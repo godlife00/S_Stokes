@@ -45,19 +45,81 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/S_Stokes.css" />
     <!-- js -->
-    <script src="js/choicestock_SS.js"></script>
-    <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
+    <script src="js/S_Stokes.js"></script>
+    <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->   
     <script src="js/header.js"></script>
     <!-- 로컬에서만 사용되는 파일 종료 -->
 </head>
 
-<body class="S_stokes">    
+<body class="s_stokes">    
     <div id="wrap">
         <!-- 헤더 -->
-        <div id="header" class="main_hdr"></div>
+        <div id="header" class="main_hdr">
+            <div class="bgWrap">
+                <div class="title">
+                    <h1 class="h1_logo"><a href="index.html"><img src="/img/h1_logo.png" alt="슈퍼스톡스"></a></h1>
+                </div>
+                <div class="r_menu">
+                    <a href="">검색</a>                    
+                    <a href="">MY</a>
+                </div>
+                <!-- //r_menu -->
+            </div>
+            <!-- //header_bgWrap -->
+        </div>
         <!-- //header -->
 
         <div id="container">
+            <!-- 마켓 -->
+            <div class=""></div>
+
+            <!-- 탭매뉴 -->
+            <div class=""></div>
+
+            <!-- 상단 롱배너 -->
+            <div class=""></div>
+
+            <!-- 포트폴리오 -->
+            <div class="main_mid portfolio">
+                <h2 class="title"><a href="#">종목추천</a></h2>         
+                <div class="list_area">
+                    <div class="swiper-container maingameSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="area">
+                                    <ul class="list">
+                                        <li class="title"><a href="">카카오프랜드스토리카카오프랜드스토리</a></li>
+                                        <li class="detail">
+                                            <div class="num">
+                                                <span>831,496.<b>25</b></span>
+                                            </div>
+                                            <div class="per">
+                                                <span class="increase">238.34<b>%</b></span>
+                                            </div>
+                                        </li>
+                                        <li class="num">
+                                            <div>
+                                                <span class="th">목표가</span>
+                                                <span class="td">8869.<b>88</b></span>
+                                                <span class="increase dod">우량주</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //list_area -->       
+            </div>
+
+            <!-- 투자전략 -->
+            <div class=""></div>
+
+            <!-- 투자매력 -->
+            <div class=""></div>
+
             
         </div>
         <!-- //container -->

@@ -182,6 +182,10 @@ select {
 }
 
 /* 그리드 grid */
+body {
+  background-color: #fff;
+}
+
 #wrap {
   padding: 0;
 }
@@ -194,34 +198,16 @@ select {
   right: 0;
   width: 100%;
   z-index: 82;
-  min-width: 1000px;
-  height: 42px;
+  height: 59px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #374b9d;
 }
 
 #container {
   padding: 0;
-  padding-top: 14px;
+  padding-top: 59px;
   position: relative;
-}
-
-#container .M_left {
-  float: left;
-  width: 200px;
-  margin-right: 13px;
-}
-
-#container .M_right {
-  position: relative;
-  float: right;
-  background-color: #fff;
-  width: calc(100% - 213px);
-}
-
-#container .M_right .contents {
-  padding: 32px 0 0;
+  min-height: 500px;
 }
 
 #container::after {
@@ -614,25 +600,55 @@ input[type='radio']:checked:before {
 }
 
 /* 헤더 header */
-#header .bgWrap .title {
-  display: inline-block;
-  width: 18%;
-  padding-left: 15px;
+#header {
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  vertical-align: top;
-  margin-top: 12px;
+  background-color: #fff;
+}
+
+#header .bgWrap {
+  height: 59px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+
+#header .bgWrap .title {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #header .bgWrap .title .h1_logo {
-  width: 89px;
-  height: 17px;
+  color: #c22e06;
 }
 
 #header .bgWrap .title .h1_logo a, #header .bgWrap .title .h1_logo img {
   display: inline-block;
   width: 100%;
   height: 100%;
+  font-size: 22px;
+  font-weight: normal;
+  letter-spacing: -0.55px;
+  text-align: left;
+  color: #c22e06;
+  vertical-align: baseline;
+}
+
+#header .bgWrap .r_menu {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 9px;
 }
 
 #header .bgWrap .gnb {
@@ -2225,2112 +2241,175 @@ input[type='radio']:checked:before {
   margin-bottom: 13px;
 }
 
-.valueline #wrap #container {
-  padding-top: calc(30px + 42px);
+.s_stokes #wrap #container {
+  background-color: blanchedalmond;
 }
 
-.valueline #wrap #container .top_banner {
-  margin-bottom: 30px;
+.s_stokes #wrap #container .main_mid {
+  padding: 0 15px;
 }
 
-.valueline #wrap #container .top_banner a, .valueline #wrap #container .top_banner img {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-
-.valueline #wrap #container .attention_area {
+.s_stokes #wrap #container .main_mid > .title a {
   position: relative;
-  padding: 15px 70px 15px 26px;
-  border-radius: 5px;
-  background-color: #eceff5;
-}
-
-.valueline #wrap #container .attention_area .no_data {
-  padding: 25px 0;
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  text-align: center;
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
   color: #222;
 }
 
-.valueline #wrap #container .attention_area .swiper-button-next, .valueline #wrap #container .attention_area .swiper-button-prev {
-  width: 9px;
-  height: 9px;
-  border-top: 1px solid #374b9d;
-  border-right: 1px solid #374b9d;
+.s_stokes #wrap #container .main_mid > .title a::after {
+  content: '';
   display: inline-block;
-  background-color: #eceff5;
-  top: 69px;
-}
-
-.valueline #wrap #container .attention_area .swiper-button-next {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 10px;
+  left: calc(100% - 15px);
+  right: auto;
+  border-top: 1px solid #898989;
+  border-right: 1px solid #898989;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  left: auto;
-  right: 24px;
 }
 
-.valueline #wrap #container .attention_area .swiper-button-prev {
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-  left: auto;
-  right: 44px;
+.s_stokes #wrap #container .main_mid.portfolio .list_area {
+  margin-top: 16px;
 }
 
-.valueline #wrap #container .attention_area .main_attboxswiper {
-  position: relative;
-  overflow: hidden;
-}
-
-.valueline #wrap #container .attention_area .main_attboxswiper .swiper-slide:first-child .data_area::before {
-  display: none;
-}
-
-.valueline #wrap #container .attention_area .data_area {
-  display: inline-block;
-  position: relative;
-  padding-left: 12px;
-}
-
-.valueline #wrap #container .attention_area .data_area::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 2px;
-  width: 1px;
-  height: 66px;
-  background-color: #dbdfed;
-}
-
-.valueline #wrap #container .attention_area .data_area .name {
+.s_stokes #wrap #container .main_mid.portfolio .list_area .area {
+  width: 215px;
+  background: #f5f5f5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: block;
+  padding: 16px 14px;
+  border-radius: 16px;
+}
+
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .title a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  display: inline-block;
-  max-width: 110px;
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-  vertical-align: top;
+  color: #333;
+  font-size: 1rem;
+  line-height: normal;
 }
 
-.valueline #wrap #container .attention_area .data_area .name.update {
-  max-width: 136px;
-  padding-right: 46px;
-}
-
-.valueline #wrap #container .attention_area .data_area .name.update::after {
-  content: 'update';
-  position: absolute;
-  right: 0;
-  top: 4px;
-  width: 36px;
-  height: 17px;
-  padding: 1px 2px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #2ec400;
-  border-radius: 3px;
-  font-size: 10px;
-  text-align: center;
-  font-weight: 300;
-  color: #fff;
-}
-
-.valueline #wrap #container .attention_area .data_area .detail .price {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: #222;
-}
-
-.valueline #wrap #container .attention_area .data_area .detail .price .unit {
-  display: inline-block;
-  padding-left: 1px;
-  font-size: 16px;
-  font-weight: normal;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .attention_area .data_area .detail .gap, .valueline #wrap #container .attention_area .data_area .detail .per {
-  vertical-align: top;
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #d30000;
-}
-
-.valueline #wrap #container .attention_area .data_area .detail.up .gap, .valueline #wrap #container .attention_area .data_area .detail.up .per {
-  color: #d30000;
-}
-
-.valueline #wrap #container .attention_area .data_area .detail.down .gap, .valueline #wrap #container .attention_area .data_area .detail.down .per {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .indices_area {
-  margin-top: 35px;
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .detail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
-.valueline #wrap #container .indices_area .table_box {
-  width: calc(100% - 254px - 25px);
-}
-
-.valueline #wrap #container .indices_area .table_box .indices_table {
-  width: 100%;
-}
-
-.valueline #wrap #container .indices_area .table_box .indices_table th, .valueline #wrap #container .indices_area .table_box .indices_table td {
-  text-align: center;
-}
-
-.valueline #wrap #container .indices_area .table_box .indices_table thead th {
-  border-bottom: 2px solid #7389af;
-  padding-bottom: 6px;
-  font-size: 12px;
-  font-weight: normal;
-  letter-spacing: -0.3px;
-  color: #7389af;
-}
-
-.valueline #wrap #container .indices_area .table_box .indices_table thead .title {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: #222;
-}
-
-.valueline #wrap #container .indices_area .table_box .indices_table tbody td {
-  border-bottom: 1px solid #e7eaf2;
-  padding: 10px 5px;
-  font-size: 14px;
-  font-weight: normal;
-  letter-spacing: -0.35px;
-  color: #222;
-}
-
-.valueline #wrap #container .indices_area .table_box .indices_table tbody td:first-child {
-  background-color: #fff;
-}
-
-.valueline #wrap #container .indices_area .table_box .indices_table tbody td.cospi, .valueline #wrap #container .indices_area .table_box .indices_table tbody td.kosdaq {
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: -0.35px;
-  color: #7389af;
-}
-
-.valueline #wrap #container .indices_area .table_box .indices_table tbody td.up .per {
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #d30000;
-}
-
-.valueline #wrap #container .indices_area .table_box .indices_table tbody td.down .per {
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #0052ff;
-}
-
-.valueline #wrap #container .indices_area .table_box .table_unitdate {
-  font-size: 12px;
-  line-height: 2.5;
-  letter-spacing: -0.3px;
-  text-align: right;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .indices_area .banner_top_right {
-  width: 254px;
-  height: 116px;
-  margin-left: 25px;
-}
-
-.valueline #wrap #container .indices_area .banner_top_right a, .valueline #wrap #container .indices_area .banner_top_right img {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-
-.valueline #wrap #container .new_listing {
-  margin-top: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.valueline #wrap #container .new_listing .left {
-  border-radius: 5px;
-  background-color: #fff;
-  width: calc(100% / 2);
-  padding: 20px 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.valueline #wrap #container .new_listing .left .new_tabs .tab_area ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: url("/img/dot_gray.png") repeat-x left calc(100% + 1px);
-}
-
-.valueline #wrap #container .new_listing .left .new_tabs .tab_area ul li {
-  cursor: pointer;
-  font-size: 20px;
-  letter-spacing: -0.5px;
-  color: #656d7e;
-  margin-left: 22px;
-  padding-bottom: 8px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.valueline #wrap #container .new_listing .left .new_tabs .tab_area ul li:first-child {
-  margin-left: 0;
-}
-
-.valueline #wrap #container .new_listing .left .new_tabs .tab_area ul li.active {
-  padding-bottom: 8px;
-  border-bottom: 3px solid #3655d6;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: #3655d6;
-}
-
-.valueline #wrap #container .new_listing .right {
-  width: calc(100% / 2 - 25px);
-}
-
-.valueline #wrap #container .new_listing .right .top {
-  padding: 20px 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 5px;
-  background-color: #fff;
-}
-
-.valueline #wrap #container .new_listing .right .top .turn_tabs .tab_area ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: url("/img/dot_gray.png") repeat-x left calc(100% + 1px);
-}
-
-.valueline #wrap #container .new_listing .right .top .turn_tabs .tab_area ul li {
-  cursor: pointer;
-  font-size: 20px;
-  letter-spacing: -0.5px;
-  color: #656d7e;
-  margin-left: 22px;
-  padding-bottom: 8px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.valueline #wrap #container .new_listing .right .top .turn_tabs .tab_area ul li:first-child {
-  margin-left: 0;
-}
-
-.valueline #wrap #container .new_listing .right .top .turn_tabs .tab_area ul li.active {
-  padding-bottom: 8px;
-  border-bottom: 3px solid #3655d6;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: #3655d6;
-}
-
-.valueline #wrap #container .new_listing .right .btm {
-  margin-top: 15px;
-  padding: 20px 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 5px;
-  background-color: #fff;
-  padding: 0;
-}
-
-.valueline #wrap #container .new_listing .right .btm .title {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  padding: 9px 36px;
-  font-weight: normal;
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-  background: #eceff5 url("/img/icon_chartFill.svg") no-repeat 13px center;
-}
-
-.valueline #wrap #container .new_listing .right .btm .title strong {
-  color: #3655d6;
-  font-weight: 700;
-}
-
-.valueline #wrap #container .new_listing .right .btm .table_box {
-  overflow: hidden;
-  padding: 0 13px 15px;
-}
-
-.valueline #wrap #container .new_listing .newListing_table {
-  position: relative;
-  width: 100%;
-  margin-top: 15px;
-}
-
-.valueline #wrap #container .new_listing .newListing_table:last-child {
-  margin-top: 40px;
-}
-
-.valueline #wrap #container .new_listing .newListing_table:last-child::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -20px;
-  height: 1px;
-  width: 100%;
-  background-color: #e7eaf2;
-}
-
-.valueline #wrap #container .new_listing .newListing_table:last-child thead {
-  visibility: collapse;
-}
-
-.valueline #wrap #container .new_listing .newListing_table:last-child thead th, .valueline #wrap #container .new_listing .newListing_table:last-child thead td {
-  padding: 0;
-  height: 0;
-}
-
-.valueline #wrap #container .new_listing .newListing_table th, .valueline #wrap #container .new_listing .newListing_table td {
-  text-align: left;
-  vertical-align: middle;
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .newListing_table th.txt_c, .valueline #wrap #container .new_listing .newListing_table td.txt_c {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .newListing_table thead th {
-  padding-bottom: 3px;
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .new_listing .newListing_table thead th.yield {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .newListing_table thead th.num {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .newListing_table tbody td {
-  padding: 5px 0;
-}
-
-.valueline #wrap #container .new_listing .newListing_table tbody td.name {
-  width: 180px;
-  max-width: 180px;
-}
-
-.valueline #wrap #container .new_listing .newListing_table tbody td.name a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: table-cell;
-  width: 100%;
-  max-width: 180px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .newListing_table tbody td.up .price, .valueline #wrap #container .new_listing .newListing_table tbody td.down .price {
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .newListing_table tbody td.up .per, .valueline #wrap #container .new_listing .newListing_table tbody td.down .per {
-  padding-left: 2px;
-  font-size: 12px;
-  letter-spacing: -0.25px;
-  color: #d30000;
-}
-
-.valueline #wrap #container .new_listing .newListing_table tbody td.down .per {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table {
-  position: relative;
-  width: 100%;
-  margin-top: 15px;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table:last-child {
-  margin-top: 40px;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table:last-child::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -20px;
-  height: 1px;
-  width: 100%;
-  background-color: #e7eaf2;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table:last-child thead {
-  visibility: collapse;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table:last-child thead th, .valueline #wrap #container .new_listing .alloListing_table:last-child thead td {
-  padding: 0;
-  height: 0;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table th, .valueline #wrap #container .new_listing .alloListing_table td {
-  text-align: left;
-  vertical-align: middle;
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table th.txt_c, .valueline #wrap #container .new_listing .alloListing_table td.txt_c {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table thead th {
-  padding-bottom: 3px;
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table thead th.yield {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table thead th.num {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table tbody td {
-  padding: 5px 0;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table tbody td.name {
-  width: 180px;
-  max-width: 180px;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table tbody td.name a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: table-cell;
-  width: 100%;
-  max-width: 180px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table tbody td.up .price, .valueline #wrap #container .new_listing .alloListing_table tbody td.down .price {
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table tbody td.up .per, .valueline #wrap #container .new_listing .alloListing_table tbody td.down .per {
-  padding-left: 2px;
-  font-size: 12px;
-  letter-spacing: -0.25px;
-  color: #d30000;
-}
-
-.valueline #wrap #container .new_listing .alloListing_table tbody td.down .per {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table {
-  position: relative;
-  width: 100%;
-  margin-top: 15px;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table:last-child {
-  margin-top: 40px;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table:last-child::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -20px;
-  height: 1px;
-  width: 100%;
-  background-color: #e7eaf2;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table:last-child thead {
-  visibility: collapse;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table:last-child thead th, .valueline #wrap #container .new_listing .hotListing_table:last-child thead td {
-  padding: 0;
-  height: 0;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table th, .valueline #wrap #container .new_listing .hotListing_table td {
-  text-align: left;
-  vertical-align: middle;
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table th.txt_c, .valueline #wrap #container .new_listing .hotListing_table td.txt_c {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table thead th {
-  padding-bottom: 3px;
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table thead th.yield {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table thead th.num {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table tbody td {
-  padding: 5px 0;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table tbody td.name {
-  width: 180px;
-  max-width: 180px;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table tbody td.name a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: table-cell;
-  width: 100%;
-  max-width: 180px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table tbody td.up .price, .valueline #wrap #container .new_listing .hotListing_table tbody td.down .price {
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table tbody td.up .per, .valueline #wrap #container .new_listing .hotListing_table tbody td.down .per {
-  padding-left: 2px;
-  font-size: 12px;
-  letter-spacing: -0.25px;
-  color: #d30000;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table tbody td.down .per {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table .attention_box {
-  position: relative;
-  padding-left: 14px;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table .attention_box .attention {
-  background-color: #bfc8d6;
-  position: absolute;
-  top: 8px;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-animation-name: beat;
-  animation-name: beat;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table .attention_box .attention:after {
-  background-color: #bfc8d6;
-  content: "";
-  border-radius: 50%;
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  top: 0px;
-  left: 4px;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table .attention_box .attention:before {
-  background-color: #bfc8d6;
-  content: "";
-  border-radius: 50%;
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  top: -4px;
-  left: 0px;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table .attention_box .attention.on, .valueline #wrap #container .new_listing .hotListing_table .attention_box .attention.on:after, .valueline #wrap #container .new_listing .hotListing_table .attention_box .attention.on:before {
-  background-color: #ff6f6f;
-}
-
-.valueline #wrap #container .new_listing .hotListing_table td.txt_L {
-  text-align: left;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table {
-  position: relative;
-  width: 100%;
-  margin-top: 15px;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table:last-child {
-  margin-top: 40px;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table:last-child::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -20px;
-  height: 1px;
-  width: 100%;
-  background-color: #e7eaf2;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table:last-child thead {
-  visibility: collapse;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table:last-child thead th, .valueline #wrap #container .new_listing .turnListing_table:last-child thead td {
-  padding: 0;
-  height: 0;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table th, .valueline #wrap #container .new_listing .turnListing_table td {
-  text-align: left;
-  vertical-align: middle;
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table th.txt_c, .valueline #wrap #container .new_listing .turnListing_table td.txt_c {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table thead th {
-  padding-bottom: 3px;
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table thead th.yield {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table thead th.num {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table tbody td {
-  padding: 5px 0;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table tbody td.name {
-  width: 180px;
-  max-width: 180px;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table tbody td.name a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: table-cell;
-  width: 100%;
-  max-width: 180px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table tbody td.up .price, .valueline #wrap #container .new_listing .turnListing_table tbody td.down .price {
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table tbody td.up .per, .valueline #wrap #container .new_listing .turnListing_table tbody td.down .per {
-  padding-left: 2px;
-  font-size: 12px;
-  letter-spacing: -0.25px;
-  color: #d30000;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table tbody td.down .per {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table:last-child {
-  margin-top: 15px;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table:last-child::before {
-  display: none;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table:last-child thead {
-  visibility: initial;
-}
-
-.valueline #wrap #container .new_listing .turnListing_table:last-child thead th, .valueline #wrap #container .new_listing .turnListing_table:last-child thead td {
-  padding: 0;
-  height: 0;
-}
-
-.valueline #wrap #container .new_listing .new_tabs tbody td {
-  padding: 0 12px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: right;
-}
-
-.valueline #wrap #container .new_listing .new_tabs tbody td:nth-child(1) {
-  padding: 5px 0;
-}
-
-.valueline #wrap #container .new_listing .new_tabs tbody td:nth-child(2) {
-  padding-right: 30px;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table {
-  position: relative;
-  width: 100%;
-  margin-top: 15px;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table:last-child {
-  margin-top: 40px;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table:last-child::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -20px;
-  height: 1px;
-  width: 100%;
-  background-color: #e7eaf2;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table:last-child thead {
-  visibility: collapse;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table:last-child thead th, .valueline #wrap #container .new_listing .mriListing_table:last-child thead td {
-  padding: 0;
-  height: 0;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table th, .valueline #wrap #container .new_listing .mriListing_table td {
-  text-align: left;
-  vertical-align: middle;
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table th.txt_c, .valueline #wrap #container .new_listing .mriListing_table td.txt_c {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table thead th {
-  padding-bottom: 3px;
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table thead th.yield {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table thead th.num {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table tbody td {
-  padding: 5px 0;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table tbody td.name {
-  width: 180px;
-  max-width: 180px;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table tbody td.name a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: table-cell;
-  width: 100%;
-  max-width: 180px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table tbody td.up .price, .valueline #wrap #container .new_listing .mriListing_table tbody td.down .price {
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table tbody td.up .per, .valueline #wrap #container .new_listing .mriListing_table tbody td.down .per {
-  padding-left: 2px;
-  font-size: 12px;
-  letter-spacing: -0.25px;
-  color: #d30000;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table tbody td.down .per {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table:last-child {
-  margin-top: 15px;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table:last-child::before {
-  display: none;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table:last-child thead {
-  visibility: initial;
-}
-
-.valueline #wrap #container .new_listing .mriListing_table:last-child thead th, .valueline #wrap #container .new_listing .mriListing_table:last-child thead td {
-  padding: 0;
-  height: 0;
-}
-
-.valueline #wrap #container .new_listing .perListing_table {
-  position: relative;
-  width: 100%;
-  margin-top: 15px;
-  float: left;
-  width: calc(100% / 2 - 20px);
-}
-
-.valueline #wrap #container .new_listing .perListing_table:last-child {
-  margin-top: 40px;
-}
-
-.valueline #wrap #container .new_listing .perListing_table:last-child::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -20px;
-  height: 1px;
-  width: 100%;
-  background-color: #e7eaf2;
-}
-
-.valueline #wrap #container .new_listing .perListing_table:last-child thead {
-  visibility: collapse;
-}
-
-.valueline #wrap #container .new_listing .perListing_table:last-child thead th, .valueline #wrap #container .new_listing .perListing_table:last-child thead td {
-  padding: 0;
-  height: 0;
-}
-
-.valueline #wrap #container .new_listing .perListing_table th, .valueline #wrap #container .new_listing .perListing_table td {
-  text-align: left;
-  vertical-align: middle;
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .perListing_table th.txt_c, .valueline #wrap #container .new_listing .perListing_table td.txt_c {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .perListing_table thead th {
-  padding-bottom: 3px;
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .new_listing .perListing_table thead th.yield {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .perListing_table thead th.num {
-  text-align: center;
-}
-
-.valueline #wrap #container .new_listing .perListing_table tbody td {
-  padding: 5px 0;
-}
-
-.valueline #wrap #container .new_listing .perListing_table tbody td.name {
-  width: 180px;
-  max-width: 180px;
-}
-
-.valueline #wrap #container .new_listing .perListing_table tbody td.name a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: table-cell;
-  width: 100%;
-  max-width: 180px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .perListing_table tbody td.up .price, .valueline #wrap #container .new_listing .perListing_table tbody td.down .price {
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .new_listing .perListing_table tbody td.up .per, .valueline #wrap #container .new_listing .perListing_table tbody td.down .per {
-  padding-left: 2px;
-  font-size: 12px;
-  letter-spacing: -0.25px;
-  color: #d30000;
-}
-
-.valueline #wrap #container .new_listing .perListing_table tbody td.down .per {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .new_listing .perListing_table thead th {
-  padding-bottom: 6px !important;
-}
-
-.valueline #wrap #container .new_listing .perListing_table tbody td.name {
-  width: 110px;
-  max-width: 110px;
-}
-
-.valueline #wrap #container .new_listing .perListing_table tbody td.name a {
-  max-width: 110px;
-  padding-right: 10px;
-}
-
-.valueline #wrap #container .new_listing .perListing_table:last-child {
-  margin-top: 15px;
-  float: right;
-}
-
-.valueline #wrap #container .new_listing .perListing_table:last-child::before {
-  content: '';
-  position: absolute;
-  left: -20px;
-  top: 0;
-  width: 1px;
-  height: 118px;
-  background-color: #e7eaf2;
-}
-
-.valueline #wrap #container .new_listing .perListing_table:last-child thead {
-  visibility: inherit;
-}
-
-.valueline #wrap #container .btm_layBox {
-  clear: both;
-  position: relative;
-  margin-top: 55px;
-}
-
-.valueline #wrap #container .btm_layBox::after {
-  content: "";
-  display: table;
-  table-layout: fixed;
-  clear: both;
-}
-
-.valueline #wrap #container .btm_layBox .left {
-  min-height: 100px;
-  float: left;
-  width: calc(100% - 254px - 26px);
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box {
-  margin-bottom: 55px;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .title {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: #3655d6;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox {
-  position: relative;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_update {
-  position: absolute;
-  right: 0;
-  top: 10px;
-  font-size: 12px;
-  line-height: 2.5;
-  letter-spacing: -0.3px;
-  text-align: right;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_div {
-  position: relative;
-  float: left;
-  width: calc(100% / 2 - 20px);
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_div:last-child {
-  float: right;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_div:last-child::before {
-  content: '';
-  position: absolute;
-  left: -20px;
-  top: 47px;
-  width: 1px;
-  height: 106px;
-  background-color: #e7eaf2;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_div .table {
-  width: 100%;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_div .table th, .valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_div .table td {
-  padding: 9px 0 6px;
-  background: none;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_div .table thead th {
-  font-size: 12px;
-  font-weight: normal;
-  letter-spacing: -0.3px;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_div .table tbody td {
-  font-size: 14px;
-  letter-spacing: -0.35px;
-  color: #656d7e;
-  padding: 5px 0;
-  padding-right: 5px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: right;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_div .table tbody td.name {
-  width: 150px;
-  max-width: 150px;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .table_div .table tbody td.name a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: table-cell;
-  width: 100%;
-  max-width: 150px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: -0.35px;
-  color: #222;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .ratio_boxboxswiper .swiper-wrapper .swiper-slide {
-  border-top: 2px solid #7389af;
-  border-bottom: 1px solid #bdc8d8;
-  padding-bottom: 10px;
-  margin-top: 15px;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .swiper-container-horizontal > .swiper-pagination-bullets {
-  top: 6px;
-  bottom: auto;
-  text-align: left;
-  padding-left: 145px;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .swiper-pagination .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-}
-
-.valueline #wrap #container .btm_layBox .left .ratio_box .line_swbox .swiper-pagination .swiper-pagination-bullet-active {
-  width: 30px;
-  border-radius: 90px;
-}
-
-.valueline #wrap #container .btm_layBox .left .market_box {
-  position: relative;
-}
-
-.valueline #wrap #container .btm_layBox .left .market_box .title {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: #222;
-}
-
-.valueline #wrap #container .btm_layBox .left .market_box .table_update {
-  position: absolute;
-  right: 0;
-  top: 13px;
-  font-size: 12px;
-  line-height: 2.5;
-  letter-spacing: -0.3px;
-  text-align: right;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .btm_layBox .left .market_box .chart_stand {
-  display: inline-block;
-  padding-left: 25px;
-}
-
-.valueline #wrap #container .btm_layBox .left .market_box .chart_stand label {
-  cursor: pointer;
-}
-
-.valueline #wrap #container .btm_layBox .left .market_box .chart_stand label:last-child {
-  margin-left: 15px;
-}
-
-.valueline #wrap #container .btm_layBox .left .market_box .chart_stand label span {
-  padding: 0 3px 0 5px;
-  font-size: 13px;
-  letter-spacing: -0.65px;
-  color: #656d7e;
-}
-
-.valueline #wrap #container .btm_layBox .left .market_box .line_swbox {
-  border-top: 2px solid #7389af;
-  margin-top: 15px;
-}
-
-.valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style {
-  height: 555px;
-}
-
-.valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text {
-  font-size: 14px !important;
-  color: #fff !important;
-  fill: #fff !important;
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .detail .num,
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .detail .num b {
   font-weight: bold;
-  text-shadow: none;
 }
 
-.valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text tspan {
-  stroke: none;
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .num > div {
+  margin-top: 10px;
 }
 
-.valueline #wrap #container .btm_layBox .left .market_box .line_swbox .treemap_style text .highcharts-br {
-  background-color: red;
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .num > div:last-child {
+  padding-left: 5px;
 }
 
-.valueline #wrap #container .btm_layBox .left .result_box {
-  margin-top: 45px;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .title {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: #3655d6;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox {
-  position: relative;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_update {
-  position: absolute;
-  right: 0;
-  top: 10px;
-  font-size: 12px;
-  line-height: 2.5;
-  letter-spacing: -0.3px;
-  text-align: right;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div {
-  position: relative;
-  float: left;
-  width: calc(100% / 2 - 20px);
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div:last-child {
-  float: right;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div:last-child::before {
-  content: '';
-  position: absolute;
-  left: -20px;
-  top: 47px;
-  width: 1px;
-  height: 106px;
-  background-color: #e7eaf2;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table {
-  width: 100%;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table th, .valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table td {
-  padding: 9px 0 6px;
-  background: none;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table thead th {
-  font-size: 12px;
-  font-weight: normal;
-  letter-spacing: -0.3px;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table tbody td {
-  font-size: 14px;
-  letter-spacing: -0.35px;
-  color: #656d7e;
-  padding: 5px 0;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table tbody td.name {
-  width: 150px;
-  max-width: 150px;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .table_div .table tbody td.name a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .num .th {
   display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: table-cell;
-  width: 100%;
-  max-width: 150px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: -0.35px;
-  color: #222;
+  color: #939393;
+  font-size: 11px;
+  padding-bottom: 2px;
+  font-weight: 300;
 }
 
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .result_boxswiper .swiper-wrapper .swiper-slide {
-  border-top: 2px solid #7389af;
-  border-bottom: 1px solid #bdc8d8;
-  padding-bottom: 10px;
-  margin-top: 15px;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .swiper-container-horizontal > .swiper-pagination-bullets {
-  top: 6px;
-  bottom: auto;
-  text-align: left;
-  padding-left: 185px;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .swiper-pagination .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .line_swbox .swiper-pagination .swiper-pagination-bullet-active {
-  width: 30px;
-  border-radius: 90px;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data {
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .num {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 9px 0 0;
 }
 
-.valueline #wrap #container .btm_layBox .left .result_box .season_data::after {
-  content: "";
-  display: table;
-  table-layout: fixed;
-  clear: both;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table {
-  position: relative;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table:nth-child(2) {
-  margin-left: 30px;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table:first-child::after {
-  content: '';
-  position: absolute;
-  right: -12px;
-  bottom: 5px;
-  width: 1px;
-  height: 107px;
-  background-color: #e7eaf2;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table th, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table td {
-  text-align: left;
-  vertical-align: middle;
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table th.txt_c, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table td.txt_c {
-  text-align: center;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table thead th {
-  padding-bottom: 5px;
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td {
-  padding: 5px 2px;
-  font-size: 14px;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.dvsion {
-  display: inline-block;
-  border-radius: 3px;
-  padding: 1px 5px;
-  background-color: red;
-  font-size: 10px;
-  font-weight: 300;
-  letter-spacing: -0.5px;
-  text-align: center;
-  color: #656d7e;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.dvsion.result {
-  color: #fff;
-  background-color: #b1b9cb;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.name {
-  padding-left: 10px;
-  width: 80px;
-  max-width: 80px;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.name a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: table-cell;
-  width: 100%;
-  max-width: 95px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down {
-  text-align: right;
-  padding-right: 5px;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up .price, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .price {
-  font-size: 14px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.up .per, .valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .per {
-  padding-left: 2px;
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #d30000;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.down .per {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.cpson {
-  text-align: center;
-  font-size: 12px;
-  letter-spacing: -0.35px;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.cpson.deficit {
-  color: #d30000;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.cpson.bk_check {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.trans {
-  text-align: center;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.trans span {
-  display: inline-block;
-  padding: 1px 3px;
-  font-size: 12px;
-  letter-spacing: -0.5px;
-  text-align: center;
-  border-radius: 3px;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.trans.deficit span {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .btm_layBox .left .result_box .season_data .season_table tbody td.trans.bk_check span {
-  color: #d30000;
-}
-
-.valueline #wrap #container .btm_layBox .right {
-  float: right;
-  width: 254px;
-  min-height: 100px;
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_area ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: url("/img/dot_gray.png") repeat-x left bottom;
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_area ul li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  cursor: pointer;
-  padding: 7px 0 8px;
-  text-align: center;
-  font-size: 18px;
-  letter-spacing: -0.45px;
-  color: #656d7e;
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_area ul li:first-child::after {
-  content: '';
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  padding: 3px 3px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: url("/img/tabcon_up.svg") no-repeat center bottom;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_area ul li:first-child.active {
-  border-bottom: 2px solid #d30000;
-  color: #d30000;
-  font-weight: 700;
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_area ul li:first-child.active::after {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_area ul li:last-child::after {
-  content: '';
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  padding: 3px 3px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: url("/img/tabcon_down.svg") no-repeat center bottom;
-  background-size: 12px 13px;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_area ul li:last-child.active {
-  border-bottom: 2px solid #3655d6;
-  color: #3655d6;
-  font-weight: 700;
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_area ul li:last-child.active::after {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content {
-  padding: 10px 0 0;
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 5px 12px;
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li a.name {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: table-cell;
-  width: 100%;
-  max-width: 110px;
-  padding-right: 10px;
-  box-sizing: border-box;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: -0.35px;
-  color: #656d7e;
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .up .price, .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .down .price {
-  font-size: 14px;
-  letter-spacing: -0.35px;
-  color: #656d7e;
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .up .per, .valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .down .per {
-  padding-left: 2px;
-  font-size: 12px;
-  letter-spacing: -0.25px;
-  color: #d30000;
-}
-
-.valueline #wrap #container .btm_layBox .right .updown_tabs .tab_content li .down .per {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .btm_layBox .right .spider_area {
-  margin-top: 30px;
-  border-radius: 5px;
-  padding: 15px 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #eceff5;
-}
-
-.valueline #wrap #container .btm_layBox .right .spider_area .data_area {
-  position: relative;
-  padding: 0 15px 10px;
-}
-
-.valueline #wrap #container .btm_layBox .right .spider_area .data_area .name a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: block;
-  width: 100%;
-  padding-right: 10px;
-  box-sizing: border-box;
-  font-size: 16px;
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .num b {
   font-weight: normal;
-  letter-spacing: -0.4px;
-  color: #222;
 }
 
-.valueline #wrap #container .btm_layBox .right .spider_area .data_area .name a::after {
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-top: 1px solid #374b9d;
-  border-right: 1px solid #374b9d;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .num .td {
+  font-size: 0.94rem;
+  color: #333;
+  vertical-align: top;
+  line-height: normal;
   display: inline-block;
-  position: absolute;
-  right: 20px;
-  top: 8px;
+  margin-top: 2px;
 }
 
-.valueline #wrap #container .btm_layBox .right .spider_area .data_area .detail .price {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: #222;
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .num .td b {
+  color: #333;
 }
 
-.valueline #wrap #container .btm_layBox .right .spider_area .data_area .detail .price .unit {
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .num .dod {
   display: inline-block;
-  padding-left: 1px;
-  font-size: 16px;
+  background-color: #F2333A;
+  text-align: center;
+  padding: 2px 5px;
+  width: 67px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 3px;
+}
+
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .num .dod b {
+  color: #fff;
   font-weight: normal;
-  letter-spacing: -0.4px;
-  color: #222;
 }
 
-.valueline #wrap #container .btm_layBox .right .spider_area .data_area .detail .per {
-  padding-left: 3px;
-  font-size: 14px;
-  letter-spacing: -0.35px;
-  color: #d30000;
-}
-
-.valueline #wrap #container .btm_layBox .right .spider_area .data_area .detail.up .per {
-  color: #d30000;
-}
-
-.valueline #wrap #container .btm_layBox .right .spider_area .data_area .detail.down .per {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .btm_layBox .right .spider_area .perlist_area {
-  border-top: 1px solid #dbdfed;
-  padding: 10px 0 0;
-  margin: 0 15px;
-}
-
-.valueline #wrap #container .btm_layBox .right .spider_area .perlist_area .perListing_table {
-  width: 100%;
-}
-
-.valueline #wrap #container .btm_layBox .right .spider_area .perlist_area .perListing_table th, .valueline #wrap #container .btm_layBox .right .spider_area .perlist_area .perListing_table td {
-  text-align: left;
-}
-
-.valueline #wrap #container .btm_layBox .right .spider_area .perlist_area .perListing_table th {
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .btm_layBox .right .spider_area .perlist_area .perListing_table td {
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .btm_layBox .right .spider_area .chart_box {
-  text-align: center;
-}
-
-.valueline #wrap #container .btm_layBox .right .spider_area .chart_box .containercharm1 {
-  padding-top: 30px;
-  height: 200px;
-}
-
-.valueline #wrap #container .btm_banner {
-  background-color: #dbdfed;
-  margin-top: 60px;
-}
-
-.valueline #wrap #container .btm_banner a, .valueline #wrap #container .btm_banner img {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-
-.valueline #wrap #container .resultdata_area {
-  background-color: red;
-  margin-top: 25px;
-  margin-bottom: 65px;
-  background-color: #fff;
-}
-
-.valueline #wrap #container .resultdata_area .season {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-top: 4px solid #374b9d;
-  border-bottom: 4px solid #e2e7f2;
-  background-color: #f7f7f8;
-}
-
-.valueline #wrap #container .resultdata_area .season .box {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  position: relative;
-  padding: 13px 2% 13px 13%;
-  border-right: 1px solid #e2e7f2;
-}
-
-.valueline #wrap #container .resultdata_area .season .box:first-child {
-  padding-left: 100px;
-}
-
-.valueline #wrap #container .resultdata_area .season .box:first-child::before {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 83px;
-  height: 100%;
-  background: #374b9d url("/img/bg_filechart.svg") no-repeat center center;
-}
-
-.valueline #wrap #container .resultdata_area .season .box .title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #37c60c;
-}
-
-.valueline #wrap #container .resultdata_area .season .box .txt {
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .resultdata_area .season .box .txt .update {
-  float: right;
-  font-size: 12px;
-  line-height: 23px;
-  letter-spacing: -0.3px;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .resultdata_area .season .box .sub_title {
-  position: absolute;
-  left: 8%;
-  top: 35px;
-  display: inline-block;
-  border-radius: 3px;
-  background-color: #d9e6ff;
-  font-weight: 300;
-  padding: 2px 10px;
-  font-size: 10px;
-  letter-spacing: -0.5px;
-  text-align: center;
-  color: #656d7e;
-}
-
-.valueline #wrap #container .resultdata_area .season .box .sub_title.all {
-  background-color: #97a3c9;
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .num .dod.decrease {
   color: #fff;
+  background-color: #006BFC;
 }
 
-.valueline #wrap #container .resultdata_area .season .box .subject dt {
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: -0.55px;
-  color: #3655d6;
-}
-
-.valueline #wrap #container .resultdata_area .season .box .subject dt .num {
-  font-size: 14px;
-  letter-spacing: -0.35px;
-  color: #3655d6;
-}
-
-.valueline #wrap #container .resultdata_area .season .box .subject dd {
-  padding-top: 5px;
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #656d7e;
-}
-
-.valueline #wrap #container .resultdata_area .season_data {
-  padding: 25px 30px;
-}
-
-.valueline #wrap #container .resultdata_area .season_data::after {
-  content: "";
-  display: table;
-  table-layout: fixed;
-  clear: both;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table {
-  position: relative;
-  width: calc(50% - 2.5%);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(3), .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(4) {
-  margin-top: 60px;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(3)::before, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(4)::before {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: -30px;
-  width: 100%;
-  height: 1px;
-  border-top: 1px solid #e7eaf2;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(3) thead, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(4) thead {
-  visibility: collapse;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(3) thead th, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(3) thead td, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(4) thead th, .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(4) thead td {
-  padding: 0;
-  height: 0;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(1), .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(3) {
-  float: left;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(2), .valueline #wrap #container .resultdata_area .season_data .season_table:nth-child(4) {
-  float: left;
-  margin-left: 5%;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table th, .valueline #wrap #container .resultdata_area .season_data .season_table td {
-  text-align: left;
-  vertical-align: middle;
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table th.txt_c, .valueline #wrap #container .resultdata_area .season_data .season_table td.txt_c {
-  text-align: center;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table thead th {
-  padding-bottom: 3px;
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #b1b9cb;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td {
-  padding: 5px 0;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.dvsion {
-  display: inline-block;
-  vertical-align: sub;
-  border-radius: 3px;
-  padding: 1px 5px;
-  background-color: #d9e6ff;
-  font-size: 10px;
-  font-weight: 300;
-  letter-spacing: -0.5px;
-  text-align: center;
-  color: #656d7e;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.dvsion.all {
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .num .dod.decrease b {
   color: #fff;
-  background-color: #97a3c9;
+  font-weight: normal;
 }
 
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.name {
-  width: 110px;
-  max-width: 110px;
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .per {
+  padding-left: 8px;
 }
 
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.name a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .per span,
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .per span b {
+  font-weight: normal;
+}
+
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .per span.increase,
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .per span.increase b {
+  color: #F2333A;
+  font-size: 0.75rem;
+  line-height: normal;
+}
+
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .per span.decrease,
+.s_stokes #wrap #container .main_mid.portfolio .list_area .list .per span.decrease b {
+  color: #006BFC;
+  font-size: 0.75rem;
+  line-height: normal;
+}
+
+.s_stokes #wrap #container .main_mid.portfolio .list_area .maingameSwiper {
+  padding-right: 15px;
+}
+
+.s_stokes #wrap #container .main_mid.portfolio .list_area .maingameSwiper .swiper-slide {
   display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: table-cell;
-  width: 100%;
-  max-width: 110px;
-  padding-right: 20px;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.up .price, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.down .price {
-  font-size: 16px;
-  letter-spacing: -0.4px;
-  color: #222;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.up .per, .valueline #wrap #container .resultdata_area .season_data .season_table tbody td.down .per {
-  padding-left: 2px;
-  font-size: 12px;
-  letter-spacing: -0.3px;
-  color: #d30000;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.down .per {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.cpson {
-  text-align: center;
-  font-size: 14px;
-  letter-spacing: -0.35px;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.cpson.deficit {
-  color: #d30000;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.cpson.bk_check {
-  color: #0052ff;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.trans {
-  text-align: center;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.trans span {
-  display: inline-block;
-  padding: 1px 3px;
-  font-size: 10px;
-  letter-spacing: -0.5px;
-  text-align: center;
-  border-radius: 3px;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.trans.deficit span {
-  border: 1px solid #1e51f5;
-  color: #0052ff;
-}
-
-.valueline #wrap #container .resultdata_area .season_data .season_table tbody td.trans.bk_check span {
-  border: 1px solid #d30000;
-  color: #d30000;
+  width: auto;
 }
 
 #container .M_right .contents .bic_chartbox .chart_line {

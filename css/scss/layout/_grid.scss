@@ -1,5 +1,8 @@
 /* 그리드 grid */
-body {}
+$headerHeiht : 59px;
+body {
+    background-color: #fff;
+}
 #wrap {                
     @include pad(0);          
 }
@@ -10,34 +13,16 @@ body {}
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 82;
-    min-width: 1000px;
-    height: 42px;        
+    z-index: 82;    
+    height: $headerHeiht;        
     box-sizing: border-box;
-    background: $colpmr;        
 }
 #container {            
-    @include pad(0);  
-    // background: url('/img/temp.jpg') no-repeat center -42px;
-    padding-top: 14px;
+    @include pad(0);      
+    padding-top: $headerHeiht;        
     position: relative;
+    min-height: 500px;
 
-    .M_left {
-        float: left;        
-        width: 200px;
-        margin-right: 13px;
-    }
-    .M_right {
-        position: relative;
-        float: right;
-        background-color: #fff;
-        width: calc(100% - 213px);
-
-        .contents {
-            padding: 32px 0 0;                        
-        }
-
-    }
     &::after {
         content: "";
         display: table;

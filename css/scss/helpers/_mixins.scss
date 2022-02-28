@@ -18,6 +18,13 @@ $col500: #656d7e;
 $f_sizeS:300;
 $f_sizeN:400;
 $f_sizeB:700;
+$font12: 0.75rem;
+$font13: 0.8125rem;
+$font14: 0.875rem;
+$font15: 0.9375rem;
+$font16: 1rem;
+$font18: 1.125rem;
+$font20: 1.25rem;
 
 // Set a default value
 $default-padding: 0px;
@@ -33,13 +40,6 @@ $default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", He
 }
 @mixin mar($n: $default-margin) {
     padding: $n;
-}
-@mixin width_minmax {
-    margin: 0 auto;  
-    box-sizing: border-box;
-    min-width: 1000px;
-    max-width: 1138px;
-    padding: 0 15px;
 }
 @mixin white-space {
     box-sizing: border-box;
