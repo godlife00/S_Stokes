@@ -1,0 +1,10 @@
+/* 그리드 grid */
+.globalStock .header {
+    @include pad(0);
+}
+.globalStock #container {    
+    @include pad(0);
+}
+.globalStock #footer {
+    @include pad(0);
+}

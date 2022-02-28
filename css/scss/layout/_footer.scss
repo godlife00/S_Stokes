@@ -1,0 +1,27 @@
+/* 푸터 footer */
+.globalStock #footer {    
+    .service_info {
+        margin-top: 50px;
+        padding: 24px 25px;    
+        box-sizing: border-box;
+        background: #f6f7fa;
+
+        .txt {            
+            color: $colgray;   
+            font-size: 0.6375em;
+            line-height: 1.6;
+            letter-spacing: -0.5px;
+        }
+        .f_logo {
+            display: inline-block;
+            margin-top: 10px;
+            height: 14px;
+
+            img {
+                display: inline-block;                
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

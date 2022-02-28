@@ -1,0 +1,76 @@
+/* 메뉴 */
+.globalStock .sub_menu {
+
+    .sub_top {
+        background:#fff;
+        padding:50px 24px 22px;
+    
+        .hm {
+            position:absolute;
+            right:23px;
+            top:27px;
+            width: 16px;
+            height: 16px;
+    
+            img {
+                display: inline-block;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .title {
+            font-size: $font20;
+            font-weight: bold;
+            letter-spacing: -1px;        
+            color: $col333;
+        }
+    }
+
+    .sub_mid {
+        background: #f6f7fa;    
+
+        .menu_link {
+            padding:20px 0 22px;
+            margin:0 auto;
+            width:calc(100% - 45px);
+            border-bottom:1px solid #e1e5ef;
+        }
+        .menu_link:last-child {
+            border-bottom:none;            
+        }
+        .menu_link .sum {
+            font-size: $font13;
+            font-weight: normal;                        
+            color: $colgray;
+            display: block;
+            padding-bottom: 10px;
+        }
+        .menu_link .txt {
+            font-size: $font15;
+            font-weight: normal;            
+            line-height: 2.33;                        
+            color: $col333;
+        }
+        .menu_link .txt a {
+            font-size: $font15;
+            font-weight: normal;            
+            line-height: 2.33;                        
+            color: $col333;
+            display:block;           
+            position: relative; 
+
+            &::after {
+                content: '';
+                @include pCenter(8px, 8px);
+                left: auto;
+                right: 0;                
+                display: inline-block;    
+                border-top: 1px solid #e57828;
+                border-right: 1px solid #e57828;
+                transform: rotate(45deg);                
+            }
+        }
+    }
+}
+

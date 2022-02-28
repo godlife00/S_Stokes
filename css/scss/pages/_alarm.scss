@@ -1,0 +1,139 @@
+/* 알림 */
+.globalStock .alarmArea {
+	box-sizing:border-box;
+	overflow:auto;
+	padding-bottom:15px;
+
+    .alarmList li {
+
+        a {
+            display:block;
+            border-bottom:1px solid #E0E4E9;
+            padding:18px 15px;
+        }
+        span.title {
+            display:inline-block;
+            width:calc(100% - 100px);
+            color: $col333;
+            font-size: $font16;
+        }
+        span.day {
+            color:$colgray;
+            display:inline-block;
+            width:95px;
+            text-align:right;
+            font-size: $font12;
+        }
+        span.sum {
+            color:$colgray;
+            display:block;
+            margin-top:20px;
+            line-height:normal;
+            font-size: $font15;
+        }
+        span.sum span {
+            color: $colgray;
+        }
+    }
+}
+
+/* 모닝브리핑 */
+
+.globalStock .sub_briefing {    
+
+    .sub_top {
+        .txt_box {
+            border-top: 1px solid #e0e5f0;
+            padding: 13px 14px;
+            background: #F6F7FA;
+
+            .txt {
+                font-size: $font14;            
+                line-height: 1.43;                        
+                color: $colgray;
+                .port_time {
+                    color: $colgray;
+                }
+    
+            }
+            .dh_patent {
+                display: block;
+                font-size: 10px;                        
+                letter-spacing: normal;
+                text-align: right;
+                color: $colgray;
+                margin-top: 6px;
+            }
+        }    
+    }
+
+    .pho_list {
+        width: calc(100% - 30px);	
+        margin:8px auto 30px;        
+    }
+
+    .pho_list li {
+        padding:14px 0;
+        border-bottom:1px solid #E1E5EF;
+
+        .list {
+            display: flex;            
+            align-items: center;
+
+            &.lst_lock {                
+                .tit a {                        
+                    text-indent: 18px;                        
+                    background: url('/img/icon_prm_lock.svg') no-repeat left 3px;
+                }
+            }
+            .tit {
+                order: 2;                                
+                padding-bottom: 10px;
+                box-sizing: border-box;
+
+                a {
+                    display:inline-block;
+                    width:100%;                                                
+                    display:-webkit-box;
+                    overflow:hidden;
+                    max-height:2.8em;
+                    line-height:1.4em;
+                    box-sizing:border-box;
+                    text-overflow:ellipsis;
+                    -webkit-line-clamp:2;
+                    -webkit-box-orient:vertical;                    
+                    color: $col333;
+                    font-size: $font16;
+                    font-weight: normal;
+                    word-break: break-all;
+                    word-wrap: break-word;
+                }
+            } 
+            .photo {
+                order: 1;
+                display: inline-block;                                
+                min-width: 80px;                                  
+                width: 80px;
+                height: 71px;
+                background: #fff url('/img/bg_noimg.svg') no-repeat center center;
+                background-size: cover;
+                margin-right: 15px;
+                border-radius: 5px;
+                overflow: hidden;
+                border: 1px solid #E1E5EF;
+
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                img {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }            
+        }
+    }
+}
