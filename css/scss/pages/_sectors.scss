@@ -1,0 +1,360 @@
+// 업종분석
+// 매트릭스 분석
+#container .M_right .contents .sectors_area {
+    position: relative;
+    
+    .table_update {
+        position: absolute;
+        right: 0;
+        top: -19px;
+        display: block;            
+        font-size: 10px;
+        letter-spacing: -0.25px;
+        text-align: right;
+        color: #b1b9cb;            
+    }  
+
+    .thead2_table {           
+        td.bdr_r {
+            // position: relative;
+            border-right: 1px solid #e7eaf2;
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     right: 0;
+            //     top: 0;
+            //     bottom: 0;
+            //     width: 1px;
+            //     background: #fff url('/img/gray_tdline.gif') repeat-y right top;   
+            // }             
+        }
+
+        th, td {
+            padding: 8.5px 12px;
+        }        
+        thead {    
+            background: #fff url('/img/gray_thline.gif') repeat-x left top;                    
+            tr:first-child {
+                th, td {
+                    background: #fff url('/img/gray_thline.gif') repeat-x left top;        
+                    &.fix {
+                        height: 60px;
+                        &::before {
+                            height: 59px;
+                        }
+                    }
+                }                    
+            }            
+
+            tr:nth-child(2) {
+                th, td {
+                    padding: 4px 3px;
+                    background: #fff url('/img/gray_tdline.gif') repeat-x left top !important;        
+                }                                    
+            }         
+            
+            th {
+                &.fix {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }  
+        tbody {
+            tr:first-child {
+                th, td {
+                    background-image: url('/img/gray_thline.gif');
+                    background-position: left top;
+                    background-repeat: repeat-x;                    
+                }                    
+            }  
+            th, td {                
+                background-image: url('/img/gray_tdline.gif');
+                background-position: left top;
+                background-repeat: repeat-x;                    
+                height: 34px;                
+                &.fix {
+                    &::before {                        
+                        min-height: 34px;
+                    }
+                }
+            }   
+            td {                
+                &:nth-child(2n - 1) {
+                    background-color: #f7f9fc;                                
+                }
+                &:first-child {
+                    background-color: #fff;
+                }
+                &.txt_name {                    
+                    a {
+                        color: #527bea;           
+                        @include white-space;     
+                        max-width: 100px;         
+                        
+                    }                                        
+                } 
+            }                      
+            tr:last-child {
+                border-bottom: 1px solid #e7eaf2;
+            }
+            
+        }        
+    }
+           
+
+    .tab_content  {
+        .containerscatter1 {
+                        
+        }
+    }
+    
+}
+
+// 업종별 재무비율
+#container .M_right .contents .sectors_area.ratio {
+    @at-root .top_swbox {
+        position: relative;
+        padding: 19px 24px 0;
+        margin-bottom: 32px;
+        box-sizing: border-box;
+        background-color: $colpmr10;
+
+        .table_update {
+            position: absolute;
+            right: 0;
+            top: -19px;
+            display: block;            
+            font-size: 10px;
+            letter-spacing: -0.25px;
+            text-align: right;
+            color: #b1b9cb;            
+        } 
+
+        .top_swboxswiper {
+            padding-bottom: 38px;            
+        }
+        .table_div {
+            display: flex;
+            justify-content: space-between;
+
+            .table {
+                width: 50%;
+                th, td {
+                    padding: 5px 5px;
+                    vertical-align: middle;
+                }                
+                &:first-child {
+                    margin-right: 15px;
+                }                
+                
+                tbody {          
+                    th {
+                        &.sectors {
+                            cursor: pointer;          
+                            border-right: 2px solid #e7eaf2;
+                            background-color: #fff;
+                            strong {
+                                display: inline-block;
+                                box-sizing: border-box;                                                                
+                                min-width: 130px;                                
+                                max-width: 160px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;                                
+                                line-height: normal;                                     
+                                vertical-align: sub;
+                            }                  
+                        }
+                    }
+                    td {
+                        background-color: #fff;
+                            &:nth-child(2n) {
+                            background-color: #f7f9fc;
+                        }
+                    }
+                    
+                }
+
+            }
+
+        }
+    }
+    .table_update {
+        position: absolute;
+        right: 0;
+        top: -19px;
+        display: block;            
+        font-size: 10px;
+        letter-spacing: -0.25px;
+        text-align: right;
+        color: #b1b9cb;            
+    } 
+    .thead2_table {
+
+        .order_select {
+            display: inline-block;
+            width: 56px;
+            .ascend, .descend {
+                // cursor: pointer;
+                display: inline-block;
+                width: 24px;            
+                // i {
+                //     vertical-align: middle;
+                //     margin-left: 2px;
+                //     display: inline-block;
+                //     width: 0;
+                //     height: 0;                
+                //     border-left: 3px solid transparent;
+                //     border-right: 3px solid transparent;
+                // }            
+            }
+            .ascend {
+                margin-right: 3px;
+                i { 
+                    border-bottom: 5px solid #97a3c9;
+                }
+            }
+            .descend {
+                i {                
+                    border-top: 5px solid #97a3c9;                
+                }
+            }
+        }
+        border-top: none;       
+        border-top: 2px solid $colpmr;           
+        td.bdr_r {
+            // position: relative;
+            border-right: 1px solid #e7eaf2;
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     right: 0;
+            //     top: 0;
+            //     bottom: 0;
+            //     width: 1px;
+            //     background: #fff url('/img/gray_tdline.gif') repeat-y right top;   
+            // }           
+        }
+
+        thead {    
+            th, td {                                
+                padding:7.5px 8px !important;                         
+                vertical-align: middle;                               
+                background: none;                                  
+            }            
+            tr:first-child {                                
+                th, td {
+                    background: #fff url('/img/gray_thline.gif') repeat-x left top;        
+                    &.fix {
+                        height: auto;
+                        &::before {
+                            height: auto;
+                        }
+                    }
+                }  
+                th {
+                    strong {
+                        color: #fff;
+                    }
+                    &:nth-child(1) {
+                        background: $colpmr;
+                        strong {
+                            font-size: 10px;
+                            font-weight: $f_sizeN;
+                        }                        
+                    }                    
+                    &:nth-child(2) {
+                        background: #7b93f4;
+                    }                    
+                    &:nth-child(3) {        
+                        background: #fff;                
+                        strong {
+                            color: #656d7e;
+                            font-weight: normal;
+                        }
+                    }                    
+                }
+            }            
+            tr:nth-child(2) {          
+                                
+                td:nth-child(2) {
+                    position: relative; 
+                    &.fix {
+                        height: 65px;
+                        &::before {
+                            height: 64px;
+                        }
+                    }
+
+                }             
+            }       
+            
+            tr:nth-child(3) {          
+                                
+                td {
+                    background-image: url('/img/gray_tdline.gif');
+                    background-position: left top;
+                    background-repeat: repeat-x;                    
+                }             
+            }   
+        }
+        
+        tbody {
+            td {                                                    
+                padding:8.5px 7px;                                                                                          
+                &:first-child,
+                &:nth-child(2n) {
+                    background-color: #fff
+                }
+                &.txt_name {
+                    padding:8.5px 12px 8.5px 7px;                                  
+                    a {
+                        color: #527bea;           
+                        @include white-space;     
+                        max-width: 100px;         
+                        
+                    }                                        
+                }        
+                .check {
+                    display: inline-block;
+                    width: 16px;
+                    height: 12px;                    
+                    background: url('/img/icon_check.svg') no-repeat 0 0;
+                }             
+            }            
+        }
+
+        .updown {            
+            display: inline-block;    
+            padding: 0 13px;
+            span {
+                display: inline-block;
+                padding: 0 1px;
+                font-size: 13px;                
+                letter-spacing: -0.33px;
+            }
+            .name {                
+                color: #656d7e;
+            }     
+            .gap {                
+                color: #222;          
+                padding-left: 6px;      
+            }       
+            .per {
+                font-size: 11px;
+                &.up {                    
+                    color: $colup;                            
+                } 
+                &.down {
+                    color: $coldown;                            
+                }  
+            }
+        }
+    }
+    .paginate {
+        margin-top: 30px;
+    }
+    
+}

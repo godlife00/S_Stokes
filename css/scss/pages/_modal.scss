@@ -1,0 +1,2335 @@
+// 모달팝업
+.modal {    
+    @at-root .blocker {
+        z-index: 98;
+        background-color: rgba(0,0,0, 0.5);
+    }
+    z-index: 99;
+    // max-width: 457px;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+
+    .pop_header {
+        width: calc(100% - 64px);
+        margin: 0 auto;
+        padding: 30px 0 10px;        
+        border-bottom: 1px solid #e7eaf2;
+        .pop_title {
+            font-size: 21px;
+            font-weight: $f_sizeB;
+            letter-spacing: -1.05px;            
+            color: #333;            
+        }
+        .clse {
+            cursor: pointer;
+            position: absolute;
+            display: inline-block;
+            padding: 4px;
+            width: 17px;
+            height: 17px;
+            right: 14px;
+            top: 14px;            
+                        
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                right: 7px;                
+                top: 0;                
+                height: 17px;
+                width: 1px;
+                background-color: $colpmr500;
+            }
+            &::before {
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .pop_con {
+        
+    }
+    .pop_foot {
+        
+    }
+    .close-modal {
+        display: none;
+        visibility: hidden;
+    }
+
+    // 통합회원 로그인
+    // 초이스스탁 통합회원 로그인
+    &.login_form {
+        .pop_con {
+            padding: 38px 64px 48px;        
+            .sns {
+                li {                                        
+                    a {                        
+                        display: block;                    
+                        text-align: center;
+                        padding: 18px 0;
+                        padding-left: calc(50% - 40px);
+                        text-align: left;                          
+                        border-radius: 5px;
+                        font-size: 15px;   
+
+                        span {
+                            display: inline-block;
+                            position: relative;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: -30px;                            
+                                top: 3px;
+                                width: 22px;                            
+                                height: 22px;
+                                background: url('/img/sns_n.svg') no-repeat 0 0;    
+                            }     
+                        }                        
+                        
+                        &.sns_n {
+                            background-color: #20b703;                                                        
+                            span {                                
+                                color: #fff;
+                                &::before {                                    
+                                    background: url('/img/sns_n.svg') no-repeat 0 0;                                
+                                }                        
+                            }  
+                        }
+                        &.sns_k {
+                            margin-top: 16px;
+                            background-color: #fae100;                                                    
+                            span {                                
+                                color: #333;
+                                &::before {                                    
+                                    background: url('/img/sns_k.svg') no-repeat 0 0;                                
+                                }                        
+                            }  
+                        }
+                    }                    
+                }                
+            }
+            .guide_txt {
+                font-size: 13px;                
+                margin-top: 13px;
+                letter-spacing: -0.33px;
+                text-align: center;
+                color: #656d7e;                
+            }
+        }        
+
+        .pop_foot {
+            background-color: #f4f6fa;
+            padding: 27px 30px;
+
+            .sub_title {
+                font-size: 16px;
+                font-weight: $f_sizeB;
+                letter-spacing: -0.8px;
+                color: #3655d6;
+            }
+            .guide_list {
+                margin-top: 13px;
+                li {
+                    border-radius: 5px;
+                    background-color: #fff;                    
+                    padding: 13px 20px;
+                    margin-top: 8px;
+                    font-size: 13px;                                        
+                    letter-spacing: -0.33px;                    
+                    color: #656d7e;
+                    strong {           
+                        display: block;                                     
+                        font-size: 15px;                                        
+                        color: #656d7e;                        
+                    }
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    // 초이스스탁 통합회원 로그인 스탭2
+    &.terms_form {
+        .pop_con {
+            padding: 39px 30px;
+
+            .loign_chk .id_chk  {
+                padding: 40px 15px;
+                border-radius: 5px;
+                border: solid 1px #e8eaf1;
+                text-align: center;
+
+                .sns_name {
+                    font-size: 12px;                                        
+                    letter-spacing: -0.6px;                    
+                    color: #939393;
+                }
+                .sns_chk {
+                    margin-top: 8px;
+                    font-size: 18px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.9px;
+                    text-align: center;
+                    color: #3655d6;
+                }
+            }
+            .member_sum {
+                margin-top: 15px;
+                font-size: 13px;
+                font-weight: normal;
+                letter-spacing: -0.33px;
+                color: #222;
+                text-align: center;
+            }
+            .agree_area {
+                .member_txt {
+                    margin-top: 45px;                                        
+                    font-size: 13px;
+                    font-weight: normal;                    
+                    letter-spacing: -0.33px;                    
+                    color: #656d7e;
+                    text-align: center;                    
+                    b {
+                        color: #222;
+                        font-weight: normal;
+                    }
+                }
+                .member_txt + .txt {
+                    margin-top: 7px;                                        
+                }                
+                .txt {
+                    margin-top: 53px;
+                    margin-bottom: 15px;
+                    font-size: 13px;
+                    font-weight: normal;                    
+                    letter-spacing: -0.33px;                    
+                    color: #656d7e;
+                    text-align: center;
+                }
+                .agree_from .label {                    
+                    width: 100%;
+                    margin-top: 8px;
+                    position: relative;
+                    border-radius: 5px;
+                    background-color: #f4f6fa;
+                    padding: 15px 85px 15px 36px;
+                    box-sizing: border-box;
+
+                    .label_chk {
+                        cursor: pointer;
+                        position: relative;
+                        display: inline-block;                        
+                        font-size: 15px;                        
+                        letter-spacing: -0.75px;                        
+                        color: #222;
+
+                        &::before {
+                            content: '';
+                            display:inline-block;
+                            vertical-align:top;
+                            position: absolute;
+                            top:4px;
+                            left: -21px;
+                            width:14px;
+                            height:14px;
+                            background: url('/img/icon_agreecheck.svg') no-repeat 100% 100%;
+                            margin-right:7px;
+                        }
+                        &.active {
+                            &::before {                                
+                                background-position: 0 100%;                                                                
+                            }
+
+                        }
+
+                    }
+                    .terms_btn {
+                        position: absolute;
+                        right: 14px;
+                        top: 14px;
+                        border-radius: 3px;
+                        border: solid 1px #3c55ce;                        
+                        padding: 3px 5px;
+                        width: 64px;
+                        height: 25px;
+                        box-sizing: border-box;
+                        font-size: 12px;                          
+                        letter-spacing: -0.6px;
+                        text-align: center;                        
+                        color: #3655d6;
+                    }
+
+                }
+                .btnArea {
+                    margin-top: 25px;
+                    padding: 0 33px;
+                    .agr_btn {  
+                        @include one_btn;
+                    }
+    
+                }
+                
+            }
+        }        
+    }
+
+    // 초이스스탁 통합회원 로그인 스탭3
+    &.sign_complete {
+        .pop_con {
+           .loign_com {
+               .login_title {                  
+                    padding: 35px 33px;
+                    background: #fff url('/img/bg_premium_top.svg') no-repeat 90% 70%;
+                    text-align: left;
+
+                    .title {         
+                        font-size: 30px;
+                        font-weight: $f_sizeB;                                        
+                        letter-spacing: -1.5px;                    
+                        color: #222;
+                            strong {
+                            color: #3655d6;
+                            font-weight: $f_sizeB;                                        
+                        }
+                    }
+                    .txt {
+                        width: 75%;
+                        margin-top: 30px;
+                        font-size: 16px;                        
+                        color: #222;
+                        letter-spacing: -0.33px;
+                    }
+                    .txt_sum {
+                        width: 75%;
+                        font-size: 13px;                        
+                        letter-spacing: -0.33px;
+                        color: #656d7e;
+                    }  
+                }
+
+                
+
+                .prm_guide {
+                    background-color: #f4f6fa;                   
+                    padding: 29px 31px;
+                        .title {
+                            font-size: 16px;
+                            font-weight: $f_sizeB;
+                            letter-spacing: -0.4px;                        
+                            color: $colpmr;
+                        }
+                        .sum {
+                            font-size: 13px;                        
+                            line-height: 1.54;
+                            letter-spacing: -0.33px;
+                            color: #656d7e;                       
+                        }
+                        .list {
+                            font-size: 0;
+                            border-top: 1px solid #e7eaf2;
+                            margin-top: 14px;
+                            padding-top: 14px;
+                            li {
+                            display: inline-block;
+                            width: 50%;
+                            font-size: 13px;
+                            line-height: 2.31;
+                            letter-spacing: -0.65px;                            
+                            color: #656d7e;
+                        }
+                    }
+                }
+
+               .btnArea {
+                    padding: 24px 33px 40px;                    
+                    .join_btn {                        
+                        @include one_btn;
+                    }
+                    .link_menu {
+                        margin-top: 12px;
+                        text-align: center;
+                        li a {
+                            position: relative;
+                            display: inline-block;
+                            font-size: 14px;                                                
+                            letter-spacing: -0.7px;
+                            color: #656d7e;        
+                            text-decoration: underline;                              
+                            &::before {
+                                content: '';
+                                width: 5px;
+                                height: 5px;
+                                border-top: 1px solid #656d7e;
+                                border-right: 1px solid #656d7e;
+                                display: inline-block;                                
+                                transform: rotate(45deg);
+                                position: absolute;
+                                top: 7px;                                
+                                right: -12px;
+                            }
+                        }                
+                    }
+               }
+           }
+        }  
+    }
+
+    // 벨류라인 프리미엄
+    &.premium_join {
+        .pop_header {
+            padding: 25px 30px 30px;
+            margin: 0; width: 100%; box-sizing: border-box;            
+            background: $colpmr url('/img/bg_premium_top.svg') no-repeat 93% bottom;
+            .pop_title {
+                font-size: 24px;
+                font-weight: $f_sizeB;
+                letter-spacing: -1.2px;
+                color: #fff;
+                span {
+                    display: block;
+                    margin-top: 5px;
+                    font-size: 14px;                                        
+                    letter-spacing: -0.7px;                    
+                    color: #fff;
+                    opacity: 0.55;
+                }                
+            }
+            .clse {         
+                &::before, &::after {                    
+                    background-color: #fff;
+                }
+            }
+        }
+        .pop_con {
+            padding: 27px 33px;                     
+            .tableRanking.type_compare {
+                width: 100%;
+                th, td {
+                    text-align: center;
+                }
+                thead {
+                    tr:first-child {                    
+                        width: 100%;
+                        border-bottom: 1px solid #e7eaf2;                    
+                        .top_th {                                            
+                            span {
+                                display: inline-block;
+                                padding-bottom: 6px;
+                                font-size: 14px;
+                                font-weight: normal;                        
+                                letter-spacing: -0.8px;                    
+                                color: #3655d6;
+                            }                    
+                            &:first-child {
+                                text-align: left;
+                                span {
+                                    font-size: 16px;
+                                    text-align: left;
+                                    font-weight: $f_sizeB;                        
+                                }
+                            }
+                            &:last-child {                            
+                                span {
+                                    font-weight: normal;
+                                    color: #656d7e;
+                                }
+                            }
+    
+                            
+                        }  
+                    }
+                }
+                
+                tbody {
+                    tr:first-child {
+                        td {
+                            padding-top: 12px;
+                        }                        
+                    }
+                    td {                    
+                        span {
+                            font-size: 14px;
+                            font-weight: normal;                                        
+                            letter-spacing: -0.7px;
+                            color: #656d7e;
+                        }
+    
+                        &.mid_td {
+                            tr:first-child {
+                                background: red;
+                                td {
+                                    padding-top: 50px;
+                                }                            
+                            }
+                            text-align: left;
+                            span {
+                                font-size: 16px;
+                                font-weight: normal;
+                                line-height: 2.31;
+                                letter-spacing: -0.8px;
+                                color: #656d7e;
+                            }                        
+                            b {
+                                font-weight: $f_sizeB;
+                                color: #656d7e;
+                            }
+                        }         
+                        &.com_select {
+                            text-align: center;
+                            span {
+                                display: inline-block;
+                                width: 16px;
+                                height: 12px;
+                                background: url('/img/com_select.svg') no-repeat 0 0;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        .pop_foot {
+            padding: 24px 33px;
+            background-color: #edf3ff;
+            .join_btn {                        
+                @include one_btn;
+            }
+            .link_menu {
+                margin-top: 12px;
+                text-align: center;
+                li a {
+                    position: relative;
+                    display: inline-block;
+                    font-size: 14px;                    
+                    letter-spacing: -0.7px;
+                    color: #656d7e;        
+                    text-decoration: underline;            
+                    &::before {
+                        content: '';
+                        width: 5px;
+                        height: 5px;
+                        border-top: 1px solid #656d7e;
+                        border-right: 1px solid #656d7e;
+                        display: inline-block;                                
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: 7px;                                
+                        right: -12px;
+                    }
+                }                
+            }
+        }
+    }    
+
+    // 마이페이지 회원정보
+    &.mypage_info {
+        .pop_header {
+            border: none;                     
+        }
+        .pop_con {
+            .tab_content:nth-child(2) {                
+                display: block;                                
+            }
+            // 회원정보
+            .mapage_area {
+                padding: 0 30px 40px;
+                .tab_area ul {
+                    font-size: 0;                    
+                    li {
+                        cursor: pointer;
+                        width: 50%;
+                        display: inline-block;
+                        font-size: 16px;
+                        letter-spacing: -0.4px;
+                        text-align: center;                        
+                        color: #222;
+                        padding: 16px 0 7px;
+                        border-bottom: 2px solid #e7eaf2;                        
+                        &.active {                            
+                            font-weight: $f_sizeB;
+                            color: #3655d6;
+                            border-color: #3655d6;                            
+                        }
+
+                    }
+                }
+                .mapage_form {
+
+                    .form_table {
+                        tr {
+                            border-bottom: 1px solid #e7eaf2;
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                        }
+                        th, td {
+                            vertical-align: top;                   
+                            text-align: left;
+                        }
+                        th {
+                            font-size: 13px;                            
+                            letter-spacing: -0.65px;                            
+                            color: #656d7e;  
+                            padding: 15px 15px 15px 9px;                                   
+                        }                    
+                        td {
+                            padding: 13px 9px;
+                            .box {
+                                position: relative;
+                                display: flex;                                
+                            }
+                            .txt_info {
+                                font-size: 15px;                            
+                                letter-spacing: -0.75px;                            
+                                color: #222;
+                            }   
+                            .mod_btn {
+                                display: inline-block;
+                                cursor: pointer;
+                                border-radius: 3px;
+                                border: solid 1px #3c55ce;
+                                margin-top: 2px;
+                                margin-left: 12px;
+                                height: 19px;                                
+                                padding: 1px 9px;
+                                box-sizing: border-box;
+                                font-size: 11px;                                
+                                letter-spacing: -0.5px;
+                                text-align: center;
+                                color: #3655d6;
+                            }             
+                            .i_dsc {
+                                position: relative;
+                                font-size: 12px;
+                                letter-spacing: -0.6px;                                
+                                padding-left: 16px;
+                                margin-top: 3px;
+                                color: #3655d6;
+                                &::before {
+                                    content: '';
+                                    display:inline-block;
+                                    vertical-align:top;
+                                    position: absolute;
+                                    top:2px;
+                                    left: 0;                                    
+                                    width:12px;
+                                    height:12px;                                    
+                                    background: url('/img/icon_preinfo.svg') no-repeat 0 0;
+                                }
+                                &.error {
+                                    color: #ff0200;                                                     
+                                    &::before {                                        
+                                        width:12px;
+                                        height:12px;                                    
+                                        background: url('/img/bg_error.png') no-repeat 0 0;
+                                        background-size: 12px 12px;
+                                    }
+                                    
+                                }
+                            }        
+                            .mod_phone {                
+                                display: none;
+                                .txt_info {
+                                    margin-top: 15px;
+                                    color: #656d7e;
+                                }                
+                                .phone_mod {
+                                    box-sizing: border-box;
+                                    vertical-align: top;
+                                    height: 28px;                                                               
+                                    margin-top: 5px;
+                                    padding: 7px 0 7px 7px;
+                                    border-top-left-radius:3px;
+                                    border-bottom-left-radius:3px;
+                                    border: solid 1px #b2b9c9;
+                                    background-color: #fff;
+                                    font-size: 15px;                            
+                                    letter-spacing: -0.75px;                            
+                                    color: #222;
+                                    &:focus {
+                                        outline: none;
+                                    }                                   
+                                }
+                                .certifi_btn {         
+                                    display: inline-block;                                    
+                                    vertical-align: top;
+                                    height: 28px;                                                               
+                                    margin-top: 5px;
+                                    padding: 5px 10px;
+                                    box-sizing:border-box;
+                                    background:$colpmr;
+                                    font-size: 12px;
+                                    color:#fff;           
+                                    text-align:center;                                    
+                                    border-top-right-radius:3px;
+                                    border-bottom-right-radius:3px;
+                                }
+                            }    
+                        }                    
+                    }
+
+                    .agree_area {
+                        .txt {
+                            margin-top: 53px;
+                            margin-bottom: 15px;
+                            font-size: 13px;
+                            font-weight: normal;                    
+                            letter-spacing: -0.33px;                    
+                            color: #656d7e;
+                            text-align: center;
+                        }
+                        .agree_from .label {                    
+                            width: 100%;
+                            margin-top: 8px;
+                            position: relative;
+                            border-radius: 5px;
+                            background-color: #f4f6fa;
+                            padding: 15px 35px;
+                            box-sizing: border-box;
+        
+                            .label_chk {
+                                cursor: pointer;
+                                position: relative;
+                                display: inline-block;                        
+                                font-size: 15px;                        
+                                letter-spacing: -0.75px;                        
+                                color: #222;
+        
+                                &::before {
+                                    content: '';
+                                    display:inline-block;
+                                    vertical-align:top;
+                                    position: absolute;
+                                    top:4px;
+                                    left: -21px;
+                                    width:14px;
+                                    height:14px;
+                                    background: url('/img/icon_agreecheck.svg') no-repeat 100% 100%;
+                                    margin-right:7px;
+                                }
+                                &.active {
+                                    &::before {                                
+                                        background-position: 0 100%;                                                                
+                                    }
+        
+                                }
+                            }
+                        }
+                    }
+
+                    .btnArea.modBtn {
+                        @include two_btn;
+                        margin-top: 24px;
+                        .btn {                            
+                            .btn_cncl {
+
+                            }
+                            .btn_save {
+                                
+                            }
+                        }
+                    }
+
+                    .withdrawal {
+                        margin-top: 10px;
+                        .btn_withdrawal {
+                            position: relative;
+                            font-size: 10px;                            
+                            letter-spacing: -0.5px;                            
+                            color: #656d7e;
+                            &::before {
+                                content: '';
+                                width: 5px;
+                                height: 5px;
+                                border-top: 1px solid #656d7e;
+                                border-right: 1px solid #656d7e;
+                                display: inline-block;                                
+                                transform: rotate(45deg);
+                                position: absolute;
+                                top: 4.5px;
+                                right: -12px;
+                            }
+                        }                        
+                    }
+                }
+            }
+            
+            // 서비스/결제내역 탭
+            .mapage_service {                       
+                overflow: hidden;                                
+                box-sizing: border-box;
+                background: #f4f6fa; 
+                border-bottom: 1px solid #757a83;
+                .left {
+                    float: left;                    
+                    width: 50%;
+                    padding: 20px 20px;
+                    box-sizing: border-box;
+                    .title {
+                        font-size: 15px;
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.75px;                        
+                        color: #3655d6;                        
+                    }
+                    .day {
+                        margin-top: 8px;
+                        font-size: 12px;
+                        color: #656d7e;
+                    }
+                }
+                .right {
+                    float: right;
+                    position: relative;
+                    width: 50%;
+                    padding: 20px 20px;
+                    box-sizing: border-box;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;                        
+                        top: 20px;
+                        height: 60px;
+                        width: 1px;
+                        background: #e7eaf2;
+                    }
+                    .title {
+                        display: inline-block;
+                        vertical-align: top;
+                        font-size: 12px;
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.6px;
+                        color: #222;                        
+                    }
+                    .card_ch {
+                        display: inline-block;
+                        vertical-align: top;
+                        border-radius: 3px;
+                        border: solid 1px #3c55ce;                        
+                        width: 36px;
+                        height: 17px;
+                        padding: 0 4px;
+                        margin-left: 8px;                        
+                        box-sizing: border-box;
+                        font-size: 10px;                        
+                        letter-spacing: -0.5px;
+                        text-align: center;
+                        color: #3655d6;
+                    }
+                    .card_table {                        
+                        th, td {
+                            padding: 1px 0;
+                            font-size: 12px;
+                            font-weight: normal;
+                            letter-spacing: -0.6px;                            
+                            color: #656d7e;                            
+                            &.num {                                
+                                color: #222;
+                                padding-right: 8px;
+                            }
+                            b {
+                                display: inline-block;
+                                padding: 0 2px;
+                                font-weight: normal
+                            }
+                        }
+                    }
+                }
+            }  
+            .history_area {
+                overflow: auto;
+                max-height: 300px;
+                border-bottom: 1px solid #e7eaf2;
+
+                /* 스크롤바 설정*/
+                &::-webkit-scrollbar{        
+                    width: 8px;                    
+                }    
+                /* 스크롤바 막대 설정*/
+                &::-webkit-scrollbar-thumb{
+                    background-color: #BDC8D8;
+                    border-radius: 8px;        
+                }
+                
+                /* 스크롤바 뒷 배경 설정*/
+                &::-webkit-scrollbar-track{                   
+                    background-color: #E7EAF2;             
+                }    
+
+
+                .history_table {
+                    width: 100%;
+                    tr {
+                        border-bottom: 1px solid #e7eaf2;
+                    }
+                    th, td {                                                
+                        text-align: center;
+                    }                    
+                    th {
+                        padding: 8.5px 0;
+                        font-size: 13px;
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.65px;                        
+                        color: #7389af;
+                    }
+                    td {
+                        padding: 10px 15px;
+                        font-size: 13px;
+                        color: #656d7e;
+                        &.day {
+                            font-size: 13px;
+                            color: #656d7e;
+                            vertical-align: middle;
+                        }
+                        &.pay {
+                            font-size: 13px;                            
+                            letter-spacing: -0.65px;
+                            color: #222;                                                  
+                            strong {
+                                font-size: 15px;
+                                font-weight: $f_sizeB;
+                                color: #222;                                
+                            }
+                        }
+                        &.way {
+                            font-size: 13px;                            
+                            letter-spacing: -0.65px;
+                            color: #222;                                 
+                        }
+                        .in {
+                            display: block;
+                            font-size: 12px;                            
+                            letter-spacing: -0.6px;                            
+                            color: #7389af;
+                        }
+
+                    }
+                }
+
+            }
+            .btnArea {
+                .btn_goods {
+                    @include one_btn;
+                    margin-top: 40px;
+                    background-color: #7389af;
+                    color: #fff;
+                    font-weight: normal;
+                    b {
+                        font-weight: $f_sizeB;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }    
+
+    // 마이페이지 회원탈퇴
+    &.withdrawal_sum {
+        .withdrawal_com {
+            padding: 40px 31px;
+            .txt {
+                font-size: 24px;
+                font-weight: bold;                
+                line-height: 30px;
+                letter-spacing: -1.2px;                
+                color: #222;
+                strong {
+                    color: #d00000;                    
+                }
+            }
+
+            .att_service {
+                margin-top: 32px;
+                .title {
+                    font-size: 16px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.4px;                    
+                    color: #3655d6;                    
+                }
+                .service_list {                    
+                    width: 100%;
+                    margin-top: 11px;
+                    th, td {
+                        padding: 8px 10px;
+                        border-top: 1px solid #e7eaf2;
+                        border-bottom: 1px solid #e7eaf2;
+                        &.th {                        
+                            font-size: 13px;                            
+                            letter-spacing: -0.65px;                            
+                            color: #222;
+                            background-color: #f4f6fa;                        
+                            .cunt {                              
+                                display: inline-block;  
+                                margin-right: 10px;
+                                color: #3655d6;
+                            }    
+                        }   
+                        &.td {
+                            text-align: right;
+                            font-size: 13px;                            
+                            letter-spacing: -0.65px;                            
+                            color: #656d7e;
+                            span {
+                                display: inline-block;
+                                min-width: 50px;
+                                padding-left: 4px;
+                            }
+                        }  
+                    }                      
+                }
+
+            }
+            .withdrawal_freetxt {
+                margin-top: 30px;
+                .service_title {                    
+                    font-size: 14px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.35px;
+                    color: #656d7e;         
+                    margin-bottom: 5px;           
+                }
+                li {
+                    position: relative;
+                    font-size: 12px;                    
+                    line-height: 21px;                    
+                    color: #656d7e;
+                    padding-left: 10px;                    
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;   
+                        right: 0;                     
+                        top: 9px;
+                        height: 1px;
+                        width: 4px;                        
+                        background-color: #939393;
+                    }
+                    strong {
+                        font-weight: $f_sizeB;
+                        color: #656d7e;                        
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .btnArea.wtwalBtn {
+                margin-top: 27px;
+                .btn_ssin {
+                    @include one_btn;
+                    background-color: #d00000;
+                    &::before {
+                        display: none;
+                    }                    
+                }
+
+            }
+        }
+    }
+
+    // 밸류라인 프리미엄 가입
+    &.payment_step {
+        
+        .step_area ul {
+            font-size:0;
+            display:flex;
+        }
+        .step_area li {
+            flex:1;
+            color:#939393;
+            font-size:14px;
+            display:inline-block;
+            text-align:center;
+            border-bottom:2px solid #3655d6;
+            padding:20px 5px 11px;
+            box-sizing:border-box;
+            position:relative;
+        }
+        .step_area li::after {		
+            content: '';    
+            width: 4px;
+            height: 4px;
+            border-top: 1px solid #939393;
+            border-right: 1px solid #939393;
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+            display: inline-block;
+            position: absolute;
+            right: -7px;
+            top: 28px;
+        }
+        .step_area li.active {
+            color:#3655d6;
+            font-weight:$f_sizeB;
+        }
+        .step_area li.active::after {			
+            border-top: 1px solid #3655d6;
+            border-right: 1px solid #3655d6;    
+        }
+        .step_area li:last-child::after {	
+            display: none;
+        }
+
+        // 가입방법 선택
+        .pop_con {           
+            background: #F4F4F5;
+            padding: 0 30px 35px;            
+
+            .btnArea.modBtn {
+                @include two_btn;
+                margin-top: 24px;
+                .btn {  
+                    position: relative;                          
+                    &.btn_cncl {
+                        &::before {
+                            content: '';
+                            width: 11px;
+                            height: 11px;
+                            border-top: 2px solid #374b9d;
+                            border-right: 2px solid #374b9d;
+                            display: inline-block;                            
+                            transform: rotate(-135deg);
+                            position: absolute;
+                            left: 20px;
+                            top: 20px;
+                        }
+                    }
+                    &.btn_save {                                                
+                        &::before {
+                            content: '';
+                            width: 11px;
+                            height: 11px;
+                            border-top: 2px solid #fff;
+                            border-right: 2px solid #fff;
+                            display: inline-block;                            
+                            transform: rotate(45deg);
+                            position: absolute;
+                            right: 20px;
+                            top: 20px;
+                        }
+                    }
+                }
+            }
+        }  
+
+        // 결제하기
+
+        // 결제완료
+    } 
+}
+
+
+
+
+/* 가입 - 가입방법 선택 step 01 */
+.serviceStep {}
+.serviceStep .step_top {
+	padding:25px 5px 5px;
+}
+.serviceStep .step_top::after {
+	content:"";
+	clear:both;
+}
+.serviceStep .step_title {
+	color:#333;
+	font-size:1.25rem;
+	line-height:1.7rem;
+	padding-bottom:8px;
+}
+.serviceStep .txt {
+	color:#939393;
+	font-size:0.9375rem;
+	line-height:1.2rem;
+}
+.serviceStep .step_box {
+	padding:15px 15px;
+	border-radius:9px;
+	border:1px solid #fff;
+	background:#fff;
+	box-sizing:border-box;
+	width:calc(100% - 10px);
+	margin:0 auto 10px;
+	position:relative;
+}
+.serviceStep .step_box.active {
+	border:1px solid #3655d6;
+}
+.serviceStep .step_box.active::before {
+	content:'';
+	width:16px;
+	height:16px;
+	background:url('/img/icon_checkmark.png') no-repeat 100% 0;
+	position:absolute;
+	right:12px;
+	top:13px;
+}
+.serviceStep .step_box .title {
+	color:#3655d6;
+	font-size:1.125rem;
+	font-weight:bold;
+}
+.serviceStep .step_box .title .way {
+	display:block;
+	color:#939393;
+	font-size:0.8rem;
+	font-weight:normal;
+	line-height:20px;
+	padding-top:2px;
+}
+.serviceStep .step_box .payRight {
+	padding-top:10px;
+	text-align:right;
+	padding-bottom:13px;
+}
+.serviceStep .step_box .payRight .pay01 {
+	color:#333;
+	font-size:1.25rem;
+	font-weight:500;
+	margin-right:20px;
+	padding:0 15px;
+	position:relative;
+}
+.serviceStep .step_box .payRight .pay01 b {
+	color:#333;
+	font-size:1rem;
+	opacity:0.7;
+	font-weight:normal;
+}
+.serviceStep .step_box .payRight .pay01 .pay_sale {
+	position:absolute;
+	right:-46px;
+	top:-15px;
+	color:#404FC3;
+	font-weight:normal;
+	font-size:0.84rem;
+	display:inline-block;
+	width:90px;
+}
+.serviceStep .step_box .payRight .pay01 .pay_sale strong {
+	color:#404FC3;
+	font-weight:bold;
+	font-size:0.84rem;
+}
+.serviceStep .step_box .payRight .pay0 .pay_sale strong {
+	color:#404FC3;
+	font-weight:bold;
+	font-size:0.84rem;
+}
+.serviceStep .step_box .payRight .pay02 {
+	color:#333;
+	font-size:1.25rem;
+	font-weight:500;
+}
+.serviceStep .step_box .payRight .pay02 b {
+	color:#333;
+	font-size:1rem;
+	font-weight:normal;
+}
+.serviceStep .step_box .payRight .pay02 .pay_sale {
+	display:block;
+	color:#939393;
+	font-size:0.8rem;
+	font-weight:normal;
+	margin-top:5px;
+	position:relative;
+}
+.serviceStep .step_box .payRight .pay02 .pay_sale02 {
+	display:inline-block;
+	color:#ff0200;
+	font-size:1rem;
+	font-weight:normal;
+	position:relative;
+}
+.serviceStep .step_box .payRight .pay02.sale, 
+.serviceStep .step_box .payRight .pay02.sale b {
+	color:#ff0200;	
+} 
+.serviceStep .step_box .payRight .pay01::before {
+	content:'';	
+	position:absolute;
+	left:0;
+	top:14px;	
+	width:100%;
+	height:2px;
+    background-color: #ff0200;
+}
+.serviceStep .step_box .payRight .pay01::after {
+	content: '';    
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #ff0200;
+    border-right: 2px solid #ff0200;    
+    transform: rotate(45deg);
+    display: inline-block;
+    position: absolute;
+    right: 0;    
+    top: 10px;
+}
+.serviceStep .step_box .payRight .pay03 {
+	color:#939393;
+	font-size:1rem;
+	font-weight:normal;
+	margin-right:0;
+	padding:0;
+	position:relative;
+}
+.serviceStep .step_box .payRight .pay03 b {
+	color:#333;
+	font-size:1rem;
+	opacity:0.7;
+	font-weight:normal;
+}
+.serviceStep .step_box .payRight .txt_line {
+	border-top:1px solid #E0E4E9;
+	padding-top:10px;
+	margin-top:25px;
+}
+.serviceStep .step_box .payRight .txt_line .txt {
+    position: relative;
+	text-align:left;
+	color:#939393;
+	font-size:0.75rem !important;
+	line-height:1.1rem;
+	padding-left:10px;	
+}
+.serviceStep .step_box .payRight .txt_line .txt::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #D3D3D3;
+}
+.serviceStep .step_box .payRight .txt_line .txt:nth-child(2),
+.serviceStep .step_box .payRight .txt_line .txt:nth-child(3),
+.serviceStep .step_box .payRight .txt_line .txt:nth-child(4) {
+	margin-top:7px;
+}
+.serviceStep .step_box .payRight .txt_line .txt strong,
+.serviceStep .step_box .payRight .txt_line .txt b {
+	color:#939393;
+}
+.payBtn {
+	text-align:center;
+	margin-top:40px;
+	padding:0 15px;
+}
+.payBtn .btn {
+	color:#3655d6;
+	font-size:0.9375rem;
+	border-radius:5px;
+	position:relative;
+}
+.payBtn .btn_cncl {
+	margin-right:5px;
+}
+.payBtn .btn_save {
+	color:#fff;
+	background:#3655d6;
+}
+.payBtn .btn_cncl i {
+	position:absolute;
+	left:18px;
+	top:14px;
+	display:inline-block;
+	width:5px;
+	height:10px;
+	background:url('/img/icon_moreL.png') no-repeat 0 0;
+	background-size:cover;
+}
+.payBtn .btn_save i {
+	position:absolute;
+	right:18px;
+	top:14px;
+	display:inline-block;
+	width:5px;
+	height:10px;
+	background:url('/img/icon_moreRR.png') no-repeat 0 0;
+	background-size:cover;
+}
+.step_box .pay_line {
+	color:#939393;
+	text-align:right;
+	font-size:0.82rem;
+	margin-top:10px;
+}
+.account_box {
+	border-top:1px solid #E0E4E9;
+	margin-top:30px;
+	padding:30px 15px 0;
+}
+.account_box .title {
+	color:#333;
+	font-size:1.125rem;
+	margin-bottom:8px;
+}
+.account_box .txt_t {
+	color:#333;
+	font-size:0.9375rem;
+	margin-bottom:5px;
+}
+.account_box .txt {
+	color:#939393;
+	font-size:0.82rem;
+	line-height:1.2rem;
+}
+.mapage_form {
+	padding:20px 15px 0;
+}
+.mapage_form .form_table {
+	border-top:1px solid #E0E4E9;
+}
+.mapage_form .form_table tr {
+	border-bottom:1px solid #E0E4E9;
+}
+.mapage_form .form_table tr:last-child {
+	border-bottom:none;
+}
+.mapage_form .form_table th,
+.mapage_form .form_table td {
+	text-align:left;
+	padding:20px 0 14px;
+	line-height:1.2rem;
+	font-weight:normal;
+	vertical-align:top;
+}
+.mapage_form .form_table th {
+	color:#939393;
+	font-size:0.82rem;
+	width:90px;
+}
+.mapage_form .form_table td {
+	color:#333;
+	font-size:0.9375rem;
+}
+.mapage_form .form_table td .i_dsc {
+	clear:both;
+	float:none;
+	color:#3655d6;
+	font-size:0.75rem;
+	line-height:14px;
+	margin-top:6px;
+}
+.mapage_form .form_table td .i_dsc i {
+	position:relative;
+	top:2px;
+	margin-right:5px;
+	display:inline-block;
+	width:14px;
+	height:14px;
+	background:url('/img/bg_x.png') no-repeat 0 0;
+}
+.mapage_form .form_table td .i_dsc.phone {
+	color:#ff0200;
+	margin-top:0;
+	padding-top:6px;
+}
+.mapage_form .form_table td .i_dsc.phone i {
+	background-position:0 100%;
+}
+.mapage_form .form_table td .i_guide {
+	clear:both;
+	float:none;
+	color:#939393;
+	margin-top:0;
+	padding-top:6px;
+	font-size:0.75rem;
+	display:block;
+	line-height:1.4;
+}
+.mapage_form .form_table td .mod_btn {
+	display:inline-block;
+	border:1px solid #3655d6;
+	border-radius:3px;
+	width:100px;
+	color:#3655d6;
+	font-size:0.75rem;
+	text-align:center;
+	padding:5px 3px;
+	box-sizing:border-box;
+}
+.mapage_form .form_table td .mod_phone .txt_info {
+	display:inline-block;
+	padding-right:5px;
+}
+.mapage_form .form_table td .certification_area {
+	background:#e6e7f4;
+	padding:15px 15px;
+	padding-left:90px;
+	margin-top:15px;
+	box-sizing:border-box;
+}
+.mapage_form .form_table td .certification_area .certifi_btn,
+.mapage_form .form_table td .certifi_btn {
+	float:left;
+	vertical-align:top;
+	background:#3655d6;
+	color:#fff;
+	font-size:0.75rem;
+	padding:0 10px;
+	box-sizing:border-box;
+	text-align:center;
+	line-height:25px;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+}
+.mapage_form .form_table td .certification_area .phone_mod,
+.mapage_form .form_table td .phone_mod {
+	float:left;
+	vertical-align:top;
+	border:none;
+	height:25px;
+	line-height:25px;
+	width:155px;
+	padding:0 5px;
+	box-sizing:border-box;
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+}
+.mapage_form .form_table td .phone_mod.chk_ok {
+	width:100%;
+}
+.sub_freeguide .agree_area {
+	width:calc(100% - 30px);
+	margin:25px auto;
+}
+.sub_freeguide .agree_area .txt {
+	color:#333;
+	font-size:0.9375rem;
+}
+.sub_freeguide .agree_area .agree_from {
+	margin-top:20px;
+}
+.sub_freeguide .agree_area .agree_from .label {
+	background:#fff;
+	border-radius:9px;
+	padding:14px 20px 14px 12px;
+}
+.sub_freeguide .agree_area .agree_from .label:first-child,
+.sub_freeguide .agree_area .agree_from .label:nth-child(2) {
+	margin-bottom:9px;
+}
+.sub_freeguide .agree_area .agree_from .label .label_chk {
+	color:#333;
+	font-size:0.82rem;
+	display:inline-block;
+}
+.sub_freeguide .agree_area .agree_from .label .label_chk i {
+	display:inline-block;
+	vertical-align:top;
+	position:relative;
+	top:-2px;
+	width:16px;
+	height:16px;
+	background:url('/img/icon_agreecheck.png') no-repeat 0 100%;
+	margin-right:7px;
+}
+.sub_freeguide .agree_area .agree_from .label .label_chk strong {
+	text-decoration:underline;
+}
+.sub_freeguide .agree_area .agree_from .label.active .label_chk i {
+	background-position:0 0;
+}
+.sub_freeguide .agree_area .agree_from .label .label_chk.sub_label {
+	padding-left:15px;
+	padding-top:10px;
+	opacity:0.5;
+}
+.sub_freeguide .agree_area .agree_from .label.active .label_chk.sub_label {
+	opacity:1;
+}
+.sub_freeguide .agree_area .agree_from .label .terms_btn {
+	float:right;
+	vertical-align:top;
+	position:relative;
+	top:-3px;
+	display:inline-block;
+	width:70px;
+	background:#3655d6;
+	border-radius:3px;
+	color:#fff;
+	font-size:0.75rem;
+	text-align:center;
+	padding:7px 5px;
+	box-sizing:border-box;
+}
+.sub_freeguide .agree_area .agree_from .label.free_label {
+	margin:0;
+}
+.sub_freeguide .agree_area .agree_from .label.free_label:first-child {
+	padding-bottom:0;
+	border-bottom-right-radius:0;
+	border-bottom-left-radius:0;
+}
+.sub_freeguide .agree_area .agree_from .label.free_label:nth-child(2) {
+	padding-top:5px;
+	border-top-right-radius:0;
+	border-top-left-radius:0;
+}
+.sub_freeguide .agree_area .agree_from .payBtn {
+	text-align:center;
+	margin-top:30px;
+	padding:0 15px;
+}
+.sub_freeguide .agree_area .agree_from .btn {
+	color:#3655d6;
+	font-size:0.9375rem;
+	border-radius:5px;
+	position:relative;
+	width:calc(100% / 2 + 60px);
+}
+.sub_freeguide .agree_area .agree_from .btn_save {
+	color:#fff;
+	background:#3655d6;
+}
+.sub_freeguide .agree_area .agree_from .btn_save i {
+	position:absolute;
+	right:18px;
+	top:15px;
+	display:inline-block;
+	width:5px;
+	height:10px;
+	background:url('/img/icon_moreRR.png') no-repeat 0 0;
+	background-size: cover;
+}
+/* 가입 - 결제하기 step 02 */
+.step_top .step_title {
+	display:inline-block;
+    font-weight: $f_sizeB;
+}
+.step_top .btn_cardEvent {
+	display:inline-block;
+	vertical-align:top;
+	float:right;
+}
+.payment_guide {
+	border-top:1px solid #E0E4E9;
+	border-bottom:1px solid #E0E4E9;
+	margin-top:30px;
+	padding:0 15px 0;
+}
+.payment_guide .guide {
+	padding:20px 0 15px;
+	border-bottom:1px solid #E0E4E9;
+}
+.payment_guide .guide:last-child {
+	border-bottom:none;
+}
+.payment_guide .guide li {
+	display:inline-block;
+	vertical-align:top;
+}
+.payment_guide .guide .th {
+	width:90px;
+	color:#939393;
+	font-size:0.82rem;
+}
+.payment_guide .guide .td_txt {
+	color:#333;
+	font-size:0.9375rem;
+}
+.payment_guide .guide .td_txt.card_list,
+.payment_guide .guide .td_txt.card_list span {
+	color:#3655d6;
+}
+.payment_guide .guide .td_txt.c_blue,
+.payment_guide .guide .td_txt.c_blue strong {
+	color:#3655d6;
+}
+.payment_guide .guide .td_txt span {
+	color:#939393;
+	font-size:0.82rem;
+}
+.payment_guide .guide .td_txt strong {
+	color:#333;
+	font-size:1.25rem;
+	vertical-align:top;
+	position:relative;
+	top:-4px;
+	font-weight:500;
+}
+.payment_guide .guide .td_sum {
+	color:#939393;
+	font-size:0.82rem;
+	display:block;
+	padding-left:90px;
+	margin-top:5px;
+	line-height:1.2rem;
+}
+.payment_guide .guide .td_sale {
+	width:100%;
+	padding:10px 15px 0;
+	padding-left:100px;
+	margin-top:0;
+	box-sizing:border-box;
+}
+.payment_guide .guide .td_sale p {
+	color:#939393;
+	font-size:0.82rem;
+	line-height:1.5rem;
+}
+.payment_guide .guide .td_sale p span {
+	display:inline-block;
+	color:#939393;
+	width:80px;
+}
+.payment_guide .guide .td_sale p strong {
+	color:#333;
+	font-size:0.9375rem;
+	padding-left:12px;
+	font-weight:500;
+}
+.payment_guide .guide .td_sale p strong i {
+	display:inline-block;
+	width:13px;
+	height:13px;
+	background:url('/img/icon_sale.png') no-repeat 0 0;
+	margin-right:5px;
+}
+.payment_guide .mapage_form {
+	padding:0;
+	border-bottom:1px solid #E0E4E9;
+}
+.payment_guide .mapage_form .form_table {
+	border-top:none;
+}
+.payment_guide .mapage_form .form_table tr {
+	border-bottom:1px solid #E0E4E9;
+}
+.payment_guide .mapage_form .form_table tr:last-child {
+	border-bottom:none;
+}
+.payment_guide .mapage_form .form_table th,
+.payment_guide .mapage_form .form_table td {
+	text-align:left;
+	padding:20px 0 14px;
+	line-height:1.2rem;
+	font-weight:normal;
+	vertical-align:top;
+}
+.payment_guide .mapage_form .form_table th {
+	color:#939393;
+	font-size:0.82rem;
+	width:90px;
+}
+.payment_guide .mapage_form .form_table td {
+	color:#333;
+	font-size:0.9375rem;
+}
+.payment_guide .mapage_form .form_table td .i_dsc {
+	clear:both;
+	float:none;
+	color:#3655d6;
+	font-size:0.75rem;
+	line-height:14px;
+	margin-top:6px;
+}
+.payment_guide .mapage_form .form_table td .i_dsc i {
+	position:relative;
+	top:2px;
+	margin-right:5px;
+	display:inline-block;
+	width:14px;
+	height:14px;
+	background:url('/img/bg_x.png') no-repeat 0 0;
+}
+.payment_guide .mapage_form .form_table td .i_dsc.coupon {
+	color:#ff0200;
+	margin-top:0;
+	padding-top:6px;
+}
+.payment_guide .mapage_form .form_table td .i_dsc.coupon i {
+	background-position:0 100%;
+}
+.payment_guide .mapage_form .form_table td .mod_btn {
+	display:inline-block;
+	border:1px solid #3655d6;
+	border-radius:3px;
+	width:100px;
+	color:#3655d6;
+	font-size:0.75rem;
+	text-align:center;
+	padding:5px 3px;
+	box-sizing:border-box;
+}
+.payment_guide .mapage_form .form_table td .mod_coupon .txt_info {
+	display:inline-block;
+	padding-right:5px;
+}
+.payment_guide .mapage_form .form_table td .certification_area {
+	background:#e6e7f4;
+	padding:15px 15px;
+	padding-left:90px;
+	margin-top:15px;
+	box-sizing:border-box;
+}
+.payment_guide .mapage_form .form_table td .certification_area .certifi_btn,
+.payment_guide .mapage_form .form_table td .certifi_btn {
+	float:left;
+	vertical-align:top;
+	background:#3655d6;
+	color:#fff;
+	font-size:0.75rem;
+	padding:0 10px;
+	box-sizing:border-box;
+	text-align:center;
+	line-height:25px;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+}
+.payment_guide .mapage_form .form_table td .certification_area .coupon_mod,
+.payment_guide .mapage_form .form_table td .coupon_mod {	
+	vertical-align:top;
+	border:none;
+	display:inline-block;
+	height:25px !important;
+	line-height:25px;
+	width:200px;
+	padding:0 5px;
+	box-sizing:border-box;
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+}
+.payment_guide .mapage_form .form_table td .coupon_mod#coupon_nm {
+	float:left;
+}
+.payment_guide .guide+.mapage_form .coupon_mod {
+	float:left;
+}
+.payment_guide .mapage_form .form_table td .coupon_mod.chk_ok {
+	width:100%;
+}
+.payment_guide .i_dsc {
+	float:none;
+	color:#3655d6;
+	font-size:0.75rem;
+	line-height:14px;
+	margin-top:6px;
+}
+.payment_note {
+	margin-top:20px;
+	padding:0 5px;
+}
+.payment_note .h4_title {
+	color:#333;
+	font-size:0.82rem;
+	font-weight:500;
+}
+.payment_note .h4_title + strong {
+    position: relative;
+	display:block;
+	margin-top:10px;
+	color:#3655d6;
+	font-size:0.82rem;	
+	padding-left:7px;
+}
+.payment_note .h4_title + strong::before {
+    content: '';	
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #404fc3;
+}
+.payment_note .note {
+	margin-top:23px;
+}
+.payment_note .note li {
+    position: relative;	
+	padding-left:8px;
+	color:#939393;
+	font-size:0.75rem;
+	line-height:1.2rem;
+	margin-bottom:4px;
+}
+.payment_note .note li::before {
+	content: '';	
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 4px;
+    height: 1px;    
+    background-color: #939393;
+}
+.payment_note .note li span {
+	color:#939393;
+	font-size:0.75rem;
+	text-decoration:underline;
+}
+.payment_note .note li strong {
+	color:#939393;
+	font-size:0.75rem;
+}
+.payment_note .note_chk {
+	margin-top:30px;
+	background:#e6e7f4;
+	border-radius:9px;
+	padding:12px 10px;
+    cursor: pointer;
+}
+.payment_note .note_chk .txt {
+	color:#333;
+	font-size:0.82rem;
+	line-height:1.2rem;
+	padding-left:30px;
+	position:relative;
+}
+.payment_note .note_chk .txt i {
+	position:absolute;
+	left:5px;
+	top:2px;
+	display:inline-block;
+	vertical-align:top;
+	width:16px;
+	height:16px;
+	background:url('/img/icon_agreecheck.png') no-repeat 0 100%;
+	margin-right:7px;
+}
+.payment_note .note_chk .txt.active i {
+	background-position: 0 0;
+}
+/* 가입 - 카드정보 입력 step 02 */
+.pay_info {
+	padding:15px 0;
+}
+.pay_info .top {
+	padding:0 15px 15px;
+	border-bottom:1px solid #E0E4E9;
+}
+.pay_info .top .logo {
+	width:90px;
+	display:inline-block;
+}
+.pay_info .top .logo img {
+	display:inline-block;
+	width:100%;
+	height:auto;
+}
+.pay_info .top .card {
+	color:#333;
+	font-size:0.9375rem;
+	float:right;
+	font-weight:bold;
+	vertical-align:top;
+	margin-top:4px;
+}
+.pay_info .info {
+	background:#fff;
+	border-radius:3px;
+	padding:2px 10px;
+	margin:15px 15px;
+}
+.pay_info .info li {
+	padding:12px 0;
+	border-bottom:1px solid #E0E4E9;
+	color:#333;
+	font-size:0.9375rem;
+}
+.pay_info .info li:last-child {
+	border-bottom:none;
+}
+.pay_info .info li strong {
+	color:#939393;
+	font-size:0.83rem;
+	display:inline-block;
+	width:70px;
+	font-weight:normal;
+}
+.pay_info .info li span {
+	font-size:0.75rem;
+	color:#939393;
+}
+.pay_info .info li span.event_pay {
+	display:block;
+	line-height:1.43;
+	padding-left:67px;
+	margin-top:4px;
+}
+.pay_info .info li span.event_pay b {
+	color:#939393;
+}
+.card_info {
+	margin-top:10px;
+	padding:0 15px;
+}
+.card_info .title {
+	color:#333;
+	font-size:0.9375rem;
+	font-weight:bold;
+}
+.card_info p.guide {
+	color:#939393;
+	font-size:0.75rem;
+	margin-top:10px;
+}
+.card_info .coupon_mod {
+	color:#939393;
+	font-size:0.84rem;
+	text-align:center;
+	border:none;
+	line-height:25px;
+	padding:0 5px;
+	width:calc(100% / 4 - 7.5px) !important;
+	border-radius:5px;
+	margin-right:4px;
+}
+.card_info .coupon_mod:last-child {
+	margin-right:0;
+}
+.card_info .term_mod {
+	border:none;
+	line-height:25px;
+	padding:0 5px;
+	width:calc(100% / 2 - 4px) !important;
+	border-radius:5px;
+	margin-right:4px;
+}
+.card_info .term_mod:last-child {
+	margin-right:0;
+}
+.card_info .by_mod {
+	color:#939393;
+	font-size:0.84rem;
+	text-align:center;
+	border:none;
+	line-height:25px;
+	padding:0 5px;
+	width:70px;
+	border-radius:5px;
+	margin-right:4px;
+}
+.card_info .payment_guide {
+	margin-top:15px;
+	padding:0;
+	padding-top:10px;
+}
+.card_info .selectbox {
+	display:inline-block;
+}
+.card_info span.pw {
+	color:#939393;
+	font-size:0.84rem;
+	display:inline-block;
+	line-height:25px;
+	margin-left:3px;
+}
+.card_info span.bns_num {
+	color:#939393;
+	font-size:0.84rem;
+	display:inline-block;
+	line-height:25px;
+	margin-left:3px;
+	position:relative;
+	padding-left:24px;
+}
+.card_info span.bns_num i {
+	position:absolute;
+	left:5px;
+	top:5px;
+	display:inline-block;
+	vertical-align:top;
+	width:16px;
+	height:16px;
+	background:url('/img/icon_agreecheck.png') no-repeat 0 100%;
+	margin-right:7px;
+}
+.card_info span.bns_num.active i {
+	background-position:0 0;
+}
+.card_info .mapage_form {
+	border-bottom:none;
+}
+.card_info .mapage_form .form_table tr {
+	border-bottom:none;
+}
+.card_info .mapage_form .form_table th,
+.card_info .mapage_form .form_table td {
+	padding:10px 0;
+}
+.card_info .payment_guide {
+	border-bottom:none;
+}
+.payment_note .top {
+	border-bottom:1px solid #E0E4E9;
+	overflow:hidden;
+	padding-bottom:9px;
+	margin-bottom:9px;
+}
+.payment_note .top .h4_title {
+	color:#333;
+	font-size:0.9375rem;
+	display:inline-block;
+	width:calc(100% - 120px);
+}
+.payment_note .top .agree {
+	color:#939393;
+	font-size:0.84rem;
+	position:relative;
+	float:right;
+	width:110px;
+	line-height:20px;
+}
+.payment_note .top .agree i {
+	display:inline-block;
+	vertical-align:top;
+	width:20px;
+	height:20px;
+	background:url('/img/select_on.png') no-repeat 0 100%;
+	background-size:20px 20px;
+	margin-right:7px;
+}
+.payment_note .top .agree.active i {
+	background:url('/img/select.png') no-repeat 0 100%;
+	background-size:20px 20px;
+}
+.agree_chk {}
+.agree_chk .txt {
+	color:#939393;
+	font-size:0.84rem;
+	line-height:20px;
+	padding:7px 0;
+	display:inline-block;
+	width:calc(100% - 47px);
+}
+.agree_chk .txt i {
+	display:inline-block;
+	vertical-align:top;
+	width:20px;
+	height:20px;
+	background:url('/img/select_on.png') no-repeat 0 100%;
+	background-size:20px 20px;
+	margin-right:7px;
+}
+.agree_chk .txt.active i {
+	background:url('/img/select.png') no-repeat 0 100%;
+	background-size:20px 20px;
+}
+.agree_chk .age_link {
+	float:right;
+	display:inline-block;
+	padding:11px 5px;
+	background:url('/img/more_Black.png') no-repeat center center;
+	font-size:0;
+	width:7px;
+	height:12px;
+	background-size:7px 12px;
+}
+.payment_chk {
+	background:#e6e7f4;
+	border-radius:9px;
+	padding:12px 10px;
+	margin:30px 15px 0;
+}
+.payment_chk .txt {
+	color:#333;
+	font-size:0.82rem;
+	line-height:1.2rem;
+	padding-left:34px;
+	position:relative;
+}
+.payment_chk .txt i {
+	position:absolute;
+	left:5px;
+	top:-1px;
+	display:inline-block;
+	vertical-align:top;
+	width:20px;
+	height:20px;
+	background:url('/img/select_on.png') no-repeat 0 100%;
+	background-size:20px 20px;
+	margin-right:7px;
+}
+.payment_chk .txt.active i {
+	background:url('/img/select.png') no-repeat 0 100%;
+	background-size:20px 20px;
+}
+.help_nicepay {
+	display:block;
+	color:#939393;
+	font-size:0.75rem;
+	text-align:center;
+	line-height:1.2rem;
+	margin-top:13px;
+}
+.fix_btn {
+	box-shadow:0 0 10px 0 rgba(0,0,0,0.3);
+	background-color:#f4f4f5;
+	padding:15px 10px;
+	position:fixed;
+	bottom:0;
+	width:100%;
+	max-width:767px;
+	box-sizing:border-box;
+	z-index:85;
+}
+.setting_pop.card_edt {}
+.setting_pop.card_edt #pay_cncl.setting_area {
+	box-shadow:0 0 6px 0 rgba(0,0,0,0.5);
+	border:solid 3px #3655d6;
+	transform:translate(-50%,-70%);
+}
+.setting_pop.card_edt .txt {
+	text-align:center;
+	color:#333;
+	font-size:0.9375rem;
+	line-height:1.3rem;
+}
+.setting_pop.card_edt .btnArea {
+	text-align:center;
+	padding-bottom:20px;
+	padding-top:20px;
+	border-top:1px solid #E0E4E9;
+}
+.setting_pop.card_edt .btnArea .btn {
+	width:90px;
+	margin:0 4px;
+}
+.setting_pop.card_edt.pay_terms {
+}
+.setting_pop.card_edt.pay_terms #pay_cncl.setting_area {
+	box-shadow:0 0 6px 0 rgba(0,0,0,0.5);
+	border:solid 3px #3655d6;
+	transform:translate(-50%,-50%);
+}
+.setting_pop.card_edt.pay_terms .pop_con {
+	overflow:scroll;
+	height:300px;
+	padding-bottom:30px !important;
+}
+.setting_pop.card_edt.pay_terms .pop_con .txt {}
+.setting_pop.card_edt.pay_terms .pop_con .txt dt {
+	margin:10px 0 5px;
+	text-align:left;
+	line-height:1.43;
+	color:#333;
+	font-weight:bold;
+	font-size:0.9rem;
+	vertical-align:top;
+}
+.setting_pop.card_edt.pay_terms .pop_con .txt,
+.setting_pop.card_edt.pay_terms .pop_con .txt dd,
+.setting_pop.card_edt.pay_terms .pop_con .txt li {
+	text-align:left;
+	line-height:1.43;
+	color:#939393;
+	font-size:0.84rem;
+	vertical-align:top;
+}
+.phone_regbox {
+	background:#fff;
+	border-radius:10px;
+	padding:15px 20px 21px;
+	margin:0 15px;
+}
+.phone_regbox .txt {
+	line-height:1.54;
+	color:#333;
+	font-size:0.9rem;
+}
+.phone_regbox .txt i {
+	display:inline-block;
+	width:12.5px;
+	height:15.5px;
+	margin-right:3px;
+	background:url('/img/banner/icon_alarm2.png') no-repeat 0 0;
+	background-size:12.5px 15.5px;
+	position:relative;
+	top:2px;
+}
+.phone_regbox .txt strong {}
+.phone_regbox .txt span {
+	text-decoration:underline;
+}
+.phone_regbox .payBtn {
+	margin-top:20px;
+}
+.phone_regbox .payBtn .btn {
+	width:calc(100% - 40px);
+}
+.link_home {
+	text-align:center;
+	margin:15px auto 0;
+}
+.link_home a {
+	display:inline-block;
+	padding-bottom:2px;
+	border-bottom:1px dotted #939393;
+	line-height:0.91;
+	letter-spacing:-0.55px;
+	color:#939393;
+	font-size:0.7rem;
+}
+.link_home i {
+	display:inline-block;
+	width:3px;
+	height:6px;
+	padding:0 1px;
+	margin-right:3px;
+	background:url('/img/more_Black.png') no-repeat 0 0;
+	background-size:3px 6px;
+	position:relative;
+	top: -2px;
+}
+/* 가입 - 결제완료 step 03 */
+.pay03 .step_top {
+	background:#fff url('/img/bg_payment_com.png') no-repeat 105% 22px;
+	min-height:175px;
+	box-sizing:border-box;
+}
+.payment_guide .guide .td_txt .event_info {
+	display:block;
+	color:#939393;
+	font-size:0.75rem;
+	line-height:1.36;
+	margin-top: 5px;
+}
+.step_top .payment_com {
+	padding-top:12px;
+	padding-left:10px;
+}
+.step_top .payment_com .login_title {
+	font-weight:bold;
+	font-size:1.8rem;
+	line-height:2.2rem;
+}
+.step_top .payment_com .login_title strong {
+	display:block;
+	color:#3655d6;
+	line-height:2.2rem;
+}
+.step_top .payment_com .txt {
+	color:#939393;
+	font-size:0.82rem;
+	line-height:1.2rem;
+	margin-top:15px;
+}
+.pay03 .payment_guide {
+	border-top:none;
+	margin-top:0;
+}
+.pay03 .payment_guide .guide {
+	padding:20px 0;
+}
+.pay03 .payment_note .note .mod_btn {
+	display:inline-block;
+	border:1px solid #3655d6;
+	border-radius:3px;
+	width:80px;
+	color:#3655d6;
+	font-size:0.75rem;
+	margin-top:7px;
+	text-align:center;
+	padding:5px 3px;
+	box-sizing: border-box;
+}

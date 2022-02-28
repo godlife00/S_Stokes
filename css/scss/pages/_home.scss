@@ -1,735 +1,1490 @@
-/* 급등주 */
-.globalStock .main_mid.event_recipe {
-    @include pad(0 15px);
-    margin-top: 32px;
-    box-sizing: border-box;
+// 메인 비시즌
+.valueline #wrap #container {
 
-    .tabsArea {
-        .tabs.recipe_tabs {
-            position: relative;
-            padding: 0;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: flex-start;
-            
-            li {
-                padding-right: 17px;
+    @mixin newListingTable_style {
+        position: relative;
+        width: 100%;
+        margin-top: 15px;
+
+        &:last-child {
+            margin-top: 40px;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -20px;                    
+                height: 1px;
+                width: 100%;
+                background-color: #e7eaf2;
             }
-            li span {
-                cursor: pointer;
-                font-size: 1.125rem;
-                color: $colgray;                
-            }
-            li.active span {
-                font-weight: bold;
-                color: $colorg;
-                border-bottom: 2px solid $colorg;                
-            }            
-        }    
-        .tab_container {            
-            margin: {
-                top: 15px;
-            }
-            .tableth_box {
-                background-color: #f6f7fa;                
-                border-radius: 16px;
-                padding: 16px 15px 0;
-                box-sizing: border-box;
-            }
-            table.tableRanking {
-                width: 100%;                
-                td {
-                    vertical-align: top;
+            thead {                    
+                visibility: collapse;
+                th, td {
+                    padding: 0;                        
+                    height: 0;
+                }                    
+            }   
+        }                        
+        th, td {
+            text-align: left;                
+            vertical-align: middle;
+            font-size: 16px;                
+            letter-spacing: -0.4px;                
+            color: #222;                                       
+            &.txt_c {
+                text-align: center;
+            }               
+        }
+        thead {
+            th {
+                padding-bottom: 3px;
+                font-size: 12px;                    
+                letter-spacing: -0.3px;                    
+                color: #b1b9cb;
+
+                &.yield {
+                    text-align: center;
+                }
+                &.num {
+                    text-align: center;
                 }
             }
-            table.tableRanking .title {
-                max-width: 142px;      
-                a {                    
-                    @include white-space;
-                    padding-top: 2px;
-                    color: $col333;
-                    font-size: $font15;                    
-                    font-weight: 400;
-                    line-height: normal;
-                }
-                span {
-                    font-size: $font15;                    
-                    letter-spacing: -0.75px;                    
-                    color: $col333;
-                }
-            }
-            table.tableRanking .num {                
-                text-align: right;
-                padding-left: 14px;                
-                box-sizing: border-box;                
-                span {
-                    display: inline-block;
-                    max-width: 70px;
-                    max-width: 100px;
-                    font-size: $font15;
-                    font-weight: 400;                    
-                    b {
-                        font-weight: 400;
+        }   
+        tbody {
+            td {
+                padding: 5px 0;
+                &.name {      
+                    width: 180px;
+                    max-width: 180px;                                                    
+
+                    a {
+                        @include white-space;
+                        display: table-cell;
+                        width: 100%;
+                        max-width: 180px;                                                    
+                        padding-right: 20px;
+                        box-sizing: border-box;
+                        font-size: 16px;
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.4px;                    
+                        color: #222;
                     }
                 }
+                &.up, &.down {
+                    .price {
+                        font-size: 16px;                            
+                        letter-spacing: -0.4px;                            
+                        color: #222;
+                    }                        
+                    .per {
+                        padding-left: 2px;
+                        font-size: 12px;                            
+                        letter-spacing: -0.25px;
+                        color: #d30000;
+                    }
+                }
+                &.down {
+                    .per {                            
+                        color: #0052ff;
+                    }                        
+                }
             }
-            table.tableRanking .num.dod {
-                padding-bottom: 15px;
-                
-                span {
-                    text-align: center;
-                    display: inline-block;                    
-                    width: 61px;
-                    line-height: 18px;
-                    height: 24px;
-                    padding: 3px 1px;
-                    box-sizing: border-box;
-                    border-radius: 3px;
-                    background-color: $colgray;
-                    color: #fff;
-                    font-size: $font12;                    
-                    b {
+        }         
+    } 
+    padding-top: calc(30px + 42px);
+
+    // 탑배너
+    .top_banner {        
+        margin-bottom: 30px;
+        a, img {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }        
+    }
+
+    // 관심종목
+    .attention_area {        
+        position: relative;        
+        padding: 15px 70px 15px 26px;
+        border-radius: 5px;
+        background-color: #eceff5;
+        
+        // 관심종목이 없는 경우
+        .no_data {
+            padding: 25px 0;
+            font-size: 16px;            
+            letter-spacing: -0.4px;
+            text-align: center;            
+            color: #222;            
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            width: 9px;
+            height: 9px;
+            border-top: 1px solid $colpmr;
+            border-right: 1px solid $colpmr;
+            display: inline-block;                
+            background-color: #eceff5;                
+            top: 69px;  
+        }
+        .swiper-button-next {                
+            
+            transform: rotate(45deg);       
+            left: auto;
+            right: 24px;            
+        }
+        .swiper-button-prev {                            
+            transform: rotate(-135deg);
+            left: auto;
+            right: 44px;         
+        }
+        
+        .main_attboxswiper {      
+            position: relative;                  
+            overflow: hidden;
+            
+            .swiper-slide:first-child {
+                .data_area::before {
+                    display: none;
+                }            
+            }            
+        }
+        
+        .data_area {
+            display: inline-block;
+            position: relative;
+            padding-left: 12px;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 2px;
+                width: 1px;
+                height: 66px;
+                background-color: #dbdfed;
+            }
+
+            .name {                
+                @include white-space;          
+                display: inline-block;      
+                max-width: 110px;
+                font-size: 16px;                
+                letter-spacing: -0.4px;
+                color: #222;
+                vertical-align: top;                
+                &.update {       
+                    max-width: 136px;             
+                    padding-right: 46px;
+                    &::after {
+                        content: 'update';
+                        position: absolute;
+                        right: 0;                
+                        top: 4px;
+                        width: 36px;
+                        height: 17px;
+                        padding: 1px 2px;
+                        box-sizing: border-box;
+                        background-color: #2ec400;                
+                        border-radius: 3px;
+                        font-size: 10px;                                
+                        text-align: center;
+                        font-weight: $f_sizeS;
                         color: #fff;
                     }
-                    &.increase {
-                        background: $colred;
-                    }
-                    &.decrease {
-                        background: $colblue;
-                    }
                 }
             }
-
-            table.tableRanking .num.score {
-                padding-bottom: 16px;
-                span {
-                    text-align: center;
-                    display: inline-block;                    
-                    width: 61px;
-                    line-height: 18px;
-                    height: 24px;
-                    padding: 3px 1px;
-                    box-sizing: border-box;                                        
-                    b {
-                        opacity: 0.75;                        
+            .detail {                
+                .price {
+                    display: block;                                        
+                    font-size: 20px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.5px;                    
+                    color: #222;
+                    .unit {
+                        display: inline-block;
+                        padding-left: 1px;
+                        font-size: 16px;
+                        font-weight: normal;                        
+                        letter-spacing: -0.4px;                        
+                        color: #222;
+                    }
+                }                
+                .gap, .per {        
+                    vertical-align: top;            
+                    font-size: 12px;                    
+                    letter-spacing: -0.3px;                    
+                    color: $colup;                    
+                }
+                &.up {
+                    .gap, .per {                                            
+                        color: $colup;
                     }
                 }
-            }
-
-            @media (min-width:320px) and (max-width:374px) {
-                table.tableRanking .num.score {
-                    padding-bottom: 15px;
+                &.down {
+                    .gap, .per {                                            
+                        color: #0052ff;
+                    }                    
                 }
             }
-
-            .tableth_box .table_btmarea {         
-                text-align: center;       
-                margin: 0 auto;
-                border-top: 1px solid #e0e5f0;    
-                a {
-                    position: relative;
-                    display: block;
-                    padding: 7px 0;
-                    color: $colgray;
-                    font-size: $font12;                                        
-                    &::after {
-                        content: '';
-                        @include pCenter(3px, 3px);
-                        left: calc(50% + 22px);
-                        right: auto;                
-                        display: inline-block;    
-                        border-top: 1px solid #85929e;
-                        border-right: 1px solid #85929e;
-                        transform: rotate(45deg);
-                    }
-                }
-            }            
-        }
-    }    
-}
-
-/* 모닝브리핑, 종목노트 */
-.globalStock .main_mid.briefing_note {
-	margin-top: 0;
-	padding: 0 14px 18px;	    
-	height: 70px;
-    overflow: hidden;
-
-    .mainbriefingSwiper {
-        height: 100px;
-    }
-    .mainbriefingSwiper ul {
-        margin-top: 24px;        
-        width: 100%;
-    }
-    .mainbriefingSwiper .txt {
-        @include white-space;
-        color: $col333;
-        font-size: $font13;
-        line-height: normal;            
-        font-weight: 400;
-        i {
-            display: inline-block;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            margin-right: 6px;
-            background-color: $colorg;
-            line-height: 18px;
-            vertical-align: middle;
-        }
-    }
-}
-
-/* 종목추천 */
-.globalStock .main_mid.game_area {
-    padding: 30px 0 32px 15px;	
-    background: #f6f7fa;
-
-    > .title {
-        color: $col333;
-        font-size: $font20;
-        display: flex;
-        justify-content: flex-start;
-        a {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-
-            &::after {                
-                @include pCenter(8px, 8px);
-                content: '';
-                left: calc(100% - 30px);
-                right: auto;                
-                display: inline-block;    
-                border-top: 1px solid #e57828;
-                border-right: 1px solid #e57828;
-                transform: rotate(45deg);
-            }
         }
     }
 
-    .list_area {
-        margin-top: 16px;
-        
-        .area {
-            width: 215px;            
-            background: #fff;
-            box-sizing: border-box;
-            padding: 16px 14px;
-            border-radius: 16px;            
-        }
-        .list .title a {
-            @include white-space;            
-            color: $col333;
-            font-size: $font16;
-            line-height: normal;                        
-        }        
-        .list .detail {
-            display: flex;            
-            .num,
-            .num b {
-                font-weight: bold;                
-            }
-        }
-        .list .num > div {
-            margin-top: 10px;
-        }
-        .list .num > div:last-child {
-            padding-left: 5px;	
-        }
-        .list .num .th {
-            display: block;    
-            color: #939393;
-            font-size: 11px;	
-            padding-bottom: 2px;
-            font-weight: 300;
-        }
-        .list .num {
-            display: flex;    
-            justify-content: space-between;
-            b {
-                font-weight: normal;
-            }        
-        }
-        .list .num .td {
-            font-size: 0.94rem;
-            color: $col333;
-            vertical-align: top;
-            line-height: normal;
-            display: inline-block;
-            margin-top: 2px;
-            b {                
-                color: $col333;	    
-            }
-        }        
-        .list .num .dod {
-            display: inline-block;
-            background-color: $colred;            
-            text-align: center;    
-            padding: 2px 5px;
-            width: 67px;         
-            box-sizing: border-box;   
-            color: #fff;
-            font-size: $font12;
-            border-radius: 3px;            
-            b {
-                color: #fff;
-                font-weight: normal;
-            }
-        }                
-        .list .num .dod.decrease {
-            color: #fff;
-            background-color: $colblue;
-            b {
-                color: #fff;
-                font-weight: normal;
-            }
-        }
-        .list .per {
-            padding-left: 8px;
-            span,
-            span b {
-                font-weight: normal;
-            }
-        }
-        .list .per span.increase,
-        .list .per span.increase b {
-            color: $colred;            
-            font-size: $font12;
-            line-height: normal;            
-        }
-        .list .per span.decrease,
-        .list .per span.decrease b {
-            color: $colblue;   
-            font-size: $font12;         
-            line-height: normal;
-        }
-        .maingameSwiper {
-            padding-right: 15px;
-            .swiper-slide {
-                display: block;
-                width: auto;	
-            }
-        }
-    }
-
-    /* 추천포트폴리오 */
-    .ptfo_recom {
+    // 주요지수
+    .indices_area {
+        margin-top: 35px;        
         display: flex;
         justify-content: space-between;	
-        margin-top: 32px;    
-        margin-right: 15px;
-        padding: 7px 14px;    
-        background-color: #eaedf5;
-        box-sizing: border-box;
-        border-radius: 16px;	
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        
-        .ptfo_title {                        
-            a {
-                position: relative;
-                padding-right: 12px;
-                color: $colorg;
-                font-size: $font14;
-                line-height: normal;	            
-                &::after {
-                    content: '';
-                    width: 6px;
-                    height: 6px;
-                    position: absolute;
-                    top: 7px;                    
-                    right: 0;                    
-                    display: inline-block;
-                    border-top: 1px solid #e57828;
-                    border-right: 1px solid #e57828;                    
-                    transform: rotate(45deg);
+        flex-wrap: wrap;
+
+        .table_box {
+            width: calc(100% - 254px - 25px);
+            .indices_table {                  
+                width: 100%;          
+                th, td {
+                    text-align: center;                       
                 }
-            }
-            @media (min-width:320px) and (max-width:374px) {
-                a::after {                        
-                    top: 5px;                    
+                thead {
+                    th {
+                        border-bottom: 2px solid #7389af;
+                        padding-bottom: 6px;
+                        font-size: 12px;
+                        font-weight: normal;                        
+                        letter-spacing: -0.3px;                        
+                        color: #7389af;
+                    }
+                    .title {
+                        font-size: 20px;
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.5px;                        
+                        color: #222;                        
+                    }
                 }
+                tbody {                    
+                    td {
+                        border-bottom: 1px solid #e7eaf2;                        
+                        padding: 10px 5px;
+                        font-size: 14px;
+                        font-weight: normal;                        
+                        letter-spacing: -0.35px;                        
+                        color: #222;                                               
+                        &:first-child {
+                            background-color: #fff;
+                        }      
+                        &.cospi, &.kosdaq {
+                            font-size: 14px;
+                            font-weight: $f_sizeB;
+                            letter-spacing: -0.35px;                            
+                            color: #7389af;                            
+                        }
+                        &.up {
+                            .per {                                            
+                                font-size: 12px;                                
+                                letter-spacing: -0.3px;
+                                color: $colup;
+                            }
+                        }
+                        &.down {
+                            .per {                                            
+                                font-size: 12px;                                
+                                letter-spacing: -0.3px;
+                                color: #0052ff;
+                            }                    
+                        }
+                    }
+                }
+    
+            }
+            .table_unitdate {
+                font-size: 12px;                
+                line-height: 2.5;
+                letter-spacing: -0.3px;
+                text-align: right;
+                color: #b1b9cb;                
             }
         }
         
-        .more {
-            display: inline-block;
-            padding: 0;
-            line-height: 22px;
-            vertical-align: middle;	
-            span {
-                background: none;	
-                color: $col333;
-                font-size: $font12;
-                font-weight: bold;
-                line-height: 22px;
-                vertical-align: middle;
-                padding: 0;
-                padding-right: 7px;	
-            }        
-        }
-        dl.revenue dt {	
-            display: inline-block;
-            font-size: $font12;
-            color: $colgray;
-            line-height: 22px;	
-            vertical-align: middle;
-        }
-        dl.revenue dd.increase {
-            display: inline-block;
-            background: $colred;		
-            border-radius: 3px;
-            text-align: center;
-            padding: 0 5px;
-            margin-left: 3px;
-            width: 67px;
-            box-sizing: border-box;
-            color: #fff;
-            font-size: $font12;
-            line-height: 22px;
-            b {	
-                color: #fff;
-                font-size: $font12;   
-                padding-left: 1px;
-            }
-        }
-    }
-    .ptfo_datatable {
-        position: relative;
-        margin-right: 15px;
-        padding: 11px 0 12px;
-        border-bottom-left-radius: 16px;
-        border-bottom-right-radius: 16px;
-        background-color: #fff;
-        display: flex;
-        box-sizing: border-box;
-
-        &::before {
-            content:"";
-            position:absolute;
-            right:50%;
-            top:11px;
-            display:inline-block;
-            width:1px;
-            height:43px;
-            background: #dfe5f1;
-        }
-    }    
-    .ptfo_datatable ul {
-        flex: 1;
-        padding: 0 15px;
-    }
-    .ptfo_datatable ul li.name a {
-        @include white-space;
-        color: $col333;
-        font-size: $font14;
-        line-height: normal;
-        max-width: 142px;	        
-    }    
-    .ptfo_datatable ul li.num span.yield {
-        font-size: $font12;
-        line-height: normal;	
-        color: $colgray;  
-    }
-    .ptfo_datatable ul li.num span.pp,
-    .ptfo_datatable ul li.num span.pp b {
-        font-size: $font12;	
-        font-weight: bold;			
-    }
-    .ptfo_datatable ul li.num span.pp.increase,
-    .ptfo_datatable ul li.num span.pp.increase b {
-        color: $colred;
-    }
-    .ptfo_datatable ul li.num span.pp.decrease,
-    .ptfo_datatable ul li.num span.pp.decrease b {
-        color: $colblue;
-    }    
-}
-
-/* 승부주 */
-.globalStock .main_mid.game_scr {
-    padding: 30px 0 0 15px;	   
-
-    > .title {
-        color: $col333;
-        font-size: $font20;
-        display: flex;
-        justify-content: flex-start;
-        a {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-
-            &::after {
-                content: '';
-                @include pCenter(8px, 8px);
-                left: calc(100% - 30px);
-                right: auto;                
-                display: inline-block;    
-                border-top: 1px solid #e57828;
-                border-right: 1px solid #e57828;
-                transform: rotate(45deg);                
-            }
-
-            span.remark {
-                color: $colgray;
-                font-size: $font12;
-                font-weight: normal;
-                padding-left: 3px;
-            }
-        }
-    }
-
-    .list_area {
-        margin-top: 16px;
-        
-        .area {
-            width: 215px;            
-            background: #f6f7fa;
-            box-sizing: border-box;
-            padding: 16px 14px;
-            border-radius: 16px;            
-        }
-        .list .title a {
-            @include white-space;            
-            color: $col333;
-            font-size: $font16;
-            line-height: normal;                        
-        }        
-        .list .detail {
-            display: flex;            
-            .num,
-            .num b {
-                font-weight: bold;                
-            }
-        }        
-        .list .num > div:last-child {
-            padding-left: 5px;	
-        }
-        .list .num .th {
-            display: block;    
-            color: #939393;
-            font-size: 11px;	
-            padding-bottom: 2px;
-            font-weight: 300;
-        }
-        .list .num {
-            display: flex;    
-            justify-content: space-between;
-            b {
-                font-weight: normal;
-            }        
-        }
-        .list .num .td {
-            font-size: 0.94rem;
-            color: $col333;
-            vertical-align: top;
-            line-height: normal;
-            display: inline-block;
-            margin-top: 2px;
-            b {                
-                color: $col333;	    
-            }
-        }        
-        .list .num .dod {
-            display: inline-block;
-            background-color: $colred;            
-            text-align: center;    
-            padding: 2px 5px;
-            width: 67px;            
-            box-sizing: border-box;
-            color: #fff;
-            font-size: $font12;
-            border-radius: 3px;            
-            b {
-                color: #fff;
-                font-weight: normal;
-            }
-        }                
-        .list .num .dod.decrease {
-            color: #fff;
-            background-color: $colblue;
-            b {
-                color: #fff;
-                font-weight: normal;
-            }
-        }
-        .list .per {
-            padding-left: 8px;
-            span,
-            span b {
-                font-weight: normal;
-            }
-        }
-        .list .per span.increase,
-        .list .per span.increase b {
-            color: $colred;            
-            font-size: $font12;
-            line-height: normal;            
-        }
-        .list .per span.decrease,
-        .list .per span.decrease b {
-            color: $colblue;   
-            font-size: $font12;         
-            line-height: normal;
-        }
-        .maingameSwiper {
-            padding-right: 15px;
-            .swiper-slide {
-                display: block;
-                width: auto;	
-            }
-        }
-    }    
-}
-
-/* 종목노트 */
-.globalStock .main_mid.note_area {
-    padding: 50px 15px 0;	   
-
-    > .title {
-        color: $col333;
-        font-size: $font20;
-        display: flex;
-        justify-content: flex-start;
-        a {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-
-            &::after {
-                content: '';
-                @include pCenter(8px, 8px);
-                left: calc(100% - 15px);
-                right: auto;                
-                display: inline-block;    
-                border-top: 1px solid #e57828;
-                border-right: 1px solid #e57828;
-                transform: rotate(45deg);                
-            }
-
-            span.remark {
-                color: $colgray;
-                font-size: $font12;
-                font-weight: normal;
-                padding-left: 3px;
-            }
-        }
-    }
-
-    .banner {
-        margin-top: 15px;
-    }
-    .banner ul {
-        display: flex;    
-        gap: 15px;
-        justify-content: space-between;
-        
-        li {
-            flex: 1;
-            position: relative;           
-            background-color: #fff5e2;                
-            padding: 18px 16px 67px;
-            box-sizing: border-box;
-            border-radius: 16px;
-
-            &::after {
-                @include pCenter(50, 50);
-                left: auto;
-                top: auto;
-                right: 14px;
-                bottom: 14px;
-                content: '';
-                display: inline-block;                
-                background: #fff5e2 url('/img/bg_noteicon.svg') no-repeat 0 0;
-            }
-            &:last-child::after {                
-                background: #fff5e2 url('/img/bg_noteicon.svg') no-repeat right 0;
-            }
-            
-            a {
+        .banner_top_right {                                    
+	        width: 254px;            
+            height: 116px;
+            margin-left: 25px;
+            a, img {
                 display: inline-block;
-                font-weight: bold;                
-                font-size: $font14;               
-                width: 100%;                
-                display: -webkit-box;
-                overflow: hidden;
-                max-height: 4.2em;
-                line-height: 1.4em;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-                text-overflow: ellipsis;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-                word-wrap: break-word;
-                text-decoration: none;
+                width: 100%;
+                height: 100%;
+            }
+        }         
+    }
+
+    // 신규상장, 턴어라운드, PER
+    .new_listing {
+        @mixin tabarea {
+            ul {
+                display: flex;
+                background: url('/img/dot_gray.png') repeat-x left calc(100% + 1px);
+                li {                                    
+                    cursor: pointer;
+                    font-size: 20px;
+                    letter-spacing: -0.5px;
+                    color: #656d7e;
+                    margin-left: 22px;
+                    padding-bottom: 8px;
+                    box-sizing: border-box;
+                    
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &.active {
+                        padding-bottom: 8px;
+                        border-bottom: 3px solid #3655d6;
+                        font-size: 20px;
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.5px;                            
+                        color: #3655d6;
+                    }
+                }    
             }            
         }
+
+        .left {
+            border-radius: 5px;
+            background-color: #fff;
+            width: calc(100% / 2);
+            padding: 20px 30px;
+            box-sizing: border-box;
+
+            .new_tabs {
+                .tab_area {                
+                    @include tabarea;                    
+                }                
+            }
+        }        
+        .right {            
+            @mixin box_style {
+                padding: 20px 30px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                background-color: #fff;                
+            }            
+            width: calc(100% / 2 - 25px);
+
+            .top {
+                @include box_style;                
+                .turn_tabs {
+                    .tab_area {                
+                        @include tabarea;                    
+                    }                
+                }
+                
+            }
+            .btm {
+                margin-top: 15px;                
+                @include box_style;       
+                padding: 0;       
+                .title {                 
+                    border-top-left-radius: 5px;                       
+                    border-top-right-radius: 5px;                                           
+                    padding: 9px 36px;       
+                    font-weight: normal;
+                    font-size: 16px;                    
+                    letter-spacing: -0.4px;                    
+                    color: #222;                    
+                    background: #eceff5 url('/img/icon_chartFill.svg') no-repeat 13px center;
+                    strong {
+                        color: #3655d6; 
+                        font-weight: $f_sizeB;
+                    }                   
+                }  
+                .table_box {
+                    overflow: hidden;                    
+                    padding: 0 13px 15px;
+                }
+            }
+        }
+               
+        margin-top: 15px;
+        display: flex;        
+        justify-content: space-between;     
+        
+        // 신규상장
+        .newListing_table {
+            @include newListingTable_style;                                                                      
+        }
+
+        // 배당배력
+        .alloListing_table {
+            @include newListingTable_style;                                 
+        }
+
+        // 인기종목
+        .hotListing_table {
+            @include newListingTable_style;                        
+
+            .attention_box {
+                position: relative;
+                padding-left: 14px;                
+                .attention {
+                    // 하트 크기
+                    @mixin whpx {
+                        width: 8px;
+                        height: 8px;                        
+                    }
+                    background-color: #bfc8d6;
+                    position: absolute;
+                    top: 8px;
+                    left: 0;
+                    @include whpx;                    
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    -webkit-animation-name: beat;
+                    animation-name: beat;
+                    -webkit-animation-duration: 1s;
+                    animation-duration: 1s;
+                    -webkit-animation-iteration-count: infinite;
+                    animation-iteration-count: infinite;
+
+                    &:after {
+                        background-color: #bfc8d6;
+                        content: "";
+                        border-radius: 50%;
+                        position: absolute;
+                        @include whpx;                    
+                        top: 0px;
+                        left: 4px;
+                    }
+
+                    &:before {
+                        background-color: #bfc8d6;
+                        content: "";
+                        border-radius: 50%;
+                        position: absolute;
+                        @include whpx;                    
+                        top: -4px;
+                        left: 0px;
+                    }
+
+                    &.on,
+                    &.on:after,
+                    &.on:before {
+                        background-color: #ff6f6f;
+                    }
+                }
+            }
+            td.txt_L {
+                text-align: left;
+            }
+        }
+        
+        // 턴어라운드
+        .turnListing_table {
+            @include newListingTable_style;                        
+            &:last-child {        
+                margin-top: 15px;        
+                &::before {
+                    display: none;
+                }
+                thead {                    
+                    visibility: initial;
+                    th, td {
+                        padding: 0;                        
+                        height: 0;
+                    }                    
+                }   
+            }    
+        }
+
+        .new_tabs {            
+            tbody {
+                td {                    
+                    padding: 0 12px;
+                    box-sizing: border-box;
+                    text-align: right;                
+                    &:nth-child(1) {
+                        padding: 5px 0;
+                    }
+                    &:nth-child(2) {
+                        padding-right: 30px;
+                    }
+                }            
+            }  
+        }
+
+        // MRI
+        .mriListing_table {
+            @include newListingTable_style;                        
+            &:last-child {        
+                margin-top: 15px;        
+                &::before {
+                    display: none;
+                }
+                thead {                    
+                    visibility: initial;
+                    th, td {
+                        padding: 0;                        
+                        height: 0;
+                    }                    
+                }   
+            }    
+        }
+
+        // PER
+        .perListing_table {
+            @include newListingTable_style;                          
+            float: left;
+            width: calc(100% / 2 - 20px);                        
+
+            thead {
+                th {
+                    padding-bottom: 6px !important;         
+                }
+            }  
+            tbody {
+                td {
+                    &.name {                        
+                        width: 110px;
+                        max-width: 110px;                                                    
+
+                        a {                            
+                            max-width: 110px;                                                    
+                            padding-right: 10px;                            
+                        }
+                    }
+                }
+            }
+
+            &:last-child {                        
+                margin-top: 15px;        
+                float: right;            
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -20px;                    
+                    top: 0;
+                    width: 1px;
+                    height: 118px;                    
+                    background-color: #e7eaf2;                    
+                    
+                }
+                thead {                                                            
+                    visibility: inherit;
+                }   
+            }    
+        }
     }
-}
 
-/* 종목노트 하단레시피 리스트 */
-.globalStock .main_mid.recipe_list {
-	margin-top: 50px;
+    // 업종별 재무비율, 마켓차트, 상승하락종목, 스파이더차트, 최신 실적 재무데이터
+    .btm_layBox {        
+        clear: both;
+        position: relative;
+        margin-top: 55px;
 
-    .list_area .mainrecipeSwiper {
-        padding: 0 14px;
-        box-sizing: border-box;
-
-        .swiper-slide {
-            display: block;
-            width: auto;	
-        }
-        .swiper-slide a {
-            position: relative;
-            display: block;
-            text-align: center;		
-        }
-        .swiper-slide a strong {	
-            display: block;
-            color: $colsilver;
-            font-size: $font12;
-            margin-top: 7px;
-        }
-        .swiper-slide a::before {
+        &::after {            
             content: "";
-            display: block;
-            width: 96px;	
-            height: 96px;
-            background: #ffb37b url('/img/icon_recipe_list.svg') no-repeat 0 12px;
-            background-size: auto 70px;
-            border-radius: 50%;	
-        }  
-        .swiper-slide:nth-child(3n - 1) a::before {            
-            background-color: #FFDC7E;
-        }    
-        .swiper-slide:nth-child(3n) a::before {            
-            background-color: #CCD1D5;
-        }    
-        .swiper-slide:nth-child(1) a::before {            
-            background-position: 13px 12px;            
+            display: table;
+            table-layout: fixed;
+            clear: both;
         }
-        .swiper-slide:nth-child(2) a::before {            
-            background-position: -68px 14px;              
-            background-size: auto 64px;
+        
+        // 업종별 재무비율, 마켓차트, 최신 실적 재무데이터
+        .left {            
+            min-height: 100px;
+            float: left;            
+            width: calc(100% - 254px - 26px);
+            // 업종별 재무비율
+            .ratio_box {                
+                margin-bottom: 55px;
+                .title {
+                    font-size: 20px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.5px;                    
+                    color: #3655d6;                    
+                }
+                .line_swbox {                    
+                    position: relative;                    
+                    .table_update {
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
+                        font-size: 12px;
+                        line-height: 2.5;
+                        letter-spacing: -0.3px;
+                        text-align: right;
+                        color: #b1b9cb;              
+                    } 
+                    .table_div {                        
+                        position: relative;
+                        float: left;
+                        width: calc(100% / 2 - 20px);                        
+                        
+                        &:last-child {                                                
+                            float: right;                            
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: -20px;                    
+                                top: 47px;
+                                width: 1px;
+                                height: 106px;                    
+                                background-color: #e7eaf2;                    
+                            }      
+                        }
+                        
+                        .table {                    
+                            width: 100%;
+                            th, td {
+                                padding: 9px 0 6px;
+                                background: none;                                
+                            }
+                            thead {
+                                th {
+                                    font-size: 12px;
+                                    font-weight: normal;                                    
+                                    letter-spacing: -0.3px;                                    
+                                    color: #b1b9cb;                                    
+                                }
+                            }
+                            tbody {
+                                td {
+                                    font-size: 14px;                                                                        
+                                    letter-spacing: -0.35px;
+                                    color: #656d7e;                                    
+                                    padding: 5px 0;
+                                    padding-right: 5px;
+                                    box-sizing: border-box;
+                                    text-align: right;
+
+                                    &.name {                        
+                                        width: 150px;
+                                        max-width: 150px;                                                   
+                                        a {
+                                            @include white-space;
+                                            display: table-cell;
+                                            width: 100%;
+                                            max-width: 150px;                                                    
+                                            padding-right: 20px;
+                                            box-sizing: border-box;
+                                            font-size: 14px;
+                                            font-weight: $f_sizeB;
+                                            letter-spacing: -0.35px;                                
+                                            color: #222;
+                                        }
+                                    }
+                                }
+                            }                                                        
+                        } 
+                    }
+                    .ratio_boxboxswiper .swiper-wrapper .swiper-slide {                        
+                        border-top: 2px solid #7389af;
+                        border-bottom: 1px solid #bdc8d8;
+                        padding-bottom: 10px;
+                        margin-top: 15px;
+                    }
+                    .swiper-container-horizontal > .swiper-pagination-bullets {
+                        top: 6px;                        
+                        bottom: auto;
+                        text-align: left;
+                        padding-left: 145px;
+                    }
+                    .swiper-pagination .swiper-pagination-bullet {                        
+                        width: 10px;
+                        height: 10px;
+                    }
+                    .swiper-pagination .swiper-pagination-bullet-active {
+                        width: 30px;
+                        border-radius: 90px;
+                    }
+                    
+                }
+            }
+            // 마켓차트
+            .market_box {                
+                // margin-top: 55px;
+                position: relative;
+                .title {
+                    display: inline-block;
+                    font-size: 20px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.5px;                    
+                    color: #222;
+                }  
+                .table_update {
+                    position: absolute;
+                    right: 0;
+                    top: 13px;
+                    font-size: 12px;
+                    line-height: 2.5;
+                    letter-spacing: -0.3px;
+                    text-align: right;
+                    color: #b1b9cb;        
+                }                 
+
+                .chart_stand {
+                    display: inline-block;                    
+                    padding-left: 25px;
+
+                    label {
+                        cursor: pointer;
+                        &:last-child {
+                            margin-left: 15px;
+                        }
+                        span {
+                            padding: 0 3px 0 5px;
+                            font-size: 13px;                        
+                            letter-spacing: -0.65px;                        
+                            color: #656d7e;                        
+                        }
+                    }                    
+                }
+
+                .line_swbox {
+                    border-top: 2px solid #7389af;                    
+                    margin-top: 15px;
+                    .treemap_style {
+                        height: 555px;           
+                        text {                   
+                            font-size: 14px !important;                                     
+                            color: #fff !important;
+                            fill: #fff !important;
+                            font-weight: bold;
+                            text-shadow: none;
+                            tspan {                                
+                                stroke: none;                                                   
+                            }
+                            .highcharts-br {
+                                background-color: red;
+                            }
+                        }             
+                    }
+                }
+            }
+            // 최신 실적 재무데이터
+            .result_box {                
+                margin-top: 45px;                
+                // margin-bottom: 55px;
+                .title {
+                    font-size: 20px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.5px;                    
+                    color: #3655d6;                    
+                }
+                .line_swbox {                    
+                    position: relative;                    
+                    .table_update {
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
+                        font-size: 12px;
+                        line-height: 2.5;
+                        letter-spacing: -0.3px;
+                        text-align: right;
+                        color: #b1b9cb;              
+                    } 
+                    .table_div {                        
+                        position: relative;
+                        float: left;
+                        width: calc(100% / 2 - 20px);                        
+                        
+                        &:last-child {                                                
+                            float: right;                            
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: -20px;                    
+                                top: 47px;
+                                width: 1px;
+                                height: 106px;                    
+                                background-color: #e7eaf2;                    
+                            }      
+                        }
+                        
+                        .table {                    
+                            width: 100%;
+                            th, td {
+                                padding: 9px 0 6px;
+                                background: none;                                
+                            }
+                            thead {
+                                th {
+                                    font-size: 12px;
+                                    font-weight: normal;                                    
+                                    letter-spacing: -0.3px;                                    
+                                    color: #b1b9cb;                                    
+                                }
+                            }
+                            tbody {
+                                td {                                                     
+                                    font-size: 14px;                                                                        
+                                    letter-spacing: -0.35px;
+                                    color: #656d7e;                                    
+                                    padding: 5px 0;
+
+                                    &.name {                        
+                                        width: 150px;
+                                        max-width: 150px;                                                   
+                                        a {
+                                            @include white-space;
+                                            display: table-cell;
+                                            width: 100%;
+                                            max-width: 150px;                                                    
+                                            padding-right: 20px;
+                                            box-sizing: border-box;
+                                            font-size: 14px;
+                                            font-weight: $f_sizeB;
+                                            letter-spacing: -0.35px;                                
+                                            color: #222;
+                                        }
+                                    }                                    
+                                }
+                            }                                                        
+                        } 
+                    }
+                    .result_boxswiper .swiper-wrapper .swiper-slide {                        
+                        border-top: 2px solid #7389af;
+                        border-bottom: 1px solid #bdc8d8;
+                        padding-bottom: 10px;
+                        margin-top: 15px;
+                    }
+                    .swiper-container-horizontal > .swiper-pagination-bullets {
+                        top: 6px;                        
+                        bottom: auto;
+                        text-align: left;
+                        padding-left: 185px;
+                    }
+                    .swiper-pagination .swiper-pagination-bullet {                        
+                        width: 10px;
+                        height: 10px;
+                    }
+                    .swiper-pagination .swiper-pagination-bullet-active {
+                        width: 30px;
+                        border-radius: 90px;
+                    }
+                    
+                }
+
+                // 최신 실적 재무데이터
+                .season_data {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 9px 0 0;             
+                    &::after {            
+                        content: "";
+                        display: table;
+                        table-layout: fixed;
+                        clear: both;
+                    }
+                    .season_table {        
+                        position: relative;                            
+                        width: 100%;                        
+                        box-sizing: border-box;                        
+                        &:nth-child(2) {
+                            margin-left: 30px;                            
+                        }
+                        &:first-child::after {
+                            content: '';
+                            position: absolute;                            
+                            right: -12px;
+                            bottom: 5px;
+                            width: 1px;                        
+                            height: 107px;                            
+                            background-color: #e7eaf2;
+                        }
+
+                        th, td {
+                            text-align: left;                
+                            vertical-align: middle;
+                            font-size: 16px;                    
+                            letter-spacing: -0.4px;                    
+                            color: #222;
+                            &.txt_c {
+                                text-align: center;
+                            }   
+                        }
+                        thead {
+                            th {
+                                padding-bottom: 5px;
+                                font-size: 12px;                    
+                                letter-spacing: -0.3px;                    
+                                color: #b1b9cb;
+                            }
+                        }   
+                        tbody {
+                            td {
+                                padding: 5px 2px;
+                                font-size: 14px;                                
+                                &.dvsion {
+                                    display: inline-block;                                    
+                                    border-radius: 3px;
+                                    padding: 1px 5px;
+                                    // background-color: #d9e6ff;
+                                    background-color: red;
+                                    font-size: 10px;
+                                    font-weight: $f_sizeS;                            
+                                    letter-spacing: -0.5px;
+                                    text-align: center;
+                                    color: #656d7e;                                                
+                                    &.result {
+                                        color: #fff;
+                                        background-color: #b1b9cb;                                
+                                    }                
+                                }
+                                &.name {               
+                                    padding-left: 10px;                                    
+                                    width: 80px;                                             
+                                    max-width: 80px;                                                    
+
+                                    a {
+                                        @include white-space;
+                                        display: table-cell;
+                                        width: 100%;
+                                        max-width: 95px;                                                    
+                                        padding-right: 20px;
+                                        box-sizing: border-box;
+                                        font-size: 14px;
+                                        font-weight: $f_sizeB;
+                                        letter-spacing: -0.4px;                                
+                                        color: #222;
+                                    }
+                                }                                
+                                &.up, &.down {                                    
+                                    text-align: right;
+                                    padding-right: 5px;
+                                    .price {
+                                        font-size: 14px;                                
+                                        letter-spacing: -0.4px;                                
+                                        color: #222;
+                                    }                        
+                                    .per {
+                                        padding-left: 2px;                                
+                                        font-size: 12px;                                
+                                        letter-spacing: -0.3px;                                
+                                        color: #d30000;
+                                    }
+                                }
+                                &.down {
+                                    .per {                            
+                                        color: #0052ff;
+                                    }                        
+                                }
+                                &.cpson {
+                                    text-align: center;                            
+                                    font-size: 12px;                                                        
+                                    letter-spacing: -0.35px;
+                                    &.deficit {
+                                        color: #d30000;
+                                    }        
+                                    &.bk_check {
+                                        color: #0052ff;
+                                    }                    
+                                }
+                                &.trans {
+                                    text-align: center;
+                                    span {
+                                        display: inline-block;
+                                        padding: 1px 3px;
+                                        font-size: 12px;                            
+                                        letter-spacing: -0.5px;
+                                        text-align: center;
+                                        border-radius: 3px;                            
+                                    }
+                                    &.deficit {
+                                        span {                                            
+                                            color: #0052ff;
+                                        }                                        
+                                    }        
+                                    &.bk_check {
+                                        span {                                            
+                                            color: #d30000;
+                                        }
+                                    }           
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-        .swiper-slide:nth-child(3) a::before {            
-            background-position: -165px 12px;                  
-        }
-        .swiper-slide:nth-child(4) a::before {            
-            background-position: -255px 16px;           
-        }
-        .swiper-slide:nth-child(5) a::before {            
-            background-position: -344px 15px;            
-        }
-        .swiper-slide:nth-child(6) a::before {            
-            background-position: -434px 11px;                 
-        }
-        .swiper-slide:nth-child(7) a::before {            
-            background-position: -475px 17px;              
-            background-size: auto 64px;
+
+        // 상승종목, 하락종목, 스파이더 차트
+        .right {         
+            float: right;   
+            width: 254px;
+            min-height: 100px;
+            // position: absolute;            
+            // right: 0;
+            // top: 0;
+
+            // 상승종목, 하락종목
+            .updown_tabs {                
+                .tab_area {
+                    ul {
+                        display: flex;                                      
+                        background: url('/img/dot_gray.png') repeat-x left bottom;
+                        li {                
+                            flex: 1;
+                            cursor: pointer;                            
+                            padding: 7px 0 8px;
+                            text-align: center;                                      
+                            font-size: 18px;                            
+                            letter-spacing: -0.45px;                            
+                            color: #656d7e;                                                     
+                            &:first-child {
+                                &::after {
+                                    content: '';
+                                    display: inline-block;                                    
+                                    width: 22px;                                
+                                    height: 22px;
+                                    padding: 3px 3px;
+                                    box-sizing: border-box;                                
+                                    background: url('/img/tabcon_up.svg') no-repeat center bottom;                                                                    
+                                    filter: grayscale(100%);
+                                }
+                                &.active {                   
+                                    border-bottom: 2px solid #d30000;                                                          
+                                    color: #d30000;
+                                    font-weight: $f_sizeB;          
+                                    &::after {                                                                                
+                                        filter: grayscale(0%);
+                                    }                      
+                                }
+                            }
+                            &:last-child {
+                                &::after {
+                                    content: '';
+                                    display: inline-block;                                    
+                                    width: 22px;                                
+                                    height: 22px;
+                                    padding: 3px 3px;
+                                    box-sizing: border-box;                                
+                                    background: url('/img/tabcon_down.svg') no-repeat center bottom;                                                                    
+                                    background-size: 12px 13px;
+                                    filter: grayscale(100%);
+                                }
+                                &.active {
+                                    border-bottom: 2px solid #3655d6;                                                          
+                                    color: #3655d6;
+                                    font-weight: $f_sizeB;                                
+                                    &::after {                                                                                
+                                        filter: grayscale(0%);
+                                    }                      
+                                }
+                            }                            
+                        }    
+                    }    
+                }
+                .tab_content {
+                    padding: 10px 0 0;
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 5px 12px;
+                        a.name {
+                            @include white-space;
+                            display: table-cell;
+                            width: 100%;
+                            max-width: 110px;                                                    
+                            padding-right: 10px;
+                            box-sizing: border-box;
+                            font-size: 14px;
+                            font-weight: $f_sizeB;                            
+                            letter-spacing: -0.35px;                            
+                            color: #656d7e;
+                        }
+                        
+                        .up, .down {
+                            .price {
+                                font-size: 14px;                                
+                                letter-spacing: -0.35px;                                
+                                color: #656d7e;
+                            }                        
+                            .per {
+                                padding-left: 2px;
+                                font-size: 12px;                            
+                                letter-spacing: -0.25px;
+                                color: #d30000;
+                            }
+                        }
+                        .down {
+                            .per {                            
+                                color: #0052ff;
+                            }                        
+                        }
+                    }
+                }
+            }
+
+            // 스파이더 차트
+            .spider_area {
+                margin-top: 30px;
+                border-radius: 5px;
+                padding: 15px 0;
+                box-sizing: border-box;
+                background-color: #eceff5;
+
+                .data_area {                    
+                    position: relative;   
+                    padding: 0 15px 10px;                    
+                    .name {           
+                        a {
+                            @include white-space;                                  
+                            display: block;                            
+                            width: 100%;
+                            padding-right: 10px;
+                            box-sizing: border-box;
+                            font-size: 16px;
+                            font-weight: normal;                        
+                            letter-spacing: -0.4px;                        
+                            color: #222;                                                        
+                            &::after {
+                                content: '';
+                                width: 8px;
+                                height: 8px;
+                                border-top: 1px solid $colpmr;
+                                border-right: 1px solid $colpmr;
+                                transform: rotate(45deg);
+                                display: inline-block;
+                                position: absolute;
+                                right: 20px;
+                                top: 8px;                                
+                            }
+                        }
+                    }
+                    .detail {                                        
+                        .price {
+                            display: inline-block;
+                            font-size: 20px;
+                            font-weight: $f_sizeB;                            
+                            letter-spacing: -0.5px;                            
+                            color: #222;
+                            .unit {
+                                display: inline-block;
+                                padding-left: 1px;
+                                font-size: 16px;
+                                font-weight: normal;                        
+                                letter-spacing: -0.4px;                        
+                                color: #222;
+                            }
+                        }                
+                        .per {        
+                            padding-left: 3px;                
+                            font-size: 14px;                            
+                            letter-spacing: -0.35px;                            
+                            color: $colup;                    
+                        }
+                        &.up {
+                            .per {                                            
+                                color: $colup;
+                            }
+                        }
+                        &.down {
+                            .per {                                            
+                                color: #0052ff;
+                            }                    
+                        }
+                    }
+                }
+
+                .perlist_area {
+                    border-top: 1px solid #dbdfed;                    
+                    padding: 10px 0 0;
+                    margin: 0 15px;
+                    .perListing_table {
+                        width: 100%;                
+                        th, td {
+                            text-align: left;                            
+                        }
+                        th {
+                            font-size: 12px;                            
+                            letter-spacing: -0.3px;                            
+                            color: #b1b9cb;
+                        }
+                        td {
+                            font-size: 16px;                            
+                            letter-spacing: -0.4px;                            
+                            color: #222;
+                        }
+                    }
+                }
+
+                .chart_box {
+                    text-align: center;
+                    .containercharm1 {                              
+                        // background-color: #fff;                                      
+                        padding-top: 30px;                                 
+                        height: 200px;
+                    }                    
+                }
+            }            
         }
     }    
+
+    // 하단 배너    
+    .btm_banner {
+        background-color: #dbdfed;
+        margin-top: 60px;
+        a, img {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // 메인 시즌
+    .resultdata_area {
+        background-color: red;
+        margin-top: 25px;
+        margin-bottom: 65px;
+        background-color: #fff;
+
+        .season {
+            display: flex;
+            justify-content: space-between;
+            border-top: 4px solid $colpmr;
+            border-bottom: 4px solid #e2e7f2;
+            background-color: #f7f7f8;
+            .box {
+                flex: 1 1 auto;
+                position: relative;
+                padding: 13px 2% 13px 13%;
+                border-right: 1px solid #e2e7f2;                
+
+                &:first-child {                    
+                    padding-left: 100px;
+                    &::before {
+                        content: '';
+                        display: inline-block;                        
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 83px;
+                        height: 100%;
+                        background: $colpmr url('/img/bg_filechart.svg') no-repeat center center;
+                    }
+                }
+                
+                .title {                    
+                    font-size: 24px;
+                    font-weight: $f_sizeB;
+                    color: #37c60c;
+                }
+                .txt {                    
+                    font-size: 16px;
+                    font-weight: $f_sizeB;                    
+                    letter-spacing: -0.4px;
+                    color: #222;                    
+                    .update {
+                        float: right;
+                        font-size: 12px;                    
+                        line-height: 23px;
+                        letter-spacing: -0.3px;                    
+                        color: #b1b9cb;                        
+                    }
+                }                
+                .sub_title {              
+                    position: absolute;      
+                    left: 8%;
+                    top: 35px;
+                    display: inline-block;
+                    border-radius: 3px;
+                    background-color: #d9e6ff;
+                    font-weight: $f_sizeS;
+                    padding: 2px 10px;
+                    font-size: 10px;                    
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    color: #656d7e;
+                    &.import {
+
+                    }
+                    &.all {
+                        background-color: #97a3c9;
+                        color: #fff;
+                    }
+                }
+                .subject {
+                    dt {
+                        font-size: 22px;
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.55px;
+                        color: #3655d6;
+                        .num {
+                            font-size: 14px;                            
+                            letter-spacing: -0.35px;                            
+                            color: #3655d6;                            
+                        }
+                    }
+                    dd {
+                        padding-top: 5px;
+                        font-size: 12px;                        
+                        letter-spacing: -0.3px;                        
+                        color: #656d7e;
+                    }
+                }
+            }
+        }
+
+        // 실적 재무데이터 업데이트 테이블
+        .season_data {
+            padding: 25px 30px;                
+            &::after {            
+                content: "";
+                display: table;
+                table-layout: fixed;
+                clear: both;
+            }
+            .season_table {        
+                position: relative;    
+                width: calc(50% - 2.5%);                            
+                box-sizing: border-box;
+
+                &:nth-child(3),
+                &:nth-child(4) {
+                    margin-top: 60px;                    
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                        top: -30px;
+                        width: 100%;
+                        height: 1px;
+                        border-top: 1px solid #e7eaf2;
+                    }
+                    thead {                    
+                        visibility: collapse;
+                        th, td {
+                            padding: 0;                        
+                            height: 0;
+                        }                    
+                    }  
+                }
+
+                &:nth-child(1),
+                &:nth-child(3) {                    
+                    float: left;
+                }
+                &:nth-child(2),
+                &:nth-child(4)  {                    
+                    float: left;
+                    margin-left: 5%;
+                }
+
+                th, td {
+                    text-align: left;                
+                    vertical-align: middle;
+                    font-size: 16px;                    
+                    letter-spacing: -0.4px;                    
+                    color: #222;
+                    &.txt_c {
+                        text-align: center;
+                    }   
+                }
+                thead {
+                    th {
+                        padding-bottom: 3px;
+                        font-size: 12px;                    
+                        letter-spacing: -0.3px;                    
+                        color: #b1b9cb;
+                    }
+                }   
+                tbody {
+                    td {
+                        padding: 5px 0;
+                        &.dvsion {
+                            display: inline-block;
+                            vertical-align: sub;
+                            border-radius: 3px;
+                            padding: 1px 5px;
+                            background-color: #d9e6ff;
+                            font-size: 10px;
+                            font-weight: $f_sizeS;                            
+                            letter-spacing: -0.5px;
+                            text-align: center;
+                            color: #656d7e;            
+                            &.import { 
+
+                            }                
+                            &.all {
+                                color: #fff;
+                                background-color: #97a3c9;                                
+                            }                
+                        }
+                        &.name {                        
+                            width: 110px;
+                            max-width: 110px;                                                    
+
+                            a {
+                                @include white-space;
+                                display: table-cell;
+                                width: 100%;
+                                max-width: 110px;                                                    
+                                padding-right: 20px;
+                                box-sizing: border-box;
+                                font-size: 16px;
+                                font-weight: $f_sizeB;
+                                letter-spacing: -0.4px;                                
+                                color: #222;
+                            }
+                        }
+                        &.up, &.down {
+                            .price {
+                                font-size: 16px;                                
+                                letter-spacing: -0.4px;                                
+                                color: #222;
+                            }                        
+                            .per {
+                                padding-left: 2px;                                
+                                font-size: 12px;                                
+                                letter-spacing: -0.3px;                                
+                                color: #d30000;
+                            }
+                        }
+                        &.down {
+                            .per {                            
+                                color: #0052ff;
+                            }                        
+                        }
+                        &.cpson {
+                            text-align: center;                            
+                            font-size: 14px;                                                        
+                            letter-spacing: -0.35px;
+                            &.deficit {
+                                color: #d30000;
+                            }        
+                            &.bk_check {
+                                color: #0052ff;
+                            }                    
+                        }
+                        &.trans {
+                            text-align: center;
+                            span {
+                                display: inline-block;
+                                padding: 1px 3px;
+                                font-size: 10px;                            
+                                letter-spacing: -0.5px;
+                                text-align: center;
+                                border-radius: 3px;                            
+                            }
+                            &.deficit {
+                                span {
+                                    border: 1px solid #1e51f5;
+                                    color: #0052ff;
+                                }
+                            }        
+                            &.bk_check {
+                                span {
+                                    border: 1px solid #d30000;
+                                    color: #d30000;
+                                }                               
+                            }      
+                                          
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
 }

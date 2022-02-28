@@ -1,0 +1,469 @@
+// 투자대가
+
+// 상단 top_invest 박스
+@mixin top_invest {
+    
+    background: #f4f6fa;         
+    padding: 7px 7px;   
+
+    .sum_txt {
+        padding: 2px 7px 0;               
+        font-size: 13px;            
+        line-height: 1.54;
+        letter-spacing: -0.33px;            
+        color: #656d7e;
+    }
+
+    .stand_standard {    
+        display: flex;
+        justify-content: space-between;	
+        margin-top: 12px;
+        padding: 22px 0 22px 22px;
+        border-radius: 10px;                            
+        &.face_buffett {
+            // background:#fff url('/img/face_buffett.svg') no-repeat left bottom;
+            // background-size: initial;
+            background:#fff url('/img/face_buffett.png') no-repeat left bottom;
+            background-size: 102px auto;            
+        }
+        &.face_graham {            
+            background:#fff url('/img/face_graham.png') no-repeat left bottom;
+            background-size: 102px auto;            
+        }
+        &.face_templeton {
+            background:#fff url('/img/face_templeton.png') no-repeat left bottom;
+            background-size: 102px auto;            
+        }
+        &.face_lynch {
+            background:#fff url('/img/face_lynch.png') no-repeat left bottom;
+            background-size: 102px auto;            
+        }
+        &.face_greenblatt {
+            background:#fff url('/img/face_greenblatt.png') no-repeat left bottom;
+            background-size: 102px auto;            
+        }
+
+        .left {                
+            width: 150px;          
+            padding: 0 15px;      
+            box-sizing: border-box;
+            .title {
+                text-align: right;
+                font-size: 14px;
+                font-weight: $f_sizeB;                                        
+                letter-spacing: -0.35px;                    
+                color: #3655d6;                    
+            }                
+        }
+        .cen {
+            position: relative;                
+            text-align: left;
+            width: calc(100% - 150px);             
+            padding: 0 0 0 15px;      
+            box-sizing: border-box;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                background-color: #e7eaf2;                    
+            }
+
+            .stand_from {
+                display: flex;
+                justify-content: space-between;	
+
+                .from_box {
+                    width: calc(100% - 110px);          
+                    .label {                        
+                        font-size: 0;                            
+
+                        .label_chk {                                   
+                            vertical-align: top;
+                            position: relative;
+                            display: inline-block;
+                            width: calc(100% / 2 - 5px);                                
+                            padding-right: 30px;
+                            margin-top: 8px;                                     
+                            box-sizing: border-box;                            
+                            cursor: pointer;                                
+
+                            &:nth-child(1), 
+                            &:nth-child(2) {
+                                margin-top: 0;
+                            }
+
+                            input[type="checkbox"] {
+                                display: none;
+
+                                & + label {
+                                    cursor: pointer;
+                                    display: inline-block;                                
+                                    font-size: 13px;                                
+                                    letter-spacing: -0.33px;
+                                    color: #656d7e;
+                                    padding-left: 18px;
+    
+                                    i {
+                                        position: absolute;
+                                        left: 0;
+                                        top: 2px;
+                                        display: inline-block;
+                                        width:14px;
+                                        height: 14px;                                
+                                        background: url('/img/icon_agreecheck.svg') no-repeat right 0;
+                                    }
+                                }
+                                &:checked + label {
+                                    display: inline-block;                                
+                                    i {                                                                        
+                                        background-position: 0 0;
+                                    }
+                                }                                                                
+                            }
+                            .vote-num{                                
+                                width: 100%;
+                                font-size: 13px;                    
+                                letter-spacing: -0.33px;                    
+                                color: #656d7e;    
+                            }
+                        }
+                    }                    
+                }
+            }
+
+            .right {
+                position: relative;
+                width: 110px;          
+                padding-top: 2px;                    
+                box-sizing: border-box;
+                text-align: center;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    width: 1px;
+                    background-color: #e7eaf2;                    
+                }
+                
+                .btn_submit {                    
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #3655d6;
+                    padding: 7px 25px;
+                    color: #fff;            
+                    font-size: 13px;
+                }
+                .help_box {
+                    display: inline-block;
+                    position: relative;
+                    cursor: pointer;                    
+                    font-size: 10px;                
+                    letter-spacing: -0.5px;                                
+                    padding-bottom: 1px;
+                    margin-top: 10px;
+                    margin-left: 15px;                
+                    color: #656d7e;                
+                    border-bottom: 1px solid #656d7e;   
+                    opacity: 0.4;
+                    
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        position: absolute;    
+                        left: -15px;                    
+                        top: 2px;
+                        width: 12px;
+                        height: 12px;
+                        background: url('/img/icon_help.svg') no-repeat 0 0;                    
+                    }     
+                }
+                
+            }
+
+            
+        }
+    }
+}
+  
+#container .M_right .contents .invest_area.buffett {
+    position: relative;
+
+    @at-root .top_invest {
+        
+        @include top_invest;
+
+        &.buffett {
+            // 워렌버핏 전용            
+        }       
+    }
+    .table_update {
+        position: absolute;
+        right: 0;
+        top: -19px;
+        display: block;            
+        font-size: 10px;
+        letter-spacing: -0.25px;
+        text-align: right;
+        color: #b1b9cb;            
+    } 
+    .thead2_table {
+        border-top: none;                  
+        td.bdr_r {
+            // border-right: 1px solid #e7eaf2;
+        }
+
+        thead {                
+            th, td {                
+                padding:8.5px 8px;                         
+                vertical-align: middle;                                                                 
+            }
+            tr:first-child {                
+                th {
+                    strong {
+                        color: #fff;
+                    }
+                    &:nth-child(1) {
+                        background: $colpmr;
+                    }                    
+                    &:nth-child(2) {
+                        background: #7489af;
+                    }                    
+                    &:nth-child(3) {
+                        background: #7b93f4;
+                    }                    
+                }
+            }
+            tr:last-child {
+                th, td {
+                    strong {
+                        font-size: 12px;                                                
+                    }                    
+                    // padding: 3.5px 5px;
+                    // letter-spacing: -1px;                    
+                }
+                td { 
+                                       
+                    &:nth-child(n + 3) {
+                        font-size: 12px;                                                
+                    }
+                    &:nth-child(2) {
+                        position: relative;                                                
+                        height: 50px;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            right: -12px;
+                            top: 0;
+                            bottom: 0;
+                            width: 12px;
+                            height: 49px;
+                            background: url("../img/fix_shadow.svg") repeat-y 0 0;
+                        }
+                    }                    
+                }
+            }
+            
+        }
+        tbody {
+            td {                                                    
+                padding:8.5px 8px;                                                            
+                &:nth-child(2n + 1) {
+                    background-color: #f7f9fc;
+                }
+                &:first-child {
+                    width: 40px;
+                    box-sizing: border-box;
+                    padding:8.5px 8px;
+                }
+                &:first-child,
+                &:nth-child(2n) {
+                    background-color: #fff
+                }
+                &.txt_name {
+                    position: relative;
+                    padding:8.5px 12px 8.5px 7px;                                                                          
+                    a {
+                        color: #527bea;           
+                        @include white-space;     
+                        max-width: 100px;         
+                        
+                    }                    
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        right: -12px;
+                        top: 0;
+                        bottom: 0;
+                        width: 12px;
+                        height: 100%;
+                        background: url("../img/fix_shadow.svg") repeat-y 0 0;
+                    }
+                }        
+                .check {
+                    display: inline-block;
+                    width: 16px;
+                    height: 12px;                    
+                    background: url('/img/icon_check.svg') no-repeat center center;
+                    background-size: 12px auto;
+                }             
+            }            
+        }
+    }
+    .paginate {
+        margin-top: 30px;
+    }
+    
+}
+
+// 조엘 그린블라트 마법공식
+#container .M_right .contents .invest_area.greenblatt {
+    position: relative;
+
+    @at-root .top_invest {        
+        @include top_invest;
+
+        &.greenblatt {
+            // 마법공식 전용
+            .stand_standard {    
+                
+                .left {                
+                    width: 100px;                              
+                }
+                .cen {                    
+                    width: calc(100% - 100px);  
+
+                    .title {
+                        font-size: 14px;
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.35px;                        
+                        color: $coltxt;
+                        span {
+                            font-weight: $f_sizeB;
+                            color: $colpmr800;                            
+                        }
+                    }
+                    ul {
+                        margin-top: 5px;
+                        li {
+                            font-size: 13px;                        
+                            line-height: 1.62;
+                            letter-spacing: -0.33px;                        
+                            color: #656d7e;                        
+                        }
+                    }
+                }
+                
+            }
+        }   
+    }
+
+    .table_update {
+        position: absolute;
+        right: 0;
+        top: -19px;
+        display: block;            
+        font-size: 10px;
+        letter-spacing: -0.25px;
+        text-align: right;
+        color: #b1b9cb;            
+    }  
+
+    .thead2_table {           
+        td.bdr_r {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                background: #fff url("../img/gray_tdline.gif") repeat-y right top;
+            }            
+        }
+
+        th, td {
+            padding: 8.5px 12px;
+        }        
+        thead {    
+            background: #fff url('/img/gray_thline.gif') repeat-x left top;                    
+            tr:first-child {
+                th, td {
+                    background: #fff url('/img/gray_thline.gif') repeat-x left top;        
+                    &.fix {
+                        height: 60px;
+                        &::before {
+                            height: 59px;
+                        }
+                    }
+                }                    
+            }            
+
+            tr:nth-child(2) {
+                th, td {
+                    padding: 4px 3px;
+                    background: #fff url('/img/gray_tdline.gif') repeat-x left top !important;        
+                }                                    
+            }         
+            
+            th {
+                &.fix {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }  
+        tbody {
+            tr:first-child {
+                th, td {
+                    background-image: url('/img/gray_thline.gif');
+                    background-position: left top;
+                    background-repeat: repeat-x;                    
+                }                    
+            }  
+            th, td {                
+                background-image: url('/img/gray_tdline.gif');
+                background-position: left top;
+                background-repeat: repeat-x;                    
+                height: 34px;                
+                &.fix {
+                    &::before {                        
+                        min-height: 34px;
+                    }
+                }
+            }   
+            td {                
+                &:nth-child(2n - 1) {
+                    background-color: #f7f9fc;                                
+                }
+                &:first-child {
+                    background-color: #fff;
+                }
+                &.txt_name {                    
+                    a {
+                        color: #527bea;           
+                        @include white-space;     
+                        max-width: 100px;         
+                        
+                    }                           
+                }    
+            }    
+                              
+            tr:last-child {
+                border-bottom: 1px solid #e7eaf2;
+            }
+            
+        }        
+    }
+    
+}
+

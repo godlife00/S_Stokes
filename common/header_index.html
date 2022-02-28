@@ -1,0 +1,770 @@
+<div class="bgWrap">    
+    <div class="title">
+        <h1 class="h1_logo"><a href="index.html"><img src="img/h1_logo.png" alt="벨류라인"></a></h1>
+    </div>
+    <div class="gnb">
+        <ul>
+            <li class="analysis active"><a href="analysis/bill.html">재무분석</a></li>
+            <li class="excavation"><a href="excavation/blue_stocks.html">종목발굴</a></li>
+            <li class="invest"><a href="invest/buffett.html">투자대가</a></li>
+            <li class="sectors"><a href="sectors/roepbr.html">업종분석</a></li>
+        </ul>
+    </div>
+    <div class="searchArea">
+        <form action="" class="form_box">
+            <fieldset>
+                <input type="text" placeholder="종목명 또는 심볼을 입력하세요." class="searchInput">
+                <input type="image" src="img/search_btn.svg" alt="검색" class="searchBtn">
+            </fieldset>
+        </form>
+        <!-- 검색어 자동완성 -->
+        <div class="AutoComplete">
+            <!-- //자동완성 결과 노출 class : _show -->
+            <ul id="autocomplete_list">
+                <li><a href="#" class="_on">
+                    <span class="schCode">207940</span>
+                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                </a></li>                
+                <li><a href="#" class="_on">
+                    <span class="schCode">207940</span>
+                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                </a></li>                
+                <li><a href="#" class="_on">
+                    <span class="schCode">207940</span>
+                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                </a></li>                
+                <li><a href="#" class="_on">
+                    <span class="schCode">207940</span>
+                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                </a></li>                
+                <li><a href="#" class="_on">
+                    <span class="schCode">207940</span>
+                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
+                </a></li>                
+            </ul>
+            <div class="no_result">
+                <p>"<strong>ㄱㄴ</strong>"에 대한 검색결과가 없습니다.</p>
+            </div>
+            <!--<ul>
+                <li>
+                    <a href="">
+                        <strong>삼성</strong> Alerian 에너지인프라 MLP ETN(530033)
+                    </a>
+                </li>
+            </ul>-->
+        </div>
+        <!-- //AutoComplete 검색어 자동완성 끝 -->
+    </div>
+    <div class="premium">
+        <a href="inform/inform_list.html" class="" style="color:#fff">알립니다.</a>
+        <a href="#" class="my_info" style="color:#fff">내정보</a>
+        <a href="#" class="join">프리미엄 가입</a>
+        <div class="loginId">
+            <span class="log">
+                <a href="#" class="login"><img src="img/login.png" alt="로그인"></a>
+                <!-- <a href="#" class="logout">로그아웃</a> -->
+            </span>
+            <!-- //log -->
+        </div>        
+    </div>
+</div>
+<!-- //header_bgWrap -->
+
+<!-- Modal popup -->
+<!-- 초이스스탁 통합회원 회원/비회원 로그인 스탭1 SNS 확인 -->
+<div class="modal login_form">
+    <div class="pop_header">
+        <h1 class="pop_title">초이스스탁 통합회원 로그인</h1>
+        <a href="#" class="clse" rel="modal:close">
+            <!--닫기-->
+        </a>
+    </div>
+    <div class="pop_con">
+        <ul class="sns">
+            <li><a href="#" class="sns_n open_step02"><span>네이버로 로그인</span></a></li>
+            <li><a href="#" class="sns_k open_step02"><span>카카오톡으로 로그인</span></a></li>
+        </ul>
+        <p class="guide_txt">네이버, 카카오 계정으로 간편하게 로그인 할 수 있습니다.</p>
+    </div>
+    <div class="pop_foot">
+        <h2 class="sub_title">초이스스탁 프리미엄 서비스</h2>
+        <ul class="guide_list">
+            <li><strong>밸류라인</strong>성공하는 투자자의 정석, 종목발굴 빅 데이터 서비스</li>
+            <li><strong>인더스트리워치</strong>성장주를 발굴하세요. 산업 통계 빅데이터 서비스</li>
+            <li><strong>초이스스탁US</strong>미국주식 쉽게 편리하게! 종목분석, 추천포트폴리오 서비스</li>
+        </ul>
+    </div>
+</div>
+<!-- 초이스스탁 통합회원 회원/비회원 로그인 스탭2 약관 동의 -->
+<div class="modal terms_form">
+    <div class="pop_header">
+        <h1 class="pop_title">초이스스탁 통합회원 로그인</h1>
+        <a href="#" class="clse" rel="modal:close">
+            <!--닫기-->
+        </a>
+    </div>
+    <!-- 비회원인 경우 -->
+    <div class="pop_con">        
+        <div class="loign_chk">
+            <div class="id_chk">
+                <p class="sns_name">네이버 아이디</p>
+                <p class="sns_chk">datahero33@naver.com</p>
+            </div>
+            <!-- //id_chk -->
+        </div>
+        <!-- //loign_chk -->        
+
+        <div class="agree_area">
+            <p class="txt">서비스 이용을 위해 약관을 확인하시고 동의해주세요.</p>
+            <div class="agree_from">
+                <div class="label">
+                    <p class="label_chk active">초이스스탁 서비스 약관에 동의합니다.</p>
+                    <a href="#" class="terms_btn">내용보기</a>
+                </div>
+                <div class="label">
+                    <p class="label_chk">개인정보 수집 및 이용에 동의합니다.</p>
+                    <a href="#" class="terms_btn">내용보기</a>
+                </div>
+                <div class="label sub_label">
+                    <p class="label_chk">뉴스레터, 특별 프로모션 정보를 수신합니다. (선택)</p>
+                </div>
+
+                <div class="btnArea">
+                    <a href="#" class="agr_btn open_step03">동의<i></i></a>
+                </div>
+            </div>
+            <!-- //agree_from -->
+        </div>
+        <!-- //agree_area -->
+    </div>
+
+    <!-- 기존 회원인 경우 -->
+    <div class="pop_con">        
+        <div class="loign_chk">
+            <div class="id_chk">
+                <p class="sns_name">네이버 아이디</p>
+                <p class="sns_chk">datahero33@naver.com</p>
+            </div>
+            <!-- //id_chk -->
+        </div>
+        <!-- //loign_chk -->        
+        <p class="member_sum"><b>초이스스탁 통합회원 아이디입니다.</b> (가입일 2021. 12/23)</p>
+
+        <div class="agree_area">
+            <p class="member_txt"><b>밸류라인 프리미엄 2주 무료 체험이 제공됩니다.</b> (최초 1회) </p>            
+            <p class="txt">서비스 이용을 위해 약관을 확인하시고 동의해주세요.</p>
+            <div class="agree_from">
+                <div class="label">
+                    <p class="label_chk active">프리미엄 서비스 무료체험 이용 동의(필수)</p>                    
+                </div>                
+                <div class="label sub_label">
+                    <p class="label_chk">뉴스레터, 특별 프로모션 정보를 수신합니다. (선택)</p>
+                </div>
+
+                <div class="btnArea">
+                    <a href="#" class="agr_btn open_step03">동의<i></i></a>
+                </div>
+            </div>
+            <!-- //agree_from -->
+        </div>
+        <!-- //agree_area -->
+    </div>
+</div>
+<!-- 초이스스탁 통합회원 회원/비회원 로그인 스탭3 가입 완료 -->
+<div class="modal sign_complete">
+    <div class="pop_header">
+        <h1 class="pop_title">초이스스탁 통합회원 로그인</h1>
+        <a href="#" class="clse" rel="modal:close">
+            <!--닫기-->
+        </a>
+    </div>
+    <div class="pop_con">
+        <div class="loign_com">
+            <!-- 비회원인 경우 -->
+            <div class="login_title">
+                <h2 class="title"><strong>초이스스탁 통합회원</strong> 가입이<br>완료되었습니다.</h2>
+                <p class="txt">신규 회원에게는 밸류라인 프리미엄 2주 무료체험이 제공됩니다.<br>밸류라인 프리미엄서비스를 마음껏 체험해보세요!</p>
+                <p class="txt_sum">(무료체험은 최초 1회만 제공되며, 기간 만료 시 자동 종료됩니다.)</p>
+            </div>
+            
+            <!-- 기존 회원인 경우 -->
+            <div class="login_title">
+                <h2 class="title"><strong>밸류라인 프리미엄</strong><br>2주 무료체험 시작!</h2>
+                <p class="txt">밸류라인 프리미엄서비스를 마음껏 체험해보세요!</p>
+                <p class="txt_sum">(무료체험은 최초 1회만 제공되며, 기간 만료 시 자동 종료됩니다.)</p>
+            </div>
+
+            <div class="">                
+                <div class="prm_guide">
+                    <h3 class="title">밸류라인 프리미엄</h3>
+                    <p class="sum">종목발굴 서비스와 데이터를 무제한으로 이용하세요.</p>
+                    <ul class="list">
+                        <li>기업분석을 위한 <b>10년 재무제표</b></li>
+                        <li>빅데이터 기반 종목발굴 <b>BIC차트</b></li>
+                        <li>기업의 강점/약점을 한눈에 <b>우량주</b></li>
+                        <li>데이터/차트 업종분석 <b>매트릭스 분석</b></li>
+                        <li>대가들의 투자법 <b>투자대가 가치주</b></li>
+                        <li>주요 <b>데이터 다운로드</b> 제공</li>
+                    </ul>
+                </div>
+                <!-- //prm_guide -->
+            </div>
+
+            <div class="btnArea">
+                <a href="index.html" class="join_btn">홈으로 이동</a>                
+            </div>
+        </div>
+    </div>    
+</div>
+
+
+<!-- 벨류라인 프리미엄 -->
+<div class="modal premium_join">
+    <div class="pop_header">
+        <h1 class="pop_title">밸류라인 프리미엄 <span>종목발굴 서비스와 데이터를 무제한으로 이용하세요.</span></h1>
+        <a href="#" class="clse" rel="modal:close">
+            <!--닫기-->
+        </a>
+    </div>
+
+    <div class="pop_con">
+        <table cellspacing="0" border="0" class="tableRanking type_compare">
+            <thead>
+                <tr>
+                    <th class="top_th"><span>벨류라인 프리미엄</span></th>
+                    <th class="top_th"><span>프리미엄</span></th>
+                    <th class="top_th"><span>무료</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="mid_td"><span>기업분석을 위한 10년 <b>재무제표</b></span></td>
+                    <td class="com_select"><span></span></td>
+                    <td class=""><span>항목제한</span></td>
+                </tr>
+                <tr>
+                    <td class="mid_td"><span>빅데이터 기반 종목발굴 <b>BIC차트</b></span></td>
+                    <td class="com_select"><span></span></td>
+                    <td class=""><span>샘플</span></td>
+                </tr>
+                <tr>
+                    <td class="mid_td"><span>기업의 강점/약점을 한눈에 <b>우량주</b></span></td>
+                    <td class="com_select"><span></span></td>
+                    <td class=""><span>샘플</span></td>
+                </tr>
+                <tr>
+                    <td class="mid_td"><span>데이터/차트 업종분석 <b>매트릭스 분석</b></span></td>
+                    <td class="com_select"><span></span></td>
+                    <td class=""><span></span></td>
+                </tr>
+                <tr>
+                    <td class="mid_td"><span>대가들의 투자법 <b>투자대가 가치주</b></span></td>
+                    <td class="com_select"><span></span></td>
+                    <td class=""><span></span></td>
+                </tr>
+                <tr>
+                    <td class="mid_td"><span>주요 <b>데이터 다운로드</b> 제공</span></td>
+                    <td class="com_select"><span></span></td>
+                    <td class=""><span></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="pop_foot">
+        <a href="#" class="join_btn open_payment"><b>프리미엄</b> 가입하기</a>
+
+        <ul class="link_menu">
+            <li><a href="#">프리미엄자세히보기</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- 내정보 -->
+<div class="modal mypage_info">
+    <div class="pop_header">
+        <h1 class="pop_title">내 정보</h1>
+        <a href="#" class="clse" rel="modal:close">
+            <!--닫기-->
+        </a>
+    </div>
+    <div class="pop_con">
+        <div class="mapage_area">
+            <div class="tab_area">
+                <ul class="term">
+                    <li class="active" rel="tab91">회원정보</li>
+                    <li rel="tab92">서비스&#47;결제내역</li>
+                </ul>
+            </div>
+            <!-- //tab_area -->
+            <div id="tab91" class="tab_content">
+                <div class="mapage_form">
+                    <form action="" method="post">
+                        <fieldset>
+                            <div class="form_table">
+                                <table cellspacing="0" border="0" class="">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">이름</th>
+                                            <td>
+                                                <div class="item">
+                                                    <p class="txt_info">데이터히어로</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">이메일</th>
+                                            <td>
+                                                <div class="item">
+                                                    <p class="txt_info">datahero@datahero.co.kr</p>
+                                                    <p class="i_dsc email">네이버ID로 가입하셨습니다.</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">성별</th>
+                                            <td>
+                                                <div class="item">
+                                                    <p class="txt_info">확인불가남여</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">휴대폰번호</th>
+                                            <td>
+                                                <div class="item">
+                                                    <div class="box">
+                                                        <p class="txt_info">010-1234-4321</p>
+                                                        <span class="mod_btn">휴대폰 번호 변경</span>
+                                                    </div>
+                                                    <p class="i_dsc phone">프리미엄회원에게는 휴대폰으로 종목추천&#47;관심종목 등 알림서비스가 제공됩니다.
+                                                    </p>
+                                                </div>
+
+                                                <!-- 휴대폰 번호 변경할 경우 보이는 영역 -->
+                                                <div class="item mod_phone">
+                                                    <p class="txt_info">변경할 휴대폰번호</p>
+                                                    <div class="box">
+                                                        <input type="number" name="" id="" class="phone_mod">
+                                                        <a href="" class="certifi_btn">인증문자 전송</a>
+                                                    </div>
+                                                    <p class="i_dsc error">현재 사용중인 휴대폰번호 입니다</p>
+
+                                                    <p class="txt_info">인증번호 입력</p>
+                                                    <div class="box">
+                                                        <input type="number" name="" id="" class="phone_mod">
+                                                        <span class="certifi_btn">확인</span>
+                                                    </div>
+                                                    <p class="i_dsc phone">인증완료!</p>
+                                                    <p class="i_dsc phone">제한시간 내 입력해주세요. - 2분 49초</p>
+                                                </div>
+                                                <!-- //휴대폰 번호 변경할 경우 보이는 영역 -->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                    <div class="agree_area">
+                        <div class="agree_from">
+                            <div class="label">
+                                <p class="label_chk">뉴스레터, 특별 프로모션 정보를 수신합니다.(선택)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btnArea modBtn">
+                        <a href="#" class="btn btn_cncl">취소</a>
+                        <a href="#" class="btn btn_save">수정완료</a>
+                    </div>
+
+                    <div class="withdrawal">
+                        <a href="#" class="btn_withdrawal open_withdrawal">회원탈퇴<i></i></a>
+                    </div>
+                    <!-- //withdrawal -->
+
+                </div>
+            </div>
+            <div id="tab92" class="tab_content">
+                <div class="mapage_service">
+                    <div class="left">
+                        <h3 class="title">밸류라인 프리미엄</h3>
+                        <p class="day">2020. 06/01 ~ 2020. 06/03</p>
+                    </div>
+                    <div class="right">
+                        <h4 class="title">월자동결제</h4>
+                        <a href="#" class="card_ch">변경</a>
+                        <table cellspacing="0" border="0" class="card_table">
+                            <tr>
+                                <th class="num">카드번호</th>
+                                <td><b>********8823</b></td>
+                            </tr>
+                            <tr>
+                                <th class="num">결제일</th>
+                                <td><b>22</b>일</td>
+                            </tr>
+                        </table>
+                        <!-- //card_table -->
+                    </div>
+                </div>
+                <!-- //mapage_service -->
+
+                <div class="history_area">
+                    <table cellspacing="0" border="0" class="history_table">
+                        <thead>
+                            <tr>
+                                <th>결제일</th>
+                                <th>결제금액</th>
+                                <th>결제수단</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="day">19.12/22</td>
+                                <td class="pay"><strong>35,000</strong>원<span class="in">월자동</span></td>
+                                <td class="way">신용카드(********8823)<span class="in">결제완료</span></td>
+                            </tr>
+                            <tr>
+                                <td class="day">19.12/22</td>
+                                <td class="pay"><strong>35,000</strong>원<span class="in">3개월 기간결제</span></td>
+                                <td class="way">체크카드<span class="in">결제취소</span></td>
+                            </tr>
+                            <tr>
+                                <td class="day">19.12/22</td>
+                                <td class="pay"><strong>35,000</strong>원<span class="in">6개월 기간결제</span></td>
+                                <td class="way">가상계좌<span class="in">환불</span></td>
+                            </tr>
+                            <tr>
+                                <td class="day">19.12/22</td>
+                                <td class="pay"><strong>35,000</strong>원<span class="in">월자동</span></td>
+                                <td class="way">신용카드(********8823)<span class="in">결제완료</span></td>
+                            </tr>
+                            <tr>
+                                <td class="day">19.12/22</td>
+                                <td class="pay"><strong>35,000</strong>원<span class="in">3개월 기간결제</span></td>
+                                <td class="way">체크카드<span class="in">결제취소</span></td>
+                            </tr>
+                            <tr>
+                                <td class="day">19.12/22</td>
+                                <td class="pay"><strong>35,000</strong>원<span class="in">6개월 기간결제</span></td>
+                                <td class="way">가상계좌<span class="in">환불</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btnArea">
+                    <a href="#" class="btn btn_goods"><b>밸류라인 프리미엄</b> 상품 보기</a>
+                </div>
+            </div>
+
+        </div>
+        <!-- //mapage_area -->
+    </div>
+</div>
+
+<!-- 내정보 - 회원탈퇴 -->
+<div class="modal withdrawal_sum">
+    <div class="pop_header">
+        <h1 class="pop_title">내 정보</h1>
+        <a href="#" class="clse" rel="modal:close">
+            <!--닫기-->
+        </a>
+    </div>
+    <div class="pop_con">
+        <div class="withdrawal_com">
+            <p class="txt"><strong>회원탈퇴</strong>가 완료되면 가입시 입력했던 회원정보가 모두 삭제됩니다.</p>
+
+            <div class="att_service">
+                <h3 class="title">사용중인 유료서비스</h3>
+                <table cellspacing="0" border="0" class="service_list">                    
+                    <tbody>
+                        <tr>
+                            <th class="th"><span class="cunt">1</span>밸류라인 프리미엄</th>
+                            <td class="td">21.09/01~21.10/01 <span>월자동</span></td>                            
+                        </tr>
+                        <tr>
+                            <th class="th"><span class="cunt">2</span>초이스스탁US 프리미엄</th>
+                            <td class="td">21.09/01~21.10/01 <span>기간결제</span></td>                            
+                        </tr>
+                        <tr>
+                            <th class="th"><span class="cunt">3</span>인더스트리워치 프리미엄</th>
+                            <td class="td">21.09/01~21.10/01 <span>무통장</span></td>                            
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <!-- //att_service -->
+
+            <ul class="withdrawal_freetxt">
+                <h3 class="service_title">회원탈퇴 전에 꼭! 확인해주세요.</h3>
+                <li>회원탈퇴와 동시에 회원 서비스를 이용할 수 없습니다.</li>
+                <li>유료서비스를 이용 중이라면, 서비스해지 후 회원탈퇴를 진행해주세요.</li>
+                <li>작성한 게시글은 회원탈퇴 후 수정/삭제 할 수 없습니다.</li>
+                <li><strong>회원탈퇴 후 6개월 간 재가입이 불가합니다.</strong></li>
+                <li>회원자격이 운영자에 의해 정지된 경우에는 회원탈퇴 후 재가입이 제한됩니다.</li>
+            </ul>
+            <!-- //withdrawal_freetxt -->
+            <div class="btnArea wtwalBtn">
+                <a href="#" class="btn btn_ssin">회원탈퇴</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- 밸류라인 프리미엄 가입 - 가입방법 -->
+<div class="modal payment_step pay01">
+    <div class="pop_header">
+        <h1 class="pop_title">밸류라인 프리미엄 가입</h1>
+        <a href="#" class="clse" rel="modal:close">
+            <!--닫기-->
+        </a>
+    </div>
+    <div class="pop_con">
+        <div class="step_area">
+            <ul>
+                <li class="active">1. 가입방법 선택</li>
+                <li>2. 결제하기</li>
+                <li>3. 결제완료</li>
+            </ul>
+        </div>
+        <!-- //step_area -->
+
+        <div class="serviceStep step01">
+            <div class="step_top">
+                <h2 class="step_title">결제하기</h2>
+            </div>
+            <!-- //step_top -->
+
+            <div class="step_box active event_1year">
+                <!-- 기존 결제 회원 -->
+                <h3 class="title">월 정기결제 <span class="way">신용카드</span></h3>
+                <div class="payRight">
+                    <span class="pay01">55,000<b>원</b><span class="pay_sale"><strong>40%</strong>
+                            할인!</span></span>
+                    <span class="pay02 sale">33,000<b>원</b></span>
+                    <div class="txt_line">
+                        <p class="txt">
+                            <strong>신규 월 정기결제시, 프리미엄 서비스를 한달 간 3,300원에 이용</strong>할 수 있으며, 둘째 달 부터는 매월
+                            33,000원(정상가에서 40%할인)으로 자동 결제됩니다.
+                        </p>
+                        <p class="txt">월 정기 결제는 신용카드와 체크카드 결제가 가능합니다.</p>
+                        <p class="txt"><strong>약정 기간 없이 언제든 해지 가능합니다.</strong></p>
+                    </div>
+                </div>
+                <!-- //payRight -->
+            </div>
+            <!-- //step_box -->
+
+            <div class="step_box">
+                <h3 class="title">3개월 기간 결제<span class="way">신용카드, 가상계좌(무통장), 계좌이체</span></h3>
+                <div class="payRight">
+                    <span class="pay01">165,000<b>원</b></span>
+                    <span class="pay02">148,500<b>원</b> <span class="pay_sale02">(10% 할인)</span><span
+                            class="pay_sale">55,000원 * 3개월</span></span>
+                </div>
+                <!-- //payRight -->
+            </div>
+            <!-- //step_box -->
+
+            <div class="btnArea modBtn">
+                <a href="#" class="btn btn_cncl" rel="modal:close">취소</a>
+                <a href="#" class="btn btn_save payment_step02">다음</a>
+            </div>
+
+        </div>
+        <!-- //serviceStep -->
+    </div>
+</div>
+
+<!-- 밸류라인 프리미엄 가입 - 결제하기 -->
+<div class="modal payment_step pay02">
+    <div class="pop_header">
+        <h1 class="pop_title">밸류라인 프리미엄 가입</h1>
+        <a href="#" class="clse" rel="modal:close">
+            <!--닫기-->
+        </a>
+    </div>
+    <div class="pop_con">
+        <div class="step_area">
+            <ul>
+                <li>1. 가입방법 선택</li>
+                <li class="active">2. 결제하기</li>
+                <li>3. 결제완료</li>
+            </ul>
+        </div>
+        <!-- //step_area -->
+
+        <div class="serviceStep step01">
+            <div class="step_top">
+                <h2 class="step_title">결제하기</h2>
+                <a href="http://www.itooza.com/ads/popup/card_event.html" class="btn_cardEvent"
+                    onclick="window.open('https://pg.nicepay.co.kr/shared/info.html', 'location', 'width=420, height=700, scrollbars=yes'); return false;">
+                    <img src="img/btn_cardEvent.png" alt="카드 무이자 할부 안내">
+                </a>
+            </div>
+            <!-- //step_top -->
+
+            <div class="step_box active event_1year">
+                <!-- 1주년 900원 이벤트 class = event_1year -->
+                <h3 class="title">월 정기결제 <span class="way">&nbsp;</span></h3>
+                <div class="payRight">
+                    <span class="pay01">55,000<b>원</b><span class="pay_sale"><strong>40%</strong>
+                            할인!</span></span>
+                    <span class="pay02 sale">3,300<b>원</b></span>
+                    <div class="txt_line">
+                        <p class="txt"><strong>월 정기결제 시 프리미엄 서비스를 한달 간 3,300원에 이용</strong> 할 수 있으며, 둘째 달 부터는 매월
+                            33,000원(정상가에서 40%할인)으로 자동 결제됩니다.</p>
+                        <p class="txt"><strong>약정 기간 없이 언제든 해지 가능합니다.</strong></p>
+                    </div>
+                </div>
+                <!-- //payRight -->
+            </div>
+            <!-- //step_box -->
+
+            <div class="payment_guide">
+                <div class="mapage_form">
+                    <fieldset>
+                        <div class="form_table">
+                            <table border="1" class="">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">결제수단</th>
+                                        <td>
+                                            <div class="selectbox">
+                                                <label for="select">신용카드(체크카드)</label>
+                                                <select name="card" id="select">
+                                                    <!-- <option value="">신용카드(체크카드)</option> -->
+                                                    <option value="롯데">롯데카드</option>
+                                                    <option value="삼성">삼성카드</option>
+                                                    <option value="신한">신한카드</option>
+                                                    <option value="현대">현대카드</option>
+                                                    <option value="NH">NH카드</option>
+                                                </select>
+                                            </div>
+                                            <div class="item mod_coupon">
+                                                <p class="i_dsc coupon">월 정기 결제는 신용카드와 체크카드 결제가 가능합니다.</p>
+                                                <p class="i_dsc">결제카드 : 롯데, 삼성, 신한, 현대, NH</p><!-- ㄱㄴㄷ순 -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </fieldset>
+                </div>
+
+
+                <ul class="guide">
+                    <li class="th">결제금액</li>
+                    <li class="td_txt" id="payPrice_1"><strong>3,300</strong>원 <span>(부가세포함)</span></li>
+                    <li class="td_sum">(월 정기 결제는 신용카드와 체크카드 결제가 가능합니다.)</li>
+                </ul>
+            </div>
+            <!-- //payment_guide -->
+
+            <div class="payment_note">
+                <h4 class="h4_title">[ 서비스 결제 유의사항 ]</h4>
+                <strong>월 정기결제</strong>
+                <ul class="note">
+                    <li><span>정기결제는 1개월 단위로 제공</span>되며 <strong>구매하신 날과 매월 동일 한 날짜에 결제</strong>가 이루어집니다</li>
+                    <li>결제 일자가 특정 월에 포함되지 않은 경우(예: 31일)에는 <span>해당 월의 마지막날에 청구</span>됩니다.</li>
+                    <li>월정기결제는 언제든 해지할 수 있습니다.
+                        월정기결제 해지 시 잔여 일이 있으면, 만료 일자까지 이용 하실 수 있으며, 환불신청이 적용되지 않습니다. <strong>단, 결제 당일 해지 시에는 전액 취소 및 서비스
+                            중지 됩니다.</strong>
+                    </li>
+                    <li>신용카드 승인오류 및 잔액 부족시에는 결제가 해지될 수 있습니다</li>
+                    <li>결제일은 실제 신용카드사에서 결제 요청하는 날짜로 실제 출금일은 카드사별로 다를 수 있습니다.</li>
+                    <li>상기 내용은 당사의 사정에 따라 사전고지 없이 변경될 수 있습니다.</li>
+                </ul>
+
+                <div class="note_chk">
+                    <p class="txt"><i></i>결제금액과 결제유의사항을 확인했습니다.</p>
+                </div>
+            </div>
+            <!-- //payment_note -->
+
+            <div class="btnArea modBtn">
+                <a href="#" class="btn btn_cncl payment_step01">결제 취소</a>
+                <a href="#" class="btn btn_save payment_step03">결제하기</a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!-- 밸류라인 프리미엄 가입 - 결제완료 -->
+<div class="modal payment_step pay03">
+    <div class="pop_header">
+        <h1 class="pop_title">밸류라인 프리미엄 가입</h1>
+        <a href="#" class="clse" rel="modal:close">
+            <!--닫기-->
+        </a>
+    </div>
+    <div class="pop_con">
+        <div class="step_area">
+            <ul>
+                <li>1. 가입방법 선택</li>
+                <li>2. 결제하기</li>
+                <li class="active">3. 결제완료</li>
+            </ul>
+        </div>
+        <!-- //step_area -->
+
+        <div class="serviceStep">
+            <div class="step_top">
+                <div class="payment_com">
+                    <h2 class="login_title"><strong>벨류라인 프리미엄 서비스</strong>정상적으로 결제가<br>완료 되었습니다. </h2>
+                </div>
+                <!-- //payment_com -->
+            </div>
+            <!-- //step_top -->
+
+            <div class="payment_guide">
+                <ul class="guide">
+                    <li class="th">결제방법</li>
+                    <li class="td_txt">신용카드</li>
+                </ul>
+                <ul class="guide">
+                    <li class="th">결제일</li>
+                    <li class="td_txt">월정기결제 - 매월 28일</li>
+                </ul>
+                <ul class="guide">
+                    <li class="th">결제금액</li>
+                    <li class="td_txt">이벤트가 &nbsp;&nbsp;&nbsp;<strong>3,300</strong>원 <span>(부가세포함)</span>
+                        <span class="event_info">둘째 달 부터 정상가(33,000원)로 결제됩니다.</span>
+                    </li>
+                </ul>
+                <ul class="guide">
+                    <li class="th">결제금액</li>
+                    <li class="td_txt"><strong>33,000</strong>원 <span>(부가세포함)</span></li>                    
+                </ul>
+                <ul class="guide">
+                    <li class="th">결제수단</li>
+                    <li class="td_txt">신용카드 (**2345)</li>
+                </ul>
+            </div>
+
+            <div class="payment_note">
+                <ul class="note">
+                    <li><span>결제 확인 및 취소/환불 신청은 ‘마이페이지’에서 확인</span>할 수 있습니다.<br>
+                        <a href="#" class="mod_btn">마이페이지</a></li>
+                    <li>고객센터 <a href="tel:0262252300">02)6225-2300</a>, <a href="mailto:hero@datahero.co.kr">hero@datahero.co.kr</a><br>
+                        (평일 09:00~17:00 (주말, 공휴일 제외), 점심시간 (11:30~12:30)</li>
+                </ul>
+            </div>
+
+            <div class="btnArea modBtn">
+                <a href="#" class="btn btn_save">서비스 메인으로</a>                
+            </div>
+
+        </div>
+        
+    </div>
+</div>

@@ -1,69 +1,110 @@
 // 변수들
-$col333: #333; //텍스트 기본색
-$colgray: #82929F; //옅은색
-$colsilver: #49525C; //진한옅은색
-$colred: #F2333A; //상승
-$colblue: #006BFC; //하락
-$collink: #094DAA; //링크
-$colorg: #E57828; //어린쥐
+//color
+$colorbg: #f7f7f8;
+$collonk: #527bea;
+$colup: #d30000;
+$coldown: #26ABFF;
+//primary
+$colpmr: #374b9d;
+$colpmr10: #f7f9fd;
+$colpmr100: #edf3ff;
+$colpmr500: #93add3;
+$colpmr800: #3655d6;
+//txt
+$coltxt: #222;
+$col200: #bdc8d8;
+$col300: #b1b9cb;
+$col500: #656d7e;
+$f_sizeS:300;
+$f_sizeN:400;
+$f_sizeB:700;
 
 // Set a default value
 $default-padding: 0px;
 $default-margin: 0px;
 $default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font12: 0.75rem;
-$font13: 0.8125rem;
-$font14: 0.875rem;
-$font15: 0.9375rem;
-$font16: 1rem;
-$font18: 1.125rem;
-$font20: 1.25rem;
-
-// pc 1024px ~
-html{font-size:16px;} 
-@mixin tablet {
-  @media (min-width:1023px){
-  // 테블릿 가로, 테블릿 세로 : 768px ~ 1023px
-  html{font-size:16px;};
-  @content;
-  }
-}
-@mixin mobile375 {
-  @media (max-width:767px){
-  // 모바일 가로, 모바일 세로 : ~ 767px
-  html{font-size:16px;};
-  @content;
-  }
-}
-@mixin mobile {
-  @media (max-width:374px){
-  // 모바일 가로 : 320 ~ 374px
-  html{font-size:14px;};
-  @content;  
-  }
-}
 
 @mixin font-family {
-  font-family: $default-fontfamily;
-  line-height:normal;        
+    font-family: $default-fontfamily;
+    line-height:normal;        
 }
-
-@mixin font-size($n:1) {
-  font-size: $n * 1em;
-}
-
 @mixin pad($n: $default-padding) {
-  padding: $n;
+    padding: $n;
 }
 @mixin mar($n: $default-margin) {
-  padding: $n;
+    padding: $n;
+}
+@mixin width_minmax {
+    margin: 0 auto;  
+    box-sizing: border-box;
+    min-width: 1000px;
+    max-width: 1138px;
+    padding: 0 15px;
 }
 @mixin white-space {
     box-sizing: border-box;
-    display: inline-block;
-    width: 100%;
+    display: block;
+    // width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;  
 }
 
+// 버튼 css
+@mixin one_btn {          
+    position: relative;        
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 13px 0;            
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: $colpmr;
+    font-size: 18px;
+    font-weight: $f_sizeB;                
+    letter-spacing: -0.9px;
+    text-align: center;
+    color: #fff;                      
+
+    &::before {
+        content: '';
+        width: 11px;
+        height: 11px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        display: inline-block;                    
+        transform: rotate(45deg);
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    b {
+        color: #ff8d5a;                    
+        font-weight: $f_sizeB;                
+    }    
+}
+@mixin two_btn {          
+    display: flex;
+    justify-content: space-between;  
+
+    .btn {    
+        flex: 1;
+        padding: 13px 0;            
+        box-sizing: border-box;
+        border-radius: 5px;
+        background-color: $colpmr;
+        font-size: 18px;
+        font-weight: $f_sizeB;                
+        letter-spacing: -0.9px;
+        text-align: center;
+        color: #fff;          
+        &:first-child {
+            border: solid 1px #3b4b98;
+            background-color: #fff;
+            color: $colpmr;            
+        }             
+        &:last-child {
+            margin-left: 10px;
+        }             
+    }
+}

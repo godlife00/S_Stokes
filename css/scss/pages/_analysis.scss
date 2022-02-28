@@ -1,0 +1,557 @@
+// 재무분석
+// BIC 차트
+#container .M_right .contents .bic_chartbox {
+    
+    .chart_line {
+        margin-top: 56px;
+        &:first-child {
+            margin-top: 0;
+        }
+        .title_box {
+            padding: 21px 24px;
+            background-color: #edf3ff;
+
+            .title {
+                display: inline-block;
+                font-size: 16px;
+                font-weight: $f_sizeB;                
+                letter-spacing: -0.4px;                
+                color: #3655d6;                
+                i {
+                    font-style: normal;
+                    display: inline-block;
+                    font-size: 14px;
+                    font-weight: $f_sizeB;       
+                    letter-spacing: -0.35px;                    
+                    color: #fff;
+                    background-color: #3655d6;
+                    min-width: 24px;
+                    height: 24px;
+                    padding: 0 5px;
+                    box-sizing: border-box;
+                    line-height: 24px;
+                    text-align: center;
+                    margin-right: 12px;
+                }
+            }
+            .sub_title {
+                display: inline-block;
+                font-size: 14px;                
+                letter-spacing: -0.35px;
+                color: #656d7e;
+                padding-left: 6px;
+            }
+        }
+        .con_box {            
+            margin-top: 24px;            
+            display: flex;
+            justify-content: space-between;	
+            flex-wrap: nowrap;
+            .left {                
+                width: 500px;                                
+                flex-grow: 1;                
+                .chart_BIC {
+                    background-color: red;
+                }
+                .chart_BIC .BICchart_style {
+                    background-color: #f7f7f8;                    
+                    height: 340px;
+                    &.simple {                                
+                        height: 420px;
+                    }
+                    .highcharts-title {
+                        font-family: "Spoqa Han Sans Neo";
+                        font-size: 17px !important;
+                        font-weight: $f_sizeB;                        
+                        letter-spacing: -0.85px;
+                        text-align: center;                        
+                        color: #222 !important;                                     
+                        fill: #222 !important;           
+                        tspan {                            
+                            font-size: 12px;
+                            font-weight: normal;                            
+                            letter-spacing: -0.6px;                            
+                            fill: #3655d6;
+                            color: #3655d6;
+                        }
+                    }
+                }
+            }
+            .right {                    
+                width: calc(100% - 540px);     
+                padding-right: 5px;           
+                overflow: auto;                
+                max-height: 340px;
+                box-sizing: border-box;                
+                margin-left: 40px;                
+                transition: width 0.35s;     
+
+                // 스크롤바 디자인 시작
+                &::-webkit-scrollbar {
+                    width: 8px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: #BDC8D8;
+                    border-radius: 8px;
+                }
+                &::-webkit-scrollbar-track {
+                    background-color: #E7EAF2;
+                }
+                // 스크롤바 디자인 종료
+
+                &.hide {
+                    width: 0;                    
+                    height: 0;
+                    margin-left: 0;                                                            
+                    overflow: hidden;                    
+                    transition: width 0.35s;                    
+                    .title, .txt {                                                
+                        color: #fff;                        
+                    }                   
+                }                
+                .title {
+                    font-size: 14px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.35px;                    
+                    color: #374b9d;
+                    padding-top: 24px;
+                    padding-bottom: 13px;
+                    border-top: 1px solid #e8eaf1;    
+                    &:first-child {
+                        padding-top: 6px;
+                        border-top: none;                        
+                    }                                    
+                }
+                .txt {
+                    font-size: 13px;                                        
+                    letter-spacing: -0.33px;                    
+                    color: #656d7e;
+                    padding-bottom: 17px;                                        
+                    span {
+                        color: #656d7e;
+                    }
+                    b {
+                        color: #656d7e;
+                        font-weight: $f_sizeB;
+                    }
+                }
+                .tip {
+                    background: #edf3ff;                    
+                    padding: 3px 8px;
+                    margin-bottom: 15px;
+                }
+                .tip .title {
+                    font-size: 12px;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.35px;                    
+                    color: #374b9d;
+                    padding: 0;                   
+                    padding-bottom: 4px;
+                    border-top: 1px solid #e8eaf1;                        
+                }
+                .tip .txt {
+                    font-size: 12px;                                        
+                    letter-spacing: -0.33px;                    
+                    color: #656d7e;
+                    padding: 0;        
+                }
+            }
+            &::after {
+                content: "";
+                display: table;
+                table-layout: fixed;
+                clear: both;
+            }
+        }
+    }
+}
+// MRI 차트
+#container .M_right .contents .mri_chartbox {    
+    margin-top: -8px;    
+    .top_spider {
+        padding: 0;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+        background-color: #f7f9fd;
+        display: flex;
+        justify-content: space-between;	
+        flex-wrap: nowrap;
+        .left {                        
+            width: 430px; 
+            padding: 30px 40px 0;
+            box-sizing: border-box;                           
+            flex-grow: 1;                  
+            .MRIchart_style {                
+                width: 330px;
+                height: 260px;
+                // width: 98%;                
+                // height: 98%;                
+                margin: 0 auto;                
+                box-sizing: border-box;
+                .highcharts-axis-labels {
+                    text {
+                        @include font-family;
+                        font-size: 14px !important;
+                        color: #656d7e !important;                        
+                        fill: #656d7e !important;
+                    }
+                }
+            }
+        }
+        .right {            
+            width: calc(100% - 430px);            
+            margin: 30px 30px 0 0;            
+
+            .chart_area.diagnosis {                                                
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                background-color: #fff;
+                box-sizing: border-box;
+                padding: 12px 10px;
+                position: relative;            
+                display: flex;
+	            flex-wrap: wrap;
+                justify-content: space-between;
+            }            
+            .chart_area.diagnosis .chartData {
+                display: inline-block;
+                border-right: 1px solid #e7eaf2;
+                vertical-align: top;
+                text-align: center;
+                padding: 12px 0;
+                min-height: 103px;                
+                box-sizing: border-box;              
+                flex: 1;                  
+            }            
+            .chart_area.diagnosis .chartData .charm {                
+                position: relative;
+                font-size: 12px;                
+                line-height: 1.5;                                
+                color: #656d7e;
+                .txt_guide {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    display: inline-block;                    
+                    padding: 10px 10px;                    
+                    cursor: pointer;
+                }
+            }            
+            .chart_area.diagnosis .chartData .charm strong {
+                font-weight: $f_sizeB;                
+            }            
+            .chart_area.diagnosis .chartData .charm_num {
+                font-size: 32px;
+                font-weight: $f_sizeB;                
+                line-height: 1.47;                
+                text-align: center;
+                color: #222;
+                padding-bottom: 10px;
+            }            
+            
+            .chart_area.diagnosis .difference {                
+                box-sizing: border-box;
+                padding: 5px 10px 10px;                
+                flex-basis: 260px;
+            }            
+            .chart_area.diagnosis .difference .dt {
+                font-size: 18px;                                
+                text-align: left;
+                color: #333;
+            }            
+            .chart_area.diagnosis .difference .dt:nth-child(3) {                
+                font-size: 12px;                
+                line-height: 1.5;                
+                color: #656d7e;
+                margin-top: 10px;
+            }            
+            .chart_area.diagnosis .difference .dt strong {
+                display: inline-block;
+                color: #3655d6;
+            }
+            
+            .chart_area.diagnosis .difference .dd {
+                font-size: 10px;
+                letter-spacing: normal;
+                color: #b1b9cb;
+                vertical-align: top;
+            }            
+            .chart_area.diagnosis .data_attainment {                
+                width: 100%;
+                border-top: 1px solid #e7eaf2;
+                padding: 12px 5px 0;
+                position: relative;                                
+            }            
+            .chart_area.diagnosis .data_attainment ul {                                
+                display: flex;                
+                justify-content: space-between;
+            }            
+            .chart_area.diagnosis .data_attainment ul li {
+                display: inline-block;
+                font-size: 11px;                
+                line-height: 1.18;                
+                color: #656d7e;                
+            }            
+            .chart_area.diagnosis .data_attainment ul li span {
+                color: #333;
+                font-weight: 500;
+                padding-left: 7px;
+            }
+            
+            .chart_area.diagnosis .data_attainment ul li b {
+                color: #333;
+                font-weight: 300;
+                padding-left: 1px;
+            }
+            .chart_table {
+                position: relative;
+                width: 100%;
+                padding: 15px 20px;                
+                box-sizing: border-box;
+                background-color: #eaedf5;                  
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;                
+                &::before {
+                    content: '';                    
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 18px;
+                    background-image: linear-gradient(to bottom, #dbdfea, #eaedf5);
+                }
+
+            }
+            .chart_table .tableRanking.table_alloca {
+                width: 100%;
+                td {
+                    vertical-align: middle;
+                    padding: 3px 0;
+                }
+                .star_area.w12 .starR.on {
+                    background-position: 0 0;
+                }
+                .star_area.w12 .starR {
+                    background-position: -14px 0;
+                }
+            }
+            .chart_table .tableRanking.table_alloca .title {
+                span {
+                    font-size: 12px;                                
+                    letter-spacing: -0.6px;
+                    text-align: left;
+                    color: #656d7e;                
+                }                
+            }
+        }
+    }
+    .mid_column {        
+        .report_title {
+            padding: 10.5px 20px;
+            background-color: #374b9d;            
+            font-size: 18px;
+            font-weight: $f_sizeB;
+            letter-spacing: -0.45px;            
+            color: #fff;
+        }
+        .con {
+            display: flex;
+            justify-content: space-between;	
+            flex-wrap: nowrap;
+            padding: 40px 30px;
+            border-bottom: 1px solid #e7eaf2;            
+            &:last-child {
+                border-bottom: none;
+            }
+            .left {
+                width: 400px;                                
+                flex-grow: 1;                               
+                .alloca_star {    
+                    flex-wrap: wrap;                
+                    display: flex;
+                    justify-content: space-between;
+                    .alloca_box {                        
+                        flex: 1;
+                        display: inline-block;
+                        vertical-align: bottom;
+                        flex-basis: auto;
+                        // margin-left: 19px;
+                        padding-left: 19px;                        
+                        
+                        .small_star {
+                            .title {                                
+                                padding-bottom: 8px;                                
+                                font-size: 14px;    
+                                font-weight: $f_sizeN;                            
+                                letter-spacing: -0.7px;
+                                color: #656d7e;
+                            }
+                            .star_area {
+                                display: inline-block;
+                                overflow: hidden;
+                                .starRev {
+                                    .starR {
+                                        width: 12px;
+                                        height: 12px;
+                                        
+                                    }
+                                }
+                            }
+                        }
+
+                        &:first-child {                                                        
+                            margin-left: 0;
+                            padding-left: 0;                            
+                            flex-basis: 190px;
+                            border-right: 1px solid #e7eaf2;     
+                            .title {
+                                padding-bottom: 7px;                                
+                                font-size: 15px;
+                                font-weight: $f_sizeB;
+                                letter-spacing: -0.75px;                                
+                                color: #333;                                           
+                            }
+                            .star_area {
+                                .starRev {
+                                    .starR {
+                                        width: 20px;
+                                        height: 20px;                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .txt {
+                        flex-wrap: wrap;
+                        margin-top: 44px;
+                        font-size: 13px;            
+                        line-height: 1.54;            
+                        color: #656d7e;                        
+                    }
+                    .leader_num {
+                        clear: both;
+                        display: inline-block;
+                        font-size: 11px;                        
+                        text-align: left;
+                        padding-left: 10px;                        
+                        color: #656d7e;                        
+                    }
+                }
+            }
+            .right {
+                background-color: #fff;                
+                width: calc(100% - 400px);                            
+                margin-left: 20px;
+                display: flex;
+	            flex-wrap: wrap;
+                .containerfinancials1 {
+                    display: inline-block;
+                    width: 100%;
+                    height: 180px;                            
+                    flex: 1 1 50%;                     
+                }
+                .containerfinancials1:first-of-type:nth-last-of-type(1),
+                .containerfinancials1:first-of-type:nth-last-of-type(1) ~ .containerfinancials1,
+                .containerfinancials1:first-of-type:nth-last-of-type(2),
+                .containerfinancials1:first-of-type:nth-last-of-type(2) ~ .containerfinancials1,
+                .containerfinancials1:first-of-type:nth-last-of-type(4),
+                .containerfinancials1:first-of-type:nth-last-of-type(4) ~ .containerfinancials1 {                    
+                    flex: 1 1 50%;                                                             
+                }                
+                .containerfinancials1:first-of-type:nth-last-of-type(3),
+                .containerfinancials1:first-of-type:nth-last-of-type(3) ~ .containerfinancials1 {                    
+                    flex: 1 1 30%;                                         
+                }
+                .containerfinancials1:first-of-type:nth-last-of-type(5),
+                .containerfinancials1:first-of-type:nth-last-of-type(5) ~ .containerfinancials1 {                    
+                    flex: 1 1 30%;                     
+                }
+                
+                .chart_legend {    
+                    flex-wrap: wrap;                
+                    display: block;
+                    width: 100%;
+                    border-radius: 5px;
+                    margin-bottom: 17px;
+                    text-align: center;
+                }
+                
+                .chart_legend li {
+                    display: inline-block;
+                }
+                
+                .chart_legend li span {
+                    display: inline-block;
+                    font-size: 13px;
+                    line-height: 1.54;
+                    padding: 0 8px;
+                }
+                
+                .chart_legend li span i {
+                    display: inline-block;
+                    margin-bottom: 1px;
+                    margin-right: 5px;
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                }
+                
+                .chart_legend li:nth-child(1) span i {
+                    background: #3655d6;
+                }
+                
+                .chart_legend li:nth-child(2) span i {
+                    background: #656d7e;
+                }
+                
+                .chart_legend li:nth-child(3) span i {
+                    background: #bdc8d8;
+                }
+            }            
+        }
+    }
+}
+// 턴어라운드
+#container .M_right .contents .turn_box {
+    .thead2_table {                        
+        thead {        
+            tr:first-child {
+                th, td {
+                    background: #fff url('/img/gray_thline.gif') repeat-x left top;        
+                }                    
+            }
+            tr:nth-child(2) {
+                th, td {
+                    background: #fff url('/img/gray_tdline.gif') repeat-x left top;        
+                }                    
+            }
+
+            th {
+                &.fix {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    
+        &.fix_table {        
+            thead {
+                .fix {                                           
+                    &::before {                    
+                        content: "";       
+                        position: absolute;
+                        right: -12px;
+                        top: 1px;
+                        bottom: 1px;
+                        width: 12px;                                
+                        height: 58px;
+                        background:url('/img/fix_shadow.svg') repeat-y 0 0;                        
+                    }
+                } 
+            }
+        }    
+    }
+    
+}
