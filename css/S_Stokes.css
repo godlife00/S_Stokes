@@ -689,7 +689,7 @@ input[type='radio']:checked:before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 10px;
+  gap: 3px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 12px 10px;
@@ -711,10 +711,12 @@ input[type='radio']:checked:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 15px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
+  padding: 5px 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 0.9375rem;
+  font-weight: 700;
   line-height: 1.93;
   letter-spacing: -0.38px;
   text-align: left;
@@ -723,6 +725,10 @@ input[type='radio']:checked:before {
 .AutoComplete #autocomplete_list li a strong {
   font-weight: 700;
   color: #222;
+}
+
+.AutoComplete #autocomplete_list li a:hover {
+  background-color: #e6e6e6;
 }
 
 .AutoComplete #autocomplete_list li:nth-child(2n) {

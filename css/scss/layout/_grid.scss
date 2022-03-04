@@ -422,7 +422,6 @@ input[type='radio']:checked:before {
     overflow: auto;
     overflow-x: hidden;                
     box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.09);
-    
 
     form {
         position: relative;
@@ -461,7 +460,7 @@ input[type='radio']:checked:before {
     #autocomplete_list {
         display: flex;
         justify-content: space-between;
-        gap: 10px;
+        gap: 3px;
         flex-wrap: wrap;
         padding: 12px 10px;
         box-sizing: border-box;
@@ -471,10 +470,11 @@ input[type='radio']:checked:before {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                font-size: 15px;
-                font-weight: bold;
-                font-stretch: normal;
-                font-style: normal;
+                padding: 5px 5px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                font-size: $font15;
+                font-weight: $f_sizeB;
                 line-height: 1.93;
                 letter-spacing: -0.38px;
                 text-align: left;
@@ -482,6 +482,9 @@ input[type='radio']:checked:before {
                 strong {
                     font-weight: $f_sizeB;
                     color: #222;
+                }
+                &:hover {
+                    background-color: #e6e6e6;
                 }
             }         
             &:nth-child(2n) {
