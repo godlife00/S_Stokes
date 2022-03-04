@@ -1,8 +1,245 @@
 // 메인
 .s_stokes #wrap #container {
-    background-color: blanchedalmond;
+
+    // 마켓
+    .mainBox.market {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f5f5f5;
+        > div {
+            padding: 12px 15px 10px;
+            box-sizing: border-box;
+        }
+        .update {     
+            flex: 1 1 0;
+            padding-top: 15px;
+            position: relative;
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: 15px;
+                width: 1px;
+                height: 40px;
+                background-color: #e5e5e5;
+            }
+        }
+        .update .title {            
+            font-size: $font12;
+            font-weight: $f_sizeB;            
+            line-height: 1.5;
+            letter-spacing: -0.3px;            
+            color: #222;            
+        }
+        .update .day {
+            display: block;
+            margin-top: 3px;
+            font-size: 10px;                        
+            letter-spacing: -0.25px;            
+            color: #898989;                        
+        }
+        .data_area {           
+            flex: 2 1 0;             
+            display: flex;
+            justify-content: space-between;
+            gap: 7px;
+            &:nth-child(2) {                
+                padding-left: 10px;            
+                padding-right: 0;
+            }
+            &:last-child {
+                padding-left: 8px;            
+                padding-right: 15px;                
+            }
+        }
+        .data_area .name {
+            flex: 1;            
+            padding-top: 3px;
+            font-size: $font12;            
+            letter-spacing: -0.3px;
+            color: #222;            
+            text-align: right;
+        }
+        .data_area .detail {                      
+            .price {
+                font-size: $font16;
+                font-weight: $f_sizeB;                
+                line-height: 1.5;
+                letter-spacing: -0.4px;                
+                color: #222;                
+            }
+            .gap, .per {
+                font-size: $font12;                
+                line-height: 1.5;                                
+                vertical-align: top;
+            }            
+
+            &.up {
+                .gap, .per {                    
+                    color: $colup;
+                }                   
+            }
+            &.down {
+                .gap, .per {                    
+                    color: $coldown;
+                }                   
+            }            
+        }
+    }
+
+    // 오늘의 승부주
+    .mainBox.game_scr {                
+        padding: 25px 0;
+
+        .page_nav {                       
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 0 15px; 
+            box-sizing: border-box;
+            border-bottom: 1px solid #d0d0d0;            
+            li {                
+                padding: 5px 0;
+                box-sizing: border-box;
+                flex: 1;
+                text-align: center;                
+                position: relative;
+                top: 1px;
+                a {
+                    font-size: $font16;
+                    line-height: 1.5;
+                    letter-spacing: -0.4px;                    
+                    color: #222;
+                }
+                &.active {
+                    border-bottom: 3px solid #c22e06;
+                    a {                        
+                        font-weight: $f_sizeB;
+                        color: #c22e06;                        
+                    }                    
+                }
+            }
+        }
+
+
+        .maingameSwiper {
+            padding-right: 15px;
+        }
+
+        .maingameSwiper .swiper-slide {
+            display: block;
+            width: auto;
+        }
+        
+        & > .title a {            
+            display: block;
+            font-size: $font20;
+            font-weight: $f_sizeB;            
+            letter-spacing: -0.5px;            
+            color: #222;            
+        }
+
+        .list_area {
+            padding: 15px 0 0 15px;            
+        }
+
+        .list_area .area {                
+            overflow: hidden;
+            width: 160px;
+            background: #f5f5f5;            
+            box-sizing: border-box;            
+            padding: 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;                    
+            gap: 6px;
+            .left {                    
+                width: calc(100% - 55px);
+                padding: 16px 0 0 16px;
+                box-sizing: border-box;
+            }
+            .right {
+                width: 45px;                                        
+                padding: 16px 10px 0 0;
+                box-sizing: border-box;
+            }
+            .btm {
+                width: 100%;                
+                box-sizing: border-box;
+                flex-wrap: wrap;                    
+            }
+        }
+
+        @include listswiper;
+        .list_area .area .left {
+            width: calc(100% - 55px);
+        }
+        .list_area .area .right {
+            width: 45px;
+            img {
+                display: inline-block;
+                width: 100%;
+            }
+        }
+        .list_area .area .btm {
+            padding: 7px 14px 10px;
+            background-color: #e6e6e6;            
+        }
+        .list_area .more {
+            margin-top: 7px;
+            text-align: right;
+            a {
+                position: relative;
+                font-size: $font13;                
+                line-height: 1.46;
+                letter-spacing: -0.33px;                
+                color: #c22c06;                               
+                padding-right: 12px;
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 6px;
+                    height: 6px;                    
+                    position: absolute;
+                    top: 6px;            
+                    right: 0;                    
+                    border-top: 1px solid #c22c06;
+                    border-right: 1px solid #c22c06;            
+                    transform: rotate(45deg);
+                }
+                &::before {
+                    content: '';
+                    display: inline-block;                    
+                    height: 1px;                    
+                    position: absolute;                    
+                    left: 0;                  
+                    right: 0;
+                    bottom: 0;  
+                    background-color: #c22c06;                    
+                }
+            }
+        }
+        
+    }
+
+    // 상단 롱배너
+    .main_topbanner {        
+        a, img {
+            display: block;
+            width: 100%;
+        }
+    }
     
-    .main_mid {        
+    .mainBox {        
+        background-color: #fff;
+        & > .title {            
+            font-size: $font20;
+            font-weight: $f_sizeB;            
+            letter-spacing: -0.5px;            
+            color: #222;            
+        }
         & > .title a {
             position: relative;
             display: block;
@@ -35,13 +272,15 @@
             left: calc(100% - 80px);                        
             font-size: $font13;                        
             letter-spacing: -0.33px;            
-            color: #898989;           
+            color: #898989;          
         }        
 
+        // 포트폴리오
         &.portfolio {
-            padding: 15px 0 15px 15px;
+            padding: 35px 0 40px 15px;
+            border-bottom: 1px solid #e5e5e5;
             .list_area {
-                margin-top: 16px;                
+                margin-top: 10px;                
             }
 
             .list_area .area {                
@@ -49,7 +288,7 @@
                 background: #f5f5f5;            
                 box-sizing: border-box;
                 padding: 16px 14px;
-                border-radius: 16px;
+                border-radius: 8px;
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;                    
@@ -75,63 +314,7 @@
                 width: auto;
             }
             
-            .list_area .list .title a {            
-                @include white-space;
-                font-size: $font16;
-                font-weight: $f_sizeB;                
-                letter-spacing: -0.4px;                
-                color: #222;
-            }
-
-            .list_area .list .detail { 
-                padding-top: 4px;
-                line-height: 0.85;
-                span {
-                    font-size: $font12;                                    
-                    letter-spacing: -0.3px;                
-                    color: #898989;
-                }                           
-            }
-            .list_area .list .num {            
-                display: flex;
-                justify-content: space-between;
-            }
-            .list_area .list .num .th {
-                display: block;
-                font-size: $font12;                
-                line-height: 1.5;
-                letter-spacing: -0.3px;                
-                color: #898989;
-            }
-
-            .list_area .list .num .td {
-                font-size: $font16;                
-                line-height: 1.5;
-                letter-spacing: -0.4px;                
-                color: #222;
-            }
-
-            .list_area .list .num .td b {
-                font-weight: $f_sizeB;
-            }
-
-            .list_area .list .num .dod {
-                &.increase {
-                    background-color: $colup;                
-                }
-                &.decrease {
-                    background-color: $coldown;           
-                }
-                border-radius: 3px;                
-                font-size: 10px;                
-                line-height: 1.5;
-                letter-spacing: -0.25px;                
-                color: #fff;
-                padding: 2px 5px;
-                box-sizing: border-box;
-                vertical-align: middle;
-                margin-left: 3px;         
-            }
+            @include listswiper;
 
             .yieldWrap {
                 margin-top: 15px;
@@ -242,6 +425,288 @@
                         }
                     }
                 }                
+            }
+        }
+
+        // 투자전략
+        &.strategy {
+            margin-top: 8px;
+            padding: 35px 15px;
+            border-bottom: 1px solid #e5e5e5;            
+            > .title a::after {
+                left: calc(100% - 12px);
+            }
+            > .title a::before {
+                left: calc(100% - 66px);
+            }
+            .updata {
+                margin-top: 10px;
+                padding: 18px 10px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                background-color: #f5f5f5;
+                text-align: center;
+                p {
+                    font-size: $font18;
+                    font-weight: $f_sizeB;                    
+                    line-height: 1.5;
+                    letter-spacing: -0.45px;                    
+                    color: #222;                    
+                }
+            }
+            .list {
+                margin-top: 15px;
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 10px;
+                    a {
+                        flex: 1;
+                        position: relative;
+                        padding: 4px 0;
+                        padding-left: 10px;
+                        font-size: $font15;
+                        line-height: 1.5;
+                        letter-spacing: -0.38px;                        
+                        color: #222;
+                        &::after {
+                            content: '';
+                            display: inline-block;
+                            width: 5px;
+                            height: 1px;
+                            position: absolute;
+                            left: 0;
+                            top: 15px;
+                            background-color: #222222;                            
+                        }
+                    }
+                    .reg_day {
+                        font-size: $font13;                                                
+                        letter-spacing: -0.33px;
+                        text-align: right;
+                        color: #898989;                        
+                    }
+                }                
+            }
+        }
+
+        // 투자매력
+        &.attr {
+            margin-top: 8px;
+            padding: 35px 0 40px;
+            border-bottom: 1px solid #e5e5e5;
+
+            > .title {
+                padding-left: 15px;
+            }
+
+            .adequateArea {
+                margin-top: 17px;
+                border-top: 2px solid #c22e06;
+                > .th {
+                    padding: 4px 0;
+                    box-sizing: border-box;
+                    font-size: 0;
+                    background-color: #f5f5f5;                    
+                    text-align: center;
+                    border-bottom: 1px solid #e5e5e5;
+                    span {
+                        display: inline-block;                        
+                        width: 170px;
+                        font-size: $font12;
+                        line-height: 1.5;
+                        letter-spacing: -0.3px;                        
+                        color: #898989;                        
+                        &:last-child {
+                            width: calc(100% - 170px);
+                        }
+                    }
+
+                }                
+                .listWrap {
+                    padding: 0 15px;
+                    .list {                        
+                        border-top: 2px solid #d3d3d3;     
+                        &:first-child {
+                            border-top: none;
+                        }                   
+                    }
+                    .top {
+                        .line {
+                            padding: 10px 0;
+                            display: flex;
+                            justify-content: flex-start;                          
+                            align-content: center;                   
+                            gap: 6px;
+                            li {                                
+                                padding: 0 2px;
+                                box-sizing: border-box;
+                            }        
+                        }
+                        .cunt {
+                            align-self: center;
+                            flex-basis: 20px;
+                            font-size: 11px;
+                            font-weight: $f_sizeB;
+                            line-height: 1.55;
+                            letter-spacing: -0.28px;                            
+                            color: #898989;
+                        }
+                        .comlogo {
+                            display: inline-block;
+                            border: 1px solid #d8d8d8;                            
+                            border-radius: 50%;
+                            overflow: hidden;      
+                            flex-basis: 24px;                      
+                            width: 24px;
+                            height: 24px;
+                            img {
+                                display: inline;
+                                width: 100%;
+                                height: 100%;
+                            }                                                        
+                        }
+                        .name {
+                            flex-basis: 40%;
+                            max-width: 40%;                            
+                            a {                                
+                                @include white-space;                                
+                                font-size: $font15;
+                                font-weight: $f_sizeB;                                
+                                line-height: 1.47;
+                                letter-spacing: -0.38px;                                
+                                color: #222;                                
+                            }                            
+                        }
+                        .price {                            
+                            flex-basis: 100px;
+                            font-size: $font15;
+                            line-height: 1.47;
+                            letter-spacing: -0.38px;                            
+                            color: #222;
+                            text-align: right;
+                            b {
+                                font-weight: $f_sizeB;                            
+                            }
+                        }
+                        .per {
+                            flex-basis: 60px;
+                            font-size: $font12;                            
+                            line-height: 1.5;
+                            letter-spacing: -0.3px;                                                        
+                            align-self: center;
+                            &.increase {
+                                color: $colup;                                
+                            }
+                            &.decrease {
+                                color: $coldown;                                                                
+                            }
+
+                        }
+
+                    }
+                    .mid {
+                        border-top: 1px solid #e5e5e5;
+                        padding: 15px 0;
+                        display: flex;
+                        justify-content: flex-start;
+                        gap: 20px;
+                        .charm_num {                          
+                            flex: 1;                                                          
+                            // flex-basis:65px;
+                            span {
+                                display: inline-block;
+                                text-align: center;
+                                border-radius: 33px;
+                                border: 3px solid #ffc05c;
+                                margin: 0 10px;
+                                padding: 5px;
+                                width: 65px;
+                                height: 65px;
+                                line-height: 52px;
+                                box-sizing: border-box;
+                                font-size: $font20;                                
+                                letter-spacing: -0.5px;                            
+                                color: #222;
+                                b {
+                                    font-weight: $f_sizeB;
+                                }
+                            }                            
+                        }
+                        .num_bar {
+                            flex-basis: calc(100% - 85px);                     
+                            display: flex;
+                            justify-content: space-between;                            
+                            flex-wrap: wrap;
+                            gap: 7px;                                       
+                            .line {                                           
+                                width: 100%;                                  
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                gap: 10px;                                
+                                .th {
+                                    display: inline-block;                                    
+                                    font-size: $font12;                                                                        
+                                    letter-spacing: -0.3px;                                    
+                                    color: #222;           
+                                    // width: 70px;                                                
+                                    flex-basis: 100px;                                                 
+                                }                                  
+                                .barArea {
+                                    width: 100%;                                    
+                                    .barline {
+                                        position: relative;
+                                        width: 100%;
+                                        height: 10px;
+                                        border-radius: 10px;
+                                        background-color: #e6e6e6;                                    
+                                        .position {
+                                            position: absolute;
+                                            left: 0;
+                                            top: 0;
+                                            display: inline-block;
+                                            background-color: #ffc05c;
+                                            border-radius: 10px;
+                                            height: 100%;                                                          
+                                            max-width: 100%;
+                                        }
+                                    }                                    
+                                }                         
+                                .td {
+                                    font-size: $font12;                                                                        
+                                    letter-spacing: -0.3px;                                    
+                                    color: #222;         
+                                    b {
+                                        font-weight: bold;
+                                    }                           
+                                }   
+                                &:nth-child(1) {
+                                    .barArea .barline .position {                                                
+                                        background-color: #ffc05c;                                                                                            
+                                    }
+                                }
+                                &:nth-child(2) {
+                                    .barArea .barline .position {                                                
+                                        background-color: #fa8700;                                                                                            
+                                    }
+                                }
+                                &:nth-child(3) {
+                                    .barArea .barline .position {                                                
+                                        background-color: #f8452c;                                                                                            
+                                    }
+                                }                      
+                            }
+                        }                        
+                    }
+                    .btn_more {
+                        margin-top: 17px;
+                        a {
+                            @include one_btn;
+                        }                        
+                    }
+                }
             }
         }
     }

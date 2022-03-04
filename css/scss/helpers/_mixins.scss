@@ -56,28 +56,17 @@ $default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", He
     display: block;
     width: 100%;
     margin: 0 auto;
-    padding: 13px 0;            
+    padding: 10px 0;            
     box-sizing: border-box;
-    border-radius: 5px;
-    background-color: $colpmr;
-    font-size: 18px;
-    font-weight: $f_sizeB;                
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;    
+    font-size: $font18;
     letter-spacing: -0.9px;
-    text-align: center;
-    color: #fff;                      
+    text-align: center;    
+    font-size: $font15;        
+    letter-spacing: -0.38px;    
+    color: #898989;
 
-    &::before {
-        content: '';
-        width: 11px;
-        height: 11px;
-        border-top: 2px solid #fff;
-        border-right: 2px solid #fff;
-        display: inline-block;                    
-        transform: rotate(45deg);
-        position: absolute;
-        right: 20px;
-        top: 20px;
-    }
     b {
         color: #ff8d5a;                    
         font-weight: $f_sizeB;                
@@ -107,4 +96,72 @@ $default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", He
             margin-left: 10px;
         }             
     }
+}
+
+@mixin listswiper {
+    .list_area .list .title a {            
+        @include white-space;
+        font-size: $font16;
+        font-weight: $f_sizeB;                
+        letter-spacing: -0.4px;                
+        color: #222;
+    }
+
+    .list_area .list .detail { 
+        padding-top: 4px;
+        line-height: 0.85;
+        span {
+            font-size: $font12;                                    
+            letter-spacing: -0.3px;                
+            color: #898989;
+        }                           
+    }
+    .list_area .list .num {            
+        display: flex;
+        justify-content: space-between;
+    }
+    .list_area .list .num .th {
+        display: block;
+        font-size: $font12;                
+        line-height: 1.5;
+        letter-spacing: -0.3px;                
+        color: #898989;
+    }
+
+    .list_area .list .num .td {
+        font-size: $font16;                
+        line-height: 1.5;
+        letter-spacing: -0.4px;                
+        color: #222;
+    }
+
+    .list_area .list .num .td b {
+        font-weight: $f_sizeB;
+    }
+
+    .list_area .list .num .trans {
+        display: inline-block;
+        text-align: center;
+        border-radius: 3px;                
+        font-size: 10px;                
+        line-height: 1.5;
+        letter-spacing: -0.25px;                
+        color: #fff;
+        min-width: 38px;
+        padding: 3px 5px 2px;
+        box-sizing: border-box;
+        vertical-align: middle;
+        margin-left: 3px;      
+        &.nice {
+            background-color: #c22c06;                
+        }
+        &.gro {
+            background-color: #63bcb9;
+        }
+        &.turn {
+            background-color: #e6a01c;
+        }
+           
+    }
+
 }
