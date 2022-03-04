@@ -683,6 +683,9 @@ input[type='radio']:checked:before {
 }
 
 .AutoComplete #autocomplete_list {
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 260px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

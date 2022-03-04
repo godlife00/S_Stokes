@@ -28,7 +28,7 @@ $(document).ready(function () {
         $('.AutoComplete, .bg_layer').hide();
     });
     $('.bgWrap .r_menu a.searchForm').on("click", function () {            
-        $('.AutoComplete').slideToggle(300);
+        $('.AutoComplete').slideDown(300);
         $('.bg_layer').show();
     });
         

@@ -458,6 +458,9 @@ input[type='radio']:checked:before {
     }
 
     #autocomplete_list {
+        overflow: auto;
+        overflow-x: hidden;
+        max-height: 260px;
         display: flex;
         justify-content: space-between;
         gap: 3px;
