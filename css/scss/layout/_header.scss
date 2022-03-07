@@ -1,10 +1,39 @@
 /* 헤더 header */
-#header {    
-    padding: 10px 15px;
-    height: 58px;
+.s_stokes #wrap #header {        
     box-sizing: border-box;    
     background-color: #fff;
     border-bottom: 1px solid #e5e5e5;
+    &.main_hdr {
+        padding: 10px 15px;
+        height: 58px;
+    }
+    &.sub_hdr {
+        padding: 10px 15px;
+        height: 44px;
+        .leftLink {
+            a {
+                position: relative;
+                padding-left: 10px;
+                font-size: $font13;
+                line-height: 1.46;
+                letter-spacing: -0.33px;                
+                color: #898989;  
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 6px;
+                    height: 6px;                    
+                    position: absolute;
+                    top: 6px;            
+                    left: 0;                    
+                    border-top: 1px solid #898989;
+                    border-right: 1px solid #898989;            
+                    transform: rotate(-135deg);
+                }            
+            }
+        }        
+    }
+
     .bgWrap {        
         // height: 59px;
         display: flex;

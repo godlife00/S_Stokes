@@ -1,0 +1,292 @@
+// 검색결과
+
+.s_stokes #wrap #container.sub_search {
+    // 검색 종목 
+    .search_topArea {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 3px 11px;
+        background: #f5f5f5;    
+        padding: 6px 15px 25px;
+
+        .comlogo {
+            order: 2;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #d3d3d3;
+            border-radius: 50%;
+            overflow: hidden;
+        }        
+        .detail {
+            order: 3;
+            .name {
+                display: inline-block;                
+                a {
+                    font-size: $font16;
+                    font-weight: $f_sizeB;                                
+                    letter-spacing: -0.4px;
+                    color: #222;
+                }            
+            }
+            .eng {
+                padding-left: 3px;
+                display: inline-block;
+                font-size: 11px;                                
+                color: #898989;
+            }
+            .price {
+                font-size: 22px;                
+                letter-spacing: -0.55px;                
+                color: #222;
+                b {
+                    color: #222;
+                    font-weight: $f_sizeB;
+                }                
+            }
+            .gap, .per {
+                font-size: 11px;                
+                line-height: 1.55;
+                letter-spacing: -0.28px;                
+                &.increase {
+                    color: $colup;                                
+                }                
+                &.decrease {
+                    color: $coldown;                                
+                }                
+            }
+
+        }
+
+        .reg_day {
+            flex-wrap: wrap;
+            width: 100%;
+            order: 1;
+            text-align: right;
+            font-size: 10px;            
+            line-height: 1.5;
+            letter-spacing: -0.25px;            
+            color: #898989;
+        }
+    } 
+
+    .attr {        
+        margin-top: 0;
+        padding: 24px 0 10px;
+        .adequateArea {
+            border-top: none;
+            margin-top: 5px;
+        }
+        .adequateArea .listWrap .mid {
+            border-top: none;        
+        }
+    }
+
+    // 일별 MVP점수 (최근 3개월) 
+    .mvp_chart {
+        padding: 15px 15px 20px;
+        border-bottom: 1px solid #e5e5e5;
+        .title {
+            font-size: 13px;
+            font-weight: $f_sizeB;
+            letter-spacing: -0.65px;
+            color: #222;              
+            span {
+                font-size: 11px;
+                font-weight: normal;
+                line-height: 1.55;
+                letter-spacing: -0.55px;            
+                color: #898989;      
+            }            
+        }       
+        .dailySalaryChart_style {
+            height: 240px;
+        } 
+    }
+
+    // 투자지표 
+    .charistic {
+        margin-top: 8px;        
+        padding: 40px 15px 30px;
+        border-bottom: 1px solid #e5e5e5;
+        .title {
+            font-size: $font18;
+            font-weight: $f_sizeB;            
+            line-height: 1.5;
+            letter-spacing: -0.9px;
+            color: #222;
+        }
+        .data_table {     
+            margin-top: 10px;       
+            display: flex;
+            justify-content: space-between;                
+            flex-wrap: wrap;                
+            gap: 0 10px;
+            > div {
+                flex: 1 1 40%;
+                display: flex;
+                justify-content: space-between;                
+                flex-wrap: wrap;                
+                padding: 9px 2px;
+                box-sizing: border-box;                
+                border-bottom: 1px solid #e5e5e5;                
+                &:nth-child(5),
+                &:nth-child(6) {
+                    border-bottom: none;
+                }
+            }
+            .th {                
+                order: 1;
+                font-size: $font13;
+                line-height: 1.46;
+                letter-spacing: -0.65px;                
+                color: #222;
+            }            
+            .td {
+                order: 2;
+                font-size: $font13;
+                line-height: 1.46;
+                letter-spacing: -0.65px;                
+                color: #898989;
+                b {
+                    font-weight: $f_sizeB;
+                    color: #222;
+                }
+            }
+            .eg {
+                order: 3;
+                flex-wrap: wrap;                
+                width: 100%;                
+                font-size: 11px;                
+                line-height: 1.55;
+                letter-spacing: -0.55px;                
+                color: #898989;
+            }
+        }
+    }
+
+    // 주식MRI 분석
+    .MRIanalyze {
+        margin-top: 8px;        
+        padding: 40px 15px 30px;
+
+        .title {            
+            font-size: $font18;
+            font-weight: $f_sizeB;                        
+            letter-spacing: -0.9px;
+            color: #222;            
+            span {
+                font-size: $font14;
+                font-weight: normal;                
+                letter-spacing: -0.7px;                
+                color: #898989;
+            }            
+        }          
+        .starWrap {
+            margin-top: 17px;
+            display: flex;
+            justify-content: space-between;            
+            .box {
+                flex: 1;
+                padding: 13px 0;
+                .sum {
+                    text-align: center;
+                    font-size: $font13;
+                    line-height: 1.46;
+                    letter-spacing: -0.65px;                    
+                    color: #222;
+                }
+                .star_area {                    
+                    .starRev {
+                        margin-top: 12px;
+                        text-align: center;
+                    }
+    
+                }
+                &:first-child {
+                    border-right: 1px solid #e6e6e6;
+                }
+            }
+            
+        }
+    }
+
+    // 차트
+    .dataChart {
+        background-color: #f7f7f8;
+        .BICchart_style {
+            height: 320px;
+
+            .highcharts-title {
+                font-family: "Spoqa Han Sans Neo";
+                font-size: $font15 !important;
+                font-weight: $f_sizeB;                
+                line-height: 1.47;
+                letter-spacing: -0.75px;                
+                color: #222;
+            }
+
+            .highcharts-title tspan {                
+                font-size: 12px;                
+                line-height: 1.5;
+                letter-spacing: -0.6px;
+                text-align: left;
+                font-size: 12px;           
+                font-weight: normal !important;     
+                fill: #c22e06 !important;
+                color: #c22e06 !important;
+            }
+        }
+    }
+
+    // 손익계산서
+    .dataTable {
+        padding: 24px 15px 40px;
+        .table {
+            thead {
+                border-top: 1px solid #898989;
+                border-bottom: 2px solid #898989;
+                th, td {
+                    padding: 9px 3px;
+                    text-align: center;
+                }
+                th {
+                    font-size: 13px;
+                    letter-spacing: -0.65px;                                        
+                    strong {
+                        font-weight: $f_sizeB;                                            
+                        color: #222;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    border-bottom: 1px solid #e5e5e5;
+                }
+                th, td {
+                    padding: 9px 3px;
+                    font-size: 13px;                    
+                    line-height: 1.46;
+                    letter-spacing: -0.65px;                    
+                    color: #222;
+                    text-align: center;
+                }
+            }            
+        }
+        .guide_txt {
+            margin-top: 8px;
+            text-align: right;
+            font-size: 11px;            
+            line-height: 1.55;
+            letter-spacing: -0.55px;            
+            color: #898989;
+        }
+    }
+
+    
+
+    
+    
+    
+}

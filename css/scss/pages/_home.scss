@@ -97,8 +97,14 @@
             justify-content: space-between;
             gap: 20px;
             padding: 0 15px; 
+            width: 100%;
             box-sizing: border-box;
-            border-bottom: 1px solid #d0d0d0;            
+            border-bottom: 1px solid #d0d0d0;                        
+            z-index: 81;
+            background-color: #fff;            
+            &.boxShadow {
+                box-shadow : 0px 7px 20px -9px #939393;
+            }
             li {                
                 padding: 5px 0;
                 box-sizing: border-box;

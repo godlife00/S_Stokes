@@ -30,17 +30,20 @@
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <!-- highstock -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>    
+    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
     <!-- highcharts -->
-    <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-    <script src="https://code.highcharts.com/modules/debugger.js"></script>
-    <script src="js/chartjs_SS.js"></script> -->
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+    <!-- <script src="https://code.highcharts.com/highcharts-more.js"></script> -->
+    <script src="https://code.highcharts.com/stock/modules/series-label.js"></script>    
+    <script src="https://code.highcharts.com/stock/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/no-data-to-display.js"></script>
+    <script src="js/chartjs_SS.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
@@ -143,10 +146,10 @@
             <!-- 오늘의 승부주 -->
             <div class="mainBox game_scr">
                 <ul class="page_nav">
-                    <li class="active"><a href="#">오늘의승부주</a></li>
-                    <li><a href="">포트폴리오</a></li>
-                    <li><a href="">투자전략</a></li>
-                    <li><a href="">투자매력</a></li>
+                    <li class="active"><a href="#" class="nav_game_scr">오늘의승부주</a></li>
+                    <li><a href="#" class="nav_portfolio">포트폴리오</a></li>
+                    <li><a href="#" class="nav_strategy">투자전략</a></li>
+                    <li><a href="#" class="nav_attr">투자매력</a></li>
                 </ul>
                 <!-- //page_nav -->
                 <div class="list_area">
@@ -399,7 +402,7 @@
 
             <!-- 투자전략 -->
             <div class="mainBox strategy">
-                <h2 class="title"><a href="#">투자전락</a></h2>
+                <h2 class="title"><a href="#">투자전략</a></h2>
                 <div class="updata">
                     <p>오늘의 승부주 업데이트 - 12/8(수)</p>
                 </div>
