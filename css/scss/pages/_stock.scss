@@ -1,0 +1,450 @@
+// 오늘의 승부주, 투자전략
+
+.s_stokes #wrap #container.sub_stock {
+    // 오늘의 승부주 리스트
+    .winner {
+        padding: 30px 15px 40px;
+
+        .title {
+            font-size: $font20;
+            font-weight: $f_sizeB;            
+            line-height: 1.45;
+            letter-spacing: -0.5px;            
+            color: #222;
+        }
+
+        .w_filter {
+            margin-top: 24px;
+            ul {
+                display: flex;
+                justify-content: flex-start;
+                gap: 8px;
+                li {
+                    span {
+                        cursor: pointer;
+                        display: inline-block;
+                        border-radius: 3px;
+                        background-color: #f7f7f7;                        
+                        padding: 3px 7px 2px;
+                        text-align: center;
+                        font-size: $font13;                        
+                        line-height: 1.46;
+                        letter-spacing: -0.33px;
+                        color: #898989;                        
+                    }                    
+                    &.active {
+                        span {
+                            background-color: #c22c06;                
+                            color: #fff;            
+                        }
+                    }
+                }
+            }
+        }
+
+        .list_area {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;   
+            padding: 10px 0;            
+        }
+        .list_area .area {             
+            flex: 1 1 40%;               
+            overflow: hidden;            
+            background: #f5f5f5;            
+            box-sizing: border-box;            
+            padding: 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;                    
+            gap: 6px;
+            align-items: stretch;
+            align-content: space-between;
+            .left {                                 
+                width: calc(100% - 55px);
+                padding: 16px 0 0 16px;
+                box-sizing: border-box;
+            }
+            .right {
+                width: 45px;                                        
+                padding: 16px 10px 0 0;
+                box-sizing: border-box;
+            }
+            .btm {
+                width: 100%;                
+                box-sizing: border-box;
+                flex-wrap: wrap;                    
+                .num {                    
+                    > div {                        
+                        width: 100%;
+                    }                    
+                }
+            }
+        }
+
+        @include listswiper;
+        .list_area .area .left {
+            width: calc(100% - 55px);
+        }
+        .list_area .area .right {
+            width: 45px;
+            img {
+                display: inline-block;
+                width: 100%;
+            }
+        }
+        .list_area .area .btm {
+            padding: 7px 14px 10px;
+            background-color: #e6e6e6;            
+        }
+        .list_area .more {
+            margin-top: 7px;
+            text-align: right;
+            a {
+                position: relative;
+                font-size: $font13;                
+                line-height: 1.46;
+                letter-spacing: -0.33px;                
+                color: #c22c06;                               
+                padding-right: 12px;
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 6px;
+                    height: 6px;                    
+                    position: absolute;
+                    top: 6px;            
+                    right: 0;                    
+                    border-top: 1px solid #c22c06;
+                    border-right: 1px solid #c22c06;            
+                    transform: rotate(45deg);
+                }
+                &::before {
+                    content: '';
+                    display: inline-block;                    
+                    height: 1px;                    
+                    position: absolute;                    
+                    left: 0;                  
+                    right: 0;
+                    bottom: 0;  
+                    background-color: #c22c06;                    
+                }
+            }
+        }
+        
+    }
+
+    // 오늘의 승부주 상세보기
+    .winner_topArea {
+        display: flex;
+        justify-content: space-between;   
+        gap: 10px;
+        align-items: center;
+        background: #fff;
+        padding: 10px 15px;
+
+        .comlogo {                      
+            display: inline-block;
+            flex-basis: 50px;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #d3d3d3;
+            border-radius: 50%;
+            overflow: hidden;
+        }        
+        .detail {  
+            flex: 2;          
+            .name {
+                display: inline-block;                
+                a {
+                    font-size: $font16;
+                    font-weight: $f_sizeB;                                
+                    letter-spacing: -0.4px;
+                    color: #222;
+                }            
+            }
+            .txt {
+                display: block;
+                margin-top: 5px;
+                font-size: $font12;                
+                line-height: 1.5;
+                letter-spacing: -0.3px;                
+                color: #898989;                
+                word-break: break-all;
+            }
+
+            .trans {
+                display: inline-block;
+                text-align: center;
+                border-radius: 3px;                
+                font-size: 10px;                
+                line-height: 1.5;
+                letter-spacing: -0.25px;                
+                color: #fff;
+                min-width: 38px;
+                padding: 3px 5px 2px;
+                box-sizing: border-box;
+                vertical-align: middle;
+                margin-left: 3px;      
+                &.nice {
+                    background-color: #c22c06;                
+                }
+                &.gro {
+                    background-color: #63bcb9;
+                }
+                &.turn {
+                    background-color: #e6a01c;
+                }  
+            }
+        }
+
+        .opinion {
+            flex: 1;
+            align-self: flex-end;
+            text-align: center;            
+            .m_opinion {
+                font-size: $font12;
+                letter-spacing: -0.3px;
+                color: #898989;                            
+            }
+            
+            .suggestion {
+                display: block;
+                font-size: $font15;
+                font-weight: $f_sizeB;
+                line-height: 1.47;
+                letter-spacing: -0.38px;                
+                &.buy {
+                    color: $colup;
+                }                
+                &.sell {
+                    color: $coldown;
+                }                
+            }
+        }
+    } 
+    
+    // 검색 종목
+    .mainBox.attr {
+        margin-top: 0;
+        padding: 0;
+        padding-top: 5px;
+        border: none;        
+
+        .bg_box {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 4px 4px;
+            margin: 15px 15px 0;
+            box-sizing: border-box;
+        }
+
+        .data_opinion {
+            display: flex;            
+            justify-content: space-between;
+            gap: 10px;
+            padding: 15px 15px;
+            &:first-child {
+                border-bottom: 1px solid #e5e5e5;
+            }            
+            .line {                
+                .th {
+                    font-size: $font12;                    
+                    line-height: 1.5;
+                    letter-spacing: -0.3px;
+                    color: #898989;
+                    span {
+                        font-size: 10px;
+                        color: #898989;                        
+                    }
+                }
+                .td {
+                    font-size: $font15;                    
+                    line-height: 1.47;
+                    letter-spacing: -0.38px;                    
+                    color: #222;
+                    b {
+                        font-weight: $f_sizeB;                    
+                    }
+
+                    &.yield {
+                        font-weight: $f_sizeB;                    
+                        color: $colup;
+                        b {
+                            color: $colup;
+                        }
+                    }
+                }                
+            }
+            &:nth-child(1) {                                
+                &:nth-child(1), &:nth-child(2) {
+                    flex: 2;
+                }                
+                &:nth-child(3) {
+                    flex: 1;
+                }
+            }
+            &:nth-child(2) {           
+                &:nth-child(1) {
+                    flex: 2;
+                }
+                &:nth-child(2) {
+                    flex: 1;
+                }
+            }
+
+        }
+
+        .adequateArea {
+            border: none;
+            margin-top: 0;
+            padding: 15px 15px 10px 0;
+            background-color: #fff;
+            border-radius: 8px;
+
+            .title {
+                padding-left: 15px;
+                font-size: $font16;
+                font-weight: $f_sizeB;                
+                line-height: 1.5;
+                letter-spacing: -0.4px;
+                color: #222;                
+            }
+        }
+        .adequateArea .listWrap {
+            padding: 0;
+        }
+        .adequateArea .listWrap .mid {
+            border: none;            
+        }
+    }
+
+    // 투자포인트
+    .point {
+        padding: 36px 15px 35px;        
+        border-bottom: 1px solid #e5e5e5;
+
+        .title {
+            font-size: $font18;
+            font-weight: $f_sizeB;            
+            line-height: 1.5;
+            letter-spacing: -0.9px;
+            color: #222;
+        }
+        li {
+            margin-top: 5px;
+            a {
+                @include white-space;
+                width: 98%;
+                position: relative;
+                display: block;
+                padding-left: 10px;
+                font-size: $font15;
+                line-height: 1.93;
+                letter-spacing: -0.38px;                
+                color: #222;
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 5px;
+                    height: 1px;
+                    position: absolute;
+                    left: 0;
+                    top: 15px;
+                    background-color: #222;
+                }
+            }
+        }        
+    }
+
+    // 투자지표 
+    .charistic {
+        margin-top: 8px;        
+        padding: 40px 15px 30px;
+        border-bottom: 1px solid #e5e5e5;
+        .title {
+            font-size: $font18;
+            font-weight: $f_sizeB;            
+            line-height: 1.5;
+            letter-spacing: -0.9px;
+            color: #222;
+        }
+        .data_table {     
+            margin-top: 10px;       
+            display: flex;
+            justify-content: space-between;                
+            flex-wrap: wrap;                
+            gap: 0 10px;
+            > div {
+                flex: 1 1 40%;
+                display: flex;
+                justify-content: space-between;                
+                flex-wrap: wrap;                
+                padding: 9px 2px;
+                box-sizing: border-box;                
+                border-bottom: 1px solid #e5e5e5;                
+                &:nth-child(5),
+                &:nth-child(6) {
+                    border-bottom: none;
+                }
+            }
+            .th {                
+                order: 1;
+                font-size: $font13;
+                line-height: 1.46;
+                letter-spacing: -0.65px;                
+                color: #222;
+            }            
+            .td {
+                order: 2;
+                font-size: $font13;
+                line-height: 1.46;
+                letter-spacing: -0.65px;                
+                color: #898989;
+                b {
+                    font-weight: $f_sizeB;
+                    color: #222;
+                }
+            }
+            .eg {
+                order: 3;
+                flex-wrap: wrap;                
+                width: 100%;                
+                font-size: 11px;                
+                line-height: 1.55;
+                letter-spacing: -0.55px;                
+                color: #898989;
+            }
+        }
+    }
+
+    // 차트
+    .dataChart {
+        background-color: #f7f7f8;
+        .BICchart_style {
+            height: 340px;
+
+            .highcharts-title {
+                font-family: "Spoqa Han Sans Neo";
+                font-size: $font15 !important;
+                font-weight: $f_sizeB;                
+                line-height: 1.47;
+                letter-spacing: -0.75px;                
+                color: #222;
+            }
+
+            .highcharts-title tspan {                
+                font-size: 12px;                
+                line-height: 1.5;
+                letter-spacing: -0.6px;
+                text-align: left;
+                font-size: 12px;           
+                font-weight: normal !important;     
+                fill: #c22e06 !important;
+                color: #c22e06 !important;
+            }
+        }
+    }
+}

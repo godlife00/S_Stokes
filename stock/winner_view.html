@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>슈퍼스톡스</title>
+    <meta name="robots" content="한경미국주식 - 미국주식 쉽고 편리하게'">
+    <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#e57828">
+    <!-- 오픈 그래프 -->
+    <meta property="og:title" content="한경미국주식 - 미국주식 쉽고 편리하게'" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="www.choicestock.co.kr">
+    <!-- 파비콘 favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <!-- highstock -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
+    <!-- highcharts -->
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+    <!-- <script src="https://code.highcharts.com/highcharts-more.js"></script> -->
+    <script src="https://code.highcharts.com/stock/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/no-data-to-display.js"></script>
+    <script src="../js/chartjs_SS.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/S_Stokes.css" />
+    <!-- js -->
+    <script src="../js/S_Stokes.js"></script>
+    <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
+    <script src="../js/header.js"></script>
+    <!-- 로컬에서만 사용되는 파일 종료 -->
+</head>
+
+<body class="s_stokes">
+    <div id="wrap">
+        <!-- 헤더 -->
+        <div id="header" class="sub_hdr">
+            <div class="bgWrap">
+                <div class="leftLink">
+                    <a href="winner.html">오늘의승부주</a>
+                </div>
+            </div>
+            <!-- //header_bgWrap -->
+        </div>
+        <!-- //header -->
+
+        <div id="container" class="sub_stock">
+            <!-- 검색 종목 -->
+            <div class="winner_topArea">
+                <img src="/img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
+                <div class="detail">
+                    <h3 class="name"><a href="#">한국앤컴퍼니</a></h3>
+                    <span class="trans nice">우량주</span>
+                    <!-- 우량주 nice, 성장주 gro, 턴 turn -->
+                    <span class="txt">실적개선+저평가+기관 매수 실적개선+저평가+기관 매수 </span>
+                </div>
+                <!-- //detail -->
+                <div class="opinion">
+                    <span class="m_opinion">투자의견</span>
+                    <strong class="suggestion buy">분할매수</strong>
+                    <!-- 매수 buy, 매도 sell -->
+                </div>
+            </div>
+            <!-- //winner_topArea -->
+
+            <!-- 추천가, 목표가 -->
+            <div class="mainBox attr">
+                <div class="bg_box">
+                    <div class="data_opinion">
+                        <div class="line">
+                            <div class="th">추천가 <span>12/13 15:33</span></div>
+                            <div class="td"><b>1,234,500</b>원</div>
+                        </div>
+                        <div class="line">
+                            <div class="th">목표가</div>
+                            <div class="td"><b>1,234,500</b>원</div>
+                        </div>                        
+                        <div class="line">
+                            <div class="th">기대수익률</div>
+                            <div class="td yield">189.<b>9%</b></div>
+                        </div>
+                    </div>
+                    <!-- //data_opinion -->
+                    <div class="data_opinion">
+                        <div class="line">
+                            <div class="th">분할매도가</div>
+                            <div class="td"><b>4,500</b>원 ~ <b>1,234,500</b>원</div>
+                        </div>
+                        <div class="line">
+                            <div class="th">손절가</div>
+                            <div class="td"><b>1,234,500</b>원</div>
+                        </div>                                                
+                    </div>
+                    <!-- //data_opinion -->
+                    
+                    <div class="adequateArea">
+                        <h2 class="title">슈스톡 진단점수</h2>
+                        <div class="listWrap">
+                            <div class="list">
+                                <!-- 벨류 점수 -->
+                                <div class="mid">
+                                    <div class="charm_num">
+                                        <span><b>98</b>점</span>
+                                    </div>
+                                    <!-- //charm_num -->
+                                    <div class="num_bar">
+                                        <div class="line">
+                                            <div class="th">수급분석</div>
+                                            <div class="barArea">
+                                                <div class="barline">
+                                                    <span class="position" style="width: 10%;"></span>
+                                                </div>
+                                            </div>
+                                            <!-- //barArea -->
+                                            <div class="td"><b>10</b>점</div>
+                                        </div>
+                                        <div class="line">
+                                            <div class="th">밸류에이션</div>
+                                            <div class="barArea">
+                                                <div class="barline">
+                                                    <span class="position" style="width: 50%;"></span>
+                                                </div>
+                                            </div>
+                                            <!-- //barArea -->
+                                            <div class="td"><b>50</b>점</div>
+                                        </div>
+                                        <div class="line">
+                                            <div class="th">펀더멘탈</div>
+                                            <div class="barArea">
+                                                <div class="barline">
+                                                    <span class="position" style="width: 90%;"></span>
+                                                </div>
+                                            </div>
+                                            <!-- //barArea -->
+                                            <div class="td"><b>90</b>점</div>
+                                        </div>
+                                    </div>
+                                    <!-- //num_bar -->
+                                </div>
+                                <!-- //mid -->
+                            </div>
+                            <!-- //list -->
+                        </div>
+                        <!-- //listWrap -->
+                    </div>
+                    <!-- //adequateArea -->
+                </div>
+                <!-- //bg_box -->
+            </div>
+            <!-- //attr -->
+
+            <!-- 슈스톡 진단점수 -->
+            <div class="mainBox point">
+                <div class="list">
+                    <h2 class="title">투자포인트</h2>
+                    <ul>
+                        <li>
+                            <a href="#">한국타이어 그룹 지주사, 자체 사업으로 차량용 납축전, 자체 사업으로 차량용 납축전</a>
+                            <a href="#">한국타이어 그룹 지주사</a>
+                            <a href="#">한국타이어 그룹 지주사, 자체 사업으로 차량용 납축전</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 투자지표 -->
+            <div class="mainBox charistic">
+                <h2 class="title">투자지표</h2>
+                <div class="data_table">
+                    <div>
+                        <span class="th">주당순이익</span>
+                        <span class="eg">EPS</span>
+                        <span class="td"><b>2,607</b>원</span>
+                    </div>
+                    <div>
+                        <span class="th">주당순자산</span>
+                        <span class="eg">BPS</span>
+                        <span class="td"><b>32,607</b>원</span>
+                    </div>
+                    <div>
+                        <span class="th">주가수익배수</span>
+                        <span class="eg">PER</span>
+                        <span class="td"><b>2,607</b>배</span>
+                    </div>
+                    <div>
+                        <span class="th">주가순자산배수</span>
+                        <span class="eg">PBR</span>
+                        <span class="td"><b>2,607</b>배</span>
+                    </div>
+                    <div>
+                        <span class="th">자기자본이익률</span>
+                        <span class="eg">ROE</span>
+                        <span class="td"><b>87</b>배</span>
+                    </div>
+                    <div>
+                        <span class="th">시가배당률</span>
+                        <span class="td"><b>6.07</b>%</span>
+                    </div>
+                </div>
+            </div>
+            <!-- //charistic -->
+
+            <!-- 차트 -->
+            <div class="mainBox dataChart">
+                <div class="">
+                    <div id="BICchart_profit01" class="BICchart_style"></div>
+
+                </div>
+            </div>
+            <!-- //data_chart -->
+
+        </div>
+        <!-- //container -->
+
+        <div id="footer" class="f_main"></div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>
