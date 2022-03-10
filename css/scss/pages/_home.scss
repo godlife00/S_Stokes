@@ -546,7 +546,7 @@
                             justify-content: flex-start;                          
                             align-content: center;                   
                             gap: 6px;
-                            li {                                
+                            li {                                     
                                 padding: 0 2px;
                                 box-sizing: border-box;
                             }        
@@ -575,10 +575,22 @@
                             }                                                        
                         }
                         .name {
-                            flex-basis: 40%;
-                            max-width: 40%;                            
+                            width: 100%;
+                            @media (min-width: 320px) and (max-width: 359px) {
+                                width: 70px;                                                                
+                            }
+                            @media (min-width: 360px) and (max-width: 424px) {
+                                width: 100px;                                                                
+                            }
+                            @media (min-width: 425px) {
+                                width: 140px;                                                                
+                            }
+                            @media (min-width: 720px) {
+                                width: 100%;                                
+                            }                         
                             a {                                
-                                @include white-space;                                
+                                @include white-space;             
+                                width: 100%;                   
                                 font-size: $font15;
                                 font-weight: $f_sizeB;                                
                                 line-height: 1.47;

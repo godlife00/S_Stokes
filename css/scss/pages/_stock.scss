@@ -275,19 +275,31 @@
                     }
                 }
                 .td {
-                    font-size: $font15;                    
+                    font-size: $font15;                                        
+                    font-weight: normal;                    
                     line-height: 1.47;
                     letter-spacing: -0.38px;                    
                     color: #222;
                     b {
-                        font-weight: $f_sizeB;                    
+                        font-weight: $f_sizeB;                        
                     }
 
-                    &.yield {
-                        font-weight: $f_sizeB;                    
+                    &.yield {                        
                         color: $colup;
                         b {
                             color: $colup;
+                        }
+                    }
+                    .up {
+                        color: $colup;
+                        b {
+                            color: $colup;                            
+                        }
+                    }
+                    .down {
+                        color: $coldown;
+                        b {
+                            color: $coldown;                           
                         }
                     }
                 }                
@@ -557,6 +569,567 @@
                 text-align: left;
                 color: #898989;
             }                
+        }
+    }
+
+    // 포트폴리오 종목추천
+    .portfolio_recom {
+        padding: 30px 0 40px;
+        .title {
+            padding: 0 15px;            
+        }
+        .tabsWrap {
+            margin-top: 19px;
+            background-color: blanchedalmond;
+            .page_nav {                       
+                display: flex;
+                justify-content: flex-start;
+                gap: 24px;                
+                width: 100%;
+                padding: 0 15px;
+                box-sizing: border-box;
+                border-bottom: 1px solid #d0d0d0;                        
+                background-color: #fff;                            
+                li {                
+                    padding: 5px 0;
+                    box-sizing: border-box;                    
+                    text-align: center;                
+                    position: relative;
+                    top: 1px;
+                    a {
+                        font-size: $font16;
+                        line-height: 1.5;
+                        letter-spacing: -0.4px;                    
+                        color: #222;
+                    }
+                    &.active {
+                        border-bottom: 3px solid #c22e06;
+                        a {                        
+                            font-weight: $f_sizeB;
+                            color: #c22e06;                        
+                        }                    
+                    }
+                    .updata {
+                        position: absolute;                        
+                        top: 13px;
+                        right: -110px;                        
+                        width: 110px;
+                        font-size: 10px;
+                        letter-spacing: -0.25px;                        
+                        color: #898989;                        
+                    }
+                }
+            }
+        }
+
+        .list_area {
+            margin-top: 14px;
+            padding: 0 15px;
+            display: flex;
+            flex-wrap: wrap;            
+            gap: 8px;
+            align-items: center;            
+            box-sizing: border-box;
+            background: #fff;
+            .list {
+                display: flex;                
+                justify-content: space-between;
+                gap: 11px;                
+                align-items: center;
+                width: 100%;
+                padding: 15px 10px;
+                box-sizing: border-box;
+                border-radius: 8px;
+                background-color: #f5f5f5;
+
+                .comlogo {                                          
+                    display: inline-block;
+                    flex-basis: 40px;
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid #d3d3d3;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }        
+                .detail {             
+                    flex: 2;         
+                    flex-basis: 100px;
+                    width: 100px;
+                    .name {
+                        display: inline-block;                                        
+                        width: 100%;
+                        a {
+                            @include white-space;                            
+                            width: 100%;
+                            position: relative;
+                            font-size: $font16;
+                            font-weight: $f_sizeB;                                
+                            letter-spacing: -0.4px;
+                            color: #222;
+                        }            
+                    }
+                    .txt {
+                        display: block;                        
+                        font-size: $font12;                
+                        line-height: 1.5;
+                        letter-spacing: -0.3px;                
+                        color: #898989;                
+                        word-break: break-all;
+                    }
+                }
+                .opinion_box {                    
+                    .th {
+                        font-size: 10px;                        
+                        letter-spacing: -0.25px;
+                        font-weight: normal;
+                        text-align: left;
+                        color: #898989;
+                        b {
+                            font-weight: $f_sizeB;                                                                
+                            color: #898989;
+                        }
+                    }
+                    .td {
+                        margin-top: 3px;
+                        font-size: $font13;                                                
+                        letter-spacing: -0.35px;
+                        text-align: left;
+                        color: #222;
+                        b {                                            
+                            font-weight: $f_sizeB;
+                            color: #222;
+                        }
+
+                        &.opinion {          
+                            text-align: center;                  
+                            padding: 1px 3px;
+                            box-sizing: border-box;
+                            color: #f00;
+                            border-radius: 3px;
+                            background-color: rgba($color: #f00, $alpha: 0.16);
+                            b {                                                                            
+                                color: #f00;
+                            }                          
+                        } 
+                        
+                        
+                                               
+                    }
+                }
+            }
+        }       
+
+        // 포트수익률
+        .bg_box {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 4px 4px;
+            margin: 15px 15px 0;
+            box-sizing: border-box;
+            .data_opinion {
+                display: flex;            
+                justify-content: space-between;
+                align-items: flex-end;
+                gap: 15px;
+                padding: 15px 15px;
+                
+                .line {                                
+                    .th {
+                        font-size: $font12;                    
+                        line-height: 1.5;
+                        letter-spacing: -0.3px;
+                        color: #898989;
+                        span {
+                            font-size: 10px;
+                            color: #898989;                        
+                        }
+                    }
+                    .td {
+                        font-size: $font18;                    
+                        line-height: 1.47;
+                        letter-spacing: -0.38px;                    
+                        color: #222;
+                        b {
+                            font-weight: $f_sizeB;                    
+                        }
+    
+                        .port {
+                            font-size: $font16;
+                            font-weight: $f_sizeB;                        
+                            letter-spacing: -0.4px;
+                            color: #222;                        
+                        }
+                        p {
+                            display: inline-block;
+                            &.yield {
+                                font-size: $font20;
+                                font-weight: $f_sizeB;                            
+                                letter-spacing: -0.53px;                            
+                                color: $colup;
+                                b {
+                                    font-weight: normal;                                
+                                    color: $colup;                                
+                                }                            
+                            }
+                        }
+    
+                        &.yield {
+                            font-weight: $f_sizeB;                    
+                            color: $colup;
+                            b {
+                                font-weight: normal;
+                                color: $colup;
+                            }
+                        }
+                    }                
+                    &:nth-child(1) {
+                        flex: 3;
+                        border-right: 1px solid #e6e6e6;
+                    }                
+                    &:nth-child(2), &:nth-child(3) {
+                        flex: 1;
+                    }
+                }    
+            }
+        }
+
+        // 포트수익률 테이블
+        .adequateArea {
+            margin-top: 17px;            
+            .tableData {
+                .table_filter {
+                    padding: 0 15px;
+                    ul {                        
+                        display: flex;                    
+                        justify-content: flex-end;        
+                    }
+                    
+                    li {               
+                        position: relative;                                 
+                        cursor: pointer;
+                        padding: 9px 7px;
+                        font-size: $font12;                            
+                        letter-spacing: -0.3px;                            
+                        color: #898989;                                
+
+                        &.active {                                
+                            font-weight: $f_sizeB;
+                            color: #575757;                                
+                        }                     
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            top: 11px;
+                            display: inline-block;
+                            width: 1px;
+                            height: 12px;
+                            background-color: #d3d3d3;
+                        }
+                        &:last-child {
+                            padding-right: 0;
+                            &::after {
+                                display: none;
+                            }
+
+                        }
+                    
+                    }
+                }
+                .table {         
+                    border-top: 2px solid #c22e06;
+                    th, td {
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+                    thead {
+                        th {
+                            padding: 4px 5px;
+                            background-color: #f5f5f5;                    
+                            text-align: center;
+                            border-bottom: 1px solid #e5e5e5;
+                            font-size: $font12;
+                            line-height: 1.5;
+                            letter-spacing: -0.3px;                        
+                            color: #898989;                                            
+                            &.txt_R {
+                                text-align: right;
+                            }
+                            &:last-child {
+                                padding-right: 15px;
+                            }
+                        } 
+                    }
+                    tbody {
+                        tr {
+                            border-bottom: 1px solid #e5e5e5;
+                            margin: 0 15px;
+                        }
+                        td {
+                            padding: 15px 5px;
+                            &:first-child {
+                                padding-left: 15px;
+                            }
+                            &:last-child {
+                                padding-right: 15px;
+                            }
+                        }
+                        .event {                        
+                            > div {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 5px;
+                                span {
+                                    text-align: left;                                    
+                                }
+                            }    
+                        }
+                        .cunt {             
+                            padding-right: 5px;                       
+                            font-size: 11px;
+                            font-weight: $f_sizeB;
+                            line-height: 1.55;
+                            letter-spacing: -0.28px;                            
+                            color: #898989;
+                        }
+                        .comlogo {
+                            display: inline-block;
+                            border: 1px solid #d8d8d8;                            
+                            border-radius: 50%;
+                            overflow: hidden;      
+                            flex-basis: 24px;                      
+                            width: 24px;
+                            height: 24px;
+                            img {
+                                display: inline;
+                                width: 100%;
+                                height: 100%;
+                            }                                                        
+                        }
+                        .name {                            
+                            width: 100%;
+                            @media (min-width: 320px) and (max-width: 359px) {
+                                width: 120px;                                                                
+                            }
+                            @media (min-width: 360px) and (max-width: 424px) {
+                                width: 80px;                                                                
+                            }
+                            @media (min-width: 425px) {
+                                width: 140px;                                                                
+                            }
+                            @media (min-width: 720px) {
+                                width: 100%;                                
+                            }
+                            a {                                
+                                @include white-space;                                
+                                font-size: $font13;
+                                font-weight: $f_sizeB;                                
+                                letter-spacing: -0.33px;                                
+                                color: #222;
+                            }                            
+                        }
+                        .price {          
+                            font-size: $font13;                            
+                            font-weight: normal;
+                            text-align: right;
+                            letter-spacing: -0.33px;                            
+                            color: #222;
+                            b {
+                                font-weight: $f_sizeB;                                                            
+                            }
+                            .per {                        
+                                font-size: 10px;
+                            }
+                        }
+                        .per {                        
+                            font-size: $font13;                            
+                            font-weight: normal;
+                            text-align: right;
+                            letter-spacing: -0.33px;                            
+                            color: #222;
+                            b {
+                                font-weight: $f_sizeB;                                                            
+                            }              
+                            &.increase {
+                                color: $colup;                                
+                            }
+                            &.decrease {
+                                color: $coldown;                                                                
+                            }    
+                        }
+                        .num {
+                            font-size: $font13;                            
+                            letter-spacing: -0.33px;                            
+                            color: #222;           
+                            b {                                
+                                font-weight: $f_sizeB;                                                            
+                                color: #222;                                      
+                            }                 
+                        }
+    
+                    }           
+                }                      
+            }
+            // 투자매력TOP 50 포트폴리오 차트
+            &.attr {
+                margin-top: 0;
+                .tableData .table{
+                    border-top: none;
+                }
+
+                .tableData .table tbody .name {                            
+                    max-width: 100%;
+                    @media (min-width: 320px) and (max-width: 359px) {
+                        max-width: 100px;                                                                
+                    }
+                    @media (min-width: 360px) and (max-width: 424px) {
+                        max-width: auto;                                                                
+                    }
+                    @media (min-width: 425px) {
+                        max-width: auto;                                                                                                                          
+                    }
+                    @media (min-width: 720px) {
+                        max-width: auto;                                                                                               
+                    }
+                    a {                                
+                        @include white-space;                                
+                        font-size: $font13;
+                        font-weight: $f_sizeB;                                
+                        letter-spacing: -0.33px;                                
+                        color: #222;
+                    }                            
+                }
+                .tableData .table tbody .price {
+                    text-align: center;                    
+                }
+                
+                .tableData .table tbody .price .per {
+                    display: inline-block;
+                }
+            }
+                
+        }
+
+        // exWrap
+        .exWrap {
+            margin-top: 30px;
+            background-color: #f5f5f5;
+            .sumTitle {                
+                text-align: center;
+                margin: 0 15px;
+                padding: 30px 0;
+                border-bottom: 1px solid #e6e6e6;
+                .txt {
+                    position: relative;
+                    display: inline-block;                                                            
+                    font-size: $font16;                    
+                    line-height: 1.44;
+                    letter-spacing: -0.4px;
+                    color: #575757;
+                    
+                    strong {
+                        display: block;
+                        font-weight: $f_sizeB;                    
+                        color: #c22e06;
+
+                    }
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        left: -19px;
+                        top: 0;
+                        width: 16px;
+                        height: 16px;
+                        background: url('/img/quotes_start.svg') no-repeat left top;
+                    }
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        right: -20px;
+                        bottom: 7px;
+                        width: 16px;
+                        height: 16px;
+                        background: url('/img/quotes_end.svg') no-repeat left top;
+                    }
+                }
+
+            }
+            .sumList {
+                padding: 24px 15px;
+                &:last-child {
+                    padding-top: 0;
+
+                }
+                .title {
+                    font-size: $font15;
+                    font-weight: $f_sizeB;                    
+                    letter-spacing: -0.38px;                    
+                    color: #222;                  
+                    padding: 0;
+                }
+                ul {
+                    margin-top: 5px;
+                    li {
+                        position: relative;
+                        font-size: $font12;                        
+                        letter-spacing: -0.3px;                        
+                        line-height: 1.25;
+                        color: #898989;
+                        padding: 3px;
+                        padding-left: 10px;
+                        &::after {
+                            content: '';
+                            display: inline-block;
+                            width: 5px;
+                            height: 1px;
+                            position: absolute;
+                            left: 0;
+                            top: 10px;
+                            background-color: #898989;
+                        }                        
+                    }
+                }
+            }
+        }
+
+        // 투자매력TOP50 점수        
+        .topbox {
+            padding: 0 15px;
+            .title {
+                padding: 0;
+                font-size: $font20;
+                font-weight: $f_sizeB;
+                letter-spacing: -0.5px;                
+                color: #222;
+            }            
+            .txt {                
+                margin-top: 20px;
+                font-size: $font12;
+                line-height: 1.5;
+                letter-spacing: -0.3px;                
+                color: #898989;   
+                word-break: break-all;
+                strong {
+                    font-weight: $f_sizeB;
+                    color: #575757;                    
+                }             
+            }
+        }
+
+        .mainBox.attr .adequateArea {
+            margin-top: 20px;
+            padding: 0;
+            border-top: 2px solid #c22e06;
+        }
+        .mainBox.attr .adequateArea .listWrap {
+            padding: 0 15px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .mainBox.attr .adequateArea .listWrap .mid {
+            border-top: 1px solid #e5e5e5;
         }
     }
 }

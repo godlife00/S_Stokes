@@ -32,12 +32,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <!-- highstock -->
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/data.js"></script>    
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
     <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
     <!-- highcharts -->
     <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
     <!-- <script src="https://code.highcharts.com/highcharts-more.js"></script> -->
-    <script src="https://code.highcharts.com/stock/modules/series-label.js"></script>    
+    <script src="https://code.highcharts.com/stock/modules/series-label.js"></script>
     <script src="https://code.highcharts.com/stock/modules/solid-gauge.js"></script>
     <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
@@ -73,12 +73,12 @@
         <div id="container" class="sub_search">
             <!-- 검색 종목 -->
             <div class="search_topArea">
-                <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">                
+                <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
                 <div class="detail">
                     <h3 class="name"><a href="#">한국앤컴퍼니</a></h3>
-                    <span class="eng">005944</span>                    
+                    <span class="eng">005944</span>
                     <div>
-                        <span class="price"><b>9,350,88</b>원</span>                    
+                        <span class="price"><b>9,350,88</b>원</span>
                         <span class="gap increase">1,100</span>
                         <span class="per increase">+1.38%</span>
                         <!-- increase 증가, decrease 감소 -->
@@ -94,7 +94,7 @@
                 <h2 class="title">슈스톡 진단점수</h2>
                 <div class="adequateArea">
                     <div class="listWrap">
-                        <div class="list">
+                        <div class="list">                            
                             <!-- 벨류 점수 -->
                             <div class="mid">
                                 <div class="charm_num">
@@ -105,8 +105,11 @@
                                     <div class="line">
                                         <div class="th">수급분석</div>
                                         <div class="barArea">
-                                            <div class="barline">
+                                            <!-- <div class="barline">
                                                 <span class="position" style="width: 10%;"></span>
+                                            </div> -->
+                                            <div class="barline zt-skill-bar">
+                                                <div class="position" data-width="10"></div>
                                             </div>
                                         </div>
                                         <!-- //barArea -->
@@ -116,7 +119,9 @@
                                         <div class="th">밸류에이션</div>
                                         <div class="barArea">
                                             <div class="barline">
-                                                <span class="position" style="width: 50%;"></span>
+                                                <div class="barline zt-skill-bar">
+                                                    <div class="position" data-width="50"></div>
+                                                </div>
                                             </div>
                                         </div>
                                         <!-- //barArea -->
@@ -126,7 +131,9 @@
                                         <div class="th">펀더멘탈</div>
                                         <div class="barArea">
                                             <div class="barline">
-                                                <span class="position" style="width: 90%;"></span>
+                                                <div class="barline zt-skill-bar">
+                                                    <div class="position" data-width="90"></div>
+                                                </div>
                                             </div>
                                         </div>
                                         <!-- //barArea -->
@@ -139,7 +146,6 @@
                         </div>
                         <!-- //list -->
                     </div>
-                    <!-- //listWrap -->
                 </div>
                 <!-- //adequateArea -->
             </div>
@@ -157,32 +163,32 @@
                 <h2 class="title">투자지표</h2>
                 <div class="data_table">
                     <div>
-                        <span class="th">주당순이익</span>     
-                        <span class="eg">EPS</span>                                           
+                        <span class="th">주당순이익</span>
+                        <span class="eg">EPS</span>
                         <span class="td"><b>2,607</b>원</span>
                     </div>
                     <div>
-                        <span class="th">주당순자산</span>     
-                        <span class="eg">BPS</span>                                           
+                        <span class="th">주당순자산</span>
+                        <span class="eg">BPS</span>
                         <span class="td"><b>32,607</b>원</span>
                     </div>
                     <div>
-                        <span class="th">주가수익배수</span>     
-                        <span class="eg">PER</span>                                           
+                        <span class="th">주가수익배수</span>
+                        <span class="eg">PER</span>
                         <span class="td"><b>2,607</b>배</span>
                     </div>
                     <div>
-                        <span class="th">주가순자산배수</span>     
-                        <span class="eg">PBR</span>                                           
+                        <span class="th">주가순자산배수</span>
+                        <span class="eg">PBR</span>
                         <span class="td"><b>2,607</b>배</span>
                     </div>
                     <div>
-                        <span class="th">자기자본이익률</span>     
-                        <span class="eg">ROE</span>                                           
+                        <span class="th">자기자본이익률</span>
+                        <span class="eg">ROE</span>
                         <span class="td"><b>87</b>배</span>
                     </div>
                     <div>
-                        <span class="th">시가배당률</span>     
+                        <span class="th">시가배당률</span>
                         <span class="td"><b>6.07</b>%</span>
                     </div>
                 </div>
@@ -192,9 +198,9 @@
             <!-- 주식MRI 분석 -->
             <div class="mainBox MRIanalyze">
                 <h2 class="title">주식MRI 분석 <span>(특허출원)</span></h2>
-                <div class="starWrap">   
+                <div class="starWrap">
                     <div class="box">
-                        <p class="sum">재무안전성</p>                    
+                        <p class="sum">재무안전성</p>
                         <div class="star_area">
                             <div class="starRev">
                                 <span class="starR on">별1</span>
@@ -209,7 +215,7 @@
                     </div>
                     <!-- //box -->
                     <div class="box">
-                        <p class="sum">현금창출력</p>                    
+                        <p class="sum">현금창출력</p>
                         <div class="star_area">
                             <div class="starRev">
                                 <span class="starR on">별1</span>
@@ -221,14 +227,14 @@
                             </div>
                         </div>
                         <!-- //star_area -->
-                    </div>                    
-                </div>      
+                    </div>
+                </div>
                 <!-- //starWrap -->
             </div>
             <!-- //MRIanalyze -->
 
             <!-- 차트 -->
-            <div class="mainBox dataChart">                
+            <div class="mainBox dataChart">
                 <div class="">
                     <div id="BICchart_profit01" class="BICchart_style"></div>
 
@@ -250,31 +256,31 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th class="txt_L">매출액</th>                                                                                                
+                                <th class="txt_L">매출액</th>
                                 <td>43</td>
                                 <td>243</td>
                                 <td>9,043</td>
                             </tr>
                             <tr>
-                                <th class="txt_L">영업이익</th>                                                                                                
+                                <th class="txt_L">영업이익</th>
                                 <td>3</td>
                                 <td>43</td>
                                 <td>9,043</td>
                             </tr>
                             <tr>
-                                <th class="txt_L">영업이익률(%)</th>                                                                                                
+                                <th class="txt_L">영업이익률(%)</th>
                                 <td>2,569%</td>
                                 <td>69%</td>
                                 <td>9,043%</td>
                             </tr>
                             <tr>
-                                <th class="txt_L">순이익(연결지배)</th>                                                                                                
+                                <th class="txt_L">순이익(연결지배)</th>
                                 <td>2,569</td>
                                 <td>2,569</td>
                                 <td>2,569</td>
                             </tr>
                             <tr>
-                                <th class="txt_L">순이익률(%)</th>                                                                                                
+                                <th class="txt_L">순이익률(%)</th>
                                 <td>043%</td>
                                 <td>043%</td>
                                 <td>043%</td>

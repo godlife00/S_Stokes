@@ -564,3 +564,11 @@ input[type='radio']:checked:before {
 	fill: transparent;
     stroke: rgb(0, 0, 0);	
 }
+
+// 그래프바 에니메이션 효과
+.zt-skill-bar * {
+    transition: all 1.5s ease;
+}
+.zt-skill-bar div {        
+    width: 0;
+}

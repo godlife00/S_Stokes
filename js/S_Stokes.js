@@ -75,6 +75,41 @@ $(document).ready(function () {
         $('html').animate({ scrollTop: offset.top - 80 }, 400);
     });
 
+    // 오늘의 승부주 필터 active
+    $('.s_stokes #wrap #container.sub_stock .winner .w_filter ul li').on("click", function () {
+        $('.s_stokes #wrap #container.sub_stock .winner .w_filter ul li').removeClass('active');
+        $(this).addClass('active');
+    });
+    $('.s_stokes #wrap #container.sub_stock .portfolio_recom .adequateArea .tableData .table_filter li').on("click", function () {
+        $('.s_stokes #wrap #container.sub_stock .portfolio_recom .adequateArea .tableData .table_filter li').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    // 진단점수 그래프바 에니메이션 효과
+    (function( $ ) {
+        $(function() {
+            function animated_contents() {
+                $(".zt-skill-bar > div ").each(function (i) {
+                    var $this  = $(this),
+                        skills = $this.data('width');
+    
+                    $this.css({'width' : skills + '%'});
+    
+                });
+            }
+            
+            if(jQuery().appear) {
+                $('.zt-skill-bar').appear().on('appear', function() {
+                    animated_contents();
+                });
+            } else {
+                animated_contents();
+            }
+        });
+    }(jQuery));
+
+
+
         
 });
 
