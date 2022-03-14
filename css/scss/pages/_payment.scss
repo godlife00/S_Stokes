@@ -1,0 +1,1546 @@
+/* 결제 */
+.s_stokes #wrap #container.sub_payment {    
+    .payment_area {
+        padding: 30px 0 40px;        
+        > .title {
+            padding-left: 15px;
+            a {
+                &::after, &::before {
+                    display: none;
+                }            
+            }
+            
+        }
+        .step_area {
+            margin-top: 30px;            
+            ul {
+                display: flex;
+                justify-content: space-between;                
+                border-bottom: 3px solid #c22e06;
+                padding: 0 10px;
+            }            
+            li {           
+                position: relative;     
+                flex: 1;                
+                font-size: $font13;                
+                line-height: 1.23;                
+                text-align: center;
+                color: #898989;
+                padding-bottom: 12px;
+                &.active {
+                    color: #c22e06;
+                    font-weight: $f_sizeB;
+                }
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 4px;
+                    height: 4px;
+                    position: absolute;
+                    top: 6px;                            
+                    right: calc(0% - 2px);                    
+                    border-top: 1px solid #898989;
+                    border-right: 1px solid #898989;            
+                    transform: rotate(45deg);         
+                }  
+                &:last-child {
+                    &::after {
+                        display: none;
+                    } 
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        /* 2주 무료 이용 신청 인트로 */
+        .sub_freeguide .sub_top {
+            padding:25px 15px 55px;
+        }
+        .sub_freeguide .sub_top.service_t01 {
+            background:#fff url('/img/bg_sub_freeguide.png') no-repeat right bottom;
+            background-size:100% auto;
+            box-sizing:border-box;
+            height:237px;
+        }
+        .sub_freeguide .sub_top .h2_title {
+            color:#00c8ed;
+            font-size:1.75rem;
+            line-height:2.2rem;
+            padding-left:0;
+        }
+        .sub_freeguide .sub_top .h2_title span {
+            color:#fff;
+            font-size:1.9rem;
+            font-weight:normal;
+        }
+        .sub_freeguide .sub_top .h2_title strong {
+            color:#fff;
+            font-weight:bold;
+            border-bottom:3px solid #00c8ed;
+            padding-bottom:3px;
+        }
+        .sub_freeguide .sub_top .sum {
+            color:#fff;
+            font-size:0.9375rem;
+            line-height:1.4rem;
+            word-break:keep-all;
+            opacity:0.5;
+        }
+        .sub_freeguide .sub_mid {
+            margin-top:30px;
+        }
+        .sub_freeguide .sub_mid .guide_txt {
+            padding:0 15px;
+        }
+        .sub_freeguide .sub_mid .guide_txt .service_title,
+        .sub_freeguide .sub_mid .guide_txt .service_title strong {
+            color:#404fc3;
+            font-weight:bold;
+            font-size:1.1rem;
+            margin-bottom:12px;
+        }
+        .sub_freeguide .sub_mid .guide_txt .title {
+            color:#939393;
+            line-height:1.43;
+            font-size:0.9375rem;
+        }
+        .sub_freeguide .sub_mid .aot_info {
+            margin:25px auto 0;
+            width:calc(100% - 30px);
+            border-top:1px solid #E0E4E9;
+            padding-top:25px;
+            text-align:center;
+        }
+        .sub_freeguide .sub_mid .aot_info .h4_title {
+            display:inline-block;
+            color:#333;
+            font-size:0.9375rem;
+            font-weight:normal;
+        }
+        .sub_freeguide .sub_mid .aot_info .guide {
+            display:inline-block;
+            padding-left:20px;
+            color:#939393;
+            font-size:0.75rem;
+        }
+        .sub_freeguide .sub_mid .aot_info .guide span {
+            color:#333;
+            font-size:0.9375rem;
+        }
+        .sub_freeguide .sub_mid .aot_info .guide strong {
+            display:inline-block;
+            padding-right:6px;
+            color:#333;
+            font-size:1.125rem;
+        }
+        .sub_freeguide .sub_mid .att_service {
+            background:#e6e7f4;
+            padding:10px 15px;
+            text-align:center;
+            margin-top:20px;
+        }
+        .sub_freeguide .sub_mid .att_service .service_title {
+            color:#404fc3;
+            font-size:1.1rem;
+            display:inline-block;
+            font-weight:normal;
+            padding:0 3px 5px;
+            line-height:1.43;
+            text-align:center;
+        }
+        .sub_freeguide .sub_mid .att_service .service_title strong {
+            display:block;
+            color:#404fc3;
+            font-weight:bold;
+            margin-bottom:5px;
+            line-height:1.2;
+        }
+        .sub_freeguide .sub_mid .att_service .guide_txt {
+            text-align:left;
+            margin-top:10px;
+            padding-bottom:10px;
+        }
+        .sub_freeguide .sub_mid .att_service .guide_txt li {
+            color:#939393;
+            font-size:0.75rem;
+            padding-left:10px;
+            line-height:1rem;
+        }
+        .sub_freeguide .sub_mid .att_service .guide_txt li.title {
+            color:#939393;
+            font-size:0.82rem;
+            padding-left:0;
+            margin-top:15px;
+            line-height:1.4;
+        }
+        .sub_freeguide .sub_mid .att_service .payBtn {
+            text-align:center;
+            margin-top:0 !important;
+        }
+        .sub_freeguide .sub_mid .btn {
+            color:#404fc3;
+            font-size:0.9375rem;
+            border-radius:5px;
+            position:relative;
+            width:64%;
+        }
+        .sub_freeguide .sub_mid .btn_save {
+            color:#fff;
+            background:#404fc3;
+        }
+        .sub_freeguide .sub_mid .att_service {
+            background:#e6e7f4;
+            padding:10px 15px 40px;
+            text-align:center;
+            margin-top:25px;
+        }
+        .sub_freeguide .sub_mid .att_service .btn_save {
+            color:#fff;
+            background:#404fc3;
+        }
+        .sub_freeguide .sub_mid .att_service .btn_save i {
+            position:absolute;
+            right:18px;
+            top:14px;
+            display:inline-block;
+            width:5px;
+            height:10px;            
+        }
+        /* 2주 무료 이용 신청 step01 */
+        .sub_freeguide .serviceStep .step_box {
+            margin-top:25px;
+        }
+        .sub_freeguide .mapage_form {
+            padding-top:10px;
+            border-bottom:1px solid #E0E4E9;
+        }
+        .sub_freeguide .mapage_form .form_table {
+            border-top:none;
+        }
+        .sub_freeguide .serviceStep .step_box.active::before {
+            display:none;
+        }
+        .sub_freeguide .serviceStep .step_box .title {
+            font-size:1.25rem;
+            line-height:1.3;
+        }
+        .sub_freeguide .serviceStep .step_box .title strong {
+            color:#00aece;
+        }
+        .sub_freeguide .serviceStep .txt {
+            color:#333;
+            font-size:0.9375rem;
+            margin-top:10px;
+        }
+        .sub_freeguide .serviceStep .guide {
+            margin-top:23px;
+            border-top:1px solid #E0E4E9;
+            padding-top:13px;
+        }
+        .sub_freeguide .serviceStep .guide li {
+            color:#939393;
+            font-size:0.75rem;
+            line-height:1.3;
+            margin-bottom:10px;
+            padding-left:7px;
+            background:url('/img/dot_gray.gif') no-repeat 0 7px;
+        }
+        .sub_freeguide .sub_mid .notice_txt {
+            padding:0 15px;
+        }
+        .sub_freeguide .sub_mid .notice_txt .service_title {
+            color:#333;
+            font-size:0.9rem;
+            margin-bottom:15px;
+        }
+        .sub_freeguide .sub_mid .notice_txt .title {
+            color:#939393;
+            font-size:0.84rem;
+            line-height:1.2;
+            margin-top:8px;
+        }
+        .sub_freeguide .sub_mid .notice_service {
+            background:#e6e7f4;
+            padding:20px 15px;
+            text-align:left;
+            margin-top:25px;
+        }
+        .sub_freeguide .sub_mid .notice_service li {
+            font-size:0.84rem;
+            color:#333;
+            line-height:1.4;
+        }
+        .sub_freeguide .sub_mid .notice_service li strong {
+            font-weight:bold;
+        }
+        .sub_freeguide .sub_mid .btnArea {
+            margin-top:35px;
+        }
+        .sub_freeguide .sub_mid .btnArea .btn_save {
+            width: 74%;
+        }
+        /* 2주 무료 이용 신청 완료 */
+        .sub_freeguide .sub_top {
+            padding:25px 15px 55px;
+        }
+        .sub_freeguide .sub_top.service_com {
+            background:#fff url('/img/bg_sub_freeguide_com.png') no-repeat right bottom;
+            background-size:144px auto;
+            box-sizing:border-box;
+            height:214px;
+        }
+        .sub_freeguide .sub_top.service_com .h2_title {
+            color:#333;
+            font-size:1.75rem;
+            line-height:2.2rem;
+            padding-left:0;
+            font-weight:bold;
+        }
+        .sub_freeguide .sub_top.service_com .h2_title span:first-child {
+            color:#404fc3;
+            font-weight:bold;
+        }
+        .sub_freeguide .sub_top.service_com .h2_title span:nth-child(2) {
+            color:#00aece;
+            font-weight:bold;
+        }
+        .sub_freeguide .sub_top.service_com .sum {
+            color:#333;
+            font-size:0.9375rem;
+            line-height:1.4rem;
+            word-break:keep-all;
+            opacity:1;
+        }
+        .sub_freeguide .notice_free {
+            background:#e6e7f4;
+            padding:25px 15px;
+            text-align:left;
+        }
+        .sub_freeguide .notice_free ul:nth-child(1) li {
+            font-size:0.9375rem;
+            color:#333;
+            line-height:1.4;
+            margin-bottom:10px;
+        }
+        .sub_freeguide .notice_free li:nth-child(1) strong {
+            font-weight:bold;
+        }
+        .sub_freeguide .notice_free ul:nth-child(2) {
+            border-top:1px solid #C7CBE9;
+            padding-top:16px;
+            margin-top:16px;
+        }
+        .sub_freeguide .notice_free ul:nth-child(2) li {
+            font-size:0.84rem;
+            color:#333;
+            line-height:1.4;
+            margin-bottom:10px;
+        }
+        .sub_freeguide .notice_free li:nth-child(2) strong {
+            font-weight:bold;
+        }
+        .sub_freeguide .notice_freetxt {
+            padding:0 15px;
+            margin-top:30px;
+        }
+        .sub_freeguide .notice_freetxt .service_title {
+            color:#333;
+            font-size:0.9rem;
+            margin-bottom:15px;
+        }
+        .sub_freeguide .notice_freetxt .title {
+            background:url('/img/dot_line.png') no-repeat 0 8px;
+            padding-left:8px;
+            color:#939393;
+            font-size:0.84rem;
+            line-height:1.4;
+            margin-top:12px;
+        }
+        .sub_freeguide .notice_freetxt .title strong {
+            color:#939393;
+        }
+        .sub_freeguide .notice_freetxt .title span {
+            color:#939393;
+            text-decoration:underline;
+        }
+        .sub_freeguide .payment_note {
+            background:none;
+            padding:0;
+            border-top:1px solid #E0E4E9;
+            margin-top:25px;
+        }
+        .sub_freeguide .payment_note .note .mod_btn {
+            display:inline-block;
+            border:1px solid #404fc3;
+            border-radius:3px;
+            width:80px;
+            color:#404fc3;
+            font-size:0.75rem;
+            margin-top:7px;
+            text-align:center;
+            padding:5px 3px;
+            box-sizing:border-box;
+        }
+        .sub_freeguide .payment_note .note li {
+            color:#939393;
+            font-size:0.84rem;
+            line-height:1.53;
+            margin-bottom:15px;
+        }
+        .sub_freeguide .payBtn .btn {
+            width: 74%;
+        }
+        
+        /* 가입 - 가입방법 선택 step 01 */
+        .serviceStep .step_top {
+            padding:36px 15px 25px;
+        }
+        .serviceStep .step_top::after {
+            content:"";
+            clear:both;
+        }
+        .serviceStep .step_title {
+            font-size: $font18;
+            font-weight: $f_sizeB;            
+            letter-spacing: -0.45px;            
+            color: #222;
+        }
+        .serviceStep .txt {
+            color:#939393;
+            font-size:0.9375rem;
+            line-height:1.2rem;
+        }
+        .serviceStep .step_box {
+            padding:15px 15px;
+            border-radius:9px;
+            border:1px solid #d3d3d3;
+            background:#fff;
+            box-sizing:border-box;
+            width:calc(100% - 30px);
+            margin:0 auto 10px;
+            position:relative;
+        }
+        .serviceStep .step_box.active {
+            border:1px solid #b33b1e;
+        }
+        .serviceStep .step_box.active::before {
+            content:'';
+            width:18px;
+            height:18px;
+            background:url('/img/icon_agreecheck.svg') no-repeat 0 0;
+            position:absolute;
+            right:12px;
+            top:13px;
+        }
+        .serviceStep .step_box .title {
+            color:#575757;
+            font-size:1.125rem;
+            font-weight:bold;
+        }
+        .serviceStep .step_box.active .title {
+            color:#c22e06;
+        }
+        .serviceStep .step_box .title .way {
+            display:block;
+            color:#939393;
+            font-size:0.8rem;
+            font-weight:normal;
+            line-height:20px;
+            padding-top:2px;
+        }
+        .serviceStep .step_box .payRight {
+            padding-top:10px;
+            text-align:right;
+            padding-bottom:13px;
+        }
+        .serviceStep .step_box .payRight .pay01 {
+            color:#333;
+            font-size:1.25rem;
+            font-weight:500;
+            margin-right:20px;
+            padding:0 15px;
+            position:relative;            
+        }
+        .serviceStep .step_box .payRight .pay01 b {
+            color:#333;
+            font-size:1rem;
+            opacity:0.7;
+            font-weight:normal;
+        }
+        .serviceStep .step_box .payRight .pay01 .pay_sale {
+            position:absolute;
+            left: auto;            
+            right: -88px;
+            top:-15px;
+            color:#fa8700;
+            font-weight:normal;
+            font-size:0.84rem;
+            display:inline-block;
+            width:90px;            
+        }
+        .serviceStep .step_box:nth-child(3) .payRight .pay01 .pay_sale {            
+            right: -110px;            
+        }
+        .serviceStep .step_box .payRight .pay01 .pay_sale strong {
+            color:#fa8700;
+            font-weight:bold;
+            font-size:0.84rem;
+        }
+        .serviceStep .step_box .payRight .pay0 .pay_sale strong {
+            color:#fa8700;
+            font-weight:bold;
+            font-size:0.84rem;
+        }
+        .serviceStep .step_box .payRight .pay02 {
+            color:#c22e06;
+            font-size:1.25rem;
+            font-weight:500;
+        }
+        .serviceStep .step_box .payRight .pay02 b {
+            color:#898989;
+            font-size:1rem;            
+            font-weight:normal;
+        }
+        .serviceStep .step_box .payRight .pay02 .pay_sale {
+            display:block;
+            color:#939393;
+            font-size:0.8rem;
+            font-weight:normal;
+            margin-top:5px;
+            position:relative;
+        }
+        .serviceStep .step_box .payRight .pay02 .pay_sale02 {
+            display:inline-block;
+            color:#fc2929;
+            font-size:1rem;
+            font-weight:normal;
+            position:relative;
+        }
+        .serviceStep .step_box .payRight .pay01::before {
+            content:'';
+            background:url('/img/c_line.png') no-repeat 100% 0;
+            position:absolute;
+            left:0;
+            top:50%;
+            margin-top:-7px;
+            width:100%;
+            height:14px;
+        }
+        .serviceStep .step_box .payRight .pay03 {
+            color:#939393;
+            font-size:1rem;
+            font-weight:normal;
+            margin-right:0;
+            padding:0;
+            position:relative;
+        }
+        .serviceStep .step_box .payRight .pay03 b {
+            color:#333;
+            font-size:1rem;
+            opacity:0.7;
+            font-weight:normal;
+        }
+        .serviceStep .step_box .payRight .txt_line {
+            border-top:1px solid #E0E4E9;
+            padding-top:10px;
+            margin-top:25px;
+        }
+        .serviceStep .step_box .payRight .txt_line .txt {
+            position: relative;
+            text-align:left;
+            color:#939393;
+            font-size:0.75rem !important;
+            line-height:1.1rem;
+            padding-left:10px;
+            &::before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 7px;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: #898989;
+            }
+        }
+        .serviceStep .step_box .payRight .txt_line .txt:nth-child(2),
+        .serviceStep .step_box .payRight .txt_line .txt:nth-child(3),
+        .serviceStep .step_box .payRight .txt_line .txt:nth-child(4) {
+            margin-top:7px;
+        }
+        .serviceStep .step_box .payRight .txt_line .txt strong,
+        .serviceStep .step_box .payRight .txt_line .txt b {
+            color:#939393;
+        }
+        .btnArea.payBtn {
+            margin: 25px 15px 0;
+            @include two_btn;
+            a {                
+                position: relative;
+                font-size: #f18;
+                font-weight: $f_sizeB;                
+                letter-spacing: -0.9px;
+                color: #fff;
+                &.btn_cncl {
+                    color: #898989;
+                    &::before {
+                        content: '';
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        position: absolute;
+                        top: 20px;                                  
+                        right: calc(100% - 35px);                        
+                        border-top: 1px solid #898989;
+                        border-right: 1px solid #898989;            
+                        transform: rotate(-135deg);         
+                    }   
+
+                }
+                &.btn_save {
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        position: absolute;
+                        top: 20px;                                  
+                        left: calc(100% - 35px);                        
+                        border-top: 1px solid #fff;
+                        border-right: 1px solid #fff;            
+                        transform: rotate(45deg);         
+                    }                 
+                }
+
+            }
+            
+
+        }
+        
+        .step_box .pay_line {
+            color:#939393;
+            text-align:right;
+            font-size:0.82rem;
+            margin-top:10px;
+        }
+        .account_box {
+            border-top:1px solid #E0E4E9;
+            margin-top:30px;
+            padding:30px 15px 0;
+        }
+        .account_box .title {
+            color:#333;
+            font-size:1.125rem;
+            margin-bottom:8px;
+        }
+        .account_box .txt_t {
+            color:#333;
+            font-size:0.9375rem;
+            margin-bottom:5px;
+        }
+        .account_box .txt {
+            color:#939393;
+            font-size:0.82rem;
+            line-height:1.2rem;
+        }
+        .mapage_form {
+            padding:20px 15px 0;
+        }
+        .mapage_form .form_table {
+            border-top:1px solid #E0E4E9;
+        }
+        .mapage_form .form_table tr {
+            border-bottom:1px solid #E0E4E9;
+        }
+        .mapage_form .form_table tr:last-child {
+            border-bottom:none;
+        }
+        .mapage_form .form_table th,
+        .mapage_form .form_table td {
+            text-align:left;
+            padding:20px 0 14px;
+            line-height:1.2rem;
+            font-weight:normal;
+            vertical-align:top;
+        }
+        .mapage_form .form_table th {
+            color:#939393;
+            font-size:0.82rem;
+            width:90px;
+        }
+        .mapage_form .form_table td {
+            color:#333;
+            font-size:0.9375rem;
+        }
+        .mapage_form .form_table td .i_dsc {
+            clear:both;
+            float:none;
+            color:#c22e06;
+            font-size:0.75rem;
+            line-height:14px;
+            margin-top:6px;
+        }
+        .mapage_form .form_table td .i_dsc i {
+            position:relative;
+            top:2px;
+            margin-right:5px;
+            display:inline-block;
+            width:14px;
+            height:14px;            
+        }
+        .mapage_form .form_table td .i_dsc.phone {
+            color:#ff2929;
+            margin-top:0;
+            padding-top:6px;
+        }
+        .mapage_form .form_table td .i_dsc.phone i {
+            background-position:0 100%;
+        }
+        .mapage_form .form_table td .i_guide {
+            clear:both;
+            float:none;
+            color:#939393;
+            margin-top:0;
+            padding-top:6px;
+            font-size:0.75rem;
+            display:block;
+            line-height:1.4;
+        }
+        .mapage_form .form_table td .mod_btn {
+            display:inline-block;
+            border:1px solid #404fc3;
+            border-radius:3px;
+            width:100px;
+            color:#404fc3;
+            font-size:0.75rem;
+            text-align:center;
+            padding:5px 3px;
+            box-sizing:border-box;
+        }
+        .mapage_form .form_table td .mod_phone .txt_info {
+            display:inline-block;
+            padding-right:5px;
+        }
+        .mapage_form .form_table td .certification_area {
+            background:#e6e7f4;
+            padding:15px 15px;
+            padding-left:90px;
+            margin-top:15px;
+            box-sizing:border-box;
+        }
+        .mapage_form .form_table td .certification_area .certifi_btn,
+        .mapage_form .form_table td .certifi_btn {
+            float:left;
+            vertical-align:top;
+            background:#404fc3;
+            color:#fff;
+            font-size:0.75rem;
+            padding:0 10px;
+            box-sizing:border-box;
+            text-align:center;
+            line-height:25px;
+            border-top-right-radius:5px;
+            border-bottom-right-radius:5px;
+        }
+        .mapage_form .form_table td .certification_area .phone_mod,
+        .mapage_form .form_table td .phone_mod {
+            float:left;
+            vertical-align:top;
+            border:none;
+            height:25px;
+            line-height:25px;
+            width:155px;
+            padding:0 5px;
+            box-sizing:border-box;
+            border-top-left-radius:5px;
+            border-bottom-left-radius:5px;
+        }
+        .mapage_form .form_table td .phone_mod.chk_ok {
+            width:100%;
+        }
+        .sub_freeguide .agree_area {
+            width:calc(100% - 30px);
+            margin:25px auto;
+        }
+        .sub_freeguide .agree_area .txt {
+            color:#333;
+            font-size:0.9375rem;
+        }
+        .sub_freeguide .agree_area .agree_from {
+            margin-top:20px;
+        }
+        .sub_freeguide .agree_area .agree_from .label {
+            background:#fff;
+            border-radius:9px;
+            padding:14px 20px 14px 12px;
+        }
+        .sub_freeguide .agree_area .agree_from .label:first-child,
+        .sub_freeguide .agree_area .agree_from .label:nth-child(2) {
+            margin-bottom:9px;
+        }
+        .sub_freeguide .agree_area .agree_from .label .label_chk {
+            color:#333;
+            font-size:0.82rem;
+            display:inline-block;
+        }
+        .sub_freeguide .agree_area .agree_from .label .label_chk i {
+            display:inline-block;
+            vertical-align:top;
+            position:relative;
+            top:-2px;
+            width:18px;
+            height:18px;
+            background:url('/img/icon_agreecheck.svg') no-repeat 0 0;
+            margin-right:7px;
+        }
+        .sub_freeguide .agree_area .agree_from .label .label_chk strong {
+            text-decoration:underline;
+        }
+        .sub_freeguide .agree_area .agree_from .label.active .label_chk i {
+            background-position:0 0;
+        }
+        .sub_freeguide .agree_area .agree_from .label .label_chk.sub_label {
+            padding-left:15px;
+            padding-top:10px;
+            opacity:0.5;
+        }
+        .sub_freeguide .agree_area .agree_from .label.active .label_chk.sub_label {
+            opacity:1;
+        }
+        .sub_freeguide .agree_area .agree_from .label .terms_btn {
+            float:right;
+            vertical-align:top;
+            position:relative;
+            top:-3px;
+            width:70px;
+            background:#404fc3;
+            border-radius:3px;
+            color:#fff;
+            font-size:0.75rem;
+            text-align:center;
+            padding:7px 5px;
+            box-sizing:border-box;
+        }
+        .sub_freeguide .agree_area .agree_from .label.free_label {
+            margin:0;
+        }
+        .sub_freeguide .agree_area .agree_from .label.free_label:first-child {
+            padding-bottom:0;
+            border-bottom-right-radius:0;
+            border-bottom-left-radius:0;
+        }
+        .sub_freeguide .agree_area .agree_from .label.free_label:nth-child(2) {
+            padding-top:5px;
+            border-top-right-radius:0;
+            border-top-left-radius:0;
+        }
+        .sub_freeguide .agree_area .agree_from .payBtn {
+            text-align:center;
+            margin-top:30px;
+            padding:0 15px;
+        }
+        .sub_freeguide .agree_area .agree_from .btn {
+            color:#404fc3;
+            font-size:0.9375rem;
+            border-radius:5px;
+            position:relative;
+            width:calc(100% / 2 + 60px);
+        }
+        .sub_freeguide .agree_area .agree_from .btn_save {
+            color:#fff;
+            background:#404fc3;
+        }
+        .sub_freeguide .agree_area .agree_from .btn_save i {
+            position:absolute;
+            right:18px;
+            top:15px;
+            display:inline-block;
+            width:5px;
+            height:10px;
+            background:url('/img/icon_moreRR.png') no-repeat 0 0;
+            background-size: cover;
+        }
+        /* 가입 - 결제하기 step 02 */
+        .step_top .step_title {
+            display:inline-block;
+        }
+        .step_top .btn_cardEvent {
+            vertical-align:top;
+            float:right;
+        }
+        .payment_guide {
+            border-top:1px solid #E0E4E9;
+            border-bottom:1px solid #E0E4E9;
+            margin-top:30px;
+            padding:0 15px 0;
+        }
+        .payment_guide .guide {
+            padding:20px 0 15px;
+            border-bottom:1px solid #E0E4E9;
+        }
+        .payment_guide .guide:last-child {
+            border-bottom:none;
+        }
+        .payment_guide .guide li {
+            display:inline-block;
+            vertical-align:top;
+        }
+        .payment_guide .guide .th {
+            width:90px;
+            color:#939393;
+            font-size:0.82rem;
+        }
+        .payment_guide .guide .td_txt {
+            color:#333;
+            font-size:0.9375rem;
+        }
+        .payment_guide .guide .td_txt.card_list,
+        .payment_guide .guide .td_txt.card_list span {
+            color:#404fc3;
+        }
+        .payment_guide .guide .td_txt.c_blue,
+        .payment_guide .guide .td_txt.c_blue strong {
+            color:#404fc3;
+        }
+        .payment_guide .guide .td_txt span {
+            color:#939393;
+            font-size:0.82rem;
+        }
+        .payment_guide .guide .td_txt strong {
+            color:#333;
+            font-size:1.25rem;
+            vertical-align:top;
+            position:relative;
+            top:-4px;
+            font-weight:500;
+        }
+        .payment_guide .guide .td_sum {
+            color:#939393;
+            font-size:0.82rem;
+            display:block;
+            padding-left:90px;
+            margin-top:5px;
+            line-height:1.2rem;
+        }
+        .payment_guide .guide .td_sale {
+            width:100%;
+            padding:10px 15px 0;
+            padding-left:100px;
+            margin-top:0;
+            box-sizing:border-box;
+        }
+        .payment_guide .guide .td_sale p {
+            color:#939393;
+            font-size:0.82rem;
+            line-height:1.5rem;
+        }
+        .payment_guide .guide .td_sale p span {
+            display:inline-block;
+            color:#939393;
+            width:80px;
+        }
+        .payment_guide .guide .td_sale p strong {
+            color:#333;
+            font-size:0.9375rem;
+            padding-left:12px;
+            font-weight:500;
+        }
+        .payment_guide .guide .td_sale p strong i {
+            display:inline-block;
+            width:13px;
+            height:13px;
+            background:url('/img/icon_sale.png') no-repeat 0 0;
+            margin-right:5px;
+        }
+        .payment_guide .mapage_form {
+            padding:0;
+            border-bottom:1px solid #E0E4E9;
+        }
+        .payment_guide .mapage_form .form_table {
+            border-top:none;
+        }
+        .payment_guide .mapage_form .form_table tr {
+            border-bottom:1px solid #E0E4E9;
+        }
+        .payment_guide .mapage_form .form_table tr:last-child {
+            border-bottom:none;
+        }
+        .payment_guide .mapage_form .form_table th,
+        .payment_guide .mapage_form .form_table td {
+            text-align:left;
+            padding:20px 0 14px;
+            line-height:1.2rem;
+            font-weight:normal;
+            vertical-align:top;
+        }
+        .payment_guide .mapage_form .form_table th {
+            color:#939393;
+            font-size:0.82rem;
+            width:90px;
+        }
+        .payment_guide .mapage_form .form_table td {
+            color:#333;
+            font-size:0.9375rem;
+        }
+        .payment_guide .mapage_form .form_table td .i_dsc {
+            clear:both;
+            float:none;
+            color:#c22e06;
+            font-size:0.75rem;
+            line-height:14px;
+            margin-top:6px;
+        }
+        .payment_guide .mapage_form .form_table td .i_dsc i {
+            position:relative;
+            top:2px;
+            margin-right:5px;
+            display:inline-block;
+            width:14px;
+            height:14px;
+            background:url('/img/bg_x.png') no-repeat 0 0;
+        }
+        .payment_guide .mapage_form .form_table td .i_dsc.coupon {
+            color:#c22e06;
+            margin-top:0;
+            padding-top:6px;
+        }
+        .payment_guide .mapage_form .form_table td .i_dsc.coupon i {
+            background-position:0 100%;
+        }
+        .payment_guide .mapage_form .form_table td .mod_btn {
+            display:inline-block;
+            border:1px solid #404fc3;
+            border-radius:3px;
+            width:100px;
+            color:#404fc3;
+            font-size:0.75rem;
+            text-align:center;
+            padding:5px 3px;
+            box-sizing:border-box;
+        }
+        .payment_guide .mapage_form .form_table td .mod_coupon .txt_info {
+            display:inline-block;
+            padding-right:5px;
+        }
+        .payment_guide .mapage_form .form_table td .certification_area {
+            background:#e6e7f4;
+            padding:15px 15px;
+            padding-left:90px;
+            margin-top:15px;
+            box-sizing:border-box;
+        }
+        .payment_guide .mapage_form .form_table td .certification_area .certifi_btn,
+        .payment_guide .mapage_form .form_table td .certifi_btn {
+            float:left;
+            vertical-align:top;
+            background:#404fc3;
+            color:#fff;
+            font-size:0.75rem;
+            padding:0 10px;
+            box-sizing:border-box;
+            text-align:center;
+            line-height:25px;
+            border-top-right-radius:5px;
+            border-bottom-right-radius:5px;
+        }
+        .payment_guide .mapage_form .form_table td .certification_area .coupon_mod,
+        .payment_guide .mapage_form .form_table td .coupon_mod {	
+            vertical-align:top;
+            border:none;
+            display:inline-block;
+            height:39px;
+            line-height:39px;
+            width:200px;
+            padding:0 5px;
+            box-sizing:border-box;
+            border-top-left-radius:5px;
+            border-bottom-left-radius:5px;
+        }
+        .payment_guide .mapage_form .form_table td .coupon_mod#coupon_nm {
+            float:left;
+        }
+        .payment_guide .guide+.mapage_form .coupon_mod {
+            float:left;
+        }
+        .payment_guide .mapage_form .form_table td .coupon_mod.chk_ok {
+            width:100%;
+        }
+        .payment_guide .i_dsc {
+            float:none;
+            color:#404fc3;
+            font-size:0.75rem;
+            line-height:14px;
+            margin-top:6px;
+        }        
+        .payment_note  {
+            background-color: #f5f5f5;
+            padding: 20px 15px;
+
+        }
+        .payment_note .h4_title {
+            font-size: $font13;
+            font-weight: $f_sizeB;            
+            letter-spacing: -0.65px;
+            color: #222;            
+        }
+        .payment_note .h4_title + strong {
+            position: relative;
+            display:block;
+            margin-top:10px;            
+            padding-left: 10px;
+            font-size: $font13;
+            letter-spacing: -0.65px;            
+            color: #c22e06;
+            &::before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: #c22e06;
+            }
+        }
+        .payment_note .note {
+            margin-top:10px;
+        }
+        .payment_note .note li {         
+            position: relative;   
+            padding-left:10px;            
+            margin-bottom:4px;
+            font-size: 11px;                        
+            color: #898989;
+            &::after {
+                content: '';                
+                display: inline-block;
+                width: 3px;
+                height: 1px;
+                position: absolute;
+                left: 0;
+                top: 6px;
+                background-color: #898989;                
+            }
+
+        }
+        .payment_note .note li span {
+            color:#939393;
+            font-size:0.75rem;
+            text-decoration:underline;
+        }
+        .payment_note .note li strong {
+            color:#939393;
+            font-size:0.75rem;
+        }
+        .payment_note .note_chk {
+            margin-top:30px;
+            border: solid 2px #ffc05c;            
+            background-color: #fff;                        
+            padding:12px 10px;
+        }
+        .payment_note .note_chk .txt {
+            color:#333;
+            font-size:0.82rem;
+            line-height:1.2rem;
+            padding-left:30px;
+            position:relative;
+        }
+        .payment_note .note_chk .txt i {
+            position:absolute;
+            left:5px;
+            top:2px;
+            display:inline-block;
+            vertical-align:top;
+            width:18px;
+            height:18px;
+            background:url('/img/icon_agreecheck.svg') no-repeat 100% 0;
+            margin-right:7px;
+        }
+        .payment_note .note_chk .txt.active i {
+            background-position: 0 0;
+        }
+        
+        /* 가입 - 결제완료 step 03 */
+        @at-root #container.sub_payment.step03 .payment_area .step_top {            
+            background:#fff url('/img/bg_payment_com.svg') no-repeat 105% 22px;            
+            min-height:200px;
+            box-sizing:border-box;            
+        }
+        .step_top .payment_com {
+            padding-top:12px;
+            padding-left:10px;
+        }
+        .step_top .payment_com .login_title {
+            font-weight:bold;
+            font-size:1.8rem;
+            line-height:2.2rem;
+        }
+        .step_top .payment_com .login_title strong {
+            display:block;
+            color:#c22e06;
+            line-height:2.2rem;
+        }
+        .step_top .payment_com .txt {
+            color:#939393;
+            font-size:0.82rem;
+            line-height:1.2rem;
+            margin-top:15px;
+        }
+        @at-root .s_stokes #wrap #container.sub_payment.step03 .payment_area .payment_guide {
+            border-top: 1px solid #E0E4E9;
+            margin-top:0;
+        }
+        @at-root .s_stokes #wrap #container.sub_payment.step03 .payment_area .payment_guide .guide {
+            padding:15px 0;
+        }
+        @at-root .s_stokes #wrap #container.sub_payment.step03 .payment_area .payment_guide .event_info {
+            display: block;
+            color: #939393;
+            font-size: 0.75rem;
+            line-height: 1.36;
+            margin-top: 5px;
+        }
+        @at-root .s_stokes #wrap #container.sub_payment.step03 .payment_area .payment_note {
+            background-color: #fff;
+        }
+        @at-root .s_stokes #wrap #container.sub_payment.step03 .payment_area .payment_note .note .mod_btn {
+            display:inline-block;
+            margin-top: 12px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            border: solid 1px #b33b1e;
+            padding: 4px 5px;
+            font-size: $font12;                        
+            letter-spacing: -0.6px;
+            text-align: left;
+            color: #c22e06;
+        }
+        .btnArea.payBtn {            
+            .btn_save {
+                border: none !important;
+                background-color: #c22e06 !important;
+                color: #fff !important;                
+            }
+            
+        }
+        
+        // 나이스페이
+        &.nicepay {
+            padding: 0 0 40px;
+
+            /* 가입 - 카드정보 입력 step 02 */
+            .pay_info {
+                padding:15px 0;
+            }
+            .pay_info .top {
+                padding:0 15px 5px;
+                border-bottom:3px solid #c22e06;
+            }
+            .pay_info .top .logo {
+                width:90px;
+                display:inline-block;
+            }
+            .pay_info .top .logo img {
+                display:inline-block;
+                width:100%;
+                height:auto;
+            }
+            .pay_info .top .card {
+                color:#333;
+                font-size:0.9375rem;
+                float:right;
+                font-weight:bold;
+                vertical-align:top;
+                margin-top:4px;
+            }
+            .step_top {
+                padding: 27px 15px 0;
+                .step_title {
+                    font-size: 1.125rem;
+                    font-weight: 700;
+                    letter-spacing: -0.45px;
+                    color: #222;
+                }
+            }
+            .pay_info .info {
+                background:#f5f5f5;
+                border-radius:3px;
+                padding:2px 15px;
+                margin-top: 15px;
+                
+            }
+            .pay_info .info li {
+                padding:22px 0;
+                border-bottom:1px solid #E0E4E9;
+                font-size: $font16;
+                font-weight: $f_sizeB;                
+                line-height: 0.63;                                
+                color: #222;
+            }
+            .pay_info .info li:last-child {
+                border-bottom:none;
+            }
+            .pay_info .info li strong {
+                color:#939393;
+                font-size:0.83rem;
+                display:inline-block;
+                width:80px;
+                font-weight:normal;
+            }
+            .pay_info .info li span {
+                font-size:0.75rem;
+                color:#939393;
+            }
+            .pay_info .info li span.event_pay {
+                display:block;
+                line-height:1.43;
+                padding-left:77px;
+                margin-top:4px;
+            }
+            .pay_info .info li span.event_pay b {
+                color:#939393;
+            }
+            .card_info {
+                margin-top:10px;
+                padding:0 15px;
+            }
+            .card_info .title {
+                color:#333;
+                font-size:0.9375rem;
+                font-weight:bold;
+            }
+            .card_info p.guide {
+                color:#939393;
+                font-size:0.75rem;
+                margin-top:10px;
+            }
+            .card_info .coupon_mod {
+                background-color: #f5f5f5;
+                color:#939393;
+                font-size:0.84rem;
+                text-align:center;
+                border:none;                
+                line-height:25px;
+                padding:0 5px;
+                width:calc(100% / 4 - 7.5px) !important;
+                border-radius:5px;
+                margin-right:4px;
+            }
+            .card_info .coupon_mod:last-child {
+                margin-right:0;
+            }
+            .card_info .term_mod {
+                border:none;
+                line-height:25px;
+                padding:0 5px;
+                width:calc(100% / 2 - 4px) !important;
+                border-radius:5px;
+                margin-right:4px;
+            }
+            .card_info .term_mod:last-child {
+                margin-right:0;
+            }
+            .card_info .by_mod {
+                background-color: #f5f5f5;
+                color:#939393;
+                font-size:0.84rem;
+                text-align:center;
+                border:none;
+                height: 39px;
+                line-height:39px;
+                padding:0 5px;
+                width:70px;
+                border-radius:5px;
+                margin-right:4px;
+            }
+            .card_info .payment_guide {
+                margin-top:15px;
+                padding:0;
+                padding-top:10px;
+            }
+            .card_info .selectbox {
+                display:inline-block;
+                width: 100%;
+            }
+            .card_info span.pw {
+                color:#939393;
+                font-size:0.84rem;
+                display:inline-block;
+                line-height:25px;
+                margin-left:3px;
+            }
+            .card_info span.bns_num {
+                color:#939393;
+                font-size:0.84rem;
+                display:inline-block;
+                line-height:25px;
+                margin-left:3px;
+                position:relative;
+                padding-left:24px;
+            }
+            .card_info span.bns_num i {
+                position:absolute;
+                left:5px;
+                top:5px;
+                display:inline-block;
+                vertical-align:top;
+                width:18px;
+                height:18px;
+                background:url('/img/icon_agreecheck.svg') no-repeat 0 0;
+                margin-right:7px;
+            }
+            .card_info span.bns_num.active i {
+                background-position:0 0;
+            }
+            .card_info .mapage_form {
+                border-bottom:none;
+            }
+            .card_info .mapage_form .form_table table {
+                width: 100%;
+            }
+            .card_info .mapage_form .form_table tr {
+                border-bottom:none;
+            }
+            .card_info .mapage_form .form_table th,
+            .card_info .mapage_form .form_table td {
+                padding:10px 0;
+            }
+            .card_info .payment_guide {
+                border-bottom:none;
+            }
+            .payment_note {	
+                border-radius:3px;
+                padding:15px 10px;	
+                background-color: #f5f5f5;            
+            }
+            .payment_note .top {
+                border-bottom:1px solid #E0E4E9;
+                overflow:hidden;
+                padding-bottom:9px;
+                margin-bottom:9px;
+            }
+            .payment_note .top .h4_title {
+                color:#333;
+                font-size:0.9375rem;
+                display:inline-block;
+                width:calc(100% - 120px);
+            }
+            .payment_note .top .agree {
+                color:#939393;
+                font-size:0.84rem;
+                position:relative;
+                float:right;
+                width:110px;
+                line-height:20px;
+            }
+            .payment_note .top .agree i {
+                display:inline-block;
+                vertical-align:top;
+                width:20px;
+                height:20px;
+                background:url('/img/select_on.png') no-repeat 0 100%;
+                background-size:20px 20px;
+                margin-right:7px;
+            }
+            .payment_note .top .agree.active i {
+                background:url('/img/select.png') no-repeat 0 100%;
+                background-size:20px 20px;
+            }
+            .agree_chk .txt {
+                color:#939393;
+                font-size:0.84rem;
+                line-height:20px;
+                padding:7px 0;
+                display:inline-block;
+                width:calc(100% - 47px);
+            }
+            .agree_chk .txt i {
+                display:inline-block;
+                vertical-align:top;
+                width:20px;
+                height:20px;
+                background:url('/img/select_on.png') no-repeat 0 100%;
+                background-size:20px 20px;
+                margin-right:7px;
+            }
+            .agree_chk .txt.active i {
+                background:url('/img/select.png') no-repeat 0 100%;
+                background-size:20px 20px;
+            }
+            .agree_chk .age_link {
+                float:right;
+                padding:11px 5px;
+                background:url('/img/more_Black.png') no-repeat center center;
+                font-size:0;
+                width:7px;
+                height:12px;
+                background-size:7px 12px;
+            }
+            .payment_chk {
+                background:#e6e7f4;
+                border-radius:9px;
+                padding:12px 10px;
+                margin:30px 15px 0;
+            }
+            .payment_chk .txt {
+                color:#333;
+                font-size:0.82rem;
+                line-height:1.2rem;
+                padding-left:34px;
+                position:relative;
+            }
+            .payment_chk .txt i {
+                position:absolute;
+                left:5px;
+                top:-1px;
+                display:inline-block;
+                vertical-align:top;
+                width:20px;
+                height:20px;
+                background:url('/img/select_on.png') no-repeat 0 100%;
+                background-size:20px 20px;
+                margin-right:7px;
+            }
+            .payment_chk .txt.active i {
+                background:url('/img/select.png') no-repeat 0 100%;
+                background-size:20px 20px;
+            }
+            .help_nicepay {
+                display:block;
+                color:#939393;
+                font-size:0.75rem;
+                text-align:center;
+                line-height:1.2rem;
+                margin-top:13px;
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+}

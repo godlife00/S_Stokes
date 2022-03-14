@@ -69,85 +69,83 @@
         </div>
         <!-- //header -->
 
-        <!-- 로그인 class = sub_login-->
-        <div id="container" class="sub_login">
-            <!-- 내정보 회원정보 -->
-            <div class="mainBox mapage_area">
-
-                <h2 class="title">내 정보</h2>
-
-                <div class="tabsWrap">
-                    <ul class="page_nav">
-                        <li><a href="mypage_mod.html">회원정보</a></li>
-                        <li class="active"><a href="mypage_history.html">서비스/결제내역</a></li>
+        <!-- 결제 class = sub_payment-->
+        <div id="container" class="sub_payment step03">
+            <!-- 결제 -->
+            <div class="mainBox payment_area">
+                <h2 class="title"><a href="#">슈퍼스톡스 프리미엄 가입</a></h2>
+                <div class="step_area">
+                    <ul>
+                        <li>1. 가입방법 선택</li>
+                        <li>2. 결제하기</li>
+                        <li class="active">3. 결제완료</li>
                     </ul>
                 </div>
-                <!-- //tabsWrap -->
+                <!-- //step_area -->
 
-            </div>
-            <!-- //mapage_area -->
-
-            <div class="mapage_service">
-                <div class="service_table">
-                    <div class="box">
-                        <h3 class="service">슈퍼스톡스 프리미엄</h3>
-                        <p class="day">2019.12/22 ~ 2020.01/22</p>
-                    </div>
-                    <div class="box">
-                        <span class="system">월자동결제</span>
-                        <a href="#" class="btn_payCan">자동결제취소</a>
-                        <div class="card_num">
-                            <p><span>카드번호</span> ************2323</p>
-                            <p><span>결제일</span> 346일</p>
+                <div class="serviceStep">
+                    <div class="step_top">
+                        <div class="payment_com">
+                            <h2 class="login_title"><strong>슈퍼스톡스<br>프리미엄 서비스</strong>결제가 완료되었습니다. </h2>
                         </div>
-                        <a href="../payment/step02_card.html" class="card_ch">카드변경</a>
+                        <!-- //payment_com -->
                     </div>
+                    <!-- //step_top -->
                 </div>
-            </div>
+                <!-- //serviceStep -->
 
-            <!-- 결제 히스토리 -->
-            <div class="history_area">
-                <table cellspacing="0" border="1" class="table history_table">
-                    <thead>
-                        <tr>
-                            <th>결제일</th>
-                            <th>결제금액</th>
-                            <th>결제수단</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>20.07/06</td>
-                            <td><b>33,000</b>원 <span class="in">월자동</span> </td>
-                            <td>신용카드 (**3423) <span class="in">결제취소</span></td>
-                        </tr>
-                        <tr>
-                            <td>20.07/06</td>
-                            <td><b>33,000</b>원 <span class="in">기간결제</span> </td>
-                            <td>무통장입금<span class="in">결제완료</span></td>
-                        </tr>
-                        <tr>
-                            <td>20.07/06</td>
-                            <td><b>33,000</b>원 <span class="in">월자동</span> </td>
-                            <td>신용카드 (**3423) <span class="in">결제완료</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- //history_area -->
+                <div class="payment_guide">
+                    <ul class="guide">
+                        <li class="th">결제방법</li>
+                        <li class="td_txt">신용카드</li>
+                    </ul>
+                    <ul class="guide">
+                        <li class="th">결제일</li>
+                        <li class="td_txt">월정기결제 - 매월 28일</li>
+                    </ul>
+                    <ul class="guide">
+                        <li class="th">결제금액</li>
+                        <li class="td_txt">이벤트가 &nbsp;&nbsp;&nbsp;<strong>3,300</strong>원 <span>(부가세포함)</span>
+                            <span class="event_info">둘째 달 부터 정상가(33,000원)로 결제됩니다.</span>
+                        </li>
+                    </ul>
+                    <ul class="guide">
+                        <li class="th">결제금액</li>
+                        <li class="td_txt"><strong>33,000</strong>원 <span>(부가세포함)</span></li>                    
+                    </ul>
+                    <ul class="guide">
+                        <li class="th">결제수단</li>
+                        <li class="td_txt">신용카드 (**2345)</li>
+                    </ul>
+                </div>
+                <!-- //payment_guide -->
 
-            <div class="btnArea payBtn">
-                <a href="#" class="btn btn_save"><b>슈퍼스톡스 프리미엄</b> 상품보기</a>
+                <div class="payment_note">
+                    <ul class="note">
+                        <li><span>결제 확인 및 취소/환불 신청은 ‘마이페이지’에서 확인</span>할 수 있습니다.<br>
+                            <a href="../member/mypage_history.html" class="mod_btn">마이페이지</a></li>
+                        <li>고객센터 <a href="tel:0262252300">02)6225-2300</a>, <a
+                                href="mailto:hero@datahero.co.kr">hero@datahero.co.kr</a><br>
+                            (평일 09:00~17:00 (주말, 공휴일 제외), 점심시간 (11:20 ~ 12:20)</li>
+                    </ul>
+                </div>
+                <!-- //payment_note -->
+                
+                <div class="btnArea payBtn">
+                    <a href="../index.html" class="btn btn_save">서비스 메인으로<i></i></a>
+                </div>
+
             </div>
+            <!-- //payment_area -->
 
         </div>
-        <!-- //sub_login -->
         <!-- //container -->
 
         <div id="footer" class="f_main"></div>
         <!-- //footer -->
     </div>
     <!-- //wrap -->
+
 </body>
 
 </html>

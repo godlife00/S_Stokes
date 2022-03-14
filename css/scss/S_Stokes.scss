@@ -10,15 +10,9 @@
 @import "pages/home"; // 메인화면
 @import "pages/search"; // 검색결과
 @import "pages/stock"; // 오늘의승부주, 투자전략
-
-
-@import "pages/analysis"; // 재무분석
-@import "pages/excavation"; // 종목발굴
-@import "pages/invest"; // 종목발굴
-@import "pages/sectors"; // 업종분석
-@import "pages/inform"; // 업종분석
-// @import "pages/member"; // 
-@import "pages/modal"; // 회원(로그인, 회원가입, 결제, 유료서비스 팝업)
+@import "pages/member"; // 로그인, 가입, 회원정보
+@import "pages/payment"; // 결제
+@import "pages/modal"; // 모달팝업
 
 // Typography
 body {

@@ -65,36 +65,34 @@ $default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", He
     text-align: center;    
     font-size: $font15;        
     letter-spacing: -0.38px;    
-    color: #898989;
+    color: #fff;
 
     b {
-        color: #ff8d5a;                    
+        color: #fff;                    
         font-weight: $f_sizeB;                
     }    
 }
 @mixin two_btn {          
     display: flex;
     justify-content: space-between;  
+    gap: 5px;
 
     .btn {    
         flex: 1;
         padding: 13px 0;            
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: $colpmr;
+        background-color: #c22e06;
         font-size: 18px;
         font-weight: $f_sizeB;                
         letter-spacing: -0.9px;
         text-align: center;
         color: #fff;          
         &:first-child {
-            border: solid 1px #3b4b98;
+            border: solid 1px #d3d3d3;
             background-color: #fff;
-            color: $colpmr;            
-        }             
-        &:last-child {
-            margin-left: 10px;
-        }             
+            color: #898989;
+        }                     
     }
 }
 

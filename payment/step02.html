@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>슈퍼스톡스</title>
+    <meta name="robots" content="한경미국주식 - 미국주식 쉽고 편리하게'">
+    <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#e57828">
+    <!-- 오픈 그래프 -->
+    <meta property="og:title" content="한경미국주식 - 미국주식 쉽고 편리하게'" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="www.choicestock.co.kr">
+    <!-- 파비콘 favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <!-- highcharts -->
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="https://code.highcharts.com/modules/treemap.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/modules/debugger.js"></script> -->
+    <script src="../js/chartjs_SS.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/S_Stokes.css" />
+    <!-- js -->
+    <script src="../js/S_Stokes.js"></script>
+    <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
+    <script src="../js/header.js"></script>
+    <!-- 로컬에서만 사용되는 파일 종료 -->
+</head>
+
+<body class="s_stokes">
+    <div id="wrap">
+        <!-- 헤더 -->
+        <div id="header" class="sub_hdr">
+            <div class="bgWrap">
+                <div class="leftLink">
+                    <a href="../index.html">홈</a>
+                </div>
+            </div>
+            <!-- //header_bgWrap -->
+        </div>
+        <!-- //header -->
+
+        <!-- 결제 class = sub_payment-->
+        <div id="container" class="sub_payment">
+            <!-- 결제 -->
+            <div class="mainBox payment_area">
+                <h2 class="title"><a href="#">슈퍼스톡스 프리미엄 가입</a></h2>
+                <div class="step_area">
+                    <ul>
+                        <li>1. 가입방법 선택</li>
+                        <li class="active">2. 결제하기</li>
+                        <li>3. 결제완료</li>
+                    </ul>
+                </div>
+                <!-- //step_area -->
+
+                <div class="serviceStep step01">
+                    <div class="step_top">
+                        <h2 class="step_title">결제하기</h2>
+                        <a href="http://www.itooza.com/ads/popup/card_event.html" class="btn_cardEvent" onclick="window.open('https://pg.nicepay.co.kr/shared/info.html', 'location', 'width=420, height=700, scrollbars=yes'); return false;">
+                            <img src="../img/btn_cardEvent.png" alt="카드 무이자 할부 안내">
+                        </a>
+                    </div>
+                    <!-- //step_top -->
+
+                    <div class="step_box active event_1year">
+                        <!-- 1주년 900원 이벤트 class = event_1year -->
+                        <h3 class="title">월 정기결제 <span class="way">&nbsp;</span></h3>
+                        <div class="payRight">
+                            <span class="pay01">55,000<b>원</b><span class="pay_sale"><strong>40%할인!</strong></span></span>
+                            <span class="pay02">3,300<b>원</b></span>
+                            <div class="txt_line">
+                                <p class="txt"><strong>월 정기결제시 프리미엄 서비스를 40% 할인된 금액에 이용</strong> 할 수 있습니다. (월 33,000원)</p>                            
+                                <p class="txt">월 정기 결제는 신용카드와 체크카드 결제가 가능합니다.</p>
+                                <p class="txt"><strong>약정 기간 없이 언제든 해지 가능합니다.</strong></p>
+                            </div>
+                        </div>
+                        <!-- //payRight -->
+                    </div>
+                    <!-- //step_box -->
+                </div>
+                <!-- //serviceStep -->
+
+                <div class="payment_guide">
+                    <!--<ul class="guide">
+                        <li class="th">결제방법</li>
+                        <li class="td_txt card_list">신용카드 <span>(롯데, 삼성, 신한, 현대, NH)</span></li>
+                    </ul>-->
+                    <div class="mapage_form">
+                        <fieldset>
+                            <div class="form_table">
+                                <table border="1" class="">
+                                    <tbody>                      
+                                        <tr>
+                                            <th scope="row">결제수단</th>
+                                            <td>                                                                                                
+                                                <div class="selectbox">
+                                                    <label for="select">신용카드(체크카드)</label>
+                                                    <select name="card" id="select">
+                                                        <option value="">신용카드(체크카드)</option>
+                                                        <option value="롯데">롯데카드</option>
+                                                        <option value="삼성">삼성카드</option>
+                                                        <option value="신한">신한카드</option>
+                                                        <option value="현대">현대카드</option>
+                                                        <option value="NH">NH카드</option>
+                                                    </select>
+                                                </div>   
+                                                <div class="item mod_coupon">
+                                                    <p class="i_dsc coupon">월 정기 결제는 신용카드와 체크카드 결제가 가능합니다.</p>                                                    
+                                                    <p class="i_dsc">* 결제카드 : 롯데, 삼성, 신한, 현대, NH</p><!-- ㄱㄴㄷ순 -->
+                                                </div>
+                                            </td>
+                                        </tr>                  
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    
+                                    <ul class="guide">
+                        <li class="th">결제금액</li>
+                                            <li class="td_txt" id="payPrice_1"><strong>3,300</strong>원 <span>(부가세포함)</span></li>
+                                            <li class="td_sum">(월 정기 결제는 신용카드와 체크카드 결제가 가능합니다.)</li>
+                                        </ul>
+                </div>
+
+                <div class="payment_note">
+                    <h4 class="h4_title">[ 서비스 결제 유의사항 ]</h4>
+                    <strong>월 정기결제</strong>
+                    <ul class="note">
+                        <li><span>자동결제는 1개월 단위로 제공</span>되며 <strong>구매하신 날과 매월 동일 한 날짜에 결제</strong>가 이루어집니다</li>
+                        <li>결제 일자가 특정 월에 포함되지 않은 경우(예: 31일)에는 <span>해당 월의 마지막날에 청구</span>됩니다.</li>
+                        <li>월정기결제는 언제든 해지할 수 있습니다.
+                            월정기결제 해지 시 잔여 일이 있으면, 만료 일자까지 이용 하실 수 있으며, 환불신청이 적용되지 않습니다. <strong>단, 결제 당일 해지 시에는 전액 취소 및 서비스 중지 됩니다.</strong>
+                        </li>
+                        <li>신용카드 승인오류 및 잔액 부족시에는 결제가 해지될 수 있습니다</li>
+                        <li>결제일은 실제 신용카드사에서 결제 요청하는 날짜로 실제 출금일은 카드사별로 다를 수 있습니다.</li>
+                        <li>상기 내용은 당사의 사정에 따라 사전고지 없이 변경될 수 있습니다.</li>
+                    </ul>
+
+                    <div class="note_chk">
+                        <p class="txt"><i></i>결제금액과 결제유의사항을 확인했습니다.</p>                    
+                    </div>
+
+                </div>
+                <!-- //payment_note -->
+
+                <div class="btnArea payBtn">
+                    <a href="step01.html" class="btn btn_cncl"><i></i>취소</a>
+                    <a href="step02_card.html" class="btn btn_save">다음<i></i></a>
+                </div>
+
+            </div>
+            <!-- //payment_area -->
+
+        </div>
+        <!-- //container -->
+
+        <div id="footer" class="f_main"></div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+</body>
+
+</html>

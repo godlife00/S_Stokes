@@ -69,85 +69,69 @@
         </div>
         <!-- //header -->
 
-        <!-- 로그인 class = sub_login-->
-        <div id="container" class="sub_login">
-            <!-- 내정보 회원정보 -->
-            <div class="mainBox mapage_area">
-
-                <h2 class="title">내 정보</h2>
-
-                <div class="tabsWrap">
-                    <ul class="page_nav">
-                        <li><a href="mypage_mod.html">회원정보</a></li>
-                        <li class="active"><a href="mypage_history.html">서비스/결제내역</a></li>
+        <!-- 결제 class = sub_payment-->
+        <div id="container" class="sub_payment">
+            <!-- 결제 -->
+            <div class="mainBox payment_area">
+                <h2 class="title"><a href="#">슈퍼스톡스 프리미엄 가입</a></h2>
+                <div class="step_area">
+                    <ul>
+                        <li class="active">1. 가입방법 선택</li>
+                        <li>2. 결제하기</li>
+                        <li>3. 결제완료</li>
                     </ul>
                 </div>
-                <!-- //tabsWrap -->
+                <!-- //step_area -->
 
-            </div>
-            <!-- //mapage_area -->
-
-            <div class="mapage_service">
-                <div class="service_table">
-                    <div class="box">
-                        <h3 class="service">슈퍼스톡스 프리미엄</h3>
-                        <p class="day">2019.12/22 ~ 2020.01/22</p>
+                <div class="serviceStep step01">
+                    <div class="step_top">
+                        <h2 class="step_title">결제하기</h2>
                     </div>
-                    <div class="box">
-                        <span class="system">월자동결제</span>
-                        <a href="#" class="btn_payCan">자동결제취소</a>
-                        <div class="card_num">
-                            <p><span>카드번호</span> ************2323</p>
-                            <p><span>결제일</span> 346일</p>
+                    <!-- //step_top -->
+
+                    <div class="step_box active">                        
+                        <h3 class="title">월 자동결제 <span class="way">신용카드</span></h3>
+                        <div class="payRight">
+                            <span class="pay01">55,000<b>원</b><span class="pay_sale"><strong>40%할인!</strong></span></span>
+                            <span class="pay02">3,300<b>원</b></span>
+                            <div class="txt_line">
+								<p class="txt"><strong>월 정기결제시 프리미엄 서비스를 40% 할인된 금액에 이용</strong> 할 수 있습니다. (월 33,000원)</p>                            
+								<p class="txt">월 정기 결제는 신용카드와 체크카드 결제가 가능합니다.</p>
+								<p class="txt"><strong>약정 기간 없이 언제든 해지 가능합니다.</strong></p>
+							</div>
                         </div>
-                        <a href="../payment/step02_card.html" class="card_ch">카드변경</a>
+                        <!-- //payRight -->
                     </div>
+                    <!-- //step_box -->
+
+                    <div class="step_box">
+                        <h3 class="title">3개월 기간 결제<span class="way">신용카드, 가상계좌(무통장), 계좌이체</span></h3>
+                        <div class="payRight">
+                            <span class="pay01">165,000<b>원</b><span class="pay_sale"><strong>10%할인!</strong></span></span>
+                            <span class="pay02">148,500<b>원</b><span class="pay_sale">55,000원 * 3개월</span></span>
+                            </span>
+                        </div>
+                        <!-- //payRight -->
+                    </div>
+                    <!-- //step_box -->
                 </div>
-            </div>
+                <!-- //serviceStep -->
 
-            <!-- 결제 히스토리 -->
-            <div class="history_area">
-                <table cellspacing="0" border="1" class="table history_table">
-                    <thead>
-                        <tr>
-                            <th>결제일</th>
-                            <th>결제금액</th>
-                            <th>결제수단</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>20.07/06</td>
-                            <td><b>33,000</b>원 <span class="in">월자동</span> </td>
-                            <td>신용카드 (**3423) <span class="in">결제취소</span></td>
-                        </tr>
-                        <tr>
-                            <td>20.07/06</td>
-                            <td><b>33,000</b>원 <span class="in">기간결제</span> </td>
-                            <td>무통장입금<span class="in">결제완료</span></td>
-                        </tr>
-                        <tr>
-                            <td>20.07/06</td>
-                            <td><b>33,000</b>원 <span class="in">월자동</span> </td>
-                            <td>신용카드 (**3423) <span class="in">결제완료</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- //history_area -->
+                <div class="btnArea payBtn">
+                    <a href="../index.html" class="btn btn_cncl"><i></i>취소</a>
+                    <a href="step02.html" class="btn btn_save">다음<i></i></a>
+                </div>
 
-            <div class="btnArea payBtn">
-                <a href="#" class="btn btn_save"><b>슈퍼스톡스 프리미엄</b> 상품보기</a>
             </div>
-
+            <!-- //payment_area -->
         </div>
-        <!-- //sub_login -->
         <!-- //container -->
 
         <div id="footer" class="f_main"></div>
         <!-- //footer -->
     </div>
     <!-- //wrap -->
+
 </body>
 
 </html>

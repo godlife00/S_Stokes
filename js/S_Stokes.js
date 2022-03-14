@@ -85,6 +85,32 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
+    // 회원로그인 체크여부
+    $('.sub_login .agree_area .agree_from .label, .modal.login_form .pop_con .mapage_form .label_chk, .payment_area .payment_note .note_chk .txt').on("click", function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $(this).addClass('active');
+        }
+    });
+
+    // 결제 박스 선택
+    $('.s_stokes #wrap #container.sub_payment .payment_area .serviceStep .step_box').on("click", function () {
+        $('.s_stokes #wrap #container.sub_payment .payment_area .serviceStep .step_box').removeClass('active');            
+        $(this).addClass('active');
+    });
+    
+
+    // 모달팝업
+    // 월자동결제 서비스 변경 팝업
+    $('.btn_payCan').on('click', function () {
+        $('.login_form').modal({
+            fadeDuration: 100
+        });
+    });
+    
+
+
     // 진단점수 그래프바 에니메이션 효과
     (function( $ ) {
         $(function() {
