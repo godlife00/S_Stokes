@@ -1131,4 +1131,163 @@
             border-top: 1px solid #e5e5e5;
         }
     }
+
+    // 서비스소개
+    .serviceStyle {
+        padding: 30px 15px 40px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #e5e5e5;
+
+        // 상단
+        &.serviceTop {
+            margin-bottom: 0;            
+            padding: 30px 0 0;
+            border-bottom: none;
+            background-image: url('/img/bg_serviceTop.svg'), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+
+            .title {
+                padding: 0 15px 15px;
+                font-size: 40px;
+                font-weight: $f_sizeB;                                
+                line-height: 1.4;
+                letter-spacing: -1px;                
+                color: #fff;         
+                strong {
+                    color: #fee46a;
+                }       
+            }
+            .list {
+                padding: 20px 15px;                                
+                background-image: linear-gradient(to right, #7e1b00 , rgba(84, 84, 84, 0) 94%);
+                ul {                
+                    li {
+                        padding: 2px 0;
+                        font-size: $font15;
+                        letter-spacing: -0.38px;                        
+                        color: #fff;                        
+                        strong {
+                            font-weight: $f_sizeB;
+                            color: #fff;                        
+                        } 
+                    }
+                }                
+            }            
+        }
+        .service_txt {
+            box-sizing: border-box;
+            margin-top: 12px;
+            font-size: $font15;            
+            line-height: 1.47;
+            letter-spacing: -0.38px;
+            color: #898989;            
+            word-break: break-all;
+        }
+        // 종목추천, 포트폴리오 
+        &.portfolio {
+            .yieldWrap {
+                padding: 0;
+                margin-right: 0;            
+            }
+        }        
+        // 투자전략알림
+        &.strategy {
+            background: #fff url('/img/bg_serviceStrategy.svg') no-repeat calc(100% + 10px) 25px;
+            .service_txt {
+                padding-right: 140px;
+                word-break: keep-all;
+            }
+        }
+        // 투자매력 TOP50
+        &.portfolio_recom {
+            .topbox {
+                padding: 0;
+            }
+            .mainBox.attr .adequateArea {
+                border-radius: 0;
+                border-top: 1px solid #e5e5e5;
+            }            
+            .mainBox.attr .adequateArea .listWrap {
+                padding: 0;
+            }
+            .mainBox.attr .adequateArea .listWrap .mid {
+                padding: 15px 5px;
+            }
+        }
+
+        // 스마트하게 슈퍼스톡스 이용하기
+        &.smart {
+            margin-bottom: 0;            
+            border-bottom: none;
+            background: #fff url('/img/bg_serviceSmart.svg') no-repeat calc(100% + 10px) 25px;            
+            .title {
+                strong {
+                    color: #c22e06;
+                }
+            }            
+            .box {
+                margin-top: 30px;                
+                .guide_txt {
+                    position: relative;
+                    padding: 0 15px;
+                    font-size: $font18;                    
+                    padding-left: 30px;
+                    letter-spacing: -0.48px;                    
+                    color: #222;
+                    .cunt {
+                        display: inline-block;                        
+                        background-color: #e6e6e6;
+                        border-radius: 50%;                        
+                        width: 22px;
+                        height: 22px;
+                        line-height: 22px;                        
+                        box-sizing: border-box;
+                        position: absolute;
+                        left: 0;
+                        top: 3px;
+                        font-size: $font13;                        
+                        text-align: center;
+                        color: #898989;
+                    }                    
+                }
+                .btnArea.payBtn {                
+                    @include one_btn;
+                    margin-top: 15px;
+                    padding: 11px 0;
+                    width: calc(100% - 60px);
+                    background-color: #fa8700;
+                    border: none;
+                    a {                
+                        position: relative;
+                        display: block;                    
+                        font-size: $font18;
+                        font-weight: $f_sizeB;                
+                        letter-spacing: -0.9px;
+                        color: #fff;
+                        &::after {
+                            content: '';
+                            display: inline-block;
+                            width: 10px;
+                            height: 10px;
+                            position: absolute;
+                            top: 8px;                                  
+                            left: calc(100% - 35px);                        
+                            border-top: 1px solid #fff;
+                            border-right: 1px solid #fff;            
+                            transform: rotate(45deg);         
+                        }  
+                    }
+                }
+
+                &:last-child {
+                    .btnArea.payBtn {
+                        background-color: #c22e06;                        
+                    }
+                }
+
+            }
+            
+        }        
+    }
 }

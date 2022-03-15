@@ -719,10 +719,15 @@
                             }
                         }                        
                     }
-                    .btn_more {
+                    .btn_more {                        
+                        @include one_btn;
                         margin-top: 17px;
-                        a {
-                            @include one_btn;
+                        padding: 10px 0;
+                        a {                            
+                            font-size: $font15;
+                            letter-spacing: -0.38px;
+                            text-align: left;
+                            color: #898989;
                         }                        
                     }
                 }

@@ -586,7 +586,7 @@
             @include two_btn;
             a {                
                 position: relative;
-                font-size: #f18;
+                font-size: $font18;
                 font-weight: $f_sizeB;                
                 letter-spacing: -0.9px;
                 color: #fff;
@@ -598,7 +598,7 @@
                         width: 10px;
                         height: 10px;
                         position: absolute;
-                        top: 20px;                                  
+                        top: 22px;                                  
                         right: calc(100% - 35px);                        
                         border-top: 1px solid #898989;
                         border-right: 1px solid #898989;            
@@ -613,7 +613,7 @@
                         width: 10px;
                         height: 10px;
                         position: absolute;
-                        top: 20px;                                  
+                        top: 22px;                                  
                         left: calc(100% - 35px);                        
                         border-top: 1px solid #fff;
                         border-right: 1px solid #fff;            
@@ -1010,7 +1010,7 @@
         }
         .payment_guide .mapage_form .form_table td .i_dsc.coupon {
             color:#c22e06;
-            margin-top:0;
+            margin-top:6px;
             padding-top:6px;
         }
         .payment_guide .mapage_form .form_table td .i_dsc.coupon i {
@@ -1312,7 +1312,7 @@
             }
             .card_info {
                 margin-top:10px;
-                padding:0 15px;
+                padding:0 15px 15px;
             }
             .card_info .title {
                 color:#333;
@@ -1322,19 +1322,26 @@
             .card_info p.guide {
                 color:#939393;
                 font-size:0.75rem;
-                margin-top:10px;
+                margin-top:5px;
+            }
+            .card_info .card_select {
+                padding-left: 5px;
+                font-size: $font13;
+                letter-spacing: -0.65px;
+                color: #c22e06;                
             }
             .card_info .coupon_mod {
-                background-color: #f5f5f5;
-                color:#939393;
-                font-size:0.84rem;
+                background-color: #f5f5f5;                
                 text-align:center;
-                border:none;                
-                line-height:25px;
+                border:none;                                
                 padding:0 5px;
                 width:calc(100% / 4 - 7.5px) !important;
                 border-radius:5px;
                 margin-right:4px;
+                font-size: $font16;                        
+                line-height: 1.5;
+                letter-spacing: -0.4px;        
+                color: #222;
             }
             .card_info .coupon_mod:last-child {
                 margin-right:0;
@@ -1372,12 +1379,13 @@
                 display:inline-block;
                 width: 100%;
             }
-            .card_info span.pw {
-                color:#939393;
-                font-size:0.84rem;
-                display:inline-block;
-                line-height:25px;
+            .card_info span.pw {                
+                display:inline-block;                
                 margin-left:3px;
+                margin-top: 10px;
+                font-size: $font16;
+                letter-spacing: 2px;                
+                color: #222;
             }
             .card_info span.bns_num {
                 color:#939393;
@@ -1390,13 +1398,13 @@
             }
             .card_info span.bns_num i {
                 position:absolute;
-                left:5px;
-                top:5px;
+                left: 3px;
+                top: 4px;
                 display:inline-block;
                 vertical-align:top;
                 width:18px;
                 height:18px;
-                background:url('/img/icon_agreecheck.svg') no-repeat 0 0;
+                background:url('/img/icon_agreecheck.svg') no-repeat 100% 0;
                 margin-right:7px;
             }
             .card_info span.bns_num.active i {
@@ -1410,18 +1418,20 @@
             }
             .card_info .mapage_form .form_table tr {
                 border-bottom:none;
-            }
+            }            
             .card_info .mapage_form .form_table th,
             .card_info .mapage_form .form_table td {
-                padding:10px 0;
+                padding:4px 0;                
+            }
+            .card_info .mapage_form .form_table th {                
+                padding-top: 15px;
             }
             .card_info .payment_guide {
                 border-bottom:none;
             }
-            .payment_note {	
-                border-radius:3px;
-                padding:15px 10px;	
-                background-color: #f5f5f5;            
+            .payment_note {	                
+                padding:15px 15px;	
+                background-color: #fff;            
             }
             .payment_note .top {
                 border-bottom:1px solid #E0E4E9;
@@ -1443,54 +1453,55 @@
                 width:110px;
                 line-height:20px;
             }
-            .payment_note .top .agree i {
-                display:inline-block;
-                vertical-align:top;
-                width:20px;
-                height:20px;
-                background:url('/img/select_on.png') no-repeat 0 100%;
-                background-size:20px 20px;
-                margin-right:7px;
-            }
-            .payment_note .top .agree.active i {
-                background:url('/img/select.png') no-repeat 0 100%;
-                background-size:20px 20px;
-            }
-            .agree_chk .txt {
-                color:#939393;
-                font-size:0.84rem;
-                line-height:20px;
+            .agree_chk {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }            
+            .agree_chk .txt {                
                 padding:7px 0;
                 display:inline-block;
                 width:calc(100% - 47px);
+                font-size: $font13;                
+                letter-spacing: -0.65px;                
+                color: #222;                
             }
             .agree_chk .txt i {
                 display:inline-block;
                 vertical-align:top;
-                width:20px;
-                height:20px;
-                background:url('/img/select_on.png') no-repeat 0 100%;
-                background-size:20px 20px;
+                width:18px;
+                height:18px;
+                background:url('/img/icon_agreecheck.svg') no-repeat 100% 0;                
                 margin-right:7px;
             }
             .agree_chk .txt.active i {
-                background:url('/img/select.png') no-repeat 0 100%;
-                background-size:20px 20px;
+                background-position: 0 0;                
             }
             .agree_chk .age_link {
-                float:right;
-                padding:11px 5px;
-                background:url('/img/more_Black.png') no-repeat center center;
+                cursor: pointer;
+                position: relative;                
+                padding:12px 10px;                
+                box-sizing: border-box;
                 font-size:0;
                 width:7px;
-                height:12px;
-                background-size:7px 12px;
+                height:12px;                
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 6px;
+                    height: 6px;                    
+                    position: absolute;
+                    top: 7px;            
+                    right: 5px;                    
+                    border-top: 1px solid #222;
+                    border-right: 1px solid #222;            
+                    transform: rotate(45deg);
+                }
             }
-            .payment_chk {
-                background:#e6e7f4;
-                border-radius:9px;
+            .payment_chk {        
+                border: 2px solid #ffc05c;        
                 padding:12px 10px;
-                margin:30px 15px 0;
+                margin:0 15px;
             }
             .payment_chk .txt {
                 color:#333;
@@ -1505,15 +1516,13 @@
                 top:-1px;
                 display:inline-block;
                 vertical-align:top;
-                width:20px;
-                height:20px;
-                background:url('/img/select_on.png') no-repeat 0 100%;
-                background-size:20px 20px;
+                width:18px;
+                height:18px;
+                background:url('/img/icon_agreecheck.svg') no-repeat 100% 0;
                 margin-right:7px;
             }
             .payment_chk .txt.active i {
-                background:url('/img/select.png') no-repeat 0 100%;
-                background-size:20px 20px;
+                background-position: 0 0;
             }
             .help_nicepay {
                 display:block;

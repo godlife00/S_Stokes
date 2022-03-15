@@ -86,7 +86,7 @@ $(document).ready(function () {
     });
 
     // 회원로그인 체크여부
-    $('.sub_login .agree_area .agree_from .label, .modal.login_form .pop_con .mapage_form .label_chk, .payment_area .payment_note .note_chk .txt').on("click", function () {
+    $('.sub_login .agree_area .agree_from .label, .modal.login_form .pop_con .mapage_form .label_chk, .payment_area .payment_note .note_chk .txt, .payment_area.nicepay .card_info span.bns_num, .payment_area.nicepay .agree_chk .txt, .payment_area.nicepay .payment_chk .txt, .pop_con .mapage_form .label_chk').on("click", function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
         } else {
@@ -108,6 +108,33 @@ $(document).ready(function () {
             fadeDuration: 100
         });
     });
+    $('.btn_payRefund').on('click', function () {
+        $('.refund').modal({
+            fadeDuration: 100
+        });
+    });
+    // 나이스페이 진행중인 결제 취소
+    $('.s_stokes #wrap #container.sub_payment .payment_area.nicepay .btnArea.payBtn a.btn_cncl').on('click', function () {
+        $('.paymentCancel').modal({
+            fadeDuration: 100
+        });
+    });
+    $('.age_pop01').on('click', function () {
+        $('.pay_terms01').modal({
+            fadeDuration: 100
+        });
+    });
+    $('.age_pop02').on('click', function () {
+        $('.pay_terms02').modal({
+            fadeDuration: 100
+        });
+    });
+    $('.age_pop03').on('click', function () {
+        $('.pay_terms03').modal({
+            fadeDuration: 100
+        });
+    });
+    
     
 
 

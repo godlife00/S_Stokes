@@ -53,8 +53,8 @@
         }
     }    
 
-    // 월자동결제 서비스 변경 팝업
-    &.login_form {
+    // 월자동결제 서비스 변경, 기간결제 해지/환불 팝업
+    &.login_form, &.refund {
         .pop_header {
             #now_time {
                 color: #939393;
@@ -65,6 +65,18 @@
         }
 
         .pop_con {
+            .pop_sum {
+                padding: 5px 0 15px;
+                color: #c22e06;
+                font-size: $font15;
+                text-align: center;
+                border-bottom: 1px solid #E0E4E9;
+                line-height: 1.4;                
+                strong {
+                    color: #c22e06;
+                    font-weight: $f_sizeB;;
+                }
+            }
             padding: 10px 15px 20px;        
             .mapage_form {
                 padding-top: 10px;
@@ -85,15 +97,27 @@
                             font-weight: normal;
                         }
                         .item {
-                            padding-left: 25px;                            
+                            padding-left: 25px;        
+                            .txt_info {
+                                strong {
+                                    color: #c22e06;
+                                }                                
+                            }                    
                         }
                         .certification_area {
+                            overflow: auto;
+                            max-height: 180px;
                             background: #f5f5f5;
                             border-radius: 5px;
                             margin-top: 10px;
                             margin-left: -50px;                            
                             padding: 15px 15px;
                             box-sizing: border-box;                            
+                            .service_title {
+                                display: block;;
+                                padding-bottom: 5px;
+                                font-size: $font14;                                
+                            }                            
                             .txt {
                                 color: #575757;
                             }
@@ -103,6 +127,24 @@
                                 text-decoration: underline;             
                                 color: $collonk;                   
                                 text-align: right;
+                            }
+                        }
+                        .tr_num {
+                            border: none;
+                            font-size: $font16;
+                            letter-spacing: -0.8px;
+                            color: #333;
+                            background-color: #f5f5f5;
+                            padding: 8px 13px;
+                            width: 100%;
+                            box-sizing: border-box;
+                            border-radius: 5px;  
+                            &:focus {
+                                border: none;
+                                outline: none;
+                            }                          
+                            &::placeholder {
+                                color: #333;
                             }
                         }
                     }
@@ -136,7 +178,68 @@
                         border: none;
                     }                                        
                 }
+            }            
+        }    
+        .btnArea.edtBtn {
+            @include one_btn;
+            background-color: #c22e06;
+            border: none;
+            margin-top: 15px;            
+            a {
+                color: #fff;                
+            }            
+        }    
+    }
+
+    // 나이스페이 진행중인 결제 취소
+    &.paymentCancel {
+        .pop_con {
+            padding: 10px 15px 20px;   
+            .txt {
+                padding: 30px 10px 30px;                   
+                font-size: $font18;
+                font-weight: $f_sizeB;;                                
+                color: #222;                
             }
-        }        
+        }
+        .btnArea.edtBtn {
+            @include two_btn;
+        }
+    }
+
+    // 나이스페이 이용약관 (전자금융거래 약관 동의) 등
+    &.pay_terms01,
+    &.pay_terms02,
+    &.pay_terms03 {
+        .pop_con {
+            padding: 10px 15px 20px;   
+            overflow: auto;
+            height: 500px;
+            .txt {
+                padding: 15px 0;                   
+                font-size: $font13;                
+                color: #222;                
+                word-break: break-all;
+            }
+            .agree {
+                padding: 20px 0 30px;                                   
+                dt, dd, li {
+                    font-size: $font12;                
+                    color: #222;                
+                    line-height: 1.5;
+                    word-break: break-all;
+                }
+                dt {
+                    font-weight: $f_sizeB;
+                    padding: 7px 0;
+                }
+                dd {
+                    padding: 7px 0;
+                }
+            }
+        }
+        .btnArea.edtBtn {
+            @include two_btn;
+        }
     }
 }

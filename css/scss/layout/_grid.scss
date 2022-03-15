@@ -396,12 +396,16 @@ input[type='radio']:checked:before {
 	position:absolute;
 	top:6px;
 	left:5px;
-	padding:0 3px;
-	color:#939393;
+	padding:0 3px;	
 	z-index:-1;
+    font-size: $font16;        
+    line-height: 1.5;
+    letter-spacing: -0.4px;        
+    color: #222;
 }
 .selectbox select {
 	width:100%;
+    padding: 0 10px;
 	height:auto;
 	box-sizing:border-box;
 	border:1px solid #E0E4E9;
@@ -411,9 +415,10 @@ input[type='radio']:checked:before {
 	appearance: none;
 
     option {        
-        line-height: 40px;        
-        color: #939393;
-        font-size: 14px;        
+        font-size: $font16;        
+        line-height: 1.5;
+        letter-spacing: -0.4px;        
+        color: #222;
     }
 }   
 
