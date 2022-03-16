@@ -1291,3 +1291,39 @@
         }        
     }
 }
+
+/*** 이용약관, 개인정보처리방침 ***/
+.s_stokes .sub_terms {
+	padding:75px 15px 30px !important;
+}
+.s_stokes .sub_terms .terms_title {
+	text-align:center;
+	color:#333;
+    font-weight: $f_sizeB;
+	font-size:1.25rem;
+}
+.s_stokes .sub_terms .terms_sum {
+	color:#333;
+	font-size:0.9375rem;
+	margin-top:25px;
+	margin-bottom:15px;
+	font-weight:bold;
+}
+.s_stokes .sub_terms .terms_sum_n {
+	color:#333;
+	font-size:0.9375rem;
+	margin-top:25px;
+	margin-bottom:15px;
+	font-weight:normal;
+}
+.s_stokes .sub_terms .txt {
+	color:#333;
+	font-size:0.84rem;
+	line-height:1.3rem;
+}
+.s_stokes .sub_terms .txt_B {
+	margin-top:15px;
+	color:#333;
+	font-size:0.84rem;
+	line-height: 1.3rem;
+}

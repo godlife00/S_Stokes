@@ -65,11 +65,9 @@
         display: block;
         padding: 21px 0;
         box-sizing: border-box;
-        padding-left: calc(50% - 30px);
         border-radius: 5px;
         font-size: $font15;    
         line-height: 1.47;        
-        text-align: left;
         color: #fff;
     }
      .loign .sns li:first-child a {
@@ -78,9 +76,13 @@
      .loign .sns li:first-child a::before,
      .loign .sns li:last-child a::before {
         content: '';	
-        position: absolute;
-        left: calc(50% - 60px);
-        top: 23px;
+        display: inline-block;
+        // position: absolute;
+        // left: calc(50% - 60px);
+        // left: 0;
+        // top: 23px;
+        vertical-align: middle;
+        padding-right: 10px;
         width: 22px;
         height: 22px;
     }

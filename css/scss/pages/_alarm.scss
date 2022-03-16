@@ -1,0 +1,40 @@
+// 알림
+.s_stokes #wrap #container.sub_alarm {    
+    .alarmArea {
+        padding: 35px 15px;	
+        .alarmList li {        
+            a {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 15px;
+                padding: 15px 0;            
+                border-bottom:1px solid #e5e5e5;            
+            }
+            span.title {
+                display:inline-block;                
+                font-size: $font15;
+                letter-spacing: -0.38px;
+                color: #222;
+            }
+            span.day {
+                font-size: $font13;
+                letter-spacing: -0.33px;
+                text-align: right;
+                color: #898989;
+            }
+            span.sum {
+                width: 100%;
+                font-size: $font13;            
+                line-height: 1.47;
+                letter-spacing: -0.38px;            
+                color: #898989;
+                word-break: break-all;
+            }
+            span.sum span {
+                color: #898989;
+            }
+        }
+    }    
+    
+}

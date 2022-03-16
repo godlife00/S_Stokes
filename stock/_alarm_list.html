@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>슈퍼스톡스</title>
+    <meta name="robots" content="한경미국주식 - 미국주식 쉽고 편리하게'">
+    <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#e57828">
+    <!-- 오픈 그래프 -->
+    <meta property="og:title" content="한경미국주식 - 미국주식 쉽고 편리하게'" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="www.choicestock.co.kr">
+    <!-- 파비콘 favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <!-- highstock -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
+    <!-- highcharts -->
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+    <!-- <script src="https://code.highcharts.com/highcharts-more.js"></script> -->
+    <script src="https://code.highcharts.com/stock/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/no-data-to-display.js"></script>
+    <script src="../js/chartjs_SS.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/S_Stokes.css" />
+    <!-- js -->
+    <script src="../js/S_Stokes.js"></script>
+    <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
+    <script src="../js/header.js"></script>
+    <!-- 로컬에서만 사용되는 파일 종료 -->
+</head>
+
+<body class="s_stokes">
+    <div id="wrap">
+        <!-- 헤더 -->
+        <div id="header" class="sub_hdr">
+            <div class="bgWrap">
+                <div class="leftLink">
+                    <a href="../index.html">홈</a>
+                </div>
+            </div>
+            <!-- //header_bgWrap -->
+        </div>
+        <!-- //header -->
+
+        <!-- 알람 class = sub_alarm-->
+        <div id="container" class="sub_alarm">
+            <!-- 알림 리스트 -->
+            <div class="mainBox alarmArea">                        
+                <h2 class="title">알림</h2>
+                <div class="alarmList">
+                    <ul>
+                        <li>
+                            <a href="alarm_view.html">
+                                <span class="title"><i class="note"></i>종목노트</span>
+                                <span class="day">12/23</span>
+                                <span class="sum">[모닝브리핑] AMD 수익률 35% 돌파, 포트 수익률도 최고치 경신 </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="alarm_view.html">
+                                <span class="title"><i class="recom"></i>종목추천 &#38; 포트폴리오</span>
+                                <span class="day">12/23</span>
+                                <span class="sum">신규 종목추천이 등록되었습니다. - 줌 비디오 커뮤니케이션(ZM)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="alarm_view.html">
+                                <span class="title"><i class="interest"></i>관심종목</span>
+                                <span class="day">12/23</span>
+                                <span class="sum">AMD 수익률 3% 돌파, 포트 수익률도 최고치 경신 시안은 두줄이어야 간격 조절이 됨</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="alarm_view.html">
+                                <span class="title"><i class="event"></i>이벤트	&#47; 알림</span>
+                                <span class="day">12/23</span>
+                                <span class="sum">초이스스탁US - 투자포탈 런칭기념 전 서비스 할인 이벤트</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="alarm_view.html">
+                                <span class="title"><i class="note"></i>종목노트</span>
+                                <span class="day">12/23</span>
+                                    <span class="sum">[모닝브리핑] AMD 수익률 35% 돌파, 포트 수익률도 최고치 경신</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="alarm_view.html">
+                                <span class="title"><i class="recom"></i>종목추천 &#38; 포트폴리오</span>
+                                <span class="day">12/23</span>
+                                <span class="sum">신규 종목추천이 등록되었습니다. - 줌 비디오 커뮤니케이션(ZM)</span>
+                            </a>
+                        </li>                        
+                    </ul>
+                </div>
+                <!-- //alarmList -->
+            </div>
+            <!-- //alarmArea -->
+
+        </div>
+        <!-- //container -->
+
+        <div id="footer" class="f_main"></div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

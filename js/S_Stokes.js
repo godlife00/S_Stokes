@@ -102,6 +102,25 @@ $(document).ready(function () {
     
 
     // 모달팝업
+    // 슈퍼스톡스 프리미엄 2주 무료
+    $('.btn_free').on('click', function () {
+        $('.premium_pop.free2weeks').modal({
+            fadeDuration: 100
+        });
+    });
+    if(window.location.hash) {
+        console.log("이게맞나");
+        var hash = window.location.hash.substring(1);
+        $('.premium_pop.free2weeks').modal({
+            fadeDuration: 100
+        });
+    }
+    // 슈퍼스톡스 프리미엄 가입하기
+    $('.btn_join').on('click', function () {
+        $('.premium_pop.premium_join').modal({
+            fadeDuration: 100
+        });
+    });
     // 월자동결제 서비스 변경 팝업
     $('.btn_payCan').on('click', function () {
         $('.login_form').modal({
