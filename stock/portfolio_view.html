@@ -30,19 +30,18 @@
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <!-- highstock -->
-    <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
     <!-- highcharts -->
-    <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
-    <!-- <script src="https://code.highcharts.com/highcharts-more.js"></script> -->
-    <script src="https://code.highcharts.com/stock/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="https://code.highcharts.com/modules/treemap.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/modules/debugger.js"></script>
     <script src="../js/chartjs_SS.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -60,133 +59,138 @@
 <body class="s_stokes">
     <div id="wrap">
         <!-- 헤더 -->
-        <div id="header" class="sub_hdr">
+        <div id="header" class="sub_hdr name_hdr">
+            <!-- 현재 페이지의 종목명 보여주는 해더 class hide_hdr -->
             <div class="bgWrap">
                 <div class="leftLink">
                     <a href="portfolio_recom.html">포트폴리오</a>
                 </div>
+                <!-- 현재 페이지의 종목명 -->
+                <div class="hdr_name">
+                    <span>한국앤컴퍼니</span>
+                </div>
+                <!-- //hdr_name -->
             </div>
             <!-- //header_bgWrap -->
         </div>
         <!-- //header -->
 
         <div id="container" class="sub_stock">
-            <!-- 검색 종목 -->
-            <div class="winner_topArea">
-                <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
-                <div class="detail">
-                    <h3 class="name">
-                        <a href="#">한국앤컴퍼니 <span class="trans nice">우량주</span></a>
-                        <!-- 우량주 nice, 성장주 gro, 턴 turn -->
-                    </h3>
+            <!-- 포트폴리오 본문 -->
+            <div class="mainBox view">
+                <div class="winner_topArea">
+                    <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
+                    <div class="detail">
+                        <h3 class="name">
+                            <a href="#">한국앤컴퍼니 <span class="trans nice">우량주</span></a>
+                            <!-- 우량주 nice, 성장주 gro, 턴 turn -->
+                        </h3>
 
-                    <span class="txt">실적개선+저평가+기관 매수 실적개선+저평가+기관 매수 </span>
-                </div>
-                <!-- //detail -->
-                <div class="opinion">
-                    <span class="m_opinion">투자의견</span>
-                    <strong class="suggestion sell">전량매도</strong>
-                    <!-- 매수 buy, 매도 sell -->
-                </div>
-            </div>
-            <!-- //winner_topArea -->
-
-            <!-- 추천가, 목표가 -->
-            <div class="mainBox attr">
-                <div class="bg_box">
-                    <div class="data_opinion">
-                        <div class="line">
-                            <div class="th">추천가 <span>12/13 15:33</span></div>
-                            <div class="td"><b>1,234,500</b>원</div>
-                        </div>
-                        <div class="line">
-                            <div class="th">목표가</div>
-                            <div class="td"><b>1,234,500</b>원</div>
-                        </div>
-                        <div class="line">
-                            <div class="th">수익률</div>
-                            <div class="td yield"><b>189.</b>9%</div>
-                        </div>
+                        <span class="txt">실적개선+저평가+기관 매수 실적개선+저평가+기관 매수 </span>
                     </div>
-                    <!-- //data_opinion -->
-                    <div class="data_opinion">
-                        <div class="line">
-                            <div class="th">매도가 <span>12/14 15:33</span></div>
-                            <div class="td"><b>4,500</b>원</div>
-                        </div>
-                        <div class="line">
-                            <div class="th">포트비중</div>
-                            <div class="td">
-                                <span><b>9.</b>9%</span>
-                                <span class="up">→ <b>0.</b>8%</span>                                                                
-                                <!-- <span class="down">→ <b>0.</b>8%</span>                                                                 -->
-                                <!-- 상승 up, 하락 down -->
+                    <!-- //detail -->
+                    <div class="opinion">
+                        <span class="m_opinion">투자의견</span>
+                        <strong class="suggestion sell">전량매도</strong>
+                        <!-- 매수 buy, 매도 sell -->
+                    </div>
+                </div>
+                <!-- //winner_topArea -->
+
+                <!-- 추천가, 목표가 -->
+                <div class="mainBox attr">
+                    <div class="bg_box">
+                        <div class="data_opinion">
+                            <div class="line">
+                                <div class="th">추천가 <span>12/13 15:33</span></div>
+                                <div class="td"><b>1,234,500</b>원</div>
+                            </div>
+                            <div class="line">
+                                <div class="th">목표가</div>
+                                <div class="td"><b>1,234,500</b>원</div>
+                            </div>
+                            <div class="line">
+                                <div class="th">수익률</div>
+                                <div class="td yield"><b>189.</b>9%</div>
                             </div>
                         </div>
-                    </div>
-                    <!-- //data_opinion -->
-
-                    <div class="adequateArea">
-                        <h2 class="title">슈스톡 진단점수</h2>
-                        <div class="listWrap">
-                            <div class="list">
-                                <!-- 벨류 점수 -->
-                                <div class="mid">
-                                    <div class="charm_num">
-                                        <span><b>98</b>점</span>
-                                    </div>
-                                    <!-- //charm_num -->
-                                    <div class="num_bar">
-                                        <div class="line">
-                                            <div class="th">수급분석</div>
-                                            <div class="barArea">
-                                                <!-- <div class="barline">
-                                                    <span class="position" style="width: 10%;"></span>
-                                                </div> -->
-                                                <div class="barline zt-skill-bar">
-                                                    <div class="position" data-width="10"></div>
-                                                </div>
-                                            </div>
-                                            <!-- //barArea -->
-                                            <div class="td"><b>10</b>점</div>
-                                        </div>
-                                        <div class="line">
-                                            <div class="th">밸류에이션</div>
-                                            <div class="barArea">
-                                                <div class="barline">
-                                                    <div class="barline zt-skill-bar">
-                                                        <div class="position" data-width="50"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- //barArea -->
-                                            <div class="td"><b>50</b>점</div>
-                                        </div>
-                                        <div class="line">
-                                            <div class="th">펀더멘탈</div>
-                                            <div class="barArea">
-                                                <div class="barline">
-                                                    <div class="barline zt-skill-bar">
-                                                        <div class="position" data-width="90"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- //barArea -->
-                                            <div class="td"><b>90</b>점</div>
-                                        </div>
-                                        <!-- //num_bar -->
-                                    </div>
-                                    <!-- //mid -->
+                        <!-- //data_opinion -->
+                        <div class="data_opinion">
+                            <div class="line">
+                                <div class="th">매도가 <span>12/14 15:33</span></div>
+                                <div class="td"><b>4,500</b>원</div>
+                            </div>
+                            <div class="line">
+                                <div class="th">포트비중</div>
+                                <div class="td">
+                                    <span><b>9.</b>9%</span>
+                                    <span class="up">→ <b>0.</b>8%</span>
+                                    <!-- <span class="down">→ <b>0.</b>8%</span>                                                                 -->
+                                    <!-- 상승 up, 하락 down -->
                                 </div>
-                                <!-- //list -->
                             </div>
-                            <!-- //listWrap -->
                         </div>
-                        <!-- //adequateArea -->
+                        <!-- //data_opinion -->
+
+                        <div class="adequateArea">
+                            <h2 class="title">슈스톡 진단점수</h2>
+                            <div class="listWrap">
+                                <div class="list">
+                                    <!-- 벨류 점수 -->
+                                    <div class="mid">
+                                        <div class="charm_num">
+                                            <span><b>98</b>점</span>
+                                        </div>
+                                        <!-- //charm_num -->
+                                        <div class="num_bar">
+                                            <div class="line">
+                                                <div class="th">수급분석</div>
+                                                <div class="barArea">
+                                                    <div class="barline zt-skill-bar">
+                                                        <div class="position" data-width="10"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- //barArea -->
+                                                <div class="td"><b>10</b>점</div>
+                                            </div>
+                                            <div class="line">
+                                                <div class="th">밸류에이션</div>
+                                                <div class="barArea">
+                                                    <div class="barline">
+                                                        <div class="barline zt-skill-bar">
+                                                            <div class="position" data-width="50"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //barArea -->
+                                                <div class="td"><b>50</b>점</div>
+                                            </div>
+                                            <div class="line">
+                                                <div class="th">펀더멘탈</div>
+                                                <div class="barArea">
+                                                    <div class="barline">
+                                                        <div class="barline zt-skill-bar">
+                                                            <div class="position" data-width="90"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //barArea -->
+                                                <div class="td"><b>90</b>점</div>
+                                            </div>
+                                        </div>
+                                        <!-- //line -->
+                                    </div>
+                                    <!-- //num_bar -->
+                                </div>
+                                <!-- //mid -->
+                            </div>
+                            <!-- //list -->
+                        </div>
+                        <!-- //listWrap -->
                     </div>
-                    <!-- //adequateArea  -->
+                    <!-- //adequateArea -->
                 </div>
-                <!-- //bg_box -->
+                <!-- //adequateArea  -->
 
                 <!-- 슈스톡 진단점수 -->
                 <div class="mainBox point">
@@ -248,11 +252,10 @@
                 </div>
                 <!-- //data_chart -->
             </div>
-            <!-- //attr -->
-
+            <!-- //view -->
         </div>
         <!-- //container -->
-
+        
         <div id="footer" class="f_main"></div>
         <!-- //footer -->
     </div>

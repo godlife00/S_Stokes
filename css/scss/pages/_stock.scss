@@ -146,7 +146,7 @@
         
     }
 
-    // 오늘의 승부주 상세보기
+    // 오늘의 승부주 상세보기    
     .winner_topArea {
         display: flex;
         justify-content: space-between;   
@@ -614,8 +614,8 @@
             }
 
             blockquote {
-                margin: 20px 0 20px 15px;
-                padding: 5px 15px;
+                margin: 20px 0;
+                padding: 5px 0 15px 15px;
                 border-left: 3px solid #ccc;
             }
 
@@ -700,7 +700,7 @@
             }
         }
 
-        .list_area {
+        .list_area {            
             margin-top: 14px;
             padding: 0 15px;
             display: flex;
@@ -708,31 +708,53 @@
             gap: 8px;
             align-items: center;            
             box-sizing: border-box;
-            background: #fff;
+            background: #fff;            
             .list {
                 display: flex;                
-                justify-content: space-between;
-                gap: 11px;                
+                justify-content: flex-start;
+                gap: 10px;                
                 align-items: center;
                 width: 100%;
                 padding: 15px 10px;
                 box-sizing: border-box;
                 border-radius: 8px;
                 background-color: #f5f5f5;
+                > div {                                                                                
+                    display: flex;
+                    gap: 10px;                        
+                    &:first-child {             
+                        width: calc(100% / 2 + 10px);                                   
+                    }
+                    &:last-child {                       
+                        width: calc(100% / 2 - 10px);                                    
+                    }
+                }
 
-                .comlogo {                                          
+                .comlogo {                        
                     display: inline-block;
                     flex-basis: 40px;
                     width: 40px;
                     height: 40px;
+                    box-sizing: border-box;
                     border: 1px solid #d3d3d3;
                     border-radius: 50%;
                     overflow: hidden;
                 }        
-                .detail {             
-                    flex: 2;         
-                    flex-basis: 100px;
-                    width: 100px;
+                .detail {                       
+                    max-width: 108px;
+                    @media (min-width: 320px) and (max-width: 359px) {
+                        max-width: 80px;
+                    }
+                    @media (min-width: 360px) and (max-width: 424px) {                        
+                        max-width: 108px;
+                    }
+                    @media (min-width: 425px) {
+                        max-width: 140px;
+                    }
+                    @media (min-width: 720px) {
+                        max-width: 100%;
+                    }
+
                     .name {
                         display: inline-block;                                        
                         width: 100%;
@@ -755,7 +777,8 @@
                         word-break: break-all;
                     }
                 }
-                .opinion_box {                    
+                .opinion_box {                                     
+                    width: 50%;
                     .th {
                         font-size: 10px;                        
                         letter-spacing: -0.25px;
@@ -1212,19 +1235,16 @@
     }
 
     // 서비스소개
-    .serviceStyle {
-        padding: 30px 15px 40px;
-        margin-bottom: 8px;
-        border-bottom: 1px solid #e5e5e5;
+    .serviceStyle {                
+        background-color: #f7f7f7;
 
         // 상단
-        &.serviceTop {
-            margin-bottom: 0;            
+        .serviceTop {            
             padding: 30px 0 0;
             border-bottom: none;
             background-image: url('/img/bg_serviceTop.svg'), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
             background-position: right bottom;
-            background-repeat: no-repeat;
+            background-repeat: no-repeat;            
 
             .title {
                 padding: 0 15px 15px;
@@ -1254,6 +1274,10 @@
                 }                
             }            
         }
+        .winner {
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e5e5e5;
+        }
         .service_txt {
             box-sizing: border-box;
             margin-top: 12px;
@@ -1264,14 +1288,20 @@
             word-break: break-all;
         }
         // 종목추천, 포트폴리오 
-        &.portfolio {
+        .portfolio {
+            padding: 35px 15px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e5e5e5;
             .yieldWrap {
                 padding: 0;
                 margin-right: 0;            
             }
         }        
         // 투자전략알림
-        &.strategy {
+        .strategy {            
+            padding: 35px 15px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e5e5e5;
             background: #fff url('/img/bg_serviceStrategy.svg') no-repeat calc(100% + 10px) 25px;
             .service_txt {
                 padding-right: 140px;
@@ -1279,7 +1309,10 @@
             }
         }
         // 투자매력 TOP50
-        &.portfolio_recom {
+        .portfolio_recom {
+            padding: 35px 15px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e5e5e5;
             .topbox {
                 padding: 0;
             }
@@ -1294,11 +1327,9 @@
                 padding: 15px 5px;
             }
         }
-
         // 스마트하게 슈퍼스톡스 이용하기
-        &.smart {
-            margin-bottom: 0;            
-            border-bottom: none;
+        .smart {
+            padding: 35px 15px;
             background: #fff url('/img/bg_serviceSmart.svg') no-repeat calc(100% + 10px) 25px;            
             .title {
                 strong {

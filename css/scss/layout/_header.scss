@@ -32,12 +32,25 @@
                 }            
             }
         }        
+
+        // 현재 페이지의 종목명 보여주는 해더
+        &.name_hdr {
+            background-color: blanchedalmond;
+            .hdr_name {
+                span {
+                    font-size: $font16;
+                    font-weight: $f_sizeB;                                
+                    color: #222;                
+                }                
+            }
+        }
     }
 
     .bgWrap {        
         // height: 59px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         gap: 10px;
         .title {                        
             align-self: center;

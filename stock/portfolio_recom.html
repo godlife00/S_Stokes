@@ -30,19 +30,18 @@
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <!-- highstock -->
-    <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/data.js"></script>    
-    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
     <!-- highcharts -->
-    <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
-    <!-- <script src="https://code.highcharts.com/highcharts-more.js"></script> -->
-    <script src="https://code.highcharts.com/stock/modules/series-label.js"></script>    
-    <script src="https://code.highcharts.com/stock/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="https://code.highcharts.com/modules/treemap.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/modules/debugger.js"></script>
     <script src="../js/chartjs_SS.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -86,171 +85,166 @@
 
                 <!-- 리스트 -->
                 <div class="list_area">                    
-                    <div class="list">                                                
-                        <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
-                        <div class="detail">
-                            <h3 class="name">
-                                <a href="portfolio_view.html">카카오</a>
-                                <!-- 우량주 nice, 성장주 gro, 턴 turn -->
-                            </h3>        
-                            <span class="txt">실적개선+저평가+기관 매수</span>
-                        </div>
-                        <!-- //detail -->                        
-                        <div class="opinion_box">
-                            <div class="th">매도가</div>
-                            <div class="td"><b>1,234,500</b>원</div>
-                        </div>
-                        <div class="opinion_box">
-                            <div class="th">전량매도</div>
-                            <div class="td opinion"><b>189.9</b>%</div>
-                        </div>
+                    <div class="list"> 
+                        <!-- 로고, 종목명 -->
+                        <div>
+                            <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
+                            <div class="detail">
+                                <h3 class="name">
+                                    <a href="portfolio_view.html">카카오</a>
+                                    <!-- 우량주 nice, 성장주 gro, 턴 turn -->
+                                </h3>        
+                                <span class="txt">실적개선+저평가+기관 매수</span>
+                            </div>
+                            <!-- //detail -->    
+                        </div>                   
+                        <!-- 매도가, 의견 -->
+                        <div>
+                            <div class="opinion_box">
+                                <div class="th">매도가</div>
+                                <div class="td"><b>1,234,500</b>원</div>
+                            </div>
+                            <div class="opinion_box">
+                                <div class="th">전량매도</div>
+                                <div class="td opinion"><b>189.9</b>%</div>
+                            </div>
+                        </div>    
                     </div>
                     <!-- //list -->
-                    <div class="list">                                                
-                        <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
-                        <div class="detail">
-                            <h3 class="name">
-                                <a href="portfolio_view.html">한국앤컴퍼니</a>
-                                <!-- 우량주 nice, 성장주 gro, 턴 turn -->
-                            </h3>        
-                            <span class="txt">실적개선+저평가</span>
-                        </div>
-                        <!-- //detail -->                        
-                        <div class="opinion_box">
-                            <div class="th">매도가</div>
-                            <div class="td"><b>1,234,500</b>원</div>
-                        </div>
-                        <div class="opinion_box">
-                            <div class="th">신규매수</div>
-                            <div class="td opinion"><b>79.93</b>%</div>
-                        </div>
+                    <div class="list"> 
+                        <!-- 로고, 종목명 -->
+                        <div>
+                            <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
+                            <div class="detail">
+                                <h3 class="name">
+                                    <a href="portfolio_view.html">한국앤컴퍼니한국앤컴퍼니</a>
+                                    <!-- 우량주 nice, 성장주 gro, 턴 turn -->
+                                </h3>        
+                                <span class="txt">실적개선+저평가+기관 매수</span>
+                            </div>
+                            <!-- //detail -->    
+                        </div>                   
+                        <!-- 매도가, 의견 -->
+                        <div>
+                            <div class="opinion_box">
+                                <div class="th">매도가</div>
+                                <div class="td"><b>234,500</b>원</div>
+                            </div>
+                            <div class="opinion_box">
+                                <div class="th">전량매도</div>
+                                <div class="td opinion"><b>9.9</b>%</div>
+                            </div>
+                        </div>    
                     </div>
                     <!-- //list -->
-                    <div class="list">                                                
-                        <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
-                        <div class="detail">
-                            <h3 class="name">
-                                <a href="portfolio_view.html">한국앤컴퍼니한국앤컴퍼니</a>
-                                <!-- 우량주 nice, 성장주 gro, 턴 turn -->
-                            </h3>        
-                            <span class="txt">실적개선+저평가+기관 매수</span>
-                        </div>
-                        <!-- //detail -->                        
-                        <div class="opinion_box">
-                            <div class="th">매도가</div>
-                            <div class="td"><b>4,500</b>원</div>
-                        </div>
-                        <div class="opinion_box">
-                            <div class="th">비중축소</div>
-                            <div class="td opinion"><b>189.9</b>%</div>
-                        </div>
+                    <div class="list"> 
+                        <!-- 로고, 종목명 -->
+                        <div>
+                            <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
+                            <div class="detail">
+                                <h3 class="name">
+                                    <a href="portfolio_view.html">삼성</a>
+                                    <!-- 우량주 nice, 성장주 gro, 턴 turn -->
+                                </h3>        
+                                <span class="txt">실적개선+저평가+기관 매수</span>
+                            </div>
+                            <!-- //detail -->    
+                        </div>                   
+                        <!-- 매도가, 의견 -->
+                        <div>
+                            <div class="opinion_box">
+                                <div class="th">매도가</div>
+                                <div class="td"><b>500</b>원</div>
+                            </div>
+                            <div class="opinion_box">
+                                <div class="th">전량매도</div>
+                                <div class="td opinion"><b>189.9</b>%</div>
+                            </div>
+                        </div>    
                     </div>
                     <!-- //list -->
-                    <div class="list">                                                
-                        <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
-                        <div class="detail">
-                            <h3 class="name">
-                                <a href="#">한국앤컴퍼니한국앤컴퍼니</a>
-                                <!-- 우량주 nice, 성장주 gro, 턴 turn -->
-                            </h3>        
-                            <span class="txt">실적개선+저평가</span>
-                        </div>
-                        <!-- //detail -->                        
-                        <div class="opinion_box">
-                            <div class="th">매도가</div>
-                            <div class="td"><b>1,234,500</b>원</div>
-                        </div>
-                        <div class="opinion_box">
-                            <div class="th">비중확대</div>
-                            <div class="td opinion"><b>79.93</b>%</div>
-                        </div>
+                    <div class="list"> 
+                        <!-- 로고, 종목명 -->
+                        <div>
+                            <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
+                            <div class="detail">
+                                <h3 class="name">
+                                    <a href="portfolio_view.html">카카오</a>
+                                    <!-- 우량주 nice, 성장주 gro, 턴 turn -->
+                                </h3>        
+                                <span class="txt">실적개선+저평가+기관 매수</span>
+                            </div>
+                            <!-- //detail -->    
+                        </div>                   
+                        <!-- 매도가, 의견 -->
+                        <div>
+                            <div class="opinion_box">
+                                <div class="th">매도가</div>
+                                <div class="td"><b>1,234,500</b>원</div>
+                            </div>
+                            <div class="opinion_box">
+                                <div class="th">전량매도</div>
+                                <div class="td opinion"><b>189.9</b>%</div>
+                            </div>
+                        </div>    
                     </div>
                     <!-- //list -->
-                    <div class="list">                                                
-                        <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
-                        <div class="detail">
-                            <h3 class="name">
-                                <a href="#">카카오</a>
-                                <!-- 우량주 nice, 성장주 gro, 턴 turn -->
-                            </h3>        
-                            <span class="txt">실적개선+저평가+기관 매수</span>
-                        </div>
-                        <!-- //detail -->                        
-                        <div class="opinion_box">
-                            <div class="th">매도가</div>
-                            <div class="td"><b>1,234,500</b>원</div>
-                        </div>
-                        <div class="opinion_box">
-                            <div class="th">전량매도</div>
-                            <div class="td opinion"><b>189.9</b>%</div>
-                        </div>
+                    <div class="list"> 
+                        <!-- 로고, 종목명 -->
+                        <div>
+                            <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
+                            <div class="detail">
+                                <h3 class="name">
+                                    <a href="portfolio_view.html">한국앤컴퍼니한국앤컴퍼니</a>
+                                    <!-- 우량주 nice, 성장주 gro, 턴 turn -->
+                                </h3>        
+                                <span class="txt">실적개선+저평가+기관 매수</span>
+                            </div>
+                            <!-- //detail -->    
+                        </div>                   
+                        <!-- 매도가, 의견 -->
+                        <div>
+                            <div class="opinion_box">
+                                <div class="th">매도가</div>
+                                <div class="td"><b>234,500</b>원</div>
+                            </div>
+                            <div class="opinion_box">
+                                <div class="th">전량매도</div>
+                                <div class="td opinion"><b>189.9</b>%</div>
+                            </div>
+                        </div>    
                     </div>
                     <!-- //list -->
-                    <div class="list">                                                
-                        <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
-                        <div class="detail">
-                            <h3 class="name">
-                                <a href="#">한국앤컴퍼니</a>
-                                <!-- 우량주 nice, 성장주 gro, 턴 turn -->
-                            </h3>        
-                            <span class="txt">실적개선+저평가</span>
-                        </div>
-                        <!-- //detail -->                        
-                        <div class="opinion_box">
-                            <div class="th">매도가</div>
-                            <div class="td"><b>1,234,500</b>원</div>
-                        </div>
-                        <div class="opinion_box">
-                            <div class="th">신규매수</div>
-                            <div class="td opinion"><b>79.93</b>%</div>
-                        </div>
-                    </div>
-                    <!-- //list -->
-                    <div class="list">                                                
-                        <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
-                        <div class="detail">
-                            <h3 class="name">
-                                <a href="#">한국앤컴퍼니한국앤컴퍼니</a>
-                                <!-- 우량주 nice, 성장주 gro, 턴 turn -->
-                            </h3>        
-                            <span class="txt">실적개선+저평가+기관 매수</span>
-                        </div>
-                        <!-- //detail -->                        
-                        <div class="opinion_box">
-                            <div class="th">매도가</div>
-                            <div class="td"><b>4,500</b>원</div>
-                        </div>
-                        <div class="opinion_box">
-                            <div class="th">비중축소</div>
-                            <div class="td opinion"><b>189.9</b>%</div>
-                        </div>
-                    </div>
-                    <!-- //list -->
-                    <div class="list">                                                
-                        <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
-                        <div class="detail">
-                            <h3 class="name">
-                                <a href="#">한국앤컴퍼니한국앤컴퍼니</a>
-                                <!-- 우량주 nice, 성장주 gro, 턴 turn -->
-                            </h3>        
-                            <span class="txt">실적개선+저평가</span>
-                        </div>
-                        <!-- //detail -->                        
-                        <div class="opinion_box">
-                            <div class="th">매도가</div>
-                            <div class="td"><b>1,234,500</b>원</div>
-                        </div>
-                        <div class="opinion_box">
-                            <div class="th">비중확대</div>
-                            <div class="td opinion"><b>79.93</b>%</div>
-                        </div>
+                    <div class="list"> 
+                        <!-- 로고, 종목명 -->
+                        <div>
+                            <img src="../img/comlogo_temp.png" alt="회사로고 들어감" class="comlogo">
+                            <div class="detail">
+                                <h3 class="name">
+                                    <a href="portfolio_view.html">삼성</a>
+                                    <!-- 우량주 nice, 성장주 gro, 턴 turn -->
+                                </h3>        
+                                <span class="txt">실적개선+저평가+기관 매수</span>
+                            </div>
+                            <!-- //detail -->    
+                        </div>                   
+                        <!-- 매도가, 의견 -->
+                        <div>
+                            <div class="opinion_box">
+                                <div class="th">매도가</div>
+                                <div class="td"><b>500</b>원</div>
+                            </div>
+                            <div class="opinion_box">
+                                <div class="th">전량매도</div>
+                                <div class="td opinion"><b>189.9</b>%</div>
+                            </div>
+                        </div>    
                     </div>
                     <!-- //list -->
                 </div>
                 <!-- //list_area -->
             </div>
             <!-- //portfolio_recom -->
-
         </div>
         <!-- //container -->
 
