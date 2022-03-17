@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+    // a태그 페이지 상단 이동 막기
+    $('btn_free, .btn_join, .game_scr .page_nav li').on('click', function () {
+        console.log("상단이동제한");
+        return false;
+    });
+
     //swiper    
     //메인 포트폴리오
     var swiper = new Swiper('.mainportfolioSwiper', {
@@ -10,7 +16,6 @@ $(document).ready(function () {
         slidesPerView: "auto",
         spaceBetween: 8,
     });
-
 
     // 상단 검색바
     $('.my_info').on('click', function () {
@@ -55,16 +60,36 @@ $(document).ready(function () {
                 }).addClass('boxShadow');              
             }
         }        
-    });
-
-    // 오늘의승부주 탭네비 페이지내 이동
+    });    
+    
+    // 메인 상단 탭네비 상단 고정 시키기    
+    $(window).scroll(function () {                        
+        if ($('.mainBox.game_scr .page_nav').length) {            
+            var navoffset01 = $('.mainBox.game_scr').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                                                  
+            var navoffset02 = $('.mainBox.portfolio').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                                                  
+            var navoffset03 = $('.mainBox.strategy').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                                                        
+            var navoffset04 = $('.mainBox.attr').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                  
+            $('.mainBox.game_scr .page_nav li').removeClass('active');            
+            if ($(document).scrollTop() >= 0 && $(document).scrollTop() < navoffset02) {                 
+                $('.mainBox.game_scr .page_nav li a.nav_game_scr').parents().addClass('active');            
+            } else if (navoffset01 <= navoffset02 && $(document).scrollTop() < navoffset03) {                                        
+                $('.mainBox.game_scr .page_nav li a.nav_portfolio').parents().addClass('active');    
+            } else if (navoffset02 <= navoffset03 && $(document).scrollTop() < navoffset04) {                  
+                $('.mainBox.game_scr .page_nav li a.nav_strategy').parents().addClass('active');   
+            } else {                
+                $('.mainBox.game_scr .page_nav li a.nav_attr').parents().addClass('active');            
+            }
+        }        
+    });    
+    // 메인 상단 탭네비 페이지내 이동    
     $('.mainBox.game_scr .page_nav li a.nav_game_scr').on("click", function () {
         var offset = $('html').offset();
-        $('html').animate({ scrollTop: offset.top}, 400);
+        $('html').animate({ scrollTop: offset.top}, 400);        
+        // $('.mainBox.game_scr .page_nav li').removeClass('active');
     });
     $('.mainBox.game_scr .page_nav li a.nav_portfolio').on("click", function () {
         var offset = $('.mainBox.portfolio').offset();
-        $('html').animate({ scrollTop: offset.top - 80 }, 400);
+        $('html').animate({ scrollTop: offset.top - 80 }, 400);        
     });
     $('.mainBox.game_scr .page_nav li a.nav_strategy').on("click", function () {
         var offset = $('.mainBox.strategy').offset();
@@ -72,10 +97,10 @@ $(document).ready(function () {
     });
     $('.mainBox.game_scr .page_nav li a.nav_attr').on("click", function () {
         var offset = $('.mainBox.attr').offset();
-        $('html').animate({ scrollTop: offset.top - 80 }, 400);
+        $('html').animate({ scrollTop: offset.top - 80 }, 400);        
     });
 
-    // 오늘의 승부주 필터 active
+    // 서브 오늘의 승부주 필터 active
     $('.s_stokes #wrap #container.sub_stock .winner .w_filter ul li').on("click", function () {
         $('.s_stokes #wrap #container.sub_stock .winner .w_filter ul li').removeClass('active');
         $(this).addClass('active');
@@ -107,14 +132,7 @@ $(document).ready(function () {
         $('.premium_pop.free2weeks').modal({
             fadeDuration: 100
         });
-    });
-    if(window.location.hash) {
-        console.log("이게맞나");
-        var hash = window.location.hash.substring(1);
-        $('.premium_pop.free2weeks').modal({
-            fadeDuration: 100
-        });
-    }
+    });    
     // 슈퍼스톡스 프리미엄 가입하기
     $('.btn_join').on('click', function () {
         $('.premium_pop.premium_join').modal({

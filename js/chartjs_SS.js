@@ -111,8 +111,8 @@ $(document).ready(function () {
         });
     }
 
-    if ($('#BICchart_profit05').length) {
-        Highcharts.chart('BICchart_profit05', {
+    if ($('#BICchart_profit02').length) {
+        Highcharts.chart('BICchart_profit02', {
             chart: {
                 type: 'line',
                 zoomType: 'xy',
@@ -125,14 +125,14 @@ $(document).ready(function () {
                 style: {
                     fontFamily: "'Spoqa Han Sans Neo','Malgun gothic', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'"
                 },
-                marginTop: 60,
-                marginBottom: 90,
+                marginTop: 30,
+                marginBottom: 70,
                 plotBorderColor: null,
                 plotBorderWidth: null,
                 plotShadow: false,
             },
 
-            colors: ["#DBDFED", "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
 
             title: {
                 text: null,
@@ -142,16 +142,9 @@ $(document).ready(function () {
                 shared: true,
             },
 
-            xAxis: [{    
-                categories: ['12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03','12.03'],  
-                type: 'datetime',                
-                labels: {
-                    // formatter: function() {
-                    //     return Highcharts.dateFormat('%y', this.value);
-                    // },
-                    step: 2
-                },                
-                crosshair: true        
+            xAxis: [{
+                categories: ['05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
+                crosshair: true
             }],
 
 
@@ -160,22 +153,11 @@ $(document).ready(function () {
                     text: null,
                 },
                 labels: {
-                    format: '{value}억',
+                    format: '{value}점',
                     style: {
                         color: ["#656d7e"],
                     }
                 },
-            }, {// 2
-                title: {
-                    text: null,
-                },
-                labels: {
-                    format: '{value}%',
-                    style: {
-                        color: ["#656d7e"],
-                    }
-                },
-                opposite: true
             }],
 
 
@@ -188,19 +170,11 @@ $(document).ready(function () {
             },
 
             series: [{
-                name: '연구개발비(좌)',
-                type: 'column',
+                name: 'MVP 점수',
                 yAxis: 0,
                 data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
                 tooltip: {
-                    pointFormat: '<span style="color:#656d7e">{series.name} : <b>{point.y:,.0f} 억</b><br/>'
-                },
-            }, {
-                name: '연구개발비 비율(우)',
-                yAxis: 1,
-                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
-                tooltip: {
-                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} %</b><br/>'
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 점</b><br/>'
                 },
             }],
 

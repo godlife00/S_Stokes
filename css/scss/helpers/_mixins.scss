@@ -117,6 +117,7 @@ $default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", He
     .list_area .list .num {            
         display: flex;
         justify-content: space-between;
+        
     }
     .list_area .list .num .th {
         display: block;
@@ -149,7 +150,8 @@ $default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", He
         padding: 3px 5px 2px;
         box-sizing: border-box;
         vertical-align: middle;
-        margin-left: 3px;      
+        margin-left: 3px;              
+        
         &.nice {
             background-color: #c22c06;                
         }
