@@ -6,6 +6,29 @@ $(document).ready(function () {
         return false;
     });
 
+    // 페이지 해더 종목명 노출 스크립트    
+    $('.page_hdrName').hide();
+    $(window).scroll(function () {        
+        if ($('.page_hdrName').length) {                        
+            var hdrNameTop = $('.mainBox.attr').offset().top;                                                                      
+            if ($(document).scrollTop() == 0 && $(document).scrollTop() <= hdrNameTop) {            
+                $('#header .bgWrap .leftLink').fadeIn();
+                $('.page_hdrName').hide();
+                $('#header .bgWrap').css({
+                    'justify-content' : 'space-between',
+                });
+                $('.s_stokes #wrap #header.sub_hdr').removeClass('boxShadow');                
+            } else if ($(document).scrollTop() !== 0 && $(document).scrollTop() > hdrNameTop) {                                                                      
+                $('#header .bgWrap .leftLink').hide();
+                $('.page_hdrName').fadeIn();
+                $('#header .bgWrap').css({
+                    'justify-content' : 'center',
+                });
+                $('.s_stokes #wrap #header.sub_hdr').addClass('boxShadow');                
+            } 
+        }
+    }); 
+
     //swiper    
     //메인 포트폴리오
     var swiper = new Swiper('.mainportfolioSwiper', {

@@ -145,3 +145,18 @@
 		margin: 0 2px 2px;
 	}
 }
+
+// 현재 페이지의 종목명 보여주는 해더
+.s_stokes {	
+	.page_hdrName {		
+		display: none;
+		text-align: center;		
+		box-sizing: border-box;		
+		
+		span {
+			font-size: $font16;
+			font-weight: $f_sizeB;                                
+			color: #222;                
+		}                
+	}
+}

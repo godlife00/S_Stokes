@@ -60,16 +60,16 @@
     <div id="wrap">
         <!-- 헤더 -->
         <div id="header" class="sub_hdr name_hdr">
-            <!-- 현재 페이지의 종목명 보여주는 해더 class hide_hdr -->
+            <!-- 현재 페이지의 종목명 보여주는 해더 class name_hdr -->
             <div class="bgWrap">
                 <div class="leftLink">
                     <a href="portfolio_recom.html">포트폴리오</a>
                 </div>
                 <!-- 현재 페이지의 종목명 -->
-                <div class="hdr_name">
+                <div class="page_hdrName">
                     <span>한국앤컴퍼니</span>
                 </div>
-                <!-- //hdr_name -->
+                <!-- //page_hdrName -->
             </div>
             <!-- //header_bgWrap -->
         </div>
@@ -101,37 +101,44 @@
                 <div class="mainBox attr">
                     <div class="bg_box">
                         <div class="data_opinion">
-                            <div class="line">
-                                <div class="th">추천가 <span>12/13 15:33</span></div>
-                                <div class="td"><b>1,234,500</b>원</div>
-                            </div>
-                            <div class="line">
-                                <div class="th">목표가</div>
-                                <div class="td"><b>1,234,500</b>원</div>
-                            </div>
-                            <div class="line">
-                                <div class="th">수익률</div>
-                                <div class="td yield"><b>189.</b>9%</div>
-                            </div>
-                        </div>
-                        <!-- //data_opinion -->
-                        <div class="data_opinion">
-                            <div class="line">
-                                <div class="th">매도가 <span>12/14 15:33</span></div>
-                                <div class="td"><b>4,500</b>원</div>
-                            </div>
-                            <div class="line">
-                                <div class="th">포트비중</div>
-                                <div class="td">
-                                    <span><b>9.</b>9%</span>
-                                    <span class="up">→ <b>0.</b>8%</span>
-                                    <!-- <span class="down">→ <b>0.</b>8%</span>                                                                 -->
-                                    <!-- 상승 up, 하락 down -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //data_opinion -->
+                            <table cellspacing="0" border="0" class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="line">
+                                            <div class="th">추천가 <span>12/13 15:33</span></div>
+                                            <div class="td"><b>1,234,500</b>원</div>
+                                        </td>
+                                        <td class="line">
+                                            <div class="th">목표가</div>
+                                            <div class="td"><b>1,234,500</b>원</div>
+                                        </td>
+                                        <td class="line">
+                                            <div class="th">수익률</div>
+                                            <div class="td yield"><b>189.</b>9%</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="line">
+                                            <div class="th">매도가 <span>12/14 15:33</span></div>
+                                            <div class="td"><b>4,500</b>원</div>
+                                        </td>
+                                        <td class="line">
+                                            <div class="th">포트비중</div>
+                                            <div class="td">
+                                                <span><b>9.</b>9%</span>
+                                                <span class="up">→ <b>0.</b>8%</span>
+                                                <!-- <span class="down">→ <b>0.</b>8%</span> -->
+                                                <!-- 상승 up, 하락 down -->
+                                            </div>
+                                        </td>
+                                        <!-- <td class="line">
 
+                                        </td> -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //data_opinion -->
+                        
                         <div class="adequateArea">
                             <h2 class="title">슈스톡 진단점수</h2>
                             <div class="listWrap">
@@ -255,7 +262,7 @@
             <!-- //view -->
         </div>
         <!-- //container -->
-        
+
         <div id="footer" class="f_main"></div>
         <!-- //footer -->
     </div>

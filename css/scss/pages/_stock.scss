@@ -265,15 +265,17 @@
             box-sizing: border-box;
         }
 
-        .data_opinion {
-            display: flex;            
-            justify-content: space-between;
-            gap: 10px;
-            padding: 15px 15px;            
-            &:first-child {
-                border-bottom: 1px solid #e5e5e5;
-            }            
-            .line {                      
+        .data_opinion {            
+            th, td {
+                padding: 18px 12px;                        
+                box-sizing: border-box;
+            }
+            tr {
+                &:first-child {
+                    border-bottom: 1px solid #e5e5e5;
+                }       
+            }     
+            .line {                                                      
                 .th {
                     font-size: $font12;                    
                     line-height: 1.5;
@@ -312,7 +314,7 @@
                             color: $coldown;                           
                         }
                     }
-                }                
+                }                                
             }
             &:nth-child(1) {                                    
                 &:nth-child(1), &:nth-child(2) {
@@ -322,15 +324,10 @@
                     flex: 1;
                 }
             }
-            &:nth-child(2) {                           
+            &:nth-child(2) {                                  
                 justify-content: flex-start;
                 gap: 25px;
-                &:nth-child(1) {
-                    flex: 1;
-                }
-                &:nth-child(2) {
-                    flex: 1;
-                }
+                    
             }
 
         }
