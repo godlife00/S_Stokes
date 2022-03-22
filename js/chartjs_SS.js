@@ -132,7 +132,7 @@ $(document).ready(function () {
                 plotShadow: false,
             },
 
-            colors: [/*"#DBDFED",*/ "#3655D6", "#37C60C", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
+            colors: [/*"#DBDFED",*/ "#3655D6", "#f8452c", "#FC4F4F", "#F7C51E", "#AA79E2", "#626262"],
 
             title: {
                 text: null,
@@ -165,7 +165,7 @@ $(document).ready(function () {
                 labels: {
                     format: '{value}원',
                     style: {
-                        color: ["#656d7e"],
+                        color: ["#f8452c"],
                     }
                 },
                 opposite: true
