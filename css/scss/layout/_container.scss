@@ -152,11 +152,30 @@
 		display: none;
 		text-align: center;		
 		box-sizing: border-box;		
+		position: relative;		
+		width: 100%;		
 		
-		span {
+		a {			
+			box-sizing: border-box;			
 			font-size: $font16;
 			font-weight: $f_sizeB;                                
-			color: #222;                
+			color: #222;                			
+			width: 100%;
+			box-sizing: border-box;
+			display: block;
+
+			&::after {
+				content: '';
+				display: inline-block;
+				width: 8px;
+				height: 8px;
+				position: absolute;
+				top: 6px;
+				left: 0;
+				border-top: 1px solid #222;
+				border-right: 1px solid #222;				
+				transform: rotate(-135deg);
+			}
 		}                
 	}
 }

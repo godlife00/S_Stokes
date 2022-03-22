@@ -158,6 +158,17 @@ $(document).ready(function () {
                         color: ["#656d7e"],
                     }
                 },
+            }, {// 2
+                title: {
+                    text: null,
+                },
+                labels: {
+                    format: '{value}원',
+                    style: {
+                        color: ["#656d7e"],
+                    }
+                },
+                opposite: true
             }],
 
 
@@ -170,11 +181,18 @@ $(document).ready(function () {
             },
 
             series: [{
-                name: 'MVP 점수',
+                name: 'MVP점수',
                 yAxis: 0,
                 data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
                 tooltip: {
                     pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 점</b><br/>'
+                },
+            }, {
+                name: '주가',
+                yAxis: 1,
+                data: [72, 32, 37, 69, 27, 31, 72, 32, 37, 69, 27, 31],
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name} : <b>{point.y:,.0f} 원</b><br/>'
                 },
             }],
 
