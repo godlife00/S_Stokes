@@ -551,172 +551,187 @@
                 <link rel="stylesheet" type="text/css" href="../css/DH_cms.css" /> <!-- cms css -->
                 <script src="../js/DH_cms.js"></script><!-- cms js -->
 
-                <h2 class="h2_title"><strong>슈퍼스톡스</strong> &gt; 추천종목 운영</h2>
-                <h3 class="h3_title">목록</h3>
+                <h2 class="h2_title"><strong>슈퍼스톡스</strong> &gt; 포트폴리오 관리</h2>
+                <h3 class="h3_title">수익률</h3>
                 <div class="superstocks_wrap">
                     <div class="page_nav">
-                        - <a href="ss_list.html">목록</a>
-                        - <a href="ss_wform.html">포트폴리오 운영전략</a>
-                        - <a href="ss_game.html">오늘의 승부주</a>
+                        - <a href="ss_portfolio_yield.html">수익률</a>
+                        - <a href="#">포트폴리오</a>
                     </div>
-                    <form name="sch_form" method="get" action="">
-                        <div class="formWrap">
+                    <!-- //page_nav -->
 
-                            <span id="help" class="btn_help">도움말</span>
-                            <div class="sch_box">
+                    <div class="flexArea">
+                        <div class="left">
+                            <div class="tab_container">
+                                <div id="tab1" class="tab_content">
+                                    <form name="ss_wform" method="post" action="">
+                                        <div class="formWrap">
+                                            <!--매수 컨텐츠 입력-->
+                                            <div class="cont_wrap">
+                                                <div class="left">
+                                                    <div class="box">
+                                                        <div class="top_sch">
+                                                            <div class="searchArea">
+                                                                <!-- 검색어 자동완성 -->
+                                                                <input type="text" autocomplete="off"
+                                                                    placeholder="종목명 또는 심볼 검색" class="searchInput">
+                                                                <a href="#" class="btn_sch">검색</a>
+                                                                <div class="AutoComplete">
+                                                                    <!-- //자동완성 결과 노출 class : _show -->
+                                                                    <ul id="autocomplete_list">
+                                                                        <li class="_on"><a href="#" class="_on">
+                                                                                <span class="schCode">207940</span>
+                                                                                <span
+                                                                                    class="schList"><strong>삼성</strong>바이오로직스</span>
+                                                                            </a></li>
+                                                                        <li class=""><a href="#" class="_on">
+                                                                                <span class="schCode">207940</span>
+                                                                                <span
+                                                                                    class="schList"><strong>삼성</strong>바이오로직스</span>
+                                                                            </a></li>
+                                                                        <li class=""><a href="#" class="_on">
+                                                                                <span class="schCode">207940</span>
+                                                                                <span
+                                                                                    class="schList"><strong>삼성</strong>바이오로직스</span>
+                                                                            </a></li>
+                                                                        <li class=""><a href="#" class="_on">
+                                                                                <span class="schCode">207940</span>
+                                                                                <span
+                                                                                    class="schList"><strong>삼성</strong>바이오로직스</span>
+                                                                            </a></li>
+                                                                        <li class=""><a href="#" class="_on">
+                                                                                <span class="schCode">207940</span>
+                                                                                <span
+                                                                                    class="schList"><strong>삼성</strong>바이오로직스</span>
+                                                                            </a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- //top_sch -->
 
-                                <div class="radio_group">
-                                    <label>
-                                        <input type="radio" name="cktype" checked>전체
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="cktype">기간
-                                    </label>
-                                    <label>
-                                        <input type="text" class="input_txt" autocomplete="off" id="datepicker1"
-                                            style="width: 100px"> ~ <input type="text" class="input_txt"
-                                            autocomplete="off" id="datepicker2" style="width: 100px">
-                                    </label>
-                                </div>
+                                                        <div class="fieldset_table">
+                                                            <fieldset>
+                                                                <ul>
+                                                                    <li class="th">종목명</li>
+                                                                    <li class="td">
+                                                                        <span class="schName">207940
+                                                                            <strong>삼성바이오로직스</strong></span>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="th">구분</li>
+                                                                    <li class="td">
+                                                                        <label>
+                                                                            <input type="radio" name="sstype" checked>
+                                                                            우량주
+                                                                        </label>
+                                                                        <label>
+                                                                            <input type="radio" name="sstype"> 성장주
+                                                                        </label>
+                                                                        <label>
+                                                                            <input type="radio" name="sstype"> 턴어라운드
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="th">투자의견</li>
+                                                                    <li class="td"><input type="text" value="" name=""
+                                                                            class="price" style="width: 100%;"></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="th">목표주가</li>
+                                                                    <li class="td"><input type="number" value="" name=""
+                                                                            class="price"> 원</li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="th">추천가</li>
+                                                                    <li class="td"><input type="number" value="" name=""
+                                                                            class="price"> 원</li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="th">기대수익률</li>
+                                                                    <li class="td"><input type="number" value="" name=""
+                                                                            class="price"> %</li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="th">상승시분할매도가</li>
+                                                                    <li class="td">
+                                                                        <input type="number" value="" name=""
+                                                                            class="per" style="width: 100px;"> 원
+                                                                        &nbsp; &nbsp; ~ &nbsp; &nbsp;
+                                                                        <input type="number" value="" name=""
+                                                                            class="per" style="width: 100px;"> 원
+                                                                    </li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="th">하락시손절매도가</li>
+                                                                    <li class="td">
+                                                                        <input type="number" value="" name=""
+                                                                            class="per" style="width: 100px;"> 원
+                                                                    </li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="th">컨텐츠 제목</li>
+                                                                    <li class="td"><input type="text" value="" name=""
+                                                                            class="price" style="width: 100%;"></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="th">투자포인트</li>
+                                                                    <li class="td">
+                                                                        <textarea
+                                                                            style="width: 100%; height: 100px;"></textarea>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="th">컨텐츠 분류</li>
+                                                                    <li class="td">
+                                                                        <label>
+                                                                            <input type="radio" name="ssclass" checked>
+                                                                            승부주
+                                                                        </label>
+                                                                        <label>
+                                                                            <input type="radio" name="ssclass"> 종목추천
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="th">표출여부</li>
+                                                                    <li class="td">
+                                                                        <label>
+                                                                            <input type="radio" name="ssexp" checked> Y
+                                                                            (표출)
+                                                                        </label>
+                                                                        <label>
+                                                                            <input type="radio" name="ssexp" checked> N
+                                                                            (미표출)
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                            </fieldset>
 
+                                                        </div>
+                                                        <!-- //fieldset_table -->
+                                                        <div class="btnWrap">
+                                                            <a href="#" class="btn btn_list">목록</a>
+                                                            <a href="#" class="btn btn_formSave">저장</a>
+                                                        </div>
+                                                        <!-- //btnWrap -->
 
-                                <div class="info_box">
-                                    <ul class="db_info">
-                                        <li><strong>* 번호 : </strong>컨텐츠 목록 번호</li>
-                                        <li><strong>* 표출 : </strong>컨텐츠 표출(○), 미표출(×)로 구분 포트전략&amp;종목추천 본문에서 표출 컨트롤
-                                        </li>
-                                        <li><strong>* 시각 : </strong>MM/DD HH:MM 으로 표시</li>
-                                        <li><strong>* 표출종목 : </strong>표출시각 표시</li>
-                                        <li><strong>* 미표출종목 : </strong>입력시각 표시</li>
-                                        <li><strong>* 포트 : </strong>포트폴리오 운영전략</li>
-                                        <li><strong>* 종목 : </strong>종목추천</li>
-                                        <li><strong>* 투자의견 : </strong>포트 및 종목추천 본문의 투자의견 표시</li>
-                                        <li><strong>* 스타일 : </strong>우량주, 성장주, 턴 중에 표시</li>
-                                        <li>* 추천가,목표가,기대수익,수익률 → 해당본문의 정보를 그대로 표시</li>
-                                        <li>* 종합=펀더+밸류+수급(활주로 점수) 컨텐츠 입력 또는 표출 당시 본문에 입력된 점수 표시(업데이트 안함)</li>
-                                        <li><strong>* 가격 : </strong>컨텐츠 건별 가격 표시</li>
-                                    </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //formWrap  -->
+                                    </form>
                                 </div>
                             </div>
-                            <div class="list_wrap">
-                                <div class="radio_group">
-                                    <label>
-                                        <input type="radio" name="ckweb" checked>전체
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="ckweb">종목명
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="ckweb">포트폴리오
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="ckweb">승부주
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="ckweb">표출
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="ckweb">미표출
-                                    </label>
-                                </div>
-                                <div class="searchArea">
-                                    <!-- 검색어 자동완성 -->
-                                    <input type="text" autocomplete="off" placeholder="종목명 또는 심볼 검색"
-                                        class="searchInput">
-                                    <a href="#" class="btn_sch">검색</a>
-                                    <div class="AutoComplete">
-                                        <!-- //자동완성 결과 노출 class : _show -->
-                                        <ul id="autocomplete_list">
-                                            <li class="_on"><a href="#" class="_on">
-                                                    <span class="schCode">207940</span>
-                                                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
-                                                </a></li>
-                                            <li class=""><a href="#" class="_on">
-                                                    <span class="schCode">207940</span>
-                                                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
-                                                </a></li>
-                                            <li class=""><a href="#" class="_on">
-                                                    <span class="schCode">207940</span>
-                                                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
-                                                </a></li>
-                                            <li class=""><a href="#" class="_on">
-                                                    <span class="schCode">207940</span>
-                                                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
-                                                </a></li>
-                                            <li class=""><a href="#" class="_on">
-                                                    <span class="schCode">207940</span>
-                                                    <span class="schList"><strong>삼성</strong>바이오로직스</span>
-                                                </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <table cellspacing="0" border="0"
-                                    class="ui-jqgrid-htable table table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>번호</th>
-                                            <th>표출유무</th>
-                                            <th>시각</th>
-                                            <th>종목명</th>
-                                            <th>구분</th>
-                                            <th>투자의견</th>
-                                            <th>스타일</th>
-                                            <th>추천가</th>
-                                            <th>목표가</th>
-                                            <th>기대수익률</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-                                        <tr>
-                                            <td>7531</td>
-                                            <td>Y</td>
-                                            <td>22.03/23 11:44</td>
-                                            <td><a href="ss_wform.html">카카오게임즈</a> </td>
-                                            <td class="port">추천</td>
-                                            <td class="port">분할 매수</td>
-                                            <td class="port">턴</td>
-                                            <td class="price">19,100</td>
-                                            <td class="price">22,000</td>
-                                            <td class="per">15.00%</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>7530</td>
-                                            <td>N</td>
-                                            <td>22.03/23 10:39</td>
-                                            <td>
-                                                <a href="ss_wform.html">삼성전자</a>
-                                            </td>
-                                            <td class="port">추천</td>
-                                            <td class="port">분할 매수</td>
-                                            <td class="port">턴</td>
-                                            <td class="price">31,100</td>
-                                            <td class="price">35,800</td>
-                                            <td class="per">15.00%</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
                         </div>
-                        <!-- //formWrap  -->
-
-                    </form>
+                        <!-- //left -->
+                    </div>
+                    <!-- //flexArea -->
                 </div>
-
-                <div class="paginate">
-                    <a href="#" class="cb_pre">&#171;</a>
-                    <a href="#" class="cb_pre">&#60;</a>
-                    <strong>1</strong>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#" class="cb_next">&#62;</a>
-                    <a href="#" class="cb_next">&#187;</a>
-                </div>
+                <!-- //superstocks_wrap -->
             </div>
             <!-- //sStokes -->
             <!-- 슈스톡 cms 하드코딩 종료 -->

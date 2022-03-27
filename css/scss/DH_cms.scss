@@ -42,12 +42,12 @@ label {
 
 
 #content .sStokes {    
-    ul, ol, li, p {
+    ul, ol, li, p, input[type=checkbox], input[type=radio] {
         list-style: none;
         padding: 0;
         margin: 0;
     }
-    input[type=checkbox], input[type=radio] {
+    input[type=checkbox], input[type=radio] {        
         margin-right: 3px;
     }
     .ui-datepicker-trigger {

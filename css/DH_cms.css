@@ -42,7 +42,7 @@ label {
   text-decoration: none;
 }
 
-#content .sStokes ul, #content .sStokes ol, #content .sStokes li, #content .sStokes p {
+#content .sStokes ul, #content .sStokes ol, #content .sStokes li, #content .sStokes p, #content .sStokes input[type=checkbox], #content .sStokes input[type=radio] {
   list-style: none;
   padding: 0;
   margin: 0;
