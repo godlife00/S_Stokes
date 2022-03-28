@@ -90,6 +90,7 @@ label {
 #content .sStokes .formWrap .sch_box {
   border: 2px solid #474544;
   margin-top: 7px;
+  margin-bottom: 25px;
   padding: 7px 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -112,7 +113,6 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 25px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: start;
@@ -167,16 +167,16 @@ label {
   top: 30px;
   background: #fff;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
-  border: 1px solid #ececec;
+  border: 1px solid #474544;
   z-index: 85;
   width: 300px;
   max-height: 185px;
   overflow: auto;
   overflow-x: hidden;
   -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.09);
-  box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.09);
 }
 
 #content .sStokes .formWrap .AutoComplete .autocomplete_list {
@@ -242,6 +242,7 @@ label {
 }
 
 #content .sStokes .cont_wrap .fieldset_table {
+  border: 1px solid #ccc;
   background-color: #fff;
   padding: 13px 13px 0;
 }
@@ -276,7 +277,7 @@ label {
   font-size: 14px;
 }
 
-#content .sStokes .cont_wrap .btnWrap {
+#content .sStokes .btnWrap {
   margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -287,7 +288,7 @@ label {
   gap: 10px;
 }
 
-#content .sStokes .cont_wrap .btnWrap .btn {
+#content .sStokes .btnWrap .btn {
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -303,7 +304,7 @@ label {
   text-decoration: none;
 }
 
-#content .sStokes .cont_wrap .btnWrap .btn_formSave {
+#content .sStokes .btnWrap .btn_formSave {
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -319,7 +320,7 @@ label {
   text-decoration: none;
 }
 
-#content .sStokes .cont_wrap .btnWrap .btn_list {
+#content .sStokes .btnWrap .btn_list {
   background-color: #a90329;
 }
 
@@ -347,9 +348,26 @@ label {
   background-color: #fff;
 }
 
+#content .sStokes .table .searchArea {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 #content .sStokes table th, #content .sStokes table td {
   text-align: center;
   font-size: 12px;
+}
+
+#content .sStokes .row_table th, #content .sStokes .row_table td {
+  padding: 10px 5px;
+  text-align: left;
+}
+
+#content .sStokes .row_table th {
+  font-weight: bold;
+  border-color: #60747c;
+  color: #f0f0f0;
+  background: #70848c;
 }
 
 #content .sStokes .tabsArea .tabs {

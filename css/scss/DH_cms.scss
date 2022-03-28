@@ -80,6 +80,7 @@ label {
         .sch_box {
             border: 2px solid #474544;
             margin-top: 7px;
+            margin-bottom: 25px;
             padding: 7px 10px;
             box-sizing: border-box;
         }
@@ -97,7 +98,7 @@ label {
         }        
         .list_wrap {
             display: flex;            
-            margin-top: 25px;            
+            // margin-top: 25px;            
             flex-wrap: wrap;
             justify-content: flex-start;
             align-items: center;
@@ -141,22 +142,20 @@ label {
             left: 0;
             right: 0;
             top: 30px;
-            background: #fff;
-            -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
+            background: #fff;            
+            box-sizing: border-box;
             padding: 0;
-            border: 1px solid #ececec;
+            border: 1px solid #474544;
             z-index: 85;
             width: 300px;
             max-height: 185px;
             overflow: auto;
-            overflow-x: hidden;
-            -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.09);
-                    box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.09);              
-            
-                    .autocomplete_list {
-                        padding: 0;
-                    }
+            overflow-x: hidden;            
+            box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.09);              
+    
+            .autocomplete_list {
+                padding: 0;
+            }
               
             .no_result {
                 font-size: 15px;
@@ -214,6 +213,7 @@ label {
             }
         }
         .fieldset_table {
+            border: 1px solid #ccc;
             background-color: #fff;
             padding: 13px 13px 0;
             ul {
@@ -239,53 +239,55 @@ label {
                 }
             }            
         }
-        .btnWrap {
-            margin-top: 30px;
-            display: flex;            
-            justify-content: flex-end;
-            gap: 10px;
-
-            .btn {
-                cursor: pointer;            
-                display: inline-block;
-                text-align: center;
-                border-radius: 3px;   
-                font-size: 16px;         
-                color: #fff;         
-                min-width: 100px;   
-                padding: 7px 15px;            
-                box-sizing: border-box;
-                vertical-align: middle;
-                background-color: #3276b1;          
-                text-decoration: none;  
-
-            }
-            .btn_formSave {
-                cursor: pointer;            
-                display: inline-block;
-                text-align: center;
-                border-radius: 3px;   
-                font-size: 16px;         
-                color: #fff;         
-                min-width: 100px;   
-                padding: 7px 15px;            
-                box-sizing: border-box;
-                vertical-align: middle;
-                background-color: #3276b1;                          
-                text-decoration: none;  
-            }
-            .btn_list {                
-                background-color: rgba(169,3,41, 1);          
-            }
-        }
+        
         
     }
 
     // 레이아웃
+    .btnWrap {
+        margin-top: 30px;
+        display: flex;            
+        justify-content: flex-end;
+        gap: 10px;
+
+        .btn {
+            cursor: pointer;            
+            display: inline-block;
+            text-align: center;
+            border-radius: 3px;   
+            font-size: 16px;         
+            color: #fff;         
+            min-width: 100px;   
+            padding: 7px 15px;            
+            box-sizing: border-box;
+            vertical-align: middle;
+            background-color: #3276b1;          
+            text-decoration: none;  
+
+        }
+        .btn_formSave {
+            cursor: pointer;            
+            display: inline-block;
+            text-align: center;
+            border-radius: 3px;   
+            font-size: 16px;         
+            color: #fff;         
+            min-width: 100px;   
+            padding: 7px 15px;            
+            box-sizing: border-box;
+            vertical-align: middle;
+            background-color: #3276b1;                          
+            text-decoration: none;  
+        }
+        .btn_list {                
+            background-color: rgba(169,3,41, 1);          
+        }
+    }
+
     .cont_wrap {
         padding: 15px 0;
-
     }
+
     .flexArea {
         display: flex;
         gap: 10px;
@@ -300,11 +302,29 @@ label {
     
 
     // 공통부분은 이 아래
-    
+    .table {
+        .searchArea {            
+            margin-top: 0;
+            margin-bottom: 0;            
+        }
+    }
 
     table th, table td {
         text-align: center;             
         font-size: 12px;           
+    }
+    .row_table {        
+        th, td {            
+            padding: 10px 5px;
+            text-align: left;
+        }
+        th {
+            font-weight: bold;            
+            border-color: #60747c;
+            color: #f0f0f0;
+            background: #70848c;
+        }
+        
     }
 
     .tabsArea {
