@@ -277,6 +277,13 @@ label {
   font-size: 14px;
 }
 
+#content .sStokes .cont_wrap .fieldset_table ul li .comlogo {
+  display: inline-block;
+  margin-top: 10px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
 #content .sStokes .btnWrap {
   margin-top: 30px;
   display: -webkit-box;

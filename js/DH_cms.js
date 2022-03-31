@@ -29,6 +29,20 @@ $(document).ready(function () {
         $('#datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)            
     });
 
+    // 업로드 이미지 미리보기
+    document.getElementById("files").onchange = function () {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            // get loaded data and render thumbnail.
+            document.getElementById("image").src = e.target.result;
+        };
+
+        // read the image file as a data URL.
+        reader.readAsDataURL(this.files[0]);
+    };
+
+
     //탭메뉴
     $(".tabsArea .tab_content").hide();
     $(".tabsArea .tab_content:first").show();
