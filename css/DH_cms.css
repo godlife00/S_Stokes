@@ -358,6 +358,14 @@ label {
   font-size: 12px;
 }
 
+#content .sStokes table th.increase.per, #content .sStokes table td.increase.per {
+  color: #c22e06;
+}
+
+#content .sStokes table th.decrease.per, #content .sStokes table td.decrease.per {
+  color: #4389f8;
+}
+
 #content .sStokes .row_table th, #content .sStokes .row_table td {
   padding: 10px 5px;
   text-align: left;

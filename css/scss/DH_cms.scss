@@ -312,6 +312,12 @@ label {
     table th, table td {
         text-align: center;             
         font-size: 12px;           
+        &.increase.per {
+            color: #c22e06;            
+        }
+        &.decrease.per {
+            color: #4389f8;            
+        }
     }
     .row_table {        
         th, td {            
