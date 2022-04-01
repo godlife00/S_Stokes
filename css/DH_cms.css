@@ -373,6 +373,10 @@ label {
   color: #4389f8;
 }
 
+#content .sStokes table th.order, #content .sStokes table td.order {
+  cursor: pointer;
+}
+
 #content .sStokes .row_table th, #content .sStokes .row_table td {
   padding: 10px 5px;
   text-align: left;

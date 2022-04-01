@@ -324,6 +324,9 @@ label {
         &.decrease.per {
             color: #4389f8;            
         }
+        &.order {
+            cursor: pointer;
+        }
     }
     .row_table {        
         th, td {            

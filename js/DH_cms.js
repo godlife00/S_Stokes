@@ -28,19 +28,31 @@ $(document).ready(function () {
         //초기값을 오늘 날짜로 설정해줘야 합니다.
         $('#datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)            
     });
-
-    // 업로드 이미지 미리보기
-    document.getElementById("files").onchange = function () {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-            // get loaded data and render thumbnail.
-            document.getElementById("image").src = e.target.result;
-        };
-
-        // read the image file as a data URL.
-        reader.readAsDataURL(this.files[0]);
-    };
+   
+    $('th.order').each(function (column) {        
+        $(this).click(function() {            
+            if($(this).is('.asc')) {
+                $(this).removeClass('asc');
+                $(this).addClass('desc');
+                sortdir=-1;                
+            } else {
+                $(this).addClass('asc');
+                $(this).removeClass('desc'); 
+                sortdir=1;
+            }
+            $(this).siblings().removeClass('asc');
+            $(this).siblings().removeClass('desc');
+            var rec = $('table').find('tbody > tr').get();
+            rec.sort(function (a, b) {
+                var val1 = $(a).children('td').eq(column).text().toUpperCase();
+                var val2 = $(b).children('td').eq(column).text().toUpperCase();
+                return (val1 < val2)?-sortdir:(val1>val2)?sortdir:0;
+            });
+            $.each(rec, function(index, row) {
+                $('tbody').append(row);
+            });
+        });
+    });
 
 
     //탭메뉴
@@ -84,6 +96,19 @@ $(document).ready(function () {
         }
         
     });
+
+    // 업로드 이미지 미리보기
+    $(function () {
+        document.getElementById("files").onchange = function () {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {            
+                document.getElementById("image").src = e.target.result;
+            };        
+            reader.readAsDataURL(this.files[0]);
+        };
+    });
+
 
     
 });
