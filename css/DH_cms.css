@@ -48,6 +48,10 @@ label {
   margin: 0;
 }
 
+#content .sStokes hr {
+  margin: 5px 0;
+}
+
 #content .sStokes input[type=checkbox], #content .sStokes input[type=radio] {
   margin-right: 3px;
 }
@@ -270,11 +274,17 @@ label {
 }
 
 #content .sStokes .cont_wrap .fieldset_table ul li.td {
-  width: 100%;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 #content .sStokes .cont_wrap .fieldset_table ul li.td .schName {
   font-size: 14px;
+}
+
+#content .sStokes .cont_wrap .fieldset_table ul li.td .per {
+  margin-bottom: 5px;
 }
 
 #content .sStokes .cont_wrap .fieldset_table ul li .comlogo {

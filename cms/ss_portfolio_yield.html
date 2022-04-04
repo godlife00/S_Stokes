@@ -554,12 +554,6 @@
                 <h2 class="h2_title"><strong>슈퍼스톡스</strong> &gt; 포트폴리오 관리</h2>
                 <h3 class="h3_title">수익률</h3>
                 <div class="superstocks_wrap">
-                    <div class="page_nav">
-                        - <a href="ss_portfolio_yield.html">수익률</a>
-                        - <a href="ss_portfolio_port.html">포트폴리오</a>
-                    </div>
-                    <!-- //page_nav -->
-
                     <div class="flexArea">
                         <div class="left">
                             <div class="tab_container">
@@ -582,8 +576,6 @@
                                                                                 autocomplete="off" id="datepicker2" style="width: 100px">
                                                                         </label>
                                                                     </li>
-                                                                </ul>
-                                                                <ul>
                                                                     <li class="th">수익률 기준일</li>
                                                                     <li class="td">
                                                                         <label>
@@ -616,36 +608,300 @@
                                                                 <ul>
                                                                     <li class="th">수익률</li>
                                                                     <li class="td">
-                                                                        <div>
-                                                                            올해 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %
-                                                                            &nbsp;&nbsp;                                                    
-                                                                            누적 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %                                                                        
-                                                                        </div>                                      
-                                                                        <br>                                                                                                          
-                                                                        <div>
-                                                                            3개월 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %                    
-                                                                            &nbsp;&nbsp;                                                    
-                                                                            6개월 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %                                                                        
-                                                                            &nbsp;&nbsp;                                                    
-                                                                            9개월 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %                                                                        
-                                                                            &nbsp;&nbsp;                                                    
-                                                                            1년 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %                                                                        
-                                                                        </div>
-                                                                        
+                                                                        올해 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %
+                                                                        &nbsp;&nbsp;                                                    
+                                                                        누적 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %                                                                        
+                                                                        &nbsp;&nbsp;                                                    
+                                                                        3개월 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %                    
+                                                                        &nbsp;&nbsp;                                                    
+                                                                        6개월 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %                                                                        
+                                                                        &nbsp;&nbsp;                                                    
+                                                                        9개월 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %                                                                        
+                                                                        &nbsp;&nbsp;                                                    
+                                                                        1년 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %  
                                                                     </li>
                                                                 </ul>
                                                             </fieldset>
 
                                                         </div>
-                                                        <!-- //fieldset_table -->
-                                                        <div class="btnWrap">
-                                                            <a href="#" class="btn btn_list">목록</a>
-                                                            <a href="#" class="btn btn_formSave">저장</a>
-                                                        </div>
-                                                        <!-- //btnWrap -->
-
+                                                        <!-- //fieldset_table -->                                                       
                                                     </div>
                                                 </div>
+                                            </div>
+
+                                            <div class="list_wrap">
+                                                <div class="radio_group">
+                                                    <label>
+                                                        <input type="radio" name="ckweb" checked>전체
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="ckweb">편입기업
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="ckweb">제외기업
+                                                    </label>
+                                                </div>
+                                                <br><br>
+                                                <table cellspacing="0" border="0" class="ui-jqgrid-htable table table-bordered table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>번호</th>
+                                                            <th>종목코드</th>
+                                                            <th>종목명</th>
+                                                            <th>매수가</th>
+                                                            <th>목표가</th>
+                                                            <th>매수일</th>
+                                                            <th>현재가</th>
+                                                            <th>수익률</th>
+                                                            <th>비중%</th>
+                                                            <th>매도가</th>
+                                                            <th>매도일</th>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목코드6자리" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="increase per">+1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목명 또는 심볼 검색" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="decrease per">-1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목코드6자리" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="increase per">+1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목명 또는 심볼 검색" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="decrease per">-1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목코드6자리" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="increase per">+1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목명 또는 심볼 검색" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="decrease per">-1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목코드6자리" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="increase per">+1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목명 또는 심볼 검색" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="decrease per">-1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목코드6자리" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="increase per">+1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목명 또는 심볼 검색" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="decrease per">-1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목코드6자리" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="increase per">+1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목명 또는 심볼 검색" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="decrease per">-1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목코드6자리" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="increase per">+1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목명 또는 심볼 검색" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="decrease per">-1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목코드6자리" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="increase per">+1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목명 또는 심볼 검색" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="decrease per">-1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목코드6자리" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="increase per">+1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td><input type="text" autocomplete="off" placeholder="종목명 또는 심볼 검색" class="searchInput" style="width: 80px;"></td>
+                                                            <td>카카오게임즈</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                            <td>16,350</td>
+                                                            <td class="decrease per">-1.38%</td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
+                                                            <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                
+                                            <div class="btnWrap">
+                                                <a href="#" class="btn btn_list">목록</a>
+                                                <a href="#" class="btn btn_formSave">저장</a>
                                             </div>
                                         </div>
                                         <!-- //formWrap  -->
