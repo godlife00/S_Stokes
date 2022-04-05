@@ -69,16 +69,16 @@ $(document).ready(function () {
 
     // 상단 검색바
     $('.searchArea .searchInput').on("focusout", function () {            
-        $('.searchArea .sch_autocomplete').hide();
+        $('.searchArea .sch_autocomplete, .searchArea .AutoComplete').hide();
     });
     $('.searchArea .searchInput').on("keydown", function () {            
         console.log("test");        
-        $(this).next().next('.searchArea .sch_autocomplete').show();
+        $(this).next().next('.searchArea .sch_autocomplete, .searchArea .AutoComplete').show();
         
     });
-    $('.searchArea .sch_autocomplete li').removeClass('_on');
-    $('.searchArea .sch_autocomplete li').on("mouseover", function () {            
-        $('.searchArea .sch_autocomplete li').removeClass('_on')
+    $('.searchArea .sch_autocomplete li, .searchArea .AutoComplete li').removeClass('_on');
+    $('.searchArea .sch_autocomplete li, .searchArea .AutoComplete li').on("mouseover", function () {            
+        $('.searchArea .sch_autocomplete li, .searchArea .AutoComplete li').removeClass('_on')
         $(this).addClass('_on');
     });
 
@@ -110,12 +110,7 @@ $(document).ready(function () {
                 reader.readAsDataURL(this.files[0]);
             };
         });
-        
     }
-    
-
-
-    
 });
 
 
