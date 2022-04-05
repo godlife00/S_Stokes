@@ -69,16 +69,16 @@ $(document).ready(function () {
 
     // 상단 검색바
     $('.searchArea .searchInput').on("focusout", function () {            
-        $('.searchArea .AutoComplete').hide();
+        $('.searchArea .sch_autocomplete').hide();
     });
     $('.searchArea .searchInput').on("keydown", function () {            
         console.log("test");        
-        $(this).next().next('.searchArea .AutoComplete').show();
+        $(this).next().next('.searchArea .sch_autocomplete').show();
         
     });
-    $('.searchArea .AutoComplete li').removeClass('_on');
-    $('.searchArea .AutoComplete li').on("mouseover", function () {            
-        $('.searchArea .AutoComplete li').removeClass('_on')
+    $('.searchArea .sch_autocomplete li').removeClass('_on');
+    $('.searchArea .sch_autocomplete li').on("mouseover", function () {            
+        $('.searchArea .sch_autocomplete li').removeClass('_on')
         $(this).addClass('_on');
     });
 
@@ -98,16 +98,21 @@ $(document).ready(function () {
     });
 
     // 업로드 이미지 미리보기
-    $(function () {
-        document.getElementById("files").onchange = function () {
-            var reader = new FileReader();
+    if ($('.fieldset_table ul li.td .comlogo').length) {
 
-            reader.onload = function (e) {            
-                document.getElementById("image").src = e.target.result;
-            };        
-            reader.readAsDataURL(this.files[0]);
-        };
-    });
+        $(function () {
+            document.getElementById("files").onchange = function () {
+                var reader = new FileReader();
+    
+                reader.onload = function (e) {            
+                    document.getElementById("image").src = e.target.result;
+                };        
+                reader.readAsDataURL(this.files[0]);
+            };
+        });
+        
+    }
+    
 
 
     

@@ -161,7 +161,7 @@ label {
   position: relative;
 }
 
-#content .sStokes .formWrap .AutoComplete {
+#content .sStokes .formWrap .sch_autocomplete {
   border-bottom-left-radius: 5px;
   border-bottom-left-radius: 5px;
   display: none;
@@ -183,47 +183,47 @@ label {
           box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.09);
 }
 
-#content .sStokes .formWrap .AutoComplete .autocomplete_list {
+#content .sStokes .formWrap .sch_autocomplete .sch_autocomplete_list {
   padding: 0;
 }
 
-#content .sStokes .formWrap .AutoComplete .no_result {
+#content .sStokes .formWrap .sch_autocomplete .no_result {
   font-size: 15px;
   letter-spacing: -0.33px;
   color: #656d7e;
   padding: 5px 10px;
 }
 
-#content .sStokes .formWrap .AutoComplete li {
+#content .sStokes .formWrap .sch_autocomplete li {
   line-height: 1;
   padding: 8px 10px;
   padding-bottom: 5px;
 }
 
-#content .sStokes .formWrap .AutoComplete li a {
+#content .sStokes .formWrap .sch_autocomplete li a {
   display: block;
   font-size: 13px;
   letter-spacing: -0.33px;
   color: #656d7e;
 }
 
-#content .sStokes .formWrap .AutoComplete li a strong {
+#content .sStokes .formWrap .sch_autocomplete li a strong {
   font-weight: 700;
 }
 
-#content .sStokes .formWrap .AutoComplete li:nth-child(2n) {
+#content .sStokes .formWrap .sch_autocomplete li:nth-child(2n) {
   background: #f4f6fa;
 }
 
-#content .sStokes .formWrap .AutoComplete li .schCode {
+#content .sStokes .formWrap .sch_autocomplete li .schCode {
   padding-right: 7px;
 }
 
-#content .sStokes .formWrap .AutoComplete li._on {
+#content .sStokes .formWrap .sch_autocomplete li._on {
   background-color: #646a86;
 }
 
-#content .sStokes .formWrap .AutoComplete li._on a, #content .sStokes .formWrap .AutoComplete li._on strong, #content .sStokes .formWrap .AutoComplete li._on span {
+#content .sStokes .formWrap .sch_autocomplete li._on a, #content .sStokes .formWrap .sch_autocomplete li._on strong, #content .sStokes .formWrap .sch_autocomplete li._on span {
   color: #fff;
 }
 

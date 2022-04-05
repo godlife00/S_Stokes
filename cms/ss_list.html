@@ -619,12 +619,15 @@
                                         <input type="radio" name="ckweb">미표출
                                     </label>
                                 </div>
-                                <div class="searchArea">
+
+                                <div class="searchArea">    
+
                                     <!-- 검색어 자동완성 -->
-                                    <input type="text" autocomplete="off" placeholder="종목명 또는 심볼 검색"
-                                        class="searchInput">
+                                    <!--<input type="text" autocomplete="off" placeholder="종목명 또는 심볼 검색" class="searchInput">-->
+                                    <input type="text" placeholder="종목명 또는 종목코드를 입력하세요.." class="searchInput">
                                     <a href="#" class="btn_sch">검색</a>
-                                    <div class="AutoComplete">
+                                    <div class="sch_autocomplete">
+                                    <!--<div class="AutoComplete">-->
                                         <!-- //자동완성 결과 노출 class : _show -->
                                         <ul id="autocomplete_list">
                                             <li class="_on"><a href="#" class="_on">
@@ -650,6 +653,7 @@
                                         </ul>
                                     </div>
                                 </div>
+
                                 <table cellspacing="0" border="0"
                                     class="ui-jqgrid-htable table table-bordered table-hover">
                                     <thead>
