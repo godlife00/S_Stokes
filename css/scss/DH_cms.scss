@@ -103,8 +103,14 @@ label {
             display: flex;            
             // margin-top: 25px;            
             flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: center;
+            justify-content: space-between;
+            align-items: center;            
+            .radio_group {
+                flex: 1;                
+                &:last-of-type {
+                    text-align: right;
+                }                
+            }
         }
         .btn_help {
             cursor: pointer;
@@ -292,6 +298,9 @@ label {
             text-decoration: none;  
         }
         .btn_list {                
+            background-color: #e6a01c;
+        }
+        .btn_del {                
             background-color: rgba(169,3,41, 1);          
         }
     }

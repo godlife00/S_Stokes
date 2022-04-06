@@ -571,18 +571,24 @@
                                                                     <li class="th">포트설정일</li>
                                                                     <li class="td">
                                                                         <label>
-                                                                            <input type="text" class="input_txt" autocomplete="off" id="datepicker1"
-                                                                                style="width: 100px"> ~ <input type="text" class="input_txt"
-                                                                                autocomplete="off" id="datepicker2" style="width: 100px">
+                                                                            <input type="text" class="input_txt" autocomplete="off" id="datepicker1">
                                                                         </label>
                                                                     </li>
                                                                     <li class="th">수익률 기준일</li>
                                                                     <li class="td">
                                                                         <label>
-                                                                            <input type="text" class="input_txt" autocomplete="off" id="datepicker1"
-                                                                                style="width: 100px"> ~ <input type="text" class="input_txt"
-                                                                                autocomplete="off" id="datepicker2" style="width: 100px">
+                                                                            <input type="text" class="input_txt" autocomplete="off" id="datepicker1">
                                                                         </label>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li class="th">슈스톡 포트</li>
+                                                                    <li class="td">                                                                        
+                                                                        <div>
+                                                                            올해 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %
+                                                                            &nbsp;&nbsp;                                                    
+                                                                            누적 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %                                                                        
+                                                                        </div>                                                                          
                                                                     </li>
                                                                 </ul>
                                                                 <hr>
@@ -607,11 +613,7 @@
                                                                 <hr>
                                                                 <ul>
                                                                     <li class="th">수익률</li>
-                                                                    <li class="td">
-                                                                        올해 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %
-                                                                        &nbsp;&nbsp;                                                    
-                                                                        누적 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %                                                                        
-                                                                        &nbsp;&nbsp;                                                    
+                                                                    <li class="td">                                                                        
                                                                         3개월 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %                    
                                                                         &nbsp;&nbsp;                                                    
                                                                         6개월 &nbsp; <input type="number" value="" name="" class="per" style="width: 100px;"> %                                                                        
@@ -639,6 +641,14 @@
                                                     </label>
                                                     <label>
                                                         <input type="radio" name="ckweb">제외기업
+                                                    </label>
+                                                </div>
+                                                <div class="radio_group">
+                                                    <label>
+                                                        <input type="radio" name="ckweb2" checked>수익률
+                                                    </label>                                                    
+                                                    <label>
+                                                        <input type="radio" name="ckweb2">최근편입
                                                     </label>
                                                 </div>
                                                 <br><br>
@@ -894,13 +904,18 @@
                                                             <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>
                                                             <td><input type="text" class="input_txt" autocomplete="off" id="datepicker1" style="width: 100px"></td>
                                                         </tr>
-                                                        
+                                                        <tr>
+                                                            <td colspan="8">현금 보유 비중</td>                                                            
+                                                            <td><input type="number" value="" name="" class="per" style="width: 100px;"></td>                                                            
+                                                            <td colspan="2">&nbsp;</td>                                                                                                                        
+                                                        </tr>                                                        
                                                     </tbody>
                                                 </table>
                                             </div>
                 
                                             <div class="btnWrap">
                                                 <a href="#" class="btn btn_list">목록</a>
+                                                <a href="#" class="btn btn_del">삭제</a>                                                
                                                 <a href="#" class="btn btn_formSave">저장</a>
                                             </div>
                                         </div>

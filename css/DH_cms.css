@@ -119,12 +119,22 @@ label {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#content .sStokes .formWrap .list_wrap .radio_group {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#content .sStokes .formWrap .list_wrap .radio_group:last-of-type {
+  text-align: right;
 }
 
 #content .sStokes .formWrap .btn_help {
@@ -338,6 +348,10 @@ label {
 }
 
 #content .sStokes .btnWrap .btn_list {
+  background-color: #e6a01c;
+}
+
+#content .sStokes .btnWrap .btn_del {
   background-color: #a90329;
 }
 
