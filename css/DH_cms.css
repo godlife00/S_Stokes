@@ -401,6 +401,10 @@ label {
   cursor: pointer;
 }
 
+#content .sStokes table th.txt_L, #content .sStokes table td.txt_L {
+  text-align: left !important;
+}
+
 #content .sStokes .row_table th, #content .sStokes .row_table td {
   padding: 10px 5px;
   text-align: left;

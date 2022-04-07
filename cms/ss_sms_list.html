@@ -551,105 +551,114 @@
                 <link rel="stylesheet" type="text/css" href="../css/DH_cms.css" /> <!-- cms css -->
                 <script src="../js/DH_cms.js"></script><!-- cms js -->
 
-                <h2 class="h2_title"><strong>슈퍼스톡스</strong> &gt; 추천종목 운영</h2>
-                <h3 class="h3_title">포트폴리오 종목</h3>
-                <div class="superstocks_wrap">
+                <h2 class="h2_title"><strong>슈퍼스톡스</strong> &gt; 발송문자</h2>
+                <h3 class="h3_title">문자발송 목록</h3>
+                <div class="superstocks_wrap">                    
                     <div class="page_nav">
-                        - <a href="ss_list.html">목록</a>
-                        - <a href="ss_wform.html">포트폴리오 종목</a>
-                        - <a href="ss_game.html">오늘의 승부주</a>
+                        - <a href="ss_sms.html">문자발송</a>                        
+                        - <a href="ss_sms_list.html">문자발송 목록</a>
                     </div>
-                    <!-- //page_nav -->
+                    <form name="sch_form" method="get" action="">
+                        <div class="formWrap">
+                            <!-- <div class="sch_box">
 
-                    <div class="flexArea">
-                        <div class="left">
+                                <div class="radio_group">
+                                    <label>
+                                        <input type="radio" name="cktype" checked>전체
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="cktype">기간
+                                    </label>
+                                    <label>
+                                        <input type="text" class="input_txt" autocomplete="off" id="datepicker1"
+                                            style="width: 100px"> ~ <input type="text" class="input_txt"
+                                            autocomplete="off" id="datepicker2" style="width: 100px">
+                                    </label>
+                                </div>
+                            </div> -->
 
-                            <div class="tabsArea">
-                                <ul class="tabs recipe_tabs">
-                                    <li class="active" rel="tab1"><span>매수</span></li>
-                                    <li rel="tab2"><span>매도</span></li>
-                                </ul>
+                            <div class="list_wrap">
+                                <!-- <div class="radio_group">
+                                    <label>
+                                        <input type="radio" name="ckweb" checked>전체
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="ckweb">프리미엄(유료+무료체험)
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="ckweb">무료체험 회원
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="ckweb">무료체험 만료 회원
+                                    </label>
+                                </div> -->
 
-                                <form name="ss_wform" method="post" action="">
-                                    <div class="formWrap">
-                                        <!--매수 컨텐츠 입력-->
-                                        <div class="cont_wrap">
-                                            <div class="left">
-                                                <div class="box">
-                                                    <div class="top_sch">
-                                                        <div class="searchArea">
-                                                            <!-- 검색어 자동완성 -->
-                                                            <input type="text" autocomplete="off"
-                                                                placeholder="종목명 또는 심볼 검색" class="searchInput">
-                                                            <a href="#" class="btn_sch">검색</a>
-                                                            <div class="AutoComplete">
-                                                                <!-- //자동완성 결과 노출 class : _show -->
-                                                                <ul id="autocomplete_list">
-                                                                    <li class="_on"><a href="#" class="_on">
-                                                                            <span class="schCode">207940</span>
-                                                                            <span
-                                                                                class="schList"><strong>삼성</strong>바이오로직스</span>
-                                                                        </a></li>
-                                                                    <li class=""><a href="#" class="_on">
-                                                                            <span class="schCode">207940</span>
-                                                                            <span
-                                                                                class="schList"><strong>삼성</strong>바이오로직스</span>
-                                                                        </a></li>
-                                                                    <li class=""><a href="#" class="_on">
-                                                                            <span class="schCode">207940</span>
-                                                                            <span
-                                                                                class="schList"><strong>삼성</strong>바이오로직스</span>
-                                                                        </a></li>
-                                                                    <li class=""><a href="#" class="_on">
-                                                                            <span class="schCode">207940</span>
-                                                                            <span
-                                                                                class="schList"><strong>삼성</strong>바이오로직스</span>
-                                                                        </a></li>
-                                                                    <li class=""><a href="#" class="_on">
-                                                                            <span class="schCode">207940</span>
-                                                                            <span
-                                                                                class="schList"><strong>삼성</strong>바이오로직스</span>
-                                                                        </a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- //top_sch -->
+                                <!-- <div class="searchArea">                                                                            
+                                    <input type="text" autocomplete="off" placeholder="검색어를 입력해주세요" class="searchInput">
+                                    <a href="#" class="btn_sch">검색</a>                                    
+                                </div> -->
 
-                                                    <div class="fieldset_table">
-                                                        <fieldset>
-                                                            <ul>
-                                                                <li class="th">구분</li>
-                                                                <li class="td">
-                                                                    <label>
-                                                                        <input type="radio" name="fdss_mmtype"
-                                                                            checked>
-                                                                        신규매수
-                                                                    </label>
-                                                                    <label>
-                                                                        <input type="radio" name="fdss_mmtype">
-                                                                        비중확대
-                                                                    </label>
-                                                                </li>
-                                                            </ul>
-                                                        </fieldset>
-                                                    </div>
-                                                    <!-- //fieldset_table -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- //formWrap  -->
-                                </form>
+                                <table cellspacing="0" border="0" class="ui-jqgrid-htable table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th style="max-width: 80px;" class="order">번호</th>                                            
+                                            <th style="max-width: 120px;" class="order">시각</th>
+                                            <th>제목</th>
+                                            <th>발송대상</th>                                            
+                                            <th style="max-width: 120px;">표출유무</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>11</td>                                            
+                                            <td>12/13 15:33</td>
+                                            <td class="txt_L"><a href="ss_sms.html">오늘의 승부주 업데이트 - 12/7(화)</a></td>
+                                            <td>프리미엄(유료+무료체험)</td>                                            
+                                            <td>Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>                                            
+                                            <td>12/13 15:33</td>
+                                            <td class="txt_L"><a href="ss_sms.html">오늘의 승부주 업데이트오늘의 승부주 업데이트오늘의 승부주 업데이트 - 12/7(화)</a></td>
+                                            <td>무료체험 만료 회원</td>                                            
+                                            <td>N</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>                                            
+                                            <td>12/13 15:33</td>
+                                            <td class="txt_L"><a href="ss_sms.html">오늘의 승부주 업데이트 - 12/7(화)</a></td>
+                                            <td>프리미엄(유료+무료체험)</td>                                            
+                                            <td>Y</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>                                            
+                                            <td>12/13 15:33</td>
+                                            <td class="txt_L"><a href="ss_sms.html">오늘의 승부주 업데이트 - 12/7(화)</a></td>
+                                            <td>프리미엄(유료+무료체험)</td>                                            
+                                            <td>Y</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <!-- //tabsArea -->
 
                         </div>
-                        <!-- //left -->                        
-                    </div>
-                    <!-- //flexArea -->
+                        <!-- //formWrap  -->
+
+                    </form>
                 </div>
-                <!-- //superstocks_wrap -->
+
+                <div class="paginate">
+                    <a href="#" class="cb_pre">&#171;</a>
+                    <a href="#" class="cb_pre">&#60;</a>
+                    <strong>1</strong>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#" class="cb_next">&#62;</a>
+                    <a href="#" class="cb_next">&#187;</a>
+                </div>
             </div>
             <!-- //sStokes -->
             <!-- 슈스톡 cms 하드코딩 종료 -->

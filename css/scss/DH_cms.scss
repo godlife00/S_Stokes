@@ -342,6 +342,9 @@ label {
         &.order {
             cursor: pointer;
         }
+        &.txt_L {
+            text-align: left !important;
+        }
     }
     .row_table {        
         th, td {            

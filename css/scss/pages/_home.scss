@@ -136,6 +136,7 @@
         .maingameSwiper .swiper-slide {
             display: block;
             width: auto;
+            height: auto;
         }
         
         & > .title a {            
@@ -156,6 +157,7 @@
             background: #f5f5f5;            
             box-sizing: border-box;            
             padding: 0;
+            padding-bottom: 70px;
             border-radius: 8px;
             display: flex;
             justify-content: space-between;
@@ -190,8 +192,16 @@
             }
         }
         .list_area .area .btm {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
             padding: 7px 14px 10px;
-            background-color: #e6e6e6;            
+            height: 59px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            box-sizing: border-box;
+            background-color: #e6e6e6;                        
         }
         .list_area .more {
             margin-top: 7px;

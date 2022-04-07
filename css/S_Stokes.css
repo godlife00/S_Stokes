@@ -1483,6 +1483,7 @@ input[type='radio']:checked:before {
 .s_stokes #wrap #container .mainBox.game_scr .maingameSwiper .swiper-slide {
   display: block;
   width: auto;
+  height: auto;
 }
 
 .s_stokes #wrap #container .mainBox.game_scr > .title a {
@@ -1504,6 +1505,7 @@ input[type='radio']:checked:before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
+  padding-bottom: 70px;
   border-radius: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1632,7 +1634,16 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container .mainBox.game_scr .list_area .area .btm {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 7px 14px 10px;
+  height: 59px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #e6e6e6;
 }
 
