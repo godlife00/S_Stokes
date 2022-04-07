@@ -20,9 +20,6 @@ $(document).ready(function () {
             , showButtonPanel: true // 캘린더 하단에 버튼 패널을 표시한다. 
             , closeText: '적용'  // 닫기 버튼 패널
             , currentText: '오늘 날짜' // 오늘 날짜로 이동하는 버튼 패널
-            , onClose: function(dateText, inst) { 
-                $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
-            }
         });
 
         //초기값을 오늘 날짜로 설정해줘야 합니다.
