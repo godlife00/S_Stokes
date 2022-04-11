@@ -1630,7 +1630,11 @@ input[type='radio']:checked:before {
 
 .s_stokes #wrap #container .mainBox.game_scr .list_area .area .right img {
   display: inline-block;
-  width: 100%;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #d8d8d8;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .s_stokes #wrap #container .mainBox.game_scr .list_area .area .btm {
@@ -1773,6 +1777,15 @@ input[type='radio']:checked:before {
 
 .s_stokes #wrap #container .mainBox.portfolio .list_area .area .right {
   width: 50px;
+}
+
+.s_stokes #wrap #container .mainBox.portfolio .list_area .area .right img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #d8d8d8;
 }
 
 .s_stokes #wrap #container .mainBox.portfolio .list_area .area .btm {

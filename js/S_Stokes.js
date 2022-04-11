@@ -85,7 +85,7 @@ $(document).ready(function () {
         }        
     });    
     
-    // 메인 상단 탭네비 상단 고정 시키기    
+    // 메인 상단 탭네비 활성화  
     $(window).scroll(function () {                        
         if ($('.mainBox.game_scr .page_nav').length) {            
             var navoffset01 = $('.mainBox.game_scr').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                                                  
