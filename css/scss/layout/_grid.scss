@@ -548,6 +548,7 @@ input[type='radio']:checked:before {
     }
 
     .no_result {
+        display: none;
         p {
             text-align: center;
             font-size: 15px;                                                
