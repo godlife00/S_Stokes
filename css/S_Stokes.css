@@ -439,7 +439,7 @@ input[type='radio']:checked:before {
 }
 
 .star_area .starR {
-  background: url("../img/ico_review.svg") no-repeat right 0;
+  background: url("/img/ico_review.svg") no-repeat right 0;
   background-size: auto 100%;
   display: inline-block;
   text-indent: -9999px;
@@ -592,7 +592,7 @@ input[type='radio']:checked:before {
   right: 6px;
   width: 26px;
   height: 26px;
-  background: url("../img/select.svg") no-repeat 0 0;
+  background: url("/img/select.svg") no-repeat 0 0;
 }
 
 .selectbox label {
@@ -1001,7 +1001,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 10.4px;
   height: 14px;
-  background: url("../img/premium_join_bg.png") no-repeat 0 0;
+  background: url("/img/premium_join_bg.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -4261,7 +4261,7 @@ input[type='radio']:checked:before {
   top: -4px;
   width: 16px;
   height: 16px;
-  background: url("../img/quotes_start.svg") no-repeat left top;
+  background: url("/img/quotes_start.svg") no-repeat left top;
 }
 
 .s_stokes #wrap #container.sub_stock .portfolio_recom .exWrap .sumTitle .txt::after {
@@ -4272,7 +4272,7 @@ input[type='radio']:checked:before {
   bottom: 7px;
   width: 16px;
   height: 16px;
-  background: url("../img/quotes_end.svg") no-repeat left top;
+  background: url("/img/quotes_end.svg") no-repeat left top;
 }
 
 .s_stokes #wrap #container.sub_stock .portfolio_recom .exWrap .sumList {
@@ -4364,8 +4364,8 @@ input[type='radio']:checked:before {
 .s_stokes #wrap #container.sub_stock .serviceStyle .serviceTop {
   padding: 30px 0 0;
   border-bottom: none;
-  background-image: url("../img/bg_serviceTop.svg"), -webkit-gradient(linear, left top, right top, color-stop(9%, #c22e06), color-stop(95%, #e07b3c));
-  background-image: url("../img/bg_serviceTop.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
+  background-image: url("/img/bg_serviceTop.svg"), -webkit-gradient(linear, left top, right top, color-stop(9%, #c22e06), color-stop(95%, #e07b3c));
+  background-image: url("/img/bg_serviceTop.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
   background-position: right bottom;
   background-repeat: no-repeat;
 }
@@ -4432,7 +4432,7 @@ input[type='radio']:checked:before {
   padding: 35px 15px;
   margin-bottom: 8px;
   border-bottom: 1px solid #e5e5e5;
-  background: #fff url("../img/bg_serviceStrategy.svg") no-repeat calc(100% + 10px) 25px;
+  background: #fff url("/img/bg_serviceStrategy.svg") no-repeat calc(100% + 10px) 25px;
 }
 
 .s_stokes #wrap #container.sub_stock .serviceStyle .strategy .service_txt {
@@ -4465,7 +4465,7 @@ input[type='radio']:checked:before {
 
 .s_stokes #wrap #container.sub_stock .serviceStyle .smart {
   padding: 35px 15px;
-  background: #fff url("../img/bg_serviceSmart.svg") no-repeat calc(100% + 10px) 25px;
+  background: #fff url("/img/bg_serviceSmart.svg") no-repeat calc(100% + 10px) 25px;
 }
 
 .s_stokes #wrap #container.sub_stock .serviceStyle .smart .title strong {
@@ -4707,11 +4707,11 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_login .loign .sns li:first-child a::before {
-  background: url("../img/icon_sns_n.svg") no-repeat left top;
+  background: url("/img/icon_sns_n.svg") no-repeat left top;
 }
 
 .s_stokes #wrap #container.sub_login .loign .sns li:last-child a::before {
-  background: url("../img/icon_sns_k.svg") no-repeat left top;
+  background: url("/img/icon_sns_k.svg") no-repeat left top;
 }
 
 .s_stokes #wrap #container.sub_login .loign .sns li a,
@@ -4865,7 +4865,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -5126,6 +5126,127 @@ input[type='radio']:checked:before {
   color: #898989;
 }
 
+.s_stokes #wrap #container.sub_login .agree_area .agree_from .mapage_form {
+  background: #f5f5f5;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table {
+  padding-top: 10px;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table th, .s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td {
+  padding: 15px 9px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table th {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 0.8125rem;
+  letter-spacing: -0.65px;
+  color: #898989;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td {
+  font-size: 0.9375rem;
+  letter-spacing: -0.75px;
+  color: #222;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .item {
+  display: inline-block;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_dsc, .s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_guide {
+  position: relative;
+  margin-top: 5px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+  color: #d36900;
+  text-indent: 16px;
+  word-break: break-all;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_dsc::before, .s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_guide::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  background: url("../img/icon_awesome.svg") no-repeat center center;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .txt_info {
+  display: inline-block;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .mod_btn {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 3px;
+  border-radius: 3px;
+  border: 1px solid #c22e06;
+  background-color: #fff;
+  padding: 1px 2px;
+  font-size: 10px;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .mod_btn a {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #c22e06;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .mod_phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .mod_phone .phone_mod {
+  width: 120px;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .certifi_btn {
+  cursor: pointer;
+  display: inline-block;
+  min-width: 80px;
+  height: 28px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 5px;
+  font-size: 0.75rem;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #c22e06;
+  border: none;
+  vertical-align: middle;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_guide, .s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_dsc {
+  width: 100%;
+}
+
 .s_stokes #wrap #container.sub_login .loign_com {
   padding: 34px 15px 20px;
 }
@@ -5141,7 +5262,7 @@ input[type='radio']:checked:before {
 .s_stokes #wrap #container.sub_login .loign_com .sum_box {
   padding: 55px 0 70px;
   border-bottom: 1px solid #e6e6e6;
-  background: url("../img/bg_loign_com.svg") no-repeat right bottom;
+  background: url("/img/bg_loign_com.svg") no-repeat right bottom;
 }
 
 .s_stokes #wrap #container.sub_login .loign_com .sum_box .login_sum {
@@ -5463,7 +5584,7 @@ input[type='radio']:checked:before {
   top: 2px;
   width: 12px;
   height: 12px;
-  background: url("../img/icon_awesome.svg") no-repeat center center;
+  background: url("/img/icon_awesome.svg") no-repeat center center;
 }
 
 .s_stokes #wrap #container.sub_login .mapage_area .agree_area .agree_from {
@@ -5794,7 +5915,7 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_login .mapage_service_free .mid ul:last-child li {
-  background: url("../img/dot_line.png") no-repeat 0 8px;
+  background: url("/img/dot_line.png") no-repeat 0 8px;
   padding-left: 8px;
   color: #333;
 }
@@ -6199,7 +6320,7 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .sub_freeguide .sub_top.service_t01 {
-  background: #fff url("../img/bg_sub_freeguide.png") no-repeat right bottom;
+  background: #fff url("/img/bg_sub_freeguide.png") no-repeat right bottom;
   background-size: 100% auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6419,7 +6540,7 @@ input[type='radio']:checked:before {
   line-height: 1.3;
   margin-bottom: 10px;
   padding-left: 7px;
-  background: url("../img/dot_gray.gif") no-repeat 0 7px;
+  background: url("/img/dot_gray.gif") no-repeat 0 7px;
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .sub_freeguide .sub_mid .notice_txt {
@@ -6469,7 +6590,7 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .sub_freeguide .sub_top.service_com {
-  background: #fff url("../img/bg_sub_freeguide_com.png") no-repeat right bottom;
+  background: #fff url("/img/bg_sub_freeguide_com.png") no-repeat right bottom;
   background-size: 144px auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6548,7 +6669,7 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .sub_freeguide .notice_freetxt .title {
-  background: url("../img/dot_line.png") no-repeat 0 8px;
+  background: url("/img/dot_line.png") no-repeat 0 8px;
   padding-left: 8px;
   color: #939393;
   font-size: 0.84rem;
@@ -6639,7 +6760,7 @@ input[type='radio']:checked:before {
   content: '';
   width: 18px;
   height: 18px;
-  background: url("../img/icon_agreecheck.svg") no-repeat 0 0;
+  background: url("/img/icon_agreecheck.svg") no-repeat 0 0;
   position: absolute;
   right: 12px;
   top: 13px;
@@ -6745,7 +6866,7 @@ input[type='radio']:checked:before {
 
 .s_stokes #wrap #container.sub_payment .payment_area .serviceStep .step_box .payRight .pay01::before {
   content: '';
-  background: url("../img/c_line.png") no-repeat 100% 0;
+  background: url("/img/c_line.png") no-repeat 100% 0;
   position: absolute;
   left: 0;
   top: 50%;
@@ -7087,7 +7208,7 @@ input[type='radio']:checked:before {
   top: -2px;
   width: 18px;
   height: 18px;
-  background: url("../img/icon_agreecheck.svg") no-repeat 0 0;
+  background: url("/img/icon_agreecheck.svg") no-repeat 0 0;
   margin-right: 7px;
 }
 
@@ -7167,7 +7288,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 5px;
   height: 10px;
-  background: url("../img/icon_moreRR.png") no-repeat 0 0;
+  background: url("/img/icon_moreRR.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -7277,7 +7398,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 13px;
   height: 13px;
-  background: url("../img/icon_sale.png") no-repeat 0 0;
+  background: url("/img/icon_sale.png") no-repeat 0 0;
   margin-right: 5px;
 }
 
@@ -7334,7 +7455,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url("../img/bg_x.png") no-repeat 0 0;
+  background: url("/img/bg_x.png") no-repeat 0 0;
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .payment_guide .mapage_form .form_table td .i_dsc.coupon {
@@ -7516,7 +7637,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -7525,7 +7646,7 @@ input[type='radio']:checked:before {
 }
 
 #container.sub_payment.step03 .payment_area .step_top {
-  background: #fff url("../img/bg_payment_com.svg") no-repeat 105% 22px;
+  background: #fff url("/img/bg_payment_com.svg") no-repeat 105% 22px;
   min-height: 200px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7791,7 +7912,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -7878,7 +7999,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -7933,7 +8054,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -8189,7 +8310,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -8374,8 +8495,8 @@ input[type='radio']:checked:before {
 
 .modal.premium_pop .pop_header {
   padding: 15px 15px 25px;
-  background-image: url("../img/bg_loign_com.svg"), -webkit-gradient(linear, left top, right top, color-stop(9%, #c22e06), color-stop(95%, #e07b3c));
-  background-image: url("../img/bg_loign_com.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
+  background-image: url("/img/bg_loign_com.svg"), -webkit-gradient(linear, left top, right top, color-stop(9%, #c22e06), color-stop(95%, #e07b3c));
+  background-image: url("/img/bg_loign_com.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
   background-position: right bottom;
   background-repeat: no-repeat;
 }

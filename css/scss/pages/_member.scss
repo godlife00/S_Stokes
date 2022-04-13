@@ -208,11 +208,7 @@
         background:#f5f5f5;
         border-radius:9px;
         padding:14px 20px 14px 12px;
-    }
-    //  .agree_area .agree_from .label:first-child,
-    //  .agree_area .agree_from .label:nth-child(2) {
-    //     margin-bottom:9px;        
-    // }
+    }    
      .agree_area .agree_from .label.sub_label .label_chk {
         width:100%;
     }
@@ -341,9 +337,7 @@
         text-align: right;	
         margin-top: 6px;
         font-size: 0.75rem;
-        color: #d36900;    
-        // width: calc(100% - 20px);	
-        // margin-left: 20px;
+        color: #d36900;            
     }
      .agree_area .agree_from .phonePin_form .pinBtn {
         cursor: pointer;
@@ -418,6 +412,109 @@
         letter-spacing: -0.6px;
         text-align: center;
         color: #898989;
+    }
+
+    // 회원정보 입력폼 통일 (3사 통일)
+    .agree_area .agree_from .mapage_form {        
+        background: #f5f5f5;
+        border-bottom-left-radius: 9px;
+        border-bottom-right-radius: 9px
+    }
+    .agree_area .mapage_form {        
+        .form_table {
+            padding-top: 10px;
+            tr {
+                border-bottom: 1px solid #e5e5e5                
+            }
+            th, td {
+                padding: 15px 9px;
+                text-align: left;
+                vertical-align: top;
+            }
+            th {                
+                flex: 1;
+                font-size: $font13;
+                letter-spacing: -0.65px;
+                color: #898989;
+            }
+            td {
+                font-size: $font15;
+                letter-spacing: -0.75px;
+                color: #222;
+                .item {
+                    display: inline-block;
+                }
+                .i_dsc, .i_guide {
+                    position: relative;
+                    margin-top: 5px;
+                    font-size: 0.75rem;
+                    line-height: 1.5;
+                    letter-spacing: -0.6px;
+                    color: #d36900;
+                    text-indent: 16px;
+                    word-break: break-all;                    
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 2px;
+                        width: 12px;
+                        height: 12px;
+                        background: url('../img/icon_awesome.svg') no-repeat center center;
+                    }   
+                }
+                .txt_info {
+                    display: inline-block;                    
+                }
+                .mod_btn {
+                    cursor: pointer;
+                    display: inline-block;
+                    margin-left: 3px;
+                    border-radius: 3px;
+                    border: 1px solid #c22e06;
+                    background-color: #fff;
+                    padding: 1px 2px;                          
+                    font-size: 10px;
+                    a {
+                        display: inline-block;                        
+                        font-size: 10px;
+                        letter-spacing: -0.6px;
+                        text-align: center;
+                        color: #c22e06;                               
+                    }       
+                }
+                .mod_phone {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 5px;                
+                    .phone_mod {                        
+                        width: 120px;
+                    }    
+                }
+                
+                .certifi_btn {                    
+                    cursor: pointer;                    
+                    display: inline-block;                    
+                    min-width: 80px;
+                    height: 28px;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    padding: 5px 5px;                          
+                    font-size: $font12;
+                    letter-spacing: -0.6px;
+                    text-align: center;
+                    color: #fff;
+                    border-radius: 3px;
+                    background-color: #c22e06;
+                    border: none;                          
+                    vertical-align: middle;
+                }
+                .i_guide, .i_dsc {
+                    width: 100%;
+                }
+            }
+        }
     }
     
     /* 로그인 - 가입완료 */
@@ -540,222 +637,8 @@
         }
 
     }     
-    
       
-    //  .phone_regbox .payBtn {
-    //     margin-top:20px;
-    // }
-    //  .phone_regbox .payBtn .btn {
-    //     width:calc(100% - 40px);
-    // }
-    //  .link_home {	
-    //     text-align:center;
-    //     margin:15px auto 0;
-    // }
-    //  .link_home a {
-    //     display: block;
-    //     width: 100%;
-    //     padding: 11px 5px;
-    //     box-sizing: border-box;
-    //     background-color: #404fc3;	
-    //     color: #fff;	
-    //     font-size: 0.9375rem;
-    //     border-radius: 5px;
-    //     position: relative;
-    // }
-    //  .link_home i {
-    //     display:inline-block;
-    //     width:3px;
-    //     height:6px;
-    //     padding:0 1px;
-    //     margin-right:3px;
-    //     background:url('/img/more_Black.png') no-repeat 0 0;
-    //     background-size:3px 6px;
-    //     position:relative;
-    //     top:-2px;
-    // }
-     
-    //  .att_service.free_service .service_title {
-    //     display:block;
-    //     font-weight:bold;
-    // }
-    //  .att_service.free_service .service_title strong {
-    //     display:inline-block;
-    //     color:#ff2929;
-    //     font-weight:normal;
-    //     font-size:0.9rem;
-    // }
-    //  .att_service.free_service .agree_area {
-    //     width:100%;
-    // }
-    //  .att_service.free_service .agree_area .agree_from {
-    //     margin-top:10px;
-    // }
-    //  .att_service.free_service .agree_area .agree_from .label .label_chk {
-    //     width:100%;
-    //     line-height:1.4;
-    // }
-    //  .att_service.free_service .agree_area .agree_from .label .label_chk i {
-    //     top:1px;
-    // }
-    //  .att_service.free_service .mapage_form .form_table tr {
-    //     border-bottom:1px solid #E0E4E9;
-    // }
-    //  .att_service.free_service .mapage_form .form_table tr:last-child {
-    //     border-bottom:none;
-    // }
-    //  .att_service.free_service .mapage_form .form_table th,
-    //  .att_service.free_service .mapage_form .form_table td {
-    //     text-align:left;
-    //     padding:20px 0 14px;
-    //     line-height:1.2rem;
-    //     font-weight:normal;
-    // }
-    //  .att_service.free_service .mapage_form .form_table th {
-    //     color:#939393;
-    //     font-size:0.82rem;
-    //     width:90px;
-    //     vertical-align:top;
-    // }
-    //  .att_service.free_service .mapage_form .form_table td {
-    //     color:#333;
-    //     font-size:0.9375rem;
-    // }
-    //  .att_service.free_service .mapage_form .form_table td .i_dsc {
-    //     clear:both;
-    //     float:none;
-    //     color:#404fc3;
-    //     font-size:0.75rem;
-    //     line-height:14px;
-    //     margin-top:6px;
-    // }
-    //  .att_service.free_service .mapage_form .form_table td .i_dsc i {
-    //     position:relative;
-    //     top:2px;
-    //     margin-right:5px;
-    //     display:inline-block;
-    //     width:14px;
-    //     height:14px;
-    //     background:url('/img/bg_x.png') no-repeat 0 0;
-    // }
-    //  .att_service.free_service .mapage_form .form_table td .i_dsc.phone {
-    //     color:#ff2929;
-    //     margin-top:0;
-    //     padding-top:6px;
-    // }
-    //  .att_service.free_service .mapage_form .form_table td .i_dsc.phone i {
-    //     background-position:0 100%;
-    // }
-    //  .att_service.free_service .mapage_form .form_table td .i_guide {
-    //     clear:both;
-    //     float:none;
-    //     color:#333;
-    //     margin-top:0;
-    //     padding-top:6px;
-    //     font-size:0.75rem;
-    //     display:block;
-    //     line-height:1.4;
-    // }
-    //  .att_service.free_service .mapage_form .form_table td .mod_btn {
-    //     display:inline-block;
-    //     border:1px solid #404fc3;
-    //     border-radius:3px;
-    //     width:100px;
-    //     color:#404fc3;
-    //     font-size:0.75rem;
-    //     text-align:center;
-    //     padding:5px 3px;
-    //     box-sizing:border-box;
-    // }
-    //  .att_service.free_service .mapage_form .form_table td .mod_phone .txt_info {
-    //     display:inline-block;
-    //     padding-right:5px;
-    // }
-    //  .att_service.free_service .mapage_form .form_table td .certification_area {
-    //     background:#e6e7f4;
-    //     min-height:58px;
-    //     padding:15px 15px;
-    //     padding-left:100px;
-    //     margin-left:-100px;
-    //     margin-top:15px;
-    //     box-sizing:border-box;
-    // }
-    //  .att_service.free_service .mapage_form .form_table td .certification_area .certifi_btn {
-    //     float:left;
-    //     vertical-align:top;
-    //     background:#404fc3;
-    //     color:#fff;
-    //     font-size:0.75rem;
-    //     padding:0 10px;
-    //     box-sizing:border-box;
-    //     text-align:center;
-    //     line-height:25px;
-    //     border-top-right-radius:5px;
-    //     border-bottom-right-radius:5px;
-    // }
-    //  .att_service.free_service .mapage_form .form_table td .certification_area .phone_mod {
-    //     float:left;
-    //     vertical-align:top;
-    //     border:none;
-    //     height:23px;
-    //     line-height:25px;
-    //     width:130px;
-    //     padding:0 5px;
-    //     box-sizing:border-box;
-    //     border-top-left-radius:5px;
-    //     border-bottom-left-radius:5px;
-    // }
-    //  .att_service.free_service .mapage_form .form_table td .certifi_btn {
-    //     float:left;
-    //     vertical-align:top;
-    //     background:#404fc3;
-    //     color:#fff;
-    //     font-size:0.75rem;
-    //     padding:0 10px;
-    //     box-sizing:border-box;
-    //     text-align:center;
-    //     line-height:25px;
-    //     border-top-right-radius:5px;
-    //     border-bottom-right-radius:5px;
-    // }
-    //  .att_service.free_service .mapage_form .form_table td .phone_mod {
-    //     float:left;
-    //     vertical-align:top;
-    //     border:none;
-    //     height:25px;
-    //     line-height:25px;
-    //     width:130px;
-    //     padding:0 5px;
-    //     box-sizing:border-box;
-    //     border-top-left-radius:5px;
-    //     border-bottom-left-radius:5px;
-    // }
-    //  .btnArea.freeBtn {
-    //     text-align:right;
-    //     margin-top:45px;
-    //     position:relative;
-    // }
-    //  .btnArea.freeBtn .btn {
-    //     width:60%;
-    // }
-    //  .go_main {
-    //     position:absolute;
-    //     left:15px;
-    //     top:12px;
-    //     color:#404fc3;
-    //     font-size:0.9375rem;
-    //     text-decoration:underline;
-    // }
-    //  .go_main i {
-    //     display:inline-block;
-    //     width:15px;
-    //     height:14px;
-    //     margin-right:3px;
-    //     position:relative;
-    //     top:2px;
-    //     background:url('/img/icon_home_on.png') no-repeat center center;
-    //     background-size: 15px 14px;
-    // }
+    
     // 220311
      .family_site {
         background-color: #f5f5f5;
@@ -1408,3 +1291,5 @@
     }
        
 }
+
+

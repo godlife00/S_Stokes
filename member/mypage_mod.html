@@ -86,68 +86,90 @@
 
                 <div class="agree_area">
                     <!-- 회원 정보 -->
-                    <div class="myInfo">
-                        <div class="line">
-                            <ul>
-                                <li class="th">이름</li>
-                                <li class="td">데이터히어로</li>
-                            </ul>
-                        </div>
-                        <div class="line">
-                            <ul>
-                                <li class="th">이메일</li>
-                                <li class="td">
-                                    datahero@datahero.co.kr
-                                    <p class="pin_countDown">네이버ID로 가입하셨습니다.</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="line">
-                            <ul>
-                                <li class="th">성별</li>
-                                <li class="td">확인불가</li>
-                            </ul>
-                        </div>
-                        <div class="line">
-                            <ul>
-                                <li class="th">휴대폰번호</li>
-                                <li class="td">
-                                    010-1234-4321
-                                    <span class="pinBtn">휴대폰 번호 변경</span>
-                                    <p class="pin_countDown">프리미엄회원에게는 휴대폰으로 종목추천/관심종목 등 알림서비스가 제공됩니다.</p>
-                                </li>
-                            </ul>
+                    <div class="mapage_form">
+                        <form action="" method="post">
+                            <fieldset>
+                                <div class="form_table">
+                                    <table border="0" class="">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">이름</th>
+                                                <td>
+                                                    <div class="item">
+                                                        <p class="txt_info">데이터히어로</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">이메일</th>
+                                                <td>
+                                                    <div class="item">
+                                                        <p class="txt_info">datahero@datahero.co.kr</p>
+                                                        <p class="i_dsc email"><i></i>네이버ID로 가입하셨습니다.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">성별</th>
+                                                <td>
+                                                    <div class="item">
+                                                        <p class="txt_info">확인불가</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">휴대폰번호</th>
+                                                <td>
+                                                    <div class="item mod_phone">
+                                                        <p class="txt_info" id="phone_number">010-4754-9624</p>
+                                                        <span class="mod_btn"><a href="#">휴대폰 번호 변경</a></span>
+                                                        <p class="i_dsc phone_premium"><i></i>프리미엄회원에게는 휴대폰으로 종목추천/관심 종목
+                                                            등 알림서비스가 제공됩니다.</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">휴대폰번호</th>
+                                                <td>
+                                                    <div class="item mod_phone">
+                                                        <input type="number" name="" id="" class="phone_mod">
+                                                        <span class="certifi_btn">인증문자 전송</span>
+                                                        <p class="i_guide">휴대폰 번호로 프리미엄 알림서비스가 제공됩니다.</p>
+                                                        <p class="i_dsc phone"><i></i>현재 사용중인 휴대폰번호 입니다</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
 
-                            <div class="agree_from">
-                                <div class="phonePin_form">
-                                    <form action="">
-                                        <fieldset>
-                                            <div class="box">
-                                                <input type="tel" placeholder="010-1234-4567" class="pinInput">
-                                                <input type="button" src="../img/icon_search.svg" value="인증번호요청"
-                                                    class="pinBtn">
-                                                <p class="dsc_error">사용중인 휴대폰번호 입니다</p>
-                                            </div>
-                                            <div class="box">
-                                                <p class="" id="auth_result"></p>
-                                                <input type="number" class="pinInput_out" name="auth-token"
-                                                    inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code"
-                                                    placeholder="인증번호를 입력해주세요">
-                                                <input type="button" src="../img/icon_search.svg" value="인증번호 확인"
-                                                    class="pin_completion">
-                                                <p class="pin_countDown" id="time_zone">휴대폰으로 전송된 인증번호를 입력 후 ‘확인’버튼을
-                                                    눌러주세요
-                                                    (<span id="timer">05:59</span>)</p>
-                                                <p class="dsc_error" id="auth_result">인증번호가 일치하지 않습니다. 다시 입력해주세요.</p>
-                                            </div>
-                                        </fieldset>
-                                    </form>
+                                            <tr>
+                                                <th scope="row">신규 휴대폰번호</th>
+                                                <td>
+                                                    <div class="item mod_phone">
+                                                        <input type="number" name="" id="" class="phone_mod">
+                                                        <span class="certifi_btn">인증문자 전송</span>
+                                                        <p class="i_guide">휴대폰 번호로 프리미엄 알림서비스가 제공됩니다.</p>
+                                                        <p class="i_dsc phone"><i></i>현재 사용중인 휴대폰번호 입니다</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">인증코드 입력</th>
+                                                <td>
+                                                    <div class="item mod_phone">
+                                                        <input type="number" class="phone_mod" name="auth-token" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" placeholder="인증번호를 입력해주세요">                                                        
+                                                        <span class="certifi_btn">확인</span>
+                                                        <p class="i_dsc phone">인증완료!</p>
+                                                        <p class="i_dsc phone">제한시간 내 입력해주세요. - 2분 49초</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                            </div>
-                            <!-- //agree_from -->
-                        </div>
+                            </fieldset>
+                        </form>
                     </div>
-                    <!-- //myInfo -->
+
                 </div>
                 <!-- //agree_area -->
 
@@ -157,7 +179,7 @@
                     <div class="use_service">
                         <ul>
                             <li class="th">밸류라인 프리미엄</li>
-                            <li class="td">21.09/21~21.10/01 <span class="method">월자동</span></li>                            
+                            <li class="td">21.09/21~21.10/01 <span class="method">월자동</span></li>
                         </ul>
                         <ul>
                             <li class="th">초이스스탁US 프리미엄</li>

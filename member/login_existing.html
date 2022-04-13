@@ -72,14 +72,14 @@
         <!-- 로그인 class = sub_login-->
         <div id="container" class="sub_login">
             <!-- 초이스스탁 통합회원 -->
-            <div class="mainBox loign_chk">            
+            <div class="mainBox loign_chk">
                 <h2 class="login_title">초이스스탁 통합회원</h2>
                 <div class="id_chk">
                     <p class="sns_name">네이버 아이디</p>
                     <p class="sns_chk">datahero1ero33@naver.com</p>
                     <div class="existing">
-                        <p class="useWelcome">초이스스탁 통합회원 아이디입니다.<span>(가입일 : 2021.12/23)</span></p>                    
-                    </div>                    
+                        <p class="useWelcome">초이스스탁 통합회원 아이디입니다.<span>(가입일 : 2021.12/23)</span></p>
+                    </div>
                     <!-- //existing -->
                 </div>
                 <!-- //id_chk -->
@@ -91,14 +91,64 @@
                 <p class="txt">서비스 이용을 위해 약관을 확인하시고 동의해주세요.</p>
                 <div class="agree_from">
                     <div class="label active">
-                        <p class="label_chk"><i></i>프리미엄 서비스 무료체험 이용 동의(필수)</p>                        
-                    </div>                    
+                        <p class="label_chk"><i></i>프리미엄 서비스 무료체험 이용 동의(필수)</p>
+                    </div>
                     <!-- 휴대폰 등록 -->
                     <div class="label phone_label">
                         <p class="label_chk"><i></i>프리미엄 서비스를 위한 휴대폰번호 수집 동의(필수)</p>
                         <p class="guide_txt">- 추천종목, 포트폴리오, 시황 등 알림 서비스가 제공됩니다.</p>
                     </div>
-                    <div class="phonePin_form">
+
+                    <div class="mapage_form">
+                        <form action="" method="post">
+                            <fieldset>
+                                <div class="form_table">
+                                    <table border="0" class="">
+                                        <tbody>                                                                                        
+                                            <tr>
+                                                <th scope="row">휴대폰번호</th>
+                                                <td>
+                                                    <div class="item mod_phone">
+                                                        <input type="number" name="" id="" class="phone_mod">
+                                                        <span class="certifi_btn">인증문자 전송</span>
+                                                        <p class="i_guide">휴대폰 번호로 프리미엄 알림서비스가 제공됩니다.</p>
+                                                        <p class="i_dsc phone"><i></i>현재 사용중인 휴대폰번호 입니다</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">신규 휴대폰번호</th>
+                                                <td>
+                                                    <div class="item mod_phone">
+                                                        <input type="number" name="" id="" class="phone_mod">
+                                                        <span class="certifi_btn">인증문자 전송</span>
+                                                        <p class="i_guide">휴대폰 번호로 프리미엄 알림서비스가 제공됩니다.</p>
+                                                        <p class="i_dsc phone"><i></i>현재 사용중인 휴대폰번호 입니다</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">인증코드 입력</th>
+                                                <td>
+                                                    <div class="item mod_phone">
+                                                        <input type="number" class="phone_mod" name="auth-token" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" placeholder="인증번호를 입력해주세요">                                                        
+                                                        <span class="certifi_btn">확인</span>
+                                                        <p class="i_dsc phone">인증완료!</p>
+                                                        <p class="i_dsc phone">제한시간 내 입력해주세요. - 2분 49초</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+
+
+                    <!-- <div class="phonePin_form">
                         <form action="">
                             <fieldset>
                                 <div class="box">
@@ -118,9 +168,9 @@
                                 </div>
                             </fieldset>
                         </form>
-                    </div>
+                    </div> -->
                     <!-- //phonePin_form -->
-                    <p class="txt_reject">휴대폰으로 전송된 인증번호 입력 후 '확인' 버튼을 눌러주세요.</p>
+                    <!-- <p class="txt_reject">휴대폰으로 전송된 인증번호 입력 후 '확인' 버튼을 눌러주세요.</p> -->
                     <!-- //휴대폰 등록 -->
 
                     <div class="label sub_label">
