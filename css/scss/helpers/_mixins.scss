@@ -116,10 +116,16 @@ $default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", He
     }
     .list_area .list .num {            
         display: flex;
+        justify-content: space-between;                
+    }
+    .list_area .list .num > div {        
+        width: 100%;        
+        display: flex;        
+        flex-wrap: wrap;
         justify-content: space-between;
-        
     }
     .list_area .list .num .th {
+        width: 100%;
         display: block;
         font-size: $font12;                
         line-height: 1.5;
@@ -127,7 +133,7 @@ $default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", He
         color: #898989;
     }
 
-    .list_area .list .num .td {
+    .list_area .list .num .td {        
         font-size: $font16;                
         line-height: 1.5;
         letter-spacing: -0.4px;                
