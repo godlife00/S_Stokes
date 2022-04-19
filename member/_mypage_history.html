@@ -57,12 +57,12 @@
 </head>
 
 <body class="s_stokes">
-    <div id="wrap">        
+    <div id="wrap">
         <!-- 헤더 -->
         <div id="header" class="sub_hdr">
             <div class="bgWrap">
                 <div class="leftLink">
-                    <a href="mypage_mod.html">내정보</a>
+                    <a href="../index.html">홈</a>
                 </div>
             </div>
             <!-- //header_bgWrap -->
@@ -71,54 +71,85 @@
 
         <!-- 로그인 class = sub_login-->
         <div id="container" class="sub_login">
-            <!-- 회원탈퇴 -->
-            <div class="mainBox withdrawal_com">            
-                <p class="txt"><strong>회원탈퇴</strong>가 완료되면 가입시 입력했던 회원정보가 모두 삭제됩니다.</p>
+            <!-- 내정보 회원정보 -->
+            <div class="mainBox mapage_area">
 
-                <!-- 사용중인 유료서비스 -->
-                <div class="inUse_box">
-                    <h3 class="title">사용중인 유료서비스</h3>
-                    <div class="use_service">
-                        <ul>
-                            <li class="th">밸류라인 프리미엄</li>
-                            <li class="td">21.09/21~21.10/01 <span class="method">월자동</span></li>                            
-                        </ul>
-                        <ul>
-                            <li class="th">초이스스탁US 프리미엄</li>
-                            <li class="td">21.09/21~21.10/01 <span class="method">기간</span></li>
-                        </ul>
-                        <!-- <ul>
-                            <li class="th">인더스트리워치 프리미엄</li>
-                            <li class="td">21.09/21~21.10/01 <span class="method">이벤트</span></li>
-                        </ul> -->
-                    </div>
-                    <!-- //use_service -->
+                <h2 class="title">내 정보</h2>
+
+                <div class="tabsWrap">
+                    <ul class="page_nav">
+                        <li><a href="mypage_mod.html">회원정보</a></li>
+                        <li class="active"><a href="mypage_history.html">서비스/결제내역</a></li>
+                    </ul>
                 </div>
-                <!-- //inUse_box -->
+                <!-- //tabsWrap -->
 
-                <ul class="withdrawal_freetxt">
-                    <h3 class="service_title"><strong>회원탈퇴 전에 꼭! 확인해주세요.</strong></h3>
-                    <li class="title">회원탈퇴와 동시에 회원 서비스를 이용할 수 없습니다.</li>
-                    <li class="title">유료서비스를 이용 중이라면, 서비스해지 후 회원탈퇴를 진행해주세요.</li>
-                    <li class="title">작성한 게시글은 회원탈퇴 후 수정/삭제 할 수 없습니다.</li>
-                    <li class="title"><strong>회원탈퇴 후 1개월 간 재가입이 불가합니다.</strong></li>
-                    <li class="title">회원자격이 운영자에 의해 정지된 경우에는 회원탈퇴 후 재가입이 제한됩니다.</li>
-                </ul>
-                <!-- //withdrawal_freetxt -->
-                <div class="btnArea wtwalBtn">
-                    <a href="#" class="btn btn_ssin">회원탈퇴</a>
+            </div>
+            <!-- //mapage_area -->
+
+            <div class="mapage_service">
+                <div class="service_table">
+                    <div class="box">
+                        <h3 class="service">슈퍼스톡스 프리미엄</h3>
+                        <p class="day">2019.12/22 ~ 2020.01/22</p>
+                    </div>
+                    <div class="box">
+                        <span class="system">월자동결제</span>
+                        <a href="#" class="btn_payCan">자동결제취소</a>
+                        <span class="system">기간결제</span>
+                        <a href="#" class="btn_payRefund">기간결제취소/환불</a>
+                        <div class="card_num">
+                            <p><span>카드번호</span> ************2323</p>
+                            <p><span>결제일</span> 346일</p>
+                        </div>
+                        <a href="../payment/step02_card.html" class="card_ch">카드변경</a>
+                    </div>
                 </div>
             </div>
-            <!-- //withdrawal_com -->
+
+            <!-- 결제 히스토리 -->
+            <div class="history_area">
+                <table cellspacing="0" border="1" class="table history_table">
+                    <thead>
+                        <tr>
+                            <th>결제일</th>
+                            <th>결제금액</th>
+                            <th>결제수단</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20.07/06</td>
+                            <td><b>33,000</b>원 <span class="in">월자동</span> </td>
+                            <td>신용카드 (**3423) <span class="in">결제취소</span></td>
+                        </tr>
+                        <tr>
+                            <td>20.07/06</td>
+                            <td><b>33,000</b>원 <span class="in">기간결제</span> </td>
+                            <td>무통장입금<span class="in">결제완료</span></td>
+                        </tr>
+                        <tr>
+                            <td>20.07/06</td>
+                            <td><b>33,000</b>원 <span class="in">월자동</span> </td>
+                            <td>신용카드 (**3423) <span class="in">결제완료</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //history_area -->
+
+            <div class="btnArea payBtn">
+                <a href="/payment/step01.html" class="btn btn_save"><b>슈퍼스톡스 프리미엄</b> 상품보기</a>
+            </div>
+
         </div>
         <!-- //sub_login -->
         <!-- //container -->
-        
+
         <div id="footer" class="f_main"></div>
         <!-- //footer -->
     </div>
     <!-- //wrap -->
-
 </body>
 
 </html>

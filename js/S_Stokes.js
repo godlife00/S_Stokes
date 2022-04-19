@@ -29,6 +29,27 @@ $(document).ready(function () {
         }
     }); 
 
+    //select
+    $(function () {
+        var selectTarget = $('.selectbox select');
+
+        // focus 가 되었을 때와 focus 를 잃었을 때
+        selectTarget.on({
+            'focus': function () {
+                $(this).parent().addClass('focus');
+            },
+            'blur': function () {
+                $(this).parent().removeClass('focus');
+            }
+        });
+
+        selectTarget.change(function () {
+            var select_name = $(this).children('option:selected').text();
+            $(this).siblings('label').text(select_name);
+            $(this).parent().removeClass('focus');
+        });
+    });
+
     //swiper    
     //메인 포트폴리오
     var swiper = new Swiper('.mainportfolioSwiper', {
@@ -142,6 +163,18 @@ $(document).ready(function () {
         }
     });
 
+    // 결제동의하기 전체약관동의 체크
+    $('.payment_note .top .agree').on("click", function () {
+        console.log("test");
+        if ($(this).hasClass("active")) {
+            $(this).removeClass('active');
+            $('.agree_chk .txt').removeClass('active');
+        } else {
+            $(this).addClass('active');
+            $('.agree_chk .txt').addClass('active');
+        }
+    });
+
     // 결제 박스 선택
     $('.s_stokes #wrap #container.sub_payment .payment_area .serviceStep .step_box').on("click", function () {
         $('.s_stokes #wrap #container.sub_payment .payment_area .serviceStep .step_box').removeClass('active');            
@@ -151,13 +184,13 @@ $(document).ready(function () {
 
     // 모달팝업
     // 슈퍼스톡스 프리미엄 2주 무료
-    $('.btn_free').on('click', function () {
-        $('.premium_pop.free2weeks').modal({
-            fadeDuration: 100
-        });
-    });    
+    // $('.btn_free').on('click', function () {
+    //     $('.premium_pop.free2weeks').modal({
+    //         fadeDuration: 100
+    //     });
+    // });    
     // 슈퍼스톡스 프리미엄 가입하기
-    $('.btn_join').on('click', function () {
+    $('.btn_free, .btn_join').on('click', function () {
         $('.premium_pop.premium_join').modal({
             fadeDuration: 100
         });

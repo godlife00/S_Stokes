@@ -510,7 +510,9 @@
             font-weight:normal;
         }
         .serviceStep .step_box .payRight .pay02 .pay_sale {
-            display:block;
+            // display:block;
+            display: inline-block;
+            padding-left: 4px;            
             color:#939393;
             font-size:0.8rem;
             font-weight:normal;
@@ -1452,6 +1454,18 @@
                 float:right;
                 width:110px;
                 line-height:20px;
+                i {
+                    display:inline-block;
+                    vertical-align:top;
+                    width:18px;
+                    height:18px;
+                    background:url('/img/icon_agreecheck.svg') no-repeat 100% 0;                
+                    margin-right:7px;
+                }
+            }
+            .payment_note .top .agree.active i {
+                background-position: 0 0;
+
             }
             .agree_chk {
                 display: flex;

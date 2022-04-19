@@ -57,20 +57,37 @@
 </head>
 
 <body class="s_stokes">
+
     <div id="wrap">
+        <!-- 3일 무료체험 상단배너 -->
+        <div class="weeks_free3">
+            <p>휴대폰 번호로 알림서비스가 제공됩니다. <a href="/member/mypage_mod.html">(등록하러가기)</a> <a href="#" class="btn_close">X</a></p>
+        </div>
+        <script language="Javascript" type="text/javascript">
+            $('.s_stokes .weeks_free3 p .btn_close').on("click", function () {
+                $('.s_stokes .weeks_free3').slideUp();
+            })
+        </script>
+        <!-- //3일 무료체험 상단배너 -->
+
         <!-- 헤더 -->
         <div id="header" class="main_hdr">
             <div class="bgWrap">
                 <div class="title">
                     <h1 class="h1_logo"><a href="index.html"><img src="img/h1_logo.png" alt="슈퍼스톡스"></a></h1>
                 </div>
+                <!-- <div class="r_menu">
+                    <a href="#" class="searchForm"><img src="img/search.svg" alt="검색"></a>
+                    <a href="member/mypage_mod.html">MY</a>
+                    <a href="member/login_sns.html">로그인/회원가입</a>                    
+                </div> -->
+                <!-- //r_menu -->      
                 <div class="r_menu">
                     <a href="#" class="searchForm"><img src="img/search.svg" alt="검색"></a>
-                    <a href="member/login_sns.html">로그인(임시)</a>
                     <a href="member/mypage_mod.html">MY</a>
-                    <!-- <a href="stock/alarm_list.html">알림</a> -->
+                    <a href="#">로그아웃</a>                    
                 </div>
-                <!-- //r_menu -->
+                <!-- //r_menu -->    
 
                 <!-- 검색어 자동완성 -->
                 <div class="AutoComplete">
@@ -157,7 +174,9 @@
                     <div class="swiper-container maingameSwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="area">
+
+                                <!-- 유료회원이 아닌 경우 -->
+                                <div class="area btn_free">
                                     <div class="left">
                                         <ul class="list">
                                             <li class="title">
@@ -167,7 +186,7 @@
                                                 </a>
                                             </li>
                                             <li class="detail">
-                                                <span>실적개선+저평가+기관 매수</span>
+                                                <span>유료회원이 아닌 경우</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -190,15 +209,14 @@
                             </div>
                             <!-- //swiper-slide -->
                             <div class="swiper-slide">
-                                <div class="area">
+
+                                <!-- 유료회원인 경우 -->
+                                <div class="area" onclick="location.href='stock/winner.html'" >
                                     <div class="left">
                                         <ul class="list">
-                                            <li class="title"><!-- class btn_free 는 프리미엄 2주 무료 팝업 -->
-                                                <a href="#" class="btn_free">
-                                                    카<span class="remark"><i></i><i></i><i></i><i></i></span>
-                                                </a></li>
+                                            <li class="title"><a href="stock/winner.html">카카오프랜드스토리카카오프랜드스토리</a></li>
                                             <li class="detail">
-                                                <span>실적개선+저평가+기관 매수실적개선+저평가+기관 매수</span>
+                                                <span>유료회원인 경우</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -221,7 +239,7 @@
                             </div>
                             <!-- //swiper-slide -->
                             <div class="swiper-slide">
-                                <div class="area">
+                                <div class="area" onclick="location.href='stock/winner.html'" >
                                     <div class="left">
                                         <ul class="list">
                                             <li class="title"><a href="">카카오프랜드스토리카카오프랜드스토리</a></li>
@@ -249,7 +267,7 @@
                             </div>
                             <!-- //swiper-slide -->
                             <div class="swiper-slide">
-                                <div class="area">
+                                <div class="area" onclick="location.href='stock/winner.html'" >
                                     <div class="left">
                                         <ul class="list">
                                             <li class="title"><a href="">카카오프랜드스토리카카오프랜드스토리</a></li>
@@ -316,8 +334,13 @@
 
             <!-- 상단 롱배너 -->
             <div class="main_topbanner">
-                <a href="payment/step01.html"><img src="img/banner/main_topbanner.jpg"
-                        alt="저평가 우량주투자, 슈퍼스톡스와 함께하세요. 슈퍼스톡스 프리미엄 안내"></a>
+                <a href="stock/service.html" class="bannerBox">
+                    <div class="title">저평가 우량주투자,<br><b>슈퍼스톡스</b>와 함께하세요.</div>
+                    <div class="link">
+                        <span>슈퍼스톡스 프리미엄 안내</span>
+                    </div>
+                </a>
+                <!-- //bannerBox -->
             </div>
             <!-- //main_topbanner -->
 
@@ -328,7 +351,9 @@
                     <div class="swiper-container mainportfolioSwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="area">
+
+                                <!-- 유료회원이 아닌 경우 -->
+                                <div class="area btn_free">                                                                
                                     <div class="left">
                                         <ul class="list">
                                             <li class="title">
@@ -338,7 +363,7 @@
                                                 </a>
                                             </li>
                                             <li class="detail">
-                                                <span>실적개선+저평가+기관 매수</span>
+                                                <span>자이에스앤디, 실적 성장 지속+저평가+외국인 매수 전환 조짐</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -361,7 +386,8 @@
                             </div>
                             <!-- //swiper-slide -->
                             <div class="swiper-slide">
-                                <div class="area">
+                                <!-- 유료회원인 경우 -->
+                                <div class="area" onclick="location.href='stock/portfolio_recom.html'" >
                                     <div class="left">
                                         <ul class="list">
                                             <li class="title"><a href="">카카오프랜드스토리카카오프랜드스토리</a></li>
@@ -419,7 +445,7 @@
             <div class="mainBox strategy">
                 <h2 class="title"><a href="stock/strategy.html">투자전략</a></h2>
                 <div class="updata">
-                    <p>오늘의 승부주 업데이트 - 12/8(수)</p>
+                    <p><a href="stock/strategy.html">오늘의 승부주 업데이트 - 12/8(수)</a></p>
                 </div>
                 <div class="list">
                     <ul>
@@ -526,7 +552,7 @@
                             <!-- 종목명, 주가 -->
                             <div class="top">
                                 <ul class="line">
-                                    <li class="cunt">88</li>
+                                    <li class="cunt">2</li>
                                     <li class="comlogo"><img src="img/comlogo_temp.png" alt="회사로고 들어감"></li>
                                     <li class="name"><a
                                             href="stock/portfolio_attr.html">파마리서치파마리서치파마리서치파마리서치파마리서치파마리서치</a></li>
@@ -592,7 +618,7 @@
                             <!-- 종목명, 주가 -->
                             <div class="top">
                                 <ul class="line">
-                                    <li class="cunt">88</li>
+                                    <li class="cunt">3</li>
                                     <li class="comlogo"><img src="img/comlogo_temp.png" alt="회사로고 들어감"></li>
                                     <li class="name"><a href="stock/portfolio_attr.html">카카오</a></li>
                                     <li class="price"><b>234,500</b>원</li>
@@ -653,6 +679,49 @@
                         </div>
                         <!-- //list -->
 
+                        <div class="adequateArea attr">
+                            <!--  투자매력TOP50 포트폴리오 차트는 class = attr 추가 -->
+                            <div class="tableData">
+                                <table cellspacing="0" border="0" class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="event">
+                                                <div>
+                                                    <span class="cunt">4</span>
+                                                    <span class="comlogo"><img src="img/comlogo_temp.png" alt="회사로고 들어감"></span>
+                                                    <span class="name"><a href="search/search.html">카카오</a></span>
+                                                </div>
+                                            </td>
+                                            <td class="num">
+                                                <b>98</b>점
+                                            </td>
+                                            <td class="price">
+                                                <b>4,500</b>원
+                                                <div class="increase per">+1.38%</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="event">
+                                                <div>
+                                                    <span class="cunt">5</span>
+                                                    <span class="comlogo"><img src="img/comlogo_temp.png" alt="회사로고 들어감"></span>
+                                                    <span class="name"><a href="search/search.html">카카오카카오</a></span>
+                                                </div>
+                                            </td>
+                                            <td class="num">
+                                                <b>98</b>점
+                                            </td>
+                                            <td class="price">
+                                                <b>4,500</b>원
+                                                <div class="decrease per">-1.38%</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //tableData -->
+                        </div>
+                        
                         <div class="btn_more">
                             <a href="stock/portfolio_attr.html">더보기</a>
                         </div>

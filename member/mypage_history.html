@@ -88,23 +88,27 @@
             <!-- //mapage_area -->
 
             <div class="mapage_service">
-                <div class="service_table">
-                    <div class="box">
-                        <h3 class="service">슈퍼스톡스 프리미엄</h3>
-                        <p class="day">2019.12/22 ~ 2020.01/22</p>
-                    </div>
-                    <div class="box">
-                        <span class="system">월자동결제</span>
-                        <a href="#" class="btn_payCan">자동결제취소</a>
-                        <span class="system">기간결제</span>
-                        <a href="#" class="btn_payRefund">기간결제취소/환불</a>
-                        <div class="card_num">
-                            <p><span>카드번호</span> ************2323</p>
-                            <p><span>결제일</span> 346일</p>
-                        </div>
-                        <a href="../payment/step02_card.html" class="card_ch">카드변경</a>
-                    </div>
-                </div>
+                <table border="1" class="service_table">
+                    <tbody>
+                        <tr>
+                            <th class="service">프리미엄 서비스:</th>
+                            <td class="day">
+                                2020.09/18 ~ 2030.10/18
+                                (월 정기결제)</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="system"><span>월정기결제</span>
+                                <a href="#pay_cncl" class="btn_payCan show_pop02 auto_cncl">정기결제취소</a>
+
+                            </th>
+                            <td class="num"><span>ㆍ카드번호</span> <strong>*********3423</strong><a
+                                    href="../payment/step02_card.html" class="card_ch">변경</a></td>
+                        </tr>
+                        <tr>
+                            <td class="num"><span>ㆍ결제일</span> <strong>19일</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
             <!-- 결제 히스토리 -->
@@ -120,17 +124,17 @@
                     <tbody>
                         <tr>
                             <td>20.07/06</td>
-                            <td><b>33,000</b>원 <span class="in">월자동</span> </td>
+                            <td><b>85,000</b>원 <span class="in">월자동</span> </td>
                             <td>신용카드 (**3423) <span class="in">결제취소</span></td>
                         </tr>
                         <tr>
                             <td>20.07/06</td>
-                            <td><b>33,000</b>원 <span class="in">기간결제</span> </td>
+                            <td><b>264,000</b>원 <span class="in">기간결제</span> </td>
                             <td>무통장입금<span class="in">결제완료</span></td>
                         </tr>
                         <tr>
                             <td>20.07/06</td>
-                            <td><b>33,000</b>원 <span class="in">월자동</span> </td>
+                            <td><b>85,000</b>원 <span class="in">월자동</span> </td>
                             <td>신용카드 (**3423) <span class="in">결제완료</span></td>
                         </tr>
                     </tbody>

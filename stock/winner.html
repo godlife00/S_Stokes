@@ -77,21 +77,27 @@
                 <div class="w_filter">
                     <ul>
                         <li class="active"><span>전체</span></li>
-                        <li><span>우량주</span></li>
-                        <li><span>성장주</span></li>
-                        <li><span>턴어라운드</span></li>
+                        <li><span class="nice">우량주</span></li>
+                        <li><span class="gro">성장주</span></li>
+                        <li><span class="turn">턴어라운드</span></li>
                     </ul>
                 </div>
                 <!-- //w_filter -->
 
                 <!-- 리스트 -->
                 <div class="list_area">
-                    <div class="area">
+                    <!-- 유료회원이 아닌 경우 -->
+                    <div class="area btn_free">   
                         <div class="left">
                             <ul class="list">
-                                <li class="title"><a href="winner_view.html">카카오프랜드스토리카카오프랜드스토리</a></li>
+                                <li class="title">
+                                    <!-- class btn_join 는 프리미엄 가입하기 -->
+                                    <a href="#" class="btn_join">
+                                        카<span class="remark"><i></i><i></i><i></i><i></i></span>
+                                    </a>
+                                </li>
                                 <li class="detail">
-                                    <span>실적개선+저평가+기관 매수</span>
+                                    <span>실적개선</span>
                                 </li>
                             </ul>
                         </div>
@@ -111,7 +117,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="area">
+                    <!-- 유료회원인 경우 -->
+                    <div class="area" onclick="location.href='winner_view.html'" >
                         <div class="left">
                             <ul class="list">
                                 <li class="title"><a href="winner_view.html">카카오프랜드스토리카카오프랜드스토리</a></li>
@@ -153,7 +160,7 @@
                                 <li class="num">
                                     <div>
                                         <span class="th">목표가</span>
-                                        <span class="td"><b>888,234,500</b>원</span>
+                                        <span class="td"><b>8,234,500</b>원</span>
                                         <span class="trans gro">성장주</span>
                                         <!-- 우량주 nice, 성장주 gro, 턴 turn -->
                                     </div>

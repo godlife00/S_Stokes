@@ -191,6 +191,66 @@
         }    
     }
 
+    // 카드정보확인
+    &.card_reg {        
+        position: fixed;
+        left: 50%;
+        top: 40%;
+        margin-left: -250px;
+        opacity: 1;
+        display: inline-block;        
+        .bg {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;            
+            padding: 20px;
+            box-sizing: border-box;            
+            text-align: center;        
+            z-index: 98;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .setting_area {
+            position: fixed;
+            left: 50%;
+            top: 40%;
+            width: 90%;            
+            margin-left: -45%;
+            opacity: 1;
+            display: inline-block;        
+            z-index: 99;            
+        }
+        .pop_con {
+            text-align: center;
+            background: #F4F4F5;
+            padding: 30px 15px 20px;
+            letter-spacing: -0.8px;
+            color: #656d7e;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+            background-color: #fff;
+
+            p {
+                font-size: 1.125rem;
+                font-weight: 700;
+                color: #222;
+                line-height: 1.7;                
+            }
+            
+            .btnArea.edtBtn {
+                @include two_btn;
+                margin-top: 30px;                
+            }
+            .btnArea.edtBtn {
+                
+            }
+        }
+    }
+
     // 나이스페이 진행중인 결제 취소
     &.paymentCancel {
         .pop_con {

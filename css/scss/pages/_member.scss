@@ -927,12 +927,15 @@
             font-weight: $f_sizeB;            
             line-height: 1.47;
             letter-spacing: -0.75px;            
-            color: #c22e06;
+            color: #c22e06;            
+            width: 120px;
+            padding-bottom: 10px;
         }
         .day {
             margin-top: 5px;
             font-size: $font12;                        
             color: #575757;
+            padding-left: 5px;
         }
         .system {
             font-size: $font12;;
@@ -940,6 +943,15 @@
             line-height: 1.5;            
             color: #222;            
             margin-right: 3px;
+        }
+        .num {
+            margin-top: 5px;
+            font-size: $font12;                        
+            color: #575757;
+            span {
+                display: inline-block;
+                padding: 3px 0 2px;
+            }
         }
         .btn_payCan, .btn_payRefund {
             cursor: pointer;            
@@ -956,6 +968,7 @@
             cursor: pointer;            
             border-radius: 3px;                        
             padding: 2px 5px;
+            margin-left: 5px;
             font-size: 10px;
             letter-spacing: -0.6px;
             text-align: center;
