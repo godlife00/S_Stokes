@@ -1,11 +1,12 @@
 // 메인
 
-.weeks_free3 {
+.top_banner {
     position: absolute;
     left: 0;
     right: 0;
     top: 58px;
     width: 100%;
+    height: 39px;
     box-sizing: border-box;
     background: #def0d8;
     padding: 10px 15px;
@@ -457,6 +458,7 @@
             }
 
             .list_area .area {
+                cursor: pointer;
                 width: 230px;
                 background: #f5f5f5;
                 box-sizing: border-box;
