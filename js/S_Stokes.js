@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // a태그 페이지 상단 이동 막기
-    $('btn_free, .btn_join, .game_scr .page_nav li').on('click', function () {
+    $('.btn_free, .btn_join, .game_scr .page_nav li').on('click', function () {
         console.log("상단이동제한");
         return false;
     });

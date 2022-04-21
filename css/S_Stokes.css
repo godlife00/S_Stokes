@@ -1691,7 +1691,7 @@ input[type='radio']:checked:before {
   width: 100%;
   display: -webkit-box;
   overflow: hidden;
-  height: 2.8em;
+  height: 4.2em;
   line-height: 1.4em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
