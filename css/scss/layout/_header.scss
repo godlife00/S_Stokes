@@ -76,6 +76,19 @@
                     padding-bottom: 2px;
                 }
             }
+            .mypage_link {
+                position: relative;                                
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                &::after {
+                    content: '';
+                    display: inline-block;                    
+                    width: 1px;
+                    height: 12px;
+                    background-color: #898989;
+                }
+            }
         }
         .gnb {
             display: inline-block;

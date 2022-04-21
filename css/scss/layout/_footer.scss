@@ -21,12 +21,12 @@
         margin-top: 25px;
         display: flex;
         justify-content: flex-start;
-        gap: 8px;
+        gap: 5px;
 
         li {
             position: relative;
             border-right: 1px solid #d3d3d3;
-            padding-right: 8px;
+            padding-right: 6px;
             line-height: 1;
             a {
                 font-size: $font13;                
