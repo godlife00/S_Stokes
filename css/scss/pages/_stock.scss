@@ -399,26 +399,25 @@
             color: #222;
         }
         li {
-            margin-top: 5px;
-            @include white-space;
-                width: 98%;
-                position: relative;
-                display: block;
-                padding-left: 10px;
-                font-size: $font15;
-                line-height: 1.93;
-                letter-spacing: -0.38px;                
-                color: #222;
-                &::after {
-                    content: '';
-                    display: inline-block;
-                    width: 5px;
-                    height: 1px;
-                    position: absolute;
-                    left: 0;
-                    top: 15px;
-                    background-color: #222;
-                }
+            margin-top: 5px;            
+            width: 98%;
+            position: relative;
+            display: block;
+            padding-left: 10px;
+            font-size: $font15;
+            line-height: 1.93;
+            letter-spacing: -0.38px;                
+            color: #222;
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 5px;
+                height: 1px;
+                position: absolute;
+                left: 0;
+                top: 15px;
+                background-color: #222;
+            }
 
             // a {
             //     @include white-space;

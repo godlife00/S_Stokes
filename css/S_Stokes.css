@@ -1799,7 +1799,7 @@ input[type='radio']:checked:before {
 .s_stokes #wrap #container .main_topbanner .bannerBox {
   display: block;
   padding: 15px 30px;
-  background: url("../img/main_topbanner.svg") no-repeat calc(100% + 15px) bottom;
+  background: url("../img/banner/main_topbanner.svg") no-repeat calc(100% + 15px) bottom;
 }
 
 .s_stokes #wrap #container .main_topbanner .bannerBox .title {
@@ -3815,12 +3815,6 @@ input[type='radio']:checked:before {
 
 .s_stokes #wrap #container.sub_stock .point li {
   margin-top: 5px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   width: 98%;
   position: relative;
   display: block;

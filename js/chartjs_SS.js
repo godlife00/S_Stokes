@@ -188,7 +188,7 @@ $(document).ready(function () {
             },
 
             series: [{
-                name: 'MVP점수',
+                name: '슈스톡점수',
                 yAxis: 0,
                 data: [42, 52, 57, 69, 97, 11, 42, 52, 57, 69, 97, 11],
                 tooltip: {
