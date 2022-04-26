@@ -1,50 +1,57 @@
 // 오늘의 승부주, 투자전략
 .s_stokes #wrap #container.sub_stock {
+
     // 오늘의 승부주 리스트
     .winner {
         padding: 30px 15px 40px;
 
         .title {
             font-size: $font20;
-            font-weight: $f_sizeB;            
+            font-weight: $f_sizeB;
             line-height: 1.45;
-            letter-spacing: -0.5px;            
+            letter-spacing: -0.5px;
             color: #222;
         }
 
         .w_filter {
             margin-top: 24px;
+
             ul {
                 display: flex;
                 justify-content: flex-start;
                 gap: 8px;
+
                 li {
                     span {
                         cursor: pointer;
                         display: inline-block;
                         border-radius: 3px;
-                        background-color: #f7f7f7;                        
+                        background-color: #f7f7f7;
                         padding: 3px 7px 2px;
                         text-align: center;
-                        font-size: $font13;                        
+                        font-size: $font13;
                         line-height: 1.46;
                         letter-spacing: -0.33px;
-                        color: #898989;                        
-                    }                    
+                        color: #898989;
+                    }
+
                     &.active {
-                        span {                            
-                            color: #fff;       
+                        span {
+                            color: #fff;
                             background-color: #c22c06;
+
                             &.nice {
                                 background-color: #c22c06;
                             }
+
                             &.gro {
                                 background-color: #63bcb9;
                             }
+
                             &.turn {
                                 background-color: #e6a01c;
                             }
-                            
+
                         }
                     }
                 }
@@ -55,64 +62,73 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 10px;   
-            padding: 10px 0;            
+            gap: 10px;
+            padding: 10px 0;
         }
-        .list_area .area {             
+
+        .list_area .area {
             cursor: pointer;
-            flex: 1 1 40%;               
-            overflow: hidden;            
-            background: #f5f5f5;            
-            box-sizing: border-box;            
+            flex: 1 1 40%;
+            overflow: hidden;
+            background: #f5f5f5;
+            box-sizing: border-box;
             padding: 0;
             border-radius: 8px;
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;                    
+            flex-wrap: wrap;
             gap: 6px;
             align-items: stretch;
             align-content: space-between;
-            .left {                                 
+
+            .left {
                 width: calc(100% - 55px);
                 padding: 16px 0 0 16px;
                 box-sizing: border-box;
             }
+
             .right {
-                width: 45px;                                        
+                width: 45px;
                 padding: 16px 10px 0 0;
                 box-sizing: border-box;
             }
+
             .btm {
-                width: 100%;                
+                width: 100%;
                 box-sizing: border-box;
-                flex-wrap: wrap;                    
-                .num {                      
+                flex-wrap: wrap;
+
+                .num {
                     display: block;
-                    > div {
+
+                    >div {
                         display: flex;
                         justify-content: space-between;
                         flex-wrap: wrap;
                         align-items: center;
                         gap: 2px 3px;
-                        .th {                
+
+                        .th {
                             width: 100%;
                         }
+
                         .trans {
                             margin-left: 0;
                         }
-                    }                 
+                    }
                 }
             }
         }
 
         @include listswiper;
-        .list .detail span {                                   
+
+        .list .detail span {
             display: block;
             width: 100%;
             display: -webkit-box;
             overflow: hidden;
             height: 2.8em;
-            line-height: 1.4em;            
+            line-height: 1.4em;
             box-sizing: border-box;
             text-overflow: ellipsis;
             -webkit-line-clamp: 2;
@@ -124,9 +140,11 @@
         .list_area .area .left {
             width: calc(100% - 55px);
         }
+
         .list_area .area .right {
             width: 45px;
-            img {                
+
+            img {
                 display: inline-block;
                 width: 35px;
                 height: 35px;
@@ -135,57 +153,62 @@
                 overflow: hidden;
             }
         }
+
         .list_area .area .btm {
             padding: 7px 14px 10px;
-            background-color: #e6e6e6;            
+            background-color: #e6e6e6;
         }
+
         .list_area .more {
             margin-top: 7px;
             text-align: right;
+
             a {
                 position: relative;
-                font-size: $font13;                
+                font-size: $font13;
                 line-height: 1.46;
-                letter-spacing: -0.33px;                
-                color: #c22c06;                               
+                letter-spacing: -0.33px;
+                color: #c22c06;
                 padding-right: 12px;
+
                 &::after {
                     content: '';
                     display: inline-block;
                     width: 6px;
-                    height: 6px;                    
+                    height: 6px;
                     position: absolute;
-                    top: 6px;            
-                    right: 0;                    
+                    top: 6px;
+                    right: 0;
                     border-top: 1px solid #c22c06;
-                    border-right: 1px solid #c22c06;            
+                    border-right: 1px solid #c22c06;
                     transform: rotate(45deg);
                 }
+
                 &::before {
                     content: '';
-                    display: inline-block;                    
-                    height: 1px;                    
-                    position: absolute;                    
-                    left: 0;                  
+                    display: inline-block;
+                    height: 1px;
+                    position: absolute;
+                    left: 0;
                     right: 0;
-                    bottom: 0;  
-                    background-color: #c22c06;                    
+                    bottom: 0;
+                    background-color: #c22c06;
                 }
             }
         }
-        
+
     }
 
     // 오늘의 승부주 상세보기    
     .winner_topArea {
         display: flex;
-        justify-content: space-between;   
+        justify-content: space-between;
         gap: 10px;
         align-items: center;
         background: #fff;
         padding: 10px 15px;
 
-        .comlogo {                      
+        .comlogo {
             display: inline-block;
             flex-basis: 50px;
             width: 50px;
@@ -193,99 +216,110 @@
             border: 1px solid #d3d3d3;
             border-radius: 50%;
             overflow: hidden;
-        }        
-        .detail {  
-            flex: 2;          
+        }
+
+        .detail {
+            flex: 2;
+
             .name {
-                display: inline-block;                
+                display: inline-block;
+
                 a {
                     position: relative;
                     font-size: $font16;
-                    font-weight: $f_sizeB;                                
+                    font-weight: $f_sizeB;
                     letter-spacing: -0.4px;
                     color: #222;
-                    padding-right: 12px;                    
+                    padding-right: 12px;
+
                     &::after {
                         content: '';
                         display: inline-block;
                         width: 6px;
-                        height: 6px;                    
+                        height: 6px;
                         position: absolute;
-                        top: 9px;            
-                        right: 0;                    
+                        top: 9px;
+                        right: 0;
                         border-top: 1px solid #898989;
-                        border-right: 1px solid #898989;            
+                        border-right: 1px solid #898989;
                         transform: rotate(45deg);
                     }
-                }            
+                }
             }
+
             .txt {
                 display: block;
                 margin-top: 5px;
-                font-size: $font12;                
+                font-size: $font12;
                 line-height: 1.5;
-                letter-spacing: -0.3px;                
-                color: #898989;                
+                letter-spacing: -0.3px;
+                color: #898989;
                 word-break: break-all;
             }
 
             .trans {
                 display: inline-block;
                 text-align: center;
-                border-radius: 3px;                
-                font-size: 10px;                
+                border-radius: 3px;
+                font-size: 10px;
                 line-height: 1.5;
-                letter-spacing: -0.25px;                
+                letter-spacing: -0.25px;
                 color: #fff;
                 min-width: 38px;
                 padding: 3px 5px 2px;
                 box-sizing: border-box;
                 vertical-align: text-bottom;
-                margin-left: 3px;                      
+                margin-left: 3px;
+
                 &.nice {
-                    background-color: #c22c06;                
+                    background-color: #c22c06;
                 }
+
                 &.gro {
                     background-color: #63bcb9;
                 }
+
                 &.turn {
                     background-color: #e6a01c;
-                }  
+                }
             }
         }
 
         .opinion {
             flex: 1;
             align-self: flex-end;
-            text-align: center;            
+            text-align: center;
+
             .m_opinion {
                 font-size: $font12;
                 letter-spacing: -0.3px;
-                color: #898989;                            
+                color: #898989;
             }
-            
+
             .suggestion {
                 display: block;
                 font-size: $font15;
                 font-weight: $f_sizeB;
                 line-height: 1.47;
-                letter-spacing: -0.38px;                
+                letter-spacing: -0.38px;
+
                 &.buy {
                     color: $colup;
-                }                
+                }
+
                 &.sell {
                     color: $coldown;
-                }                
+                }
             }
         }
-    } 
-    
+    }
+
     // 검색 종목
     .mainBox.attr {
         margin-top: 0;
         padding: 0;
         padding-top: 5px;
-        border: none;        
+        border: none;
 
         .bg_box {
             background-color: #f5f5f5;
@@ -295,69 +329,86 @@
             box-sizing: border-box;
         }
 
-        .data_opinion {            
-            th, td {
-                padding: 18px 12px;                        
+        .data_opinion {
+
+            th,
+            td {
+                padding: 18px 12px;
                 box-sizing: border-box;
             }
+
             tr {
                 &:first-child {
                     border-bottom: 1px solid #e5e5e5;
-                }       
-            }     
-            .line {                                                      
+                }
+            }
+
+            .line {
                 .th {
-                    font-size: $font12;                    
+                    font-size: $font12;
                     line-height: 1.5;
                     letter-spacing: -0.3px;
                     color: #898989;
+
                     span {
                         font-size: 10px;
-                        color: #898989;                        
+                        color: #898989;
                     }
                 }
+
                 .td {
-                    font-size: $font15;                                        
-                    font-weight: normal;                    
+                    font-size: $font15;
+                    font-weight: normal;
                     line-height: 1.47;
-                    letter-spacing: -0.38px;                    
+                    letter-spacing: -0.38px;
                     color: #222;
+
                     b {
-                        font-weight: $f_sizeB;                        
+                        font-weight: $f_sizeB;
                     }
 
-                    &.yield {                        
+                    &.yield {
                         color: $colup;
+
                         b {
                             color: $colup;
                         }
                     }
+
                     .up {
                         color: $colup;
+
                         b {
-                            color: $colup;                            
+                            color: $colup;
                         }
                     }
+
                     .down {
                         color: $coldown;
+
                         b {
-                            color: $coldown;                           
+                            color: $coldown;
                         }
                     }
-                }                                
+                }
             }
-            &:nth-child(1) {                                    
-                &:nth-child(1), &:nth-child(2) {
+
+            &:nth-child(1) {
+
+                &:nth-child(1),
+                &:nth-child(2) {
                     flex: 2;
-                }                
+                }
+
                 &:nth-child(3) {
                     flex: 1;
                 }
             }
-            &:nth-child(2) {                                  
+
+            &:nth-child(2) {
                 justify-content: flex-start;
                 gap: 25px;
-                    
+
             }
 
         }
@@ -372,42 +423,46 @@
             .title {
                 padding-left: 15px;
                 font-size: $font16;
-                font-weight: $f_sizeB;                
+                font-weight: $f_sizeB;
                 line-height: 1.5;
                 letter-spacing: -0.4px;
-                color: #222;                
+                color: #222;
             }
         }
+
         .adequateArea .listWrap {
             padding: 0;
         }
+
         .adequateArea .listWrap .mid {
-            border: none;            
+            border: none;
         }
     }
 
     // 투자포인트
     .point {
-        padding: 36px 15px 35px;        
+        padding: 36px 15px 35px;
         border-bottom: 1px solid #e5e5e5;
 
         .title {
             font-size: $font18;
-            font-weight: $f_sizeB;            
+            font-weight: $f_sizeB;
             line-height: 1.5;
             letter-spacing: -0.9px;
             color: #222;
         }
+
         li {
-            margin-top: 5px;            
+            margin-top: 5px;
             width: 98%;
             position: relative;
             display: block;
             padding-left: 10px;
             font-size: $font15;
             line-height: 1.93;
-            letter-spacing: -0.38px;                
+            letter-spacing: -0.38px;
             color: #222;
+
             &::after {
                 content: '';
                 display: inline-block;
@@ -440,65 +495,73 @@
             //         background-color: #222;
             //     }
             // }
-        }        
+        }
     }
 
     // 투자지표 
     .charistic {
-        margin-top: 8px;        
+        margin-top: 8px;
         padding: 40px 15px 30px;
         border-bottom: 1px solid #e5e5e5;
+
         .title {
             font-size: $font18;
-            font-weight: $f_sizeB;            
+            font-weight: $f_sizeB;
             line-height: 1.5;
             letter-spacing: -0.9px;
             color: #222;
         }
-        .data_table {     
-            margin-top: 10px;       
+
+        .data_table {
+            margin-top: 10px;
             display: flex;
-            justify-content: space-between;                
-            flex-wrap: wrap;                
+            justify-content: space-between;
+            flex-wrap: wrap;
             gap: 0 10px;
-            > div {
+
+            >div {
                 flex: 1 1 40%;
                 display: flex;
-                justify-content: space-between;                
-                flex-wrap: wrap;                
+                justify-content: space-between;
+                flex-wrap: wrap;
                 padding: 9px 2px;
-                box-sizing: border-box;                
-                border-bottom: 1px solid #e5e5e5;                
+                box-sizing: border-box;
+                border-bottom: 1px solid #e5e5e5;
+
                 &:nth-child(5),
                 &:nth-child(6) {
                     border-bottom: none;
                 }
             }
-            .th {                
+
+            .th {
                 order: 1;
                 font-size: $font13;
                 line-height: 1.46;
-                letter-spacing: -0.65px;                
+                letter-spacing: -0.65px;
                 color: #222;
-            }            
+            }
+
             .td {
                 order: 2;
                 font-size: $font13;
                 line-height: 1.46;
-                letter-spacing: -0.65px;                
+                letter-spacing: -0.65px;
                 color: #898989;
+
                 b {
                     font-weight: $f_sizeB;
                     color: #222;
                 }
             }
+
             .eg {
                 order: 3;
-                flex-wrap: wrap;                
-                width: 100%;                
-                font-size: 11px;                
+                flex-wrap: wrap;
+                width: 100%;
+                font-size: 11px;
                 line-height: 1.55;
-                letter-spacing: -0.55px;                
+                letter-spacing: -0.55px;
                 color: #898989;
             }
         }
@@ -507,25 +570,26 @@
     // 차트
     .dataChart {
         background-color: #f7f7f8;
+
         .BICchart_style {
             height: 340px;
 
             .highcharts-title {
                 font-family: "Spoqa Han Sans Neo";
                 font-size: $font15 !important;
-                font-weight: $f_sizeB;                
+                font-weight: $f_sizeB;
                 line-height: 1.47;
-                letter-spacing: -0.75px;                
+                letter-spacing: -0.75px;
                 color: #222;
             }
 
-            .highcharts-title tspan {                
-                font-size: 12px;                
+            .highcharts-title tspan {
+                font-size: 12px;
                 line-height: 1.5;
                 letter-spacing: -0.6px;
                 text-align: left;
-                font-size: 12px;           
-                font-weight: normal !important;     
+                font-size: 12px;
+                font-weight: normal !important;
                 fill: #c22e06 !important;
                 color: #c22e06 !important;
             }
@@ -536,28 +600,33 @@
     .strategy {
         margin-top: 0;
         padding-bottom: 60px;
-      
-        .title a::after, .title a::before  {
-            display: none;            
+
+        .title a::after,
+        .title a::before {
+            display: none;
         }
+
         .list {
             margin-top: 18px;
             // padding-bottom: 30px;
         }
-        .list li a {            
-            padding-bottom: 10px;            
+
+        .list li a {
+            padding-bottom: 10px;
             line-height: 1.4;
         }
+
         .updata {
             margin-top: 24px;
-        }        
-    } 
+        }
+    }
 
     // 투자전략 뷰
     .view_con {
         padding-bottom: 60px;
+
         .top {
-            padding:30px 15px 11px;
+            padding: 30px 15px 11px;
 
             .title {
                 font-size: 22px;
@@ -571,54 +640,62 @@
                 word-break: break-all;
                 word-wrap: break-word;
             }
+
             .wtr_info {
                 margin-top: 10px;
-                text-align: right;                
-                span, a {
-                    font-size: $font13;                
+                text-align: right;
+
+                span,
+                a {
+                    font-size: $font13;
                     line-height: 1.46;
-                    letter-spacing: -0.33px;                
-                    color: #898989;  
-                }              
+                    letter-spacing: -0.33px;
+                    color: #898989;
+                }
             }
 
-   
-        }    
+
+        }
+
         .mid {
             border-radius: 5px;
             background-color: #f5f5f5;
-            padding:22px 20px 34px;
-            width:calc(100% - 30px);
+            padding: 22px 20px 34px;
+            width: calc(100% - 30px);
             box-sizing: border-box;
-            margin:0 auto;        
-            font-size: $font15;                
+            margin: 0 auto;
+            font-size: $font15;
             line-height: 1.67;
-            letter-spacing: -0.38px;                
-            color: #222;    
+            letter-spacing: -0.38px;
+            color: #222;
             word-break: break-all;
             word-wrap: break-word;
 
             img {
-                width:100% !important;
-                height:auto !important;
-                display:inline-block;
-                margin-bottom:15px;
-            }    
-            p, a {
-                font-size: $font15;                
+                width: 100% !important;
+                height: auto !important;
+                display: inline-block;
+                margin-bottom: 15px;
+            }
+
+            p,
+            a {
+                font-size: $font15;
                 line-height: 1.67;
-                letter-spacing: -0.38px;                
+                letter-spacing: -0.38px;
                 color: #222;
             }
+
             a {
-                text-decoration:underline;
-            }            
+                text-decoration: underline;
+            }
+
             ul li {
                 position: relative;
-                padding-left: 13px;                
-                font-size: $font15;                
+                padding-left: 13px;
+                font-size: $font15;
                 line-height: 1.67;
-                letter-spacing: -0.38px;                
+                letter-spacing: -0.38px;
                 color: #222;
 
 
@@ -634,15 +711,20 @@
                     border-radius: 50%;
                 }
             }
+
             ol {
                 list-style: decimal;
                 padding-left: 15px;
+
                 li {
                     list-style: list-item;
                 }
             }
 
-            address, caption, em, var {
+            address,
+            caption,
+            em,
+            var {
                 font-style: italic;
             }
 
@@ -655,7 +737,10 @@
                 list-style: list-item;
             }
 
-            blockquote:before, blockquote:after, q:before, q:after {
+            blockquote:before,
+            blockquote:after,
+            q:before,
+            q:after {
                 content: '';
             }
 
@@ -682,102 +767,116 @@
                 height: 100%;
             }
         }
-        .go_list {                
+
+        .go_list {
             margin-top: 10px;
             padding: 0 15px;
             text-align: right;
+
             a {
                 text-decoration: underline;
-                font-size: $font13;                                        
+                font-size: $font13;
                 letter-spacing: -0.33px;
                 text-align: left;
                 color: #898989;
-            }                
+            }
         }
     }
 
     // 포트폴리오 종목추천
     .portfolio_recom {
         padding: 30px 0 40px;
+
         .title {
-            padding: 0 15px;            
+            padding: 0 15px;
         }
+
         .tabsWrap {
             margin-top: 19px;
             background-color: blanchedalmond;
-            .page_nav {                       
+
+            .page_nav {
                 display: flex;
                 justify-content: flex-start;
-                gap: 24px;                
+                gap: 24px;
                 width: 100%;
                 padding: 0 15px;
                 box-sizing: border-box;
-                border-bottom: 1px solid #d0d0d0;                        
-                background-color: #fff;                            
-                li {                
+                border-bottom: 1px solid #d0d0d0;
+                background-color: #fff;
+
+                li {
                     padding: 5px 0;
-                    box-sizing: border-box;                    
-                    text-align: center;                
+                    box-sizing: border-box;
+                    text-align: center;
                     position: relative;
                     top: 1px;
+
                     a {
                         font-size: $font16;
                         line-height: 1.5;
-                        letter-spacing: -0.4px;                    
+                        letter-spacing: -0.4px;
                         color: #222;
                     }
+
                     &.active {
                         border-bottom: 3px solid #c22e06;
-                        a {                        
+
+                        a {
                             font-weight: $f_sizeB;
-                            color: #c22e06;                        
-                        }                    
+                            color: #c22e06;
+                        }
                     }
+
                     .updata {
-                        position: absolute;                        
+                        position: absolute;
                         top: 13px;
-                        right: -110px;                        
+                        right: -110px;
                         width: 110px;
                         font-size: 10px;
-                        letter-spacing: -0.25px;                        
-                        color: #898989;                        
+                        letter-spacing: -0.25px;
+                        color: #898989;
                     }
                 }
             }
         }
 
-        .list_area {            
+        .list_area {
             margin-top: 14px;
             padding: 0 15px;
             display: flex;
-            flex-wrap: wrap;            
+            flex-wrap: wrap;
             gap: 8px;
-            align-items: center;            
+            align-items: center;
             box-sizing: border-box;
-            background: #fff;            
+            background: #fff;
+
             .list {
                 cursor: pointer;
-                display: flex;                
+                display: flex;
                 justify-content: flex-start;
-                gap: 10px;                
+                gap: 10px;
                 align-items: center;
                 width: 100%;
                 padding: 15px 10px;
                 box-sizing: border-box;
                 border-radius: 8px;
                 background-color: #f5f5f5;
-                > div {                                                                                
+
+                >div {
                     display: flex;
-                    gap: 10px;                        
-                    &:first-child {             
-                        width: calc(100% / 2 + 10px);                                   
+                    gap: 10px;
+
+                    &:first-child {
+                        width: calc(100% / 2 + 10px);
                     }
-                    &:last-child {                       
-                        width: calc(100% / 2 - 10px);                                    
+
+                    &:last-child {
+                        width: calc(100% / 2 - 10px);
                     }
                 }
 
-                .comlogo {                        
+                .comlogo {
                     display: inline-block;
                     flex-basis: 40px;
                     width: 40px;
@@ -786,45 +885,52 @@
                     border: 1px solid #d3d3d3;
                     border-radius: 50%;
                     overflow: hidden;
-                }        
-                .detail {                       
+                }
+
+                .detail {
                     max-width: 108px;
+
                     @media (min-width: 320px) and (max-width: 359px) {
                         max-width: 80px;
                     }
-                    @media (min-width: 360px) and (max-width: 424px) {                        
+
+                    @media (min-width: 360px) and (max-width: 424px) {
                         max-width: 108px;
                     }
+
                     @media (min-width: 425px) {
                         max-width: 140px;
                     }
+
                     @media (min-width: 720px) {
                         max-width: 100%;
                     }
 
                     .name {
-                        display: inline-block;                                        
+                        display: inline-block;
                         width: 100%;
+
                         a {
-                            @include white-space;                            
+                            @include white-space;
                             width: 100%;
                             position: relative;
                             font-size: $font16;
-                            font-weight: $f_sizeB;                                
+                            font-weight: $f_sizeB;
                             letter-spacing: -0.4px;
                             color: #222;
-                        }            
+                        }
                     }
-                    .txt {                        
-                        display: block;                        
-                        font-size: $font12;                                        
-                        letter-spacing: -0.3px;                
-                        color: #898989;                                       
+
+                    .txt {
+                        display: block;
+                        font-size: $font12;
+                        letter-spacing: -0.3px;
+                        color: #898989;
                         width: 100%;
                         display: -webkit-box;
                         overflow: hidden;
                         height: 3em;
-                        line-height: 1.5em;            
+                        line-height: 1.5em;
                         box-sizing: border-box;
                         text-overflow: ellipsis;
                         -webkit-line-clamp: 2;
@@ -836,48 +942,67 @@
 
                     }
                 }
-                .opinion_box {                                     
+
+                .opinion_box {
                     width: 50%;
+
                     .th {
-                        font-size: 10px;                        
+                        font-size: 10px;
                         letter-spacing: -0.25px;
                         font-weight: normal;
                         text-align: left;
                         color: #898989;
+
                         b {
-                            font-weight: $f_sizeB;                                                                
+                            font-weight: $f_sizeB;
                             color: #898989;
                         }
                     }
+
                     .td {
                         margin-top: 3px;
-                        font-size: $font13;                                                
+                        font-size: $font13;
                         letter-spacing: -0.35px;
                         text-align: left;
                         color: #222;
-                        b {                                            
+
+                        b {
                             font-weight: $f_sizeB;
                             color: #222;
                         }
 
-                        &.opinion {          
-                            text-align: center;                  
+                        &.opinion {
+                            text-align: center;
                             padding: 1px 3px;
-                            box-sizing: border-box;
-                            color: #f00;
+                            box-sizing: border-box;                            
                             border-radius: 3px;
-                            background-color: rgba($color: #f00, $alpha: 0.16);
-                            b {                                                                            
-                                color: #f00;
-                            }                          
-                        } 
-                        
-                        
-                                               
+                            background-color: rgba($color: #f00, $alpha: 0.16);                                                                                      
+                            color: #f00;                                  
+                                b {
+                                    color: #f00;  
+                                }
+                            &.increase {
+                                color: #f00;  
+                                background-color: rgba($color: #f00, $alpha: 0.16);                                                                                      
+                                b {
+                                    color: #f00;  
+                                }
+                            }
+                            &.decrease {
+                                color: $coldown;  
+                                background-color: rgba($color: $coldown, $alpha: 0.16);                                                                                      
+                                b {
+                                    color: $coldown;  
+                                }
+                            }
+                        }
+
+
+
                     }
                 }
             }
-        }       
+        }
 
         // 포트수익률
         .bg_box {
@@ -886,96 +1011,116 @@
             padding: 4px 4px;
             margin: 15px 15px 0;
             box-sizing: border-box;
+
             .data_opinion {
-                display: flex;            
+                display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
                 gap: 15px;
                 padding: 15px 15px;
-                
-                .line {                                
+
+                .line {
                     .th {
-                        font-size: $font12;                    
+                        font-size: $font12;
                         line-height: 1.5;
                         letter-spacing: -0.3px;
                         color: #898989;
+
                         span {
                             font-size: 10px;
-                            color: #898989;                        
+                            color: #898989;
                         }
                     }
+
                     .td {
-                        font-size: $font18;                    
+                        font-size: $font18;
                         line-height: 1.47;
-                        letter-spacing: -0.38px;                    
+                        letter-spacing: -0.38px;
                         color: #222;
+
                         b {
-                            font-weight: $f_sizeB;                    
+                            font-weight: $f_sizeB;
                         }
-    
+
                         .port {
                             font-size: $font16;
-                            font-weight: $f_sizeB;                        
+                            font-weight: $f_sizeB;
                             letter-spacing: -0.4px;
-                            color: #222;                        
+                            color: #222;
                         }
+
                         p {
                             display: inline-block;
+
                             &.yield {
+                                &.increase, &.increase b {
+                                    color: $colup;                                    
+                                }
+                                &.decrease, &.decrease b {
+                                    color: $coldown;                                    
+                                }
                                 font-size: $font20;
-                                font-weight: $f_sizeB;                            
-                                letter-spacing: -0.53px;                            
-                                color: $colup;
+                                font-weight: $f_sizeB;
+                                letter-spacing: -0.53px;
                                 b {
-                                    font-weight: normal;                                
-                                    color: $colup;                                
-                                }                            
+                                    font-weight: normal;
+                                }                                
                             }
                         }
-    
+
                         &.yield {
-                            font-weight: $f_sizeB;                    
-                            color: $colup;
-                            b {
-                                font-weight: normal;
-                                color: $colup;
+                            &.increase, &.increase b {
+                                color: $colup;                                    
                             }
+                            &.decrease, &.decrease b {
+                                color: $coldown;                                    
+                            }
+                            font-weight: $f_sizeB;
+                            b {
+                                font-weight: normal;                                
+                            }                            
                         }
-                    }                
+                    }
+
                     &:nth-child(1) {
                         flex: 3;
                         border-right: 1px solid #e6e6e6;
-                    }                
-                    &:nth-child(2), &:nth-child(3) {
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
                         flex: 1;
                     }
-                }    
+                }
             }
         }
 
         // 포트수익률 테이블
         .adequateArea {
-            margin-top: 17px;            
+            margin-top: 17px;
+
             .tableData {
                 .table_filter {
                     padding: 0 15px;
-                    ul {                        
-                        display: flex;                    
-                        justify-content: flex-end;        
+
+                    ul {
+                        display: flex;
+                        justify-content: flex-end;
                     }
-                    
-                    li {               
-                        position: relative;                                 
+
+                    li {
+                        position: relative;
                         cursor: pointer;
                         padding: 9px 7px;
-                        font-size: $font12;                            
-                        letter-spacing: -0.3px;                            
-                        color: #898989;                                
+                        font-size: $font12;
+                        letter-spacing: -0.3px;
+                        color: #898989;
 
-                        &.active {                                
+                        &.active {
                             font-weight: $f_sizeB;
-                            color: #575757;                                
-                        }                     
+                            color: #575757;
+                        }
+
                         &::after {
                             content: '';
                             position: absolute;
@@ -986,214 +1131,257 @@
                             height: 12px;
                             background-color: #d3d3d3;
                         }
+
                         &:last-child {
                             padding-right: 0;
+
                             &::after {
                                 display: none;
                             }
 
                         }
-                    
+
                     }
                 }
-                .table {         
+
+                .table {
                     border-top: 2px solid #c22e06;
-                    th, td {
+
+                    th,
+                    td {
                         text-align: center;
                         vertical-align: middle;
                     }
+
                     thead {
                         th {
                             padding: 4px 5px;
-                            background-color: #f5f5f5;                    
+                            background-color: #f5f5f5;
                             text-align: center;
                             border-bottom: 1px solid #e5e5e5;
                             font-size: $font12;
                             line-height: 1.5;
-                            letter-spacing: -0.3px;                        
-                            color: #898989;                                            
+                            letter-spacing: -0.3px;
+                            color: #898989;
+
                             &.txt_R {
                                 text-align: right;
                             }
+
                             &:last-child {
                                 padding-right: 15px;
                             }
-                        } 
+                        }
                     }
+
                     tbody {
                         tr {
                             border-bottom: 1px solid #e5e5e5;
                             margin: 0 15px;
                         }
+
                         td {
                             padding: 15px 5px;
+
                             &:first-child {
                                 padding-left: 15px;
                             }
+
                             &:last-child {
                                 padding-right: 15px;
                             }
                         }
-                        .event {                        
-                            > div {
+
+                        .event {
+                            >div {
                                 display: flex;
                                 justify-content: flex-start;
                                 align-items: center;
                                 gap: 5px;
+
                                 span {
-                                    text-align: left;                                    
+                                    text-align: left;
                                 }
-                            }    
+                            }
                         }
-                        .cunt {             
-                            flex-basis: 20px;                            
+
+                        .cunt {
+                            flex-basis: 20px;
                             font-size: 11px;
                             font-weight: $f_sizeB;
                             line-height: 1.55;
-                            letter-spacing: -0.28px;                            
-                            color: #898989;                            
+                            letter-spacing: -0.28px;
+                            color: #898989;
                         }
+
                         .comlogo {
                             display: inline-block;
-                            border: 1px solid #d8d8d8;                            
+                            border: 1px solid #d8d8d8;
                             border-radius: 50%;
-                            overflow: hidden;      
-                            flex-basis: 24px;                      
+                            overflow: hidden;
+                            flex-basis: 24px;
                             width: 24px;
                             height: 24px;
+
                             img {
                                 display: inline;
                                 width: 100%;
                                 height: 100%;
-                            }                                                        
+                            }
                         }
-                        .name {                            
+
+                        .name {
                             width: 100%;
+
                             @media (min-width: 320px) and (max-width: 359px) {
-                                width: 120px;                                                                
+                                width: 120px;
                             }
+
                             @media (min-width: 360px) and (max-width: 424px) {
-                                width: 80px;                                                                
+                                width: 80px;
                             }
+
                             @media (min-width: 425px) {
-                                width: 140px;                                                                
+                                width: 140px;
                             }
+
                             @media (min-width: 720px) {
-                                width: 100%;                                
+                                width: 100%;
                             }
-                            a {                                
-                                @include white-space;                                
+
+                            a {
+                                @include white-space;
                                 font-size: $font13;
-                                font-weight: $f_sizeB;                                
-                                letter-spacing: -0.33px;                                
+                                font-weight: $f_sizeB;
+                                letter-spacing: -0.33px;
                                 color: #222;
-                            }                            
+                            }
                         }
-                        .price {          
-                            font-size: $font13;                            
+
+                        .price {
+                            font-size: $font13;
                             font-weight: normal;
                             text-align: right;
-                            letter-spacing: -0.33px;                            
+                            letter-spacing: -0.33px;
                             color: #222;
+
                             b {
-                                font-weight: $f_sizeB;                                                            
+                                font-weight: $f_sizeB;
                             }
-                            .per {                        
+
+                            .per {
                                 font-size: 10px;
                             }
                         }
-                        .per {                        
-                            font-size: $font13;                            
+
+                        .per {
+                            font-size: $font13;
                             font-weight: normal;
                             text-align: right;
-                            letter-spacing: -0.33px;                            
+                            letter-spacing: -0.33px;
                             color: #222;
+
                             b {
-                                font-weight: $f_sizeB;                                                            
-                            }              
-                            &.increase {
-                                color: $colup;                                
+                                font-weight: $f_sizeB;
                             }
+
+                            &.increase {
+                                color: $colup;
+                            }
+
                             &.decrease {
-                                color: $coldown;                                                                
-                            }    
+                                color: $coldown;
+                            }
                         }
+
                         .num {
-                            font-size: $font13;                            
-                            letter-spacing: -0.33px;                            
-                            color: #222;           
-                            b {                                
-                                font-weight: $f_sizeB;                                                            
-                                color: #222;                                      
-                            }                 
+                            font-size: $font13;
+                            letter-spacing: -0.33px;
+                            color: #222;
+
+                            b {
+                                font-weight: $f_sizeB;
+                                color: #222;
+                            }
                         }
-    
-                    }           
-                }                      
+
+                    }
+                }
             }
+
             // 투자매력TOP 50 포트폴리오 차트
             &.attr {
                 margin-top: 0;
-                .tableData .table{
+
+                .tableData .table {
                     border-top: none;
                 }
 
-                .tableData .table tbody .name {                            
+                .tableData .table tbody .name {
                     max-width: 100%;
+
                     @media (min-width: 320px) and (max-width: 359px) {
-                        max-width: 100px;                                                                
+                        max-width: 100px;
                     }
+
                     @media (min-width: 360px) and (max-width: 424px) {
-                        max-width: auto;                                                                
+                        max-width: auto;
                     }
+
                     @media (min-width: 425px) {
-                        max-width: auto;                                                                                                                          
+                        max-width: auto;
                     }
+
                     @media (min-width: 720px) {
-                        max-width: auto;                                                                                               
+                        max-width: auto;
                     }
-                    a {                                
-                        @include white-space;                                
+
+                    a {
+                        @include white-space;
                         font-size: $font13;
-                        font-weight: $f_sizeB;                                
-                        letter-spacing: -0.33px;                                
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.33px;
                         color: #222;
-                    }                            
+                    }
                 }
+
                 .tableData .table tbody .price {
-                    text-align: center;                    
+                    text-align: center;
                 }
-                
+
                 .tableData .table tbody .price .per {
                     display: inline-block;
                 }
             }
-                
+
         }
 
         // exWrap
         .exWrap {
             margin-top: 30px;
             background-color: #f5f5f5;
-            .sumTitle {                
+
+            .sumTitle {
                 text-align: center;
                 margin: 0 15px;
                 padding: 30px 0;
                 border-bottom: 1px solid #e6e6e6;
+
                 .txt {
                     position: relative;
-                    display: inline-block;                                                            
-                    font-size: $font16;                    
+                    display: inline-block;
+                    font-size: $font16;
                     line-height: 1.44;
                     letter-spacing: -0.4px;
                     color: #575757;
-                    
+
                     strong {
                         display: block;
-                        font-weight: $f_sizeB;                    
+                        font-weight: $f_sizeB;
                         color: #c22e06;
 
                     }
+
                     &::before {
                         content: '';
                         display: inline-block;
@@ -1204,6 +1392,7 @@
                         height: 16px;
                         background: url('/img/quotes_start.svg') no-repeat left top;
                     }
+
                     &::after {
                         content: '';
                         display: inline-block;
@@ -1217,29 +1406,35 @@
                 }
 
             }
+
             .sumList {
                 padding: 24px 15px;
+
                 &:last-child {
                     padding-top: 0;
 
                 }
+
                 .title {
                     font-size: $font15;
-                    font-weight: $f_sizeB;                    
-                    letter-spacing: -0.38px;                    
-                    color: #222;                  
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.38px;
+                    color: #222;
                     padding: 0;
                 }
+
                 ul {
                     margin-top: 5px;
+
                     li {
                         position: relative;
-                        font-size: $font12;                        
-                        letter-spacing: -0.3px;                        
+                        font-size: $font12;
+                        letter-spacing: -0.3px;
                         line-height: 1.25;
                         color: #898989;
                         padding: 3px;
                         padding-left: 10px;
+
                         &::after {
                             content: '';
                             display: inline-block;
@@ -1249,7 +1444,7 @@
                             left: 0;
                             top: 10px;
                             background-color: #898989;
-                        }                        
+                        }
                     }
                 }
             }
@@ -1258,24 +1453,27 @@
         // 투자매력TOP50 점수        
         .topbox {
             padding: 0 15px;
+
             .title {
                 padding: 0;
                 font-size: $font20;
                 font-weight: $f_sizeB;
-                letter-spacing: -0.5px;                
+                letter-spacing: -0.5px;
                 color: #222;
-            }            
-            .txt {                
+            }
+
+            .txt {
                 margin-top: 20px;
                 font-size: $font12;
                 line-height: 1.5;
-                letter-spacing: -0.3px;                
-                color: #898989;   
+                letter-spacing: -0.3px;
+                color: #898989;
                 word-break: break-all;
+
                 strong {
                     font-weight: $f_sizeB;
-                    color: #575757;                    
-                }             
+                    color: #575757;
+                }
             }
         }
 
@@ -1284,215 +1482,245 @@
             padding: 0;
             border-top: 2px solid #c22e06;
         }
+
         .mainBox.attr .adequateArea .listWrap {
             padding: 0 15px;
             border-bottom: 1px solid #e5e5e5;
         }
+
         .mainBox.attr .adequateArea .listWrap .mid {
             border-top: 1px solid #e5e5e5;
         }
     }
 
     // 서비스소개
-    .serviceStyle {                
+    .serviceStyle {
         background-color: #f7f7f7;
 
         // 상단
-        .serviceTop {            
+        .serviceTop {
             padding: 30px 0 0;
             border-bottom: none;
             background-image: url('/img/bg_serviceTop.svg'), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
             background-position: right bottom;
-            background-repeat: no-repeat;            
+            background-repeat: no-repeat;
 
             .title {
                 padding: 0 15px 15px;
                 font-size: 40px;
-                font-weight: $f_sizeB;                                
+                font-weight: $f_sizeB;
                 line-height: 1.4;
-                letter-spacing: -1px;                
-                color: #fff;         
+                letter-spacing: -1px;
+                color: #fff;
+
                 strong {
                     color: #fee46a;
-                }       
+                }
             }
+
             .list {
-                padding: 20px 15px;                                
-                background-image: linear-gradient(to right, #7e1b00 , rgba(84, 84, 84, 0) 94%);
-                ul {                
+                padding: 20px 15px;
+                background-image: linear-gradient(to right, #7e1b00, rgba(84, 84, 84, 0) 94%);
+
+                ul {
                     li {
                         padding: 2px 0;
                         font-size: $font15;
-                        letter-spacing: -0.38px;                        
-                        color: #fff;                        
+                        letter-spacing: -0.38px;
+                        color: #fff;
+
                         strong {
                             font-weight: $f_sizeB;
-                            color: #fff;                        
-                        } 
+                            color: #fff;
+                        }
                     }
-                }                
-            }            
+                }
+            }
         }
+
         .winner {
             margin-bottom: 8px;
             border-bottom: 1px solid #e5e5e5;
         }
+
         .service_txt {
             box-sizing: border-box;
             margin-top: 12px;
-            font-size: $font15;            
+            font-size: $font15;
             line-height: 1.47;
             letter-spacing: -0.38px;
-            color: #898989;            
+            color: #898989;
             word-break: break-all;
         }
+
         // 종목추천, 포트폴리오 
         .portfolio {
             padding: 35px 15px;
             margin-bottom: 8px;
             border-bottom: 1px solid #e5e5e5;
+
             .yieldWrap {
                 padding: 0;
-                margin-right: 0;            
+                margin-right: 0;
             }
-        }        
+        }
+
         // 투자전략알림
-        .strategy {            
+        .strategy {
             padding: 35px 15px;
             margin-bottom: 8px;
             border-bottom: 1px solid #e5e5e5;
             background: #fff url('/img/bg_serviceStrategy.svg') no-repeat calc(100% + 10px) 25px;
+
             .service_txt {
                 padding-right: 140px;
                 word-break: keep-all;
             }
         }
+
         // 투자매력 TOP50
         .portfolio_recom {
             padding: 35px 15px;
             margin-bottom: 8px;
             border-bottom: 1px solid #e5e5e5;
+
             .topbox {
                 padding: 0;
             }
+
             .mainBox.attr .adequateArea {
                 border-radius: 0;
                 border-top: 1px solid #e5e5e5;
-            }            
+            }
+
             .mainBox.attr .adequateArea .listWrap {
                 padding: 0;
             }
+
             .mainBox.attr .adequateArea .listWrap .mid {
                 padding: 15px 5px;
             }
         }
+
         // 스마트하게 슈퍼스톡스 이용하기
         .smart {
             padding: 35px 15px;
-            background: #fff url('/img/bg_serviceSmart.svg') no-repeat calc(100% + 10px) 25px;            
+            background: #fff url('/img/bg_serviceSmart.svg') no-repeat calc(100% + 10px) 25px;
+
             .title {
                 strong {
                     color: #c22e06;
                 }
-            }            
+            }
+
             .box {
-                margin-top: 30px;                
+                margin-top: 30px;
+
                 .guide_txt {
                     position: relative;
                     padding: 0 15px;
-                    font-size: $font18;                    
+                    font-size: $font18;
                     padding-left: 0;
-                    letter-spacing: -0.48px;                    
+                    letter-spacing: -0.48px;
                     color: #222;
+
                     .cunt {
-                        display: inline-block;                        
+                        display: inline-block;
                         background-color: #e6e6e6;
-                        border-radius: 50%;                        
+                        border-radius: 50%;
                         width: 22px;
                         height: 22px;
-                        line-height: 22px;                        
+                        line-height: 22px;
                         box-sizing: border-box;
                         position: absolute;
                         left: 0;
                         top: 3px;
-                        font-size: $font13;                        
+                        font-size: $font13;
                         text-align: center;
                         color: #898989;
-                    }                    
+                    }
                 }
-                .btnArea.payBtn {                
+
+                .btnArea.payBtn {
                     @include one_btn;
                     margin-top: 15px;
                     padding: 11px 0;
                     width: calc(100% - 60px);
                     background-color: #fa8700;
                     border: none;
-                    a {                
+
+                    a {
                         position: relative;
-                        display: block;                    
+                        display: block;
                         font-size: $font18;
-                        font-weight: $f_sizeB;                
+                        font-weight: $f_sizeB;
                         letter-spacing: -0.9px;
                         color: #fff;
+
                         &::after {
                             content: '';
                             display: inline-block;
                             width: 10px;
                             height: 10px;
                             position: absolute;
-                            top: 8px;                                  
-                            left: calc(100% - 35px);                        
+                            top: 8px;
+                            left: calc(100% - 35px);
                             border-top: 1px solid #fff;
-                            border-right: 1px solid #fff;            
-                            transform: rotate(45deg);         
-                        }  
+                            border-right: 1px solid #fff;
+                            transform: rotate(45deg);
+                        }
                     }
                 }
 
                 &:last-child {
                     .btnArea.payBtn {
-                        background-color: #c22e06;                        
+                        background-color: #c22e06;
                     }
                 }
 
             }
-            
-        }        
+
+        }
     }
 }
 
 /*** 이용약관, 개인정보처리방침 ***/
 .s_stokes .sub_terms {
-	padding:75px 15px 30px !important;
+    padding: 75px 15px 30px !important;
 }
+
 .s_stokes .sub_terms .terms_title {
-	text-align:center;
-	color:#333;
+    text-align: center;
+    color: #333;
     font-weight: $f_sizeB;
-	font-size:1.25rem;
+    font-size: 1.25rem;
 }
+
 .s_stokes .sub_terms .terms_sum {
-	color:#333;
-	font-size:0.9375rem;
-	margin-top:25px;
-	margin-bottom:15px;
-	font-weight:bold;
+    color: #333;
+    font-size: 0.9375rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
+
 .s_stokes .sub_terms .terms_sum_n {
-	color:#333;
-	font-size:0.9375rem;
-	margin-top:25px;
-	margin-bottom:15px;
-	font-weight:normal;
+    color: #333;
+    font-size: 0.9375rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: normal;
 }
+
 .s_stokes .sub_terms .txt {
-	color:#333;
-	font-size:0.84rem;
-	line-height:1.3rem;
+    color: #333;
+    font-size: 0.84rem;
+    line-height: 1.3rem;
 }
+
 .s_stokes .sub_terms .txt_B {
-	margin-top:15px;
-	color:#333;
-	font-size:0.84rem;
-	line-height: 1.3rem;
+    margin-top: 15px;
+    color: #333;
+    font-size: 0.84rem;
+    line-height: 1.3rem;
 }
