@@ -368,11 +368,12 @@
                     }
 
                     &.yield {
-                        color: $colup;
-
-                        b {
-                            color: $colup;
+                        &.increase, &.increase b {
+                            color: $colup;                                    
                         }
+                        &.decrease, &.decrease b {
+                            color: $coldown;                                    
+                        }                        
                     }
 
                     .up {
@@ -980,7 +981,14 @@
                             color: #f00;                                  
                                 b {
                                     color: #f00;  
+                                }    
+                            &.same {
+                                color: #222;  
+                                background-color: rgba($color: #222, $alpha: 0.16);                                                                                      
+                                b {
+                                    color: #222;  
                                 }
+                            }                        
                             &.increase {
                                 color: #f00;  
                                 background-color: rgba($color: #f00, $alpha: 0.16);                                                                                      
@@ -1017,7 +1025,7 @@
                 justify-content: space-between;
                 align-items: flex-end;
                 gap: 15px;
-                padding: 15px 15px;
+                padding: 15px 15px;                
 
                 .line {
                     .th {

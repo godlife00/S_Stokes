@@ -1,5 +1,7 @@
 /* 헤더 header */
 .s_stokes #wrap #header {        
+    max-width: 767px;
+    margin: 0 auto;        
     box-sizing: border-box;    
     background-color: #fff;
     border-bottom: 1px solid #e5e5e5;
@@ -35,7 +37,7 @@
     }
 
     .bgWrap {        
-        // height: 59px;        
+        // height: 59px;               
         display: flex;
         justify-content: space-between;
         align-items: center;

@@ -65,14 +65,17 @@
             letter-spacing: -0.55px;
             color: #898989;
             a {
+                display: inline-block;                
+                color: #898989;                
+            }
+            i {
                 display: inline-block;
-                padding-right: 8px;
-                color: #898989;
-                &:first-child {
-                    border-right: 1px solid #d3d3d3;
-                    padding-right: 8px;
-                    margin-right: 8px;
-                }
+                background-color: #d3d3d3;
+                width: 1px;
+                height: 10px;
+                margin: 0 4px;
+                position: relative;
+                top: 1px;
             }
         }
     }

@@ -1,6 +1,8 @@
 /* 그리드 grid */
 body {
     background-color: #f7f7f7;
+    max-width: 767px;
+    margin: 0 auto;
 }
 #wrap {                
     @include pad(0);          

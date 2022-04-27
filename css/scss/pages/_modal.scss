@@ -400,4 +400,108 @@
             }
         }
     }
+
+    // 유료서비스 이전 신청 안내
+    &.previous_pop {
+        background-color: #fff;                
+        .pop_header {            
+            padding: 30px 15px 20px;
+            background-image: linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+
+            .clse::before, .clse::after {
+                background-color: #fff;
+            }
+            .h2_title {
+                font-size: $font20;
+                font-weight: $f_sizeB;                
+                line-height: 1.4;                                
+                color: #fff;
+                strong {                    
+                    color: #fee46a;                    
+                }                
+            }   
+            .period {
+                margin-top: 15px;
+                font-size: $font13;                    
+                letter-spacing: -0.38px;                    
+                color: #fff;                    
+            }         
+        }        
+        .pop_con {
+            padding: 20px 0 20px;   
+            .scr_box {                
+                padding: 0 15px;   
+                overflow: auto;            
+                overflow-x: hidden;
+                max-height: 300px;
+                box-sizing: border-box;
+                font-size: $font14;                    
+                line-height: 1.47;
+                letter-spacing: -0.38px;
+                color: #898989;
+            } 
+            .day {              
+                font-size: $font14;                    
+                line-height: 1.47;
+                letter-spacing: -0.38px;
+                color: #898989;  
+                text-decoration: underline;
+            }            
+            .btnArea.payBtn {                
+                @include one_btn;        
+                width: calc(100% - 30px);
+                margin: 25px auto 0;
+                padding: 11px 0;            
+                background-color: #fa8700;
+                border: none;
+                a {                
+                    position: relative;
+                    display: block;                    
+                    font-size: $font15;
+                    font-weight: $f_sizeB;                
+                    letter-spacing: -0.9px;
+                    color: #fff;
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        position: absolute;
+                        top: 6px;                                  
+                        left: calc(100% - 35px);                        
+                        border-top: 1px solid #fff;
+                        border-right: 1px solid #fff;            
+                        transform: rotate(45deg);         
+                    }  
+                }
+            }
+
+            .service_info {
+                margin-top: 15px;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                a {
+                    color: #c22e06;
+                    font-size: $font13;
+                }
+            }
+        }        
+        &.premium_join {
+            .pop_con .btnArea.payBtn {
+                background-color: #c22e06;
+            }
+        }
+        .today_check {
+            padding-right: 15px;
+            margin-top: 15px;
+            text-align: right;
+            font-size: $font14;                    
+            line-height: 1.47;
+            letter-spacing: -0.38px;
+            color: #898989;
+        }
+    }
 }

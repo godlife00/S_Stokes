@@ -1175,6 +1175,9 @@
         /* 가입 - 결제완료 step 03 */
         @at-root #container.sub_payment.step03 .payment_area .step_top {            
             background:#fff url('/img/bg_payment_com.svg') no-repeat 105% 22px;            
+            @media (min-width:426px) {
+                background-position : 100% 22px;            
+            }
             min-height:200px;
             box-sizing:border-box;            
         }
