@@ -42,15 +42,18 @@
         justify-content: space-between;
         align-items: center;
         gap: 10px;
-        .title {                        
+        .title {                                   
             align-self: center;
             box-sizing: border-box;            
             .h1_logo {                                  
-                color: #c22e06;
+                color: #c22e06;                
                 a, img {
                     display: inline-block;                
                     width: 100%;    
-                    height: 100%;            
+                    // height: 100%;            
+                    height: 25px;
+                    // padding-bottom: 2px;
+                    box-sizing: border-box;
                     font-size: 22px;
                     font-weight: normal;                    
                     letter-spacing: -0.55px;

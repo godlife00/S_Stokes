@@ -12,7 +12,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#e57828">
     <!-- 오픈 그래프 -->
-    <meta property="og:title" content="슈퍼스톡스 | 저평가 우랑주투자, 슈퍼스톡스와 함께하세요." />
+    <meta property="og:title" content="슈퍼스톡스" />
     <meta property="og:type" content="website">
     <meta property="og:description" content="저평가 우랑주투자, 슈퍼스톡스와 함께하세요.">
     <meta property="og:image" content="http://godlife.ivyro.net/SStokes/img/SStokes_thumb.png">
@@ -75,7 +75,7 @@
         <div id="header" class="main_hdr">
             <div class="bgWrap">
                 <div class="title">
-                    <h1 class="h1_logo"><a href="index.html"><img src="img/h1_logo.png" alt="슈퍼스톡스"></a></h1>
+                    <h1 class="h1_logo"><a href="index.html"><img src="img/h1_logo.svg" alt="슈퍼스톡스"></a></h1>
                 </div>
                 <!-- <div class="r_menu">
                     <a href="#" class="searchForm"><img src="img/search.svg" alt="검색"></a>                    
@@ -955,8 +955,8 @@
                 <br>
                 1. 신규 슈퍼스톡스 사이트 회원가입 &nbsp; → &nbsp; 2. 서비스 이전 신청<br> → &nbsp; 3. 이전 완료 및 안내문자 발송
                 <br>
-                <span class="day">- 이전 신청기간 : ~ 2022년 5월 31일까지</span>
-                (*유료회원 전환 영업일 기준 최대 3일 소요)
+                <span class="day">- 이전 신청기간 : ~ 2022년 5월 31일까지 (*유료회원 전환 영업일 기준 최대 3일 소요)</span>
+                
                 <br><br>
                 서비스 이전으로 인해 불편을 드려 죄송합니다.
                 <br><br>
@@ -969,7 +969,7 @@
             </div>
 
             <div class="btnArea payBtn">
-                <a href="https://forms.gle/mcKsz7jWWPRPPPcM6" class="join_btn open_payment" target="_blank">서비스 이전
+                <a href="https://forms.gle/Um5FCodD6rtiuJiF8" class="join_btn open_payment" target="_blank">서비스 이전
                     신청</a>
             </div>
             <div class="today_check">
@@ -996,6 +996,7 @@
             }
             document.getElementById('layer_pop').style.display = "none";
             $('.blocker').hide();
+            $('body').removeAttr("style")
         }
 
         if (cookiedata.indexOf("ncookie_SStokes=done") < 0) {

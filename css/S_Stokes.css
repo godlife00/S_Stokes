@@ -441,7 +441,7 @@ input[type='radio']:checked:before {
 }
 
 .star_area .starR {
-  background: url("/img/ico_review.svg") no-repeat right 0;
+  background: url("../img/ico_review.svg") no-repeat right 0;
   background-size: auto 100%;
   display: inline-block;
   text-indent: -9999px;
@@ -594,7 +594,7 @@ input[type='radio']:checked:before {
   right: 6px;
   width: 26px;
   height: 26px;
-  background: url("/img/select.svg") no-repeat 0 0;
+  background: url("../img/select.svg") no-repeat 0 0;
 }
 
 .selectbox label {
@@ -905,7 +905,9 @@ input[type='radio']:checked:before {
 .s_stokes #wrap #header .bgWrap .title .h1_logo a, .s_stokes #wrap #header .bgWrap .title .h1_logo img {
   display: inline-block;
   width: 100%;
-  height: 100%;
+  height: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 22px;
   font-weight: normal;
   letter-spacing: -0.55px;
@@ -1024,7 +1026,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 10.4px;
   height: 14px;
-  background: url("/img/premium_join_bg.png") no-repeat 0 0;
+  background: url("../img/premium_join_bg.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -1808,7 +1810,7 @@ input[type='radio']:checked:before {
 .s_stokes #wrap #container .main_topbanner .bannerBox {
   display: block;
   padding: 15px 30px;
-  background: url("/img/banner/main_topbanner.svg") no-repeat calc(100% + 15px) bottom;
+  background: url("../img/banner/main_topbanner.svg") no-repeat calc(100% + 15px) bottom;
 }
 
 .s_stokes #wrap #container .main_topbanner .bannerBox .title {
@@ -4836,7 +4838,7 @@ input[type='radio']:checked:before {
   top: -4px;
   width: 16px;
   height: 16px;
-  background: url("/img/quotes_start.svg") no-repeat left top;
+  background: url("../img/quotes_start.svg") no-repeat left top;
 }
 
 .s_stokes #wrap #container.sub_stock .portfolio_recom .exWrap .sumTitle .txt::after {
@@ -4847,7 +4849,7 @@ input[type='radio']:checked:before {
   bottom: 7px;
   width: 16px;
   height: 16px;
-  background: url("/img/quotes_end.svg") no-repeat left top;
+  background: url("../img/quotes_end.svg") no-repeat left top;
 }
 
 .s_stokes #wrap #container.sub_stock .portfolio_recom .exWrap .sumList {
@@ -4939,8 +4941,8 @@ input[type='radio']:checked:before {
 .s_stokes #wrap #container.sub_stock .serviceStyle .serviceTop {
   padding: 30px 0 0;
   border-bottom: none;
-  background-image: url("/img/bg_serviceTop.svg"), -webkit-gradient(linear, left top, right top, color-stop(9%, #c22e06), color-stop(95%, #e07b3c));
-  background-image: url("/img/bg_serviceTop.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
+  background-image: url("../img/bg_serviceTop.svg"), -webkit-gradient(linear, left top, right top, color-stop(9%, #c22e06), color-stop(95%, #e07b3c));
+  background-image: url("../img/bg_serviceTop.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
   background-position: right bottom;
   background-repeat: no-repeat;
 }
@@ -5007,7 +5009,7 @@ input[type='radio']:checked:before {
   padding: 35px 15px;
   margin-bottom: 8px;
   border-bottom: 1px solid #e5e5e5;
-  background: #fff url("/img/bg_serviceStrategy.svg") no-repeat calc(100% + 10px) 25px;
+  background: #fff url("../img/bg_serviceStrategy.svg") no-repeat calc(100% + 10px) 25px;
 }
 
 .s_stokes #wrap #container.sub_stock .serviceStyle .strategy .service_txt {
@@ -5040,7 +5042,7 @@ input[type='radio']:checked:before {
 
 .s_stokes #wrap #container.sub_stock .serviceStyle .smart {
   padding: 35px 15px;
-  background: #fff url("/img/bg_serviceSmart.svg") no-repeat calc(100% + 10px) 25px;
+  background: #fff url("../img/bg_serviceSmart.svg") no-repeat calc(100% + 10px) 25px;
 }
 
 .s_stokes #wrap #container.sub_stock .serviceStyle .smart .title strong {
@@ -5282,11 +5284,11 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_login .loign .sns li:first-child a::before {
-  background: url("/img/icon_sns_n.svg") no-repeat left top;
+  background: url("../img/icon_sns_n.svg") no-repeat left top;
 }
 
 .s_stokes #wrap #container.sub_login .loign .sns li:last-child a::before {
-  background: url("/img/icon_sns_k.svg") no-repeat left top;
+  background: url("../img/icon_sns_k.svg") no-repeat left top;
 }
 
 .s_stokes #wrap #container.sub_login .loign .sns li a,
@@ -5440,7 +5442,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -5837,7 +5839,7 @@ input[type='radio']:checked:before {
 .s_stokes #wrap #container.sub_login .loign_com .sum_box {
   padding: 55px 0 70px;
   border-bottom: 1px solid #e6e6e6;
-  background: url("/img/bg_loign_com.svg") no-repeat right bottom;
+  background: url("../img/bg_loign_com.svg") no-repeat right bottom;
 }
 
 .s_stokes #wrap #container.sub_login .loign_com .sum_box .login_sum {
@@ -6159,7 +6161,7 @@ input[type='radio']:checked:before {
   top: 2px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_awesome.svg") no-repeat center center;
+  background: url("../img/icon_awesome.svg") no-repeat center center;
 }
 
 .s_stokes #wrap #container.sub_login .mapage_area .agree_area .agree_from {
@@ -6505,7 +6507,7 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_login .mapage_service_free .mid ul:last-child li {
-  background: url("/img/dot_line.png") no-repeat 0 8px;
+  background: url("../img/dot_line.png") no-repeat 0 8px;
   padding-left: 8px;
   color: #333;
 }
@@ -6910,7 +6912,7 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .sub_freeguide .sub_top.service_t01 {
-  background: #fff url("/img/bg_sub_freeguide.png") no-repeat right bottom;
+  background: #fff url("../img/bg_sub_freeguide.png") no-repeat right bottom;
   background-size: 100% auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7130,7 +7132,7 @@ input[type='radio']:checked:before {
   line-height: 1.3;
   margin-bottom: 10px;
   padding-left: 7px;
-  background: url("/img/dot_gray.gif") no-repeat 0 7px;
+  background: url("../img/dot_gray.gif") no-repeat 0 7px;
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .sub_freeguide .sub_mid .notice_txt {
@@ -7180,7 +7182,7 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .sub_freeguide .sub_top.service_com {
-  background: #fff url("/img/bg_sub_freeguide_com.png") no-repeat right bottom;
+  background: #fff url("../img/bg_sub_freeguide_com.png") no-repeat right bottom;
   background-size: 144px auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7259,7 +7261,7 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .sub_freeguide .notice_freetxt .title {
-  background: url("/img/dot_line.png") no-repeat 0 8px;
+  background: url("../img/dot_line.png") no-repeat 0 8px;
   padding-left: 8px;
   color: #939393;
   font-size: 0.84rem;
@@ -7350,7 +7352,7 @@ input[type='radio']:checked:before {
   content: '';
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 0 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 0 0;
   position: absolute;
   right: 12px;
   top: 13px;
@@ -7457,7 +7459,7 @@ input[type='radio']:checked:before {
 
 .s_stokes #wrap #container.sub_payment .payment_area .serviceStep .step_box .payRight .pay01::before {
   content: '';
-  background: url("/img/c_line.png") no-repeat 100% 0;
+  background: url("../img/c_line.png") no-repeat 100% 0;
   position: absolute;
   left: 0;
   top: 50%;
@@ -7799,7 +7801,7 @@ input[type='radio']:checked:before {
   top: -2px;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 0 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 0 0;
   margin-right: 7px;
 }
 
@@ -7879,7 +7881,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 5px;
   height: 10px;
-  background: url("/img/icon_moreRR.png") no-repeat 0 0;
+  background: url("../img/icon_moreRR.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -7989,7 +7991,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 13px;
   height: 13px;
-  background: url("/img/icon_sale.png") no-repeat 0 0;
+  background: url("../img/icon_sale.png") no-repeat 0 0;
   margin-right: 5px;
 }
 
@@ -8046,7 +8048,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url("/img/bg_x.png") no-repeat 0 0;
+  background: url("../img/bg_x.png") no-repeat 0 0;
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .payment_guide .mapage_form .form_table td .i_dsc.coupon {
@@ -8228,7 +8230,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -8237,7 +8239,7 @@ input[type='radio']:checked:before {
 }
 
 #container.sub_payment.step03 .payment_area .step_top {
-  background: #fff url("/img/bg_payment_com.svg") no-repeat 105% 22px;
+  background: #fff url("../img/bg_payment_com.svg") no-repeat 105% 22px;
   min-height: 200px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8509,7 +8511,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -8575,7 +8577,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -8609,7 +8611,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -8664,7 +8666,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -8920,7 +8922,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -9194,8 +9196,8 @@ input[type='radio']:checked:before {
 
 .modal.premium_pop .pop_header {
   padding: 15px 15px 25px;
-  background-image: url("/img/bg_loign_com.svg"), -webkit-gradient(linear, left top, right top, color-stop(9%, #c22e06), color-stop(95%, #e07b3c));
-  background-image: url("/img/bg_loign_com.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
+  background-image: url("../img/bg_loign_com.svg"), -webkit-gradient(linear, left top, right top, color-stop(9%, #c22e06), color-stop(95%, #e07b3c));
+  background-image: url("../img/bg_loign_com.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
   background-position: right bottom;
   background-repeat: no-repeat;
 }
