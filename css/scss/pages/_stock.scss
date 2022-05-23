@@ -96,7 +96,7 @@
             .btm {
                 width: 100%;
                 box-sizing: border-box;
-                flex-wrap: wrap;
+                flex-wrap: wrap;                
 
                 .num {
                     display: block;
@@ -109,7 +109,22 @@
                         gap: 2px 3px;
 
                         .th {
-                            width: 100%;
+                            flex: 1 1 40%;
+                            width: auto;
+                            
+                        }
+                        .td {
+                            flex: 1 1 40%;
+                            width: auto;
+                            
+                        }
+                        .reg_day {
+                            flex: 1 1 40%;
+                            text-align: right;
+                            font-size: $font12;
+                            line-height: 1.5;
+                            letter-spacing: -0.3px;
+                            color: #898989;                            
                         }
 
                         .trans {
