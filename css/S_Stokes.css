@@ -854,13 +854,26 @@ input[type='radio']:checked:before {
   height: 44px;
 }
 
+.s_stokes #wrap #header.sub_hdr .leftLink {
+  padding-top: 3px;
+}
+
 .s_stokes #wrap #header.sub_hdr .leftLink a {
   position: relative;
-  padding-left: 10px;
   font-size: 0.8125rem;
-  line-height: 1.46;
   letter-spacing: -0.33px;
   color: #898989;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .s_stokes #wrap #header.sub_hdr .leftLink a::after {
@@ -868,9 +881,6 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 6px;
   height: 6px;
-  position: absolute;
-  top: 4px;
-  left: 0;
   border-top: 1px solid #898989;
   border-right: 1px solid #898989;
   -webkit-transform: rotate(-135deg);
@@ -2871,10 +2881,6 @@ input[type='radio']:checked:before {
   color: #222;
 }
 
-.s_stokes #wrap #container .mainBox.attr .adequateArea .listWrap .adequateArea.attr .tableData .table tbody .price {
-  text-align: center;
-}
-
 .s_stokes #wrap #container .mainBox.attr .adequateArea .listWrap .adequateArea.attr .tableData .table tbody .price .per {
   display: inline-block;
 }
@@ -3857,22 +3863,10 @@ input[type='radio']:checked:before {
   width: 98%;
   position: relative;
   display: block;
-  padding-left: 10px;
   font-size: 0.9375rem;
   line-height: 1.93;
   letter-spacing: -0.38px;
   color: #222;
-}
-
-.s_stokes #wrap #container.sub_stock .point li::after {
-  content: '';
-  display: inline-block;
-  width: 5px;
-  height: 1px;
-  position: absolute;
-  left: 0;
-  top: 15px;
-  background-color: #222;
 }
 
 .s_stokes #wrap #container.sub_stock .charistic {
@@ -4817,11 +4811,34 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_stock .portfolio_recom .adequateArea.attr .tableData .table tbody .price {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.s_stokes #wrap #container.sub_stock .portfolio_recom .adequateArea.attr .tableData .table tbody .price b {
+  display: block;
+  width: 70px;
 }
 
 .s_stokes #wrap #container.sub_stock .portfolio_recom .adequateArea.attr .tableData .table tbody .price .per {
+  text-align: left;
   display: inline-block;
+  width: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 5px;
+}
+
+.s_stokes #wrap #container.sub_stock .portfolio_recom .adequateArea .btn_more {
+  width: calc(100% - 30px);
+  margin: 17px auto 0;
 }
 
 .s_stokes #wrap #container.sub_stock .portfolio_recom .exWrap {
