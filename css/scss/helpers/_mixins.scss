@@ -168,6 +168,15 @@ $default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", He
         &.turn {
             background-color: #e6a01c;
         }
+
+        &.buy_new, &.buy_expan {
+            color: #f00;
+            background-color: rgba(255, 0, 0, 0.16);
+        }        
+        &.sell_all, &.sell_parl {
+            color: #4389f8;
+            background-color: rgba(67, 137, 248, 0.16);     
+        }
            
     }
 

@@ -1726,6 +1726,16 @@ input[type='radio']:checked:before {
   background-color: #e6a01c;
 }
 
+.s_stokes #wrap #container .mainBox.game_scr .list_area .list .num .trans.buy_new, .s_stokes #wrap #container .mainBox.game_scr .list_area .list .num .trans.buy_expan {
+  color: #f00;
+  background-color: rgba(255, 0, 0, 0.16);
+}
+
+.s_stokes #wrap #container .mainBox.game_scr .list_area .list .num .trans.sell_all, .s_stokes #wrap #container .mainBox.game_scr .list_area .list .num .trans.sell_parl {
+  color: #4389f8;
+  background-color: rgba(67, 137, 248, 0.16);
+}
+
 .s_stokes #wrap #container .mainBox.game_scr .list .detail span {
   display: block;
   width: 100%;
@@ -2074,6 +2084,16 @@ input[type='radio']:checked:before {
 
 .s_stokes #wrap #container .mainBox.portfolio .list_area .list .num .trans.turn {
   background-color: #e6a01c;
+}
+
+.s_stokes #wrap #container .mainBox.portfolio .list_area .list .num .trans.buy_new, .s_stokes #wrap #container .mainBox.portfolio .list_area .list .num .trans.buy_expan {
+  color: #f00;
+  background-color: rgba(255, 0, 0, 0.16);
+}
+
+.s_stokes #wrap #container .mainBox.portfolio .list_area .list .num .trans.sell_all, .s_stokes #wrap #container .mainBox.portfolio .list_area .list .num .trans.sell_parl {
+  color: #4389f8;
+  background-color: rgba(67, 137, 248, 0.16);
 }
 
 .s_stokes #wrap #container .mainBox.portfolio .list .detail span {
@@ -3519,6 +3539,16 @@ input[type='radio']:checked:before {
 
 .s_stokes #wrap #container.sub_stock .winner .list_area .list .num .trans.turn {
   background-color: #e6a01c;
+}
+
+.s_stokes #wrap #container.sub_stock .winner .list_area .list .num .trans.buy_new, .s_stokes #wrap #container.sub_stock .winner .list_area .list .num .trans.buy_expan {
+  color: #f00;
+  background-color: rgba(255, 0, 0, 0.16);
+}
+
+.s_stokes #wrap #container.sub_stock .winner .list_area .list .num .trans.sell_all, .s_stokes #wrap #container.sub_stock .winner .list_area .list .num .trans.sell_parl {
+  color: #4389f8;
+  background-color: rgba(67, 137, 248, 0.16);
 }
 
 .s_stokes #wrap #container.sub_stock .winner .list .detail span {
