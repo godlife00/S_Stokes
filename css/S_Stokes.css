@@ -441,7 +441,7 @@ input[type='radio']:checked:before {
 }
 
 .star_area .starR {
-  background: url("/img/ico_review.svg") no-repeat right 0;
+  background: url("../img/ico_review.svg") no-repeat right 0;
   background-size: auto 100%;
   display: inline-block;
   text-indent: -9999px;
@@ -594,7 +594,7 @@ input[type='radio']:checked:before {
   right: 6px;
   width: 26px;
   height: 26px;
-  background: url("/img/select.svg") no-repeat 0 0;
+  background: url("../img/select.svg") no-repeat 0 0;
 }
 
 .selectbox label {
@@ -1036,7 +1036,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 10.4px;
   height: 14px;
-  background: url("/img/premium_join_bg.png") no-repeat 0 0;
+  background: url("../img/premium_join_bg.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -1830,7 +1830,7 @@ input[type='radio']:checked:before {
 .s_stokes #wrap #container .main_topbanner .bannerBox {
   display: block;
   padding: 15px 30px;
-  background: url("/img/banner/main_topbanner.svg") no-repeat calc(100% + 15px) bottom;
+  background: url("../img/banner/main_topbanner.svg") no-repeat calc(100% + 15px) bottom;
 }
 
 .s_stokes #wrap #container .main_topbanner .bannerBox .title {
@@ -4906,7 +4906,7 @@ input[type='radio']:checked:before {
   top: -4px;
   width: 16px;
   height: 16px;
-  background: url("/img/quotes_start.svg") no-repeat left top;
+  background: url("../img/quotes_start.svg") no-repeat left top;
 }
 
 .s_stokes #wrap #container.sub_stock .portfolio_recom .exWrap .sumTitle .txt::after {
@@ -4917,7 +4917,7 @@ input[type='radio']:checked:before {
   bottom: 7px;
   width: 16px;
   height: 16px;
-  background: url("/img/quotes_end.svg") no-repeat left top;
+  background: url("../img/quotes_end.svg") no-repeat left top;
 }
 
 .s_stokes #wrap #container.sub_stock .portfolio_recom .exWrap .sumList {
@@ -5009,8 +5009,8 @@ input[type='radio']:checked:before {
 .s_stokes #wrap #container.sub_stock .serviceStyle .serviceTop {
   padding: 30px 0 0;
   border-bottom: none;
-  background-image: url("/img/bg_serviceTop.svg"), -webkit-gradient(linear, left top, right top, color-stop(9%, #c22e06), color-stop(95%, #e07b3c));
-  background-image: url("/img/bg_serviceTop.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
+  background-image: url("../img/bg_serviceTop.svg"), -webkit-gradient(linear, left top, right top, color-stop(9%, #c22e06), color-stop(95%, #e07b3c));
+  background-image: url("../img/bg_serviceTop.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
   background-position: right bottom;
   background-repeat: no-repeat;
 }
@@ -5077,7 +5077,7 @@ input[type='radio']:checked:before {
   padding: 35px 15px;
   margin-bottom: 8px;
   border-bottom: 1px solid #e5e5e5;
-  background: #fff url("/img/bg_serviceStrategy.svg") no-repeat calc(100% + 10px) 25px;
+  background: #fff url("../img/bg_serviceStrategy.svg") no-repeat calc(100% + 10px) 25px;
 }
 
 .s_stokes #wrap #container.sub_stock .serviceStyle .strategy .service_txt {
@@ -5110,7 +5110,7 @@ input[type='radio']:checked:before {
 
 .s_stokes #wrap #container.sub_stock .serviceStyle .smart {
   padding: 35px 15px;
-  background: #fff url("/img/bg_serviceSmart.svg") no-repeat calc(100% + 10px) 25px;
+  background: #fff url("../img/bg_serviceSmart.svg") no-repeat calc(100% + 10px) 25px;
 }
 
 .s_stokes #wrap #container.sub_stock .serviceStyle .smart .title strong {
@@ -5352,11 +5352,11 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_login .loign .sns li:first-child a::before {
-  background: url("/img/icon_sns_n.svg") no-repeat left top;
+  background: url("../img/icon_sns_n.svg") no-repeat left top;
 }
 
 .s_stokes #wrap #container.sub_login .loign .sns li:last-child a::before {
-  background: url("/img/icon_sns_k.svg") no-repeat left top;
+  background: url("../img/icon_sns_k.svg") no-repeat left top;
 }
 
 .s_stokes #wrap #container.sub_login .loign .sns li a,
@@ -5510,7 +5510,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -5612,15 +5612,18 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .label.phone_label .guide_txt {
-  padding: 5px 0 0 22px;
+  padding-top: 5px;
+  padding-left: 24px;
   font-size: 0.75rem;
   letter-spacing: -0.6px;
-  color: #898989;
+  text-align: left;
+  color: #939393;
+  line-height: 1.2;
 }
 
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .box {
   padding: 0 35px 10px;
-  background: #f5f5f5;
+  background: #f5f6fa;
   position: relative;
 }
 
@@ -5628,19 +5631,22 @@ input[type='radio']:checked:before {
   margin-top: 0;
 }
 
+.s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .box:last-child {
+  display: none;
+}
+
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .pinInput,
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .pinInput_out {
-  border-radius: 5px;
   border: none;
+  color: #333;
   font-size: 1rem;
   letter-spacing: -0.8px;
-  color: #333;
-  background-color: #fff;
   padding: 8px 13px;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 5px;
+  background-color: #ececef;
 }
 
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .pinInput {
@@ -5660,7 +5666,8 @@ input[type='radio']:checked:before {
   text-align: right;
   margin-top: 6px;
   font-size: 0.75rem;
-  color: #d36900;
+  line-height: 1.3;
+  color: #D36900;
 }
 
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .pinBtn {
@@ -5670,14 +5677,16 @@ input[type='radio']:checked:before {
   top: 6px;
   width: 81px;
   height: 25px;
-  border-radius: 3px;
-  border: 1px solid #c22e06;
-  background-color: #fff;
-  padding: 3px 4px;
   font-size: 0.75rem;
+  font-weight: normal;
   letter-spacing: -0.6px;
   text-align: center;
-  color: #c22e06;
+  color: #C22E06;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: solid 1px #C22E06;
+  background-color: #fff;
 }
 
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .pinInput_out {
@@ -5731,8 +5740,8 @@ input[type='radio']:checked:before {
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .pin_countDown {
   font-size: 0.75rem;
   letter-spacing: -0.8px;
-  color: #d36900;
-  text-align: right;
+  color: #549ef4;
+  text-align: center;
   width: calc(100% - 20px);
   margin-left: 20px;
   margin-top: 6px;
@@ -5741,7 +5750,7 @@ input[type='radio']:checked:before {
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .pin_countDown span {
   font-size: 0.75rem;
   letter-spacing: -0.8px;
-  color: #d36900;
+  color: #549ef4;
 }
 
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .pin_completion {
@@ -5753,22 +5762,24 @@ input[type='radio']:checked:before {
   height: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: normal;
   letter-spacing: -0.6px;
   text-align: center;
   color: #fff;
+  outline: none;
+  padding: 4px 8px;
   border-radius: 3px;
-  background-color: #c22e06;
-  border: none;
+  border: solid 1px #C22E06;
+  background-color: #C22E06;
 }
 
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .txt_reject {
-  padding: 10px 0;
-  background-color: #f5f5f5;
-  font-size: 0.75rem;
-  letter-spacing: -0.6px;
-  text-align: center;
+  text-align: right;
   color: #898989;
+  font-size: 0.75rem;
+  line-height: 14px;
+  margin-top: 7px;
 }
 
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .mapage_form {
@@ -5785,7 +5796,8 @@ input[type='radio']:checked:before {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table th, .s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td {
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table th,
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td {
   padding: 15px 9px;
   text-align: left;
   vertical-align: top;
@@ -5810,7 +5822,8 @@ input[type='radio']:checked:before {
   display: inline-block;
 }
 
-.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_dsc, .s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_guide {
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_dsc,
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_guide {
   position: relative;
   margin-top: 5px;
   font-size: 0.75rem;
@@ -5821,7 +5834,8 @@ input[type='radio']:checked:before {
   word-break: break-all;
 }
 
-.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_dsc::before, .s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_guide::before {
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_dsc::before,
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_guide::before {
   content: '';
   position: absolute;
   left: 0;
@@ -5844,6 +5858,7 @@ input[type='radio']:checked:before {
   background-color: #fff;
   padding: 1px 2px;
   font-size: 10px;
+  color: #c22e06;
 }
 
 .s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .mod_btn a {
@@ -5888,8 +5903,176 @@ input[type='radio']:checked:before {
   vertical-align: middle;
 }
 
-.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_guide, .s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_dsc {
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_guide,
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .i_dsc {
   width: 100%;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form {
+  display: none;
+  background-color: #f5f6fa;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .box {
+  display: block;
+  padding: 0 15px 0 35px;
+  background: #f5f6fa;
+  position: relative;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .box:first-child {
+  margin-top: 0;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .box:last-child {
+  display: none;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput,
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput_out {
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  letter-spacing: -0.8px;
+  padding: 8px 13px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput {
+  color: #333;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput:focus {
+  border: none;
+  outline: none;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .dsc_error {
+  text-align: right;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  color: #d36900;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinBtn {
+  cursor: pointer;
+  position: absolute;
+  right: 22px;
+  top: 6px;
+  width: 81px;
+  height: 25px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #C22E06;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: solid 1px #C22E06;
+  background-color: #fff;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput_out {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  color: #333;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput_out:focus {
+  border: none;
+  outline: none;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput::-webkit-input-placeholder,
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput_out::-webkit-input-placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: #82929f;
+  letter-spacing: -0.8px;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput:-ms-input-placeholder,
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput_out:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: #82929f;
+  letter-spacing: -0.8px;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput::-ms-input-placeholder,
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput_out::-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: #82929f;
+  letter-spacing: -0.8px;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput::placeholder,
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput_out::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: #82929f;
+  letter-spacing: -0.8px;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput_out:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pin_countDown {
+  font-size: 0.75rem;
+  letter-spacing: -0.8px;
+  color: #549ef4;
+  text-align: center;
+  width: calc(100% - 20px);
+  margin-left: 20px;
+  margin-top: 6px;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pin_countDown span {
+  font-size: 0.75rem;
+  letter-spacing: -0.8px;
+  color: #549ef4;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pin_completion {
+  cursor: pointer;
+  position: absolute;
+  right: 22px;
+  top: 6px;
+  width: 81px;
+  height: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.75rem;
+  font-weight: normal;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #fff;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: solid 1px #C22E06;
+  background-color: #C22E06;
+}
+
+.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td .txt_reject {
+  text-align: right;
+  color: #898989;
+  font-size: 0.75rem;
+  line-height: 14px;
+  margin-top: 7px;
 }
 
 .s_stokes #wrap #container.sub_login .loign_com {
@@ -5907,7 +6090,7 @@ input[type='radio']:checked:before {
 .s_stokes #wrap #container.sub_login .loign_com .sum_box {
   padding: 55px 0 70px;
   border-bottom: 1px solid #e6e6e6;
-  background: url("/img/bg_loign_com.svg") no-repeat right bottom;
+  background: url("../img/bg_loign_com.svg") no-repeat right bottom;
 }
 
 .s_stokes #wrap #container.sub_login .loign_com .sum_box .login_sum {
@@ -6174,7 +6357,8 @@ input[type='radio']:checked:before {
   font-size: 10px;
 }
 
-.s_stokes #wrap #container.sub_login .mapage_area .agree_area .myInfo .line .th, .s_stokes #wrap #container.sub_login .mapage_area .agree_area .myInfo .line .td {
+.s_stokes #wrap #container.sub_login .mapage_area .agree_area .myInfo .line .th,
+.s_stokes #wrap #container.sub_login .mapage_area .agree_area .myInfo .line .td {
   padding: 15px 9px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6229,7 +6413,7 @@ input[type='radio']:checked:before {
   top: 2px;
   width: 12px;
   height: 12px;
-  background: url("/img/icon_awesome.svg") no-repeat center center;
+  background: url("../img/icon_awesome.svg") no-repeat center center;
 }
 
 .s_stokes #wrap #container.sub_login .mapage_area .agree_area .agree_from {
@@ -6465,7 +6649,8 @@ input[type='radio']:checked:before {
   padding: 3px 0 2px;
 }
 
-.s_stokes #wrap #container.sub_login .mapage_service .service_table .btn_payCan, .s_stokes #wrap #container.sub_login .mapage_service .service_table .btn_payRefund {
+.s_stokes #wrap #container.sub_login .mapage_service .service_table .btn_payCan,
+.s_stokes #wrap #container.sub_login .mapage_service .service_table .btn_payRefund {
   cursor: pointer;
   border-radius: 3px;
   border: 1px solid #c22e06;
@@ -6575,7 +6760,7 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_login .mapage_service_free .mid ul:last-child li {
-  background: url("/img/dot_line.png") no-repeat 0 8px;
+  background: url("../img/dot_line.png") no-repeat 0 8px;
   padding-left: 8px;
   color: #333;
 }
@@ -6631,7 +6816,8 @@ input[type='radio']:checked:before {
   width: calc(100% - 30px);
 }
 
-.s_stokes #wrap #container.sub_login .history_table th, .s_stokes #wrap #container.sub_login .history_table td {
+.s_stokes #wrap #container.sub_login .history_table th,
+.s_stokes #wrap #container.sub_login .history_table td {
   padding: 9px 2px;
   text-align: center;
   vertical-align: middle;
@@ -6980,7 +7166,7 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .sub_freeguide .sub_top.service_t01 {
-  background: #fff url("/img/bg_sub_freeguide.png") no-repeat right bottom;
+  background: #fff url("../img/bg_sub_freeguide.png") no-repeat right bottom;
   background-size: 100% auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7200,7 +7386,7 @@ input[type='radio']:checked:before {
   line-height: 1.3;
   margin-bottom: 10px;
   padding-left: 7px;
-  background: url("/img/dot_gray.gif") no-repeat 0 7px;
+  background: url("../img/dot_gray.gif") no-repeat 0 7px;
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .sub_freeguide .sub_mid .notice_txt {
@@ -7250,7 +7436,7 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .sub_freeguide .sub_top.service_com {
-  background: #fff url("/img/bg_sub_freeguide_com.png") no-repeat right bottom;
+  background: #fff url("../img/bg_sub_freeguide_com.png") no-repeat right bottom;
   background-size: 144px auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7329,7 +7515,7 @@ input[type='radio']:checked:before {
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .sub_freeguide .notice_freetxt .title {
-  background: url("/img/dot_line.png") no-repeat 0 8px;
+  background: url("../img/dot_line.png") no-repeat 0 8px;
   padding-left: 8px;
   color: #939393;
   font-size: 0.84rem;
@@ -7420,7 +7606,7 @@ input[type='radio']:checked:before {
   content: '';
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 0 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 0 0;
   position: absolute;
   right: 12px;
   top: 13px;
@@ -7527,7 +7713,7 @@ input[type='radio']:checked:before {
 
 .s_stokes #wrap #container.sub_payment .payment_area .serviceStep .step_box .payRight .pay01::before {
   content: '';
-  background: url("/img/c_line.png") no-repeat 100% 0;
+  background: url("../img/c_line.png") no-repeat 100% 0;
   position: absolute;
   left: 0;
   top: 50%;
@@ -7869,7 +8055,7 @@ input[type='radio']:checked:before {
   top: -2px;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 0 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 0 0;
   margin-right: 7px;
 }
 
@@ -7949,7 +8135,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 5px;
   height: 10px;
-  background: url("/img/icon_moreRR.png") no-repeat 0 0;
+  background: url("../img/icon_moreRR.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -8059,7 +8245,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 13px;
   height: 13px;
-  background: url("/img/icon_sale.png") no-repeat 0 0;
+  background: url("../img/icon_sale.png") no-repeat 0 0;
   margin-right: 5px;
 }
 
@@ -8116,7 +8302,7 @@ input[type='radio']:checked:before {
   display: inline-block;
   width: 14px;
   height: 14px;
-  background: url("/img/bg_x.png") no-repeat 0 0;
+  background: url("../img/bg_x.png") no-repeat 0 0;
 }
 
 .s_stokes #wrap #container.sub_payment .payment_area .payment_guide .mapage_form .form_table td .i_dsc.coupon {
@@ -8298,7 +8484,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -8307,7 +8493,7 @@ input[type='radio']:checked:before {
 }
 
 #container.sub_payment.step03 .payment_area .step_top {
-  background: #fff url("/img/bg_payment_com.svg") no-repeat 105% 22px;
+  background: #fff url("../img/bg_payment_com.svg") no-repeat 105% 22px;
   min-height: 200px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8579,7 +8765,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -8645,7 +8831,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -8679,7 +8865,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -8734,7 +8920,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -8990,7 +9176,7 @@ input[type='radio']:checked:before {
   vertical-align: top;
   width: 18px;
   height: 18px;
-  background: url("/img/icon_agreecheck.svg") no-repeat 100% 0;
+  background: url("../img/icon_agreecheck.svg") no-repeat 100% 0;
   margin-right: 7px;
 }
 
@@ -9264,8 +9450,8 @@ input[type='radio']:checked:before {
 
 .modal.premium_pop .pop_header {
   padding: 15px 15px 25px;
-  background-image: url("/img/bg_loign_com.svg"), -webkit-gradient(linear, left top, right top, color-stop(9%, #c22e06), color-stop(95%, #e07b3c));
-  background-image: url("/img/bg_loign_com.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
+  background-image: url("../img/bg_loign_com.svg"), -webkit-gradient(linear, left top, right top, color-stop(9%, #c22e06), color-stop(95%, #e07b3c));
+  background-image: url("../img/bg_loign_com.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
   background-position: right bottom;
   background-repeat: no-repeat;
 }
