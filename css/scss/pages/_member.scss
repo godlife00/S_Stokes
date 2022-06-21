@@ -355,9 +355,9 @@
         }
 
         .phonePin_form .box {
-            padding: 0 35px 10px;
-            background: #f5f6fa;
+            padding: 0 35px 10px;            
             position: relative;
+            background-color: #f5f5f5;
         }
 
         .phonePin_form .box:first-child {
@@ -407,7 +407,7 @@
             position: absolute;
             right: 42px;
             top: 6px;
-            width: 81px;
+            width: 70px;
             height: 25px;
             font-size: 0.75rem;
             font-weight: normal;
@@ -419,6 +419,18 @@
             border-radius: 3px;
             border: solid 1px #C22E06;
             background-color: #fff;
+            &.pin_req {
+                display: block;	
+                color: #fff;    
+                border: solid 1px #C22E06;
+                background-color: #C22E06;
+            }
+            &.pin_reqAgain {
+                display: none;
+                color: #C22E06;
+                border: solid 1px #C22E06;
+                background-color: #fff;
+            }
         }
 
         .phonePin_form .pinInput_out {
@@ -466,7 +478,7 @@
             position: absolute;
             right: 42px;
             top: 6px;
-            width: 81px;
+            width: 70px;
             height: 25px;
             box-sizing: border-box;
             font-size: 0.75rem;
@@ -610,11 +622,10 @@
 
                 &.phonePin_form {
                     display: none;
-                    background-color: #f5f6fa;
+                    background-color: #fff;
                     .box {
-                        display: block;
-                        padding: 0 15px 0 35px;
-                        background: #f5f6fa;
+                        display: block;                        
+                        background: #fff;
                         position: relative;
                     }
 
@@ -630,13 +641,13 @@
                     .pinInput_out {
                         border: none;
                         color: #333;
-                        font-size: 1rem;
+                        font-size: 0.875rem;
                         letter-spacing: -0.8px;
-                        padding: 8px 13px;
+                        padding: 9px 13px;
                         width: 100%;
                         box-sizing: border-box;
                         border-radius: 5px;
-                        background-color: #fff;
+                        background-color: #f5f5f5;
                     }
 
                     .pinInput {
@@ -663,9 +674,9 @@
                     .pinBtn {
                         cursor: pointer;
                         position: absolute;
-                        right: 22px;
+                        right: 9px;
                         top: 6px;
-                        width: 81px;
+                        width: 70px;
                         height: 25px;
                         font-size: 0.75rem;
                         font-weight: normal;
@@ -677,10 +688,22 @@
                         border-radius: 3px;
                         border: solid 1px #C22E06;
                         background-color: #fff;
+                        &.pin_req {
+                            display: block;	
+                            color: #fff;    
+                            border: solid 1px #C22E06;
+                            background-color: #C22E06;
+                        }
+                        &.pin_reqAgain {
+                            display: none;
+                            color: #C22E06;
+                            border: solid 1px #C22E06;
+                            background-color: #fff;
+                        }
                     }
 
                     .pinInput_out {
-                        font-size: 1rem;
+                        font-size: 0.875rem;
                         font-weight: bold;
                         letter-spacing: 1.6px;
                         color: #333;
@@ -693,7 +716,7 @@
 
                     .pinInput::placeholder,
                     .pinInput_out::placeholder {
-                        font-size: 16px;
+                        font-size: 0.875rem;
                         font-weight: normal;
                         color: #82929f;
                         letter-spacing: -0.8px;
@@ -722,9 +745,9 @@
                     .pin_completion {
                         cursor: pointer;
                         position: absolute;
-                        right: 22px;
+                        right: 9px;
                         top: 6px;
-                        width: 81px;
+                        width: 70px;
                         height: 25px;
                         box-sizing: border-box;
                         font-size: 0.75rem;
