@@ -51,11 +51,19 @@
                     display: inline-block;
                 }
             }
-            .cs {
-                font-size: 10px;                
+            .cs, a {
+                font-size: 12px;                
                 line-height: 1.3;                
                 text-align: left;
                 color: #898989;                
+            }
+            a {
+                font-size: 13px;                
+                line-height: 1.3;                
+                text-align: left;
+                color: #898989;       
+                text-decoration: underline;         
+                margin-right: 3px;
             }
         }
         .copyright {
