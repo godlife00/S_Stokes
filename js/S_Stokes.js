@@ -144,6 +144,11 @@ $(document).ready(function () {
         $('html').animate({ scrollTop: offset.top - 80 }, 400);        
     });
 
+    // 기업개요 더보기 열기
+    $('.s_stokes #wrap #container.sub_search .summary_box .summary').on("click", function () {                
+        $(this).toggleClass('active');                     
+    });   
+
     // 서브 오늘의 승부주 필터 active
     $('.s_stokes #wrap #container.sub_stock .winner .w_filter ul li').on("click", function () {
         $('.s_stokes #wrap #container.sub_stock .winner .w_filter ul li').removeClass('active');
