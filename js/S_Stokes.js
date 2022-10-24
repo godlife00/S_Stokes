@@ -144,10 +144,26 @@ $(document).ready(function () {
         $('html').animate({ scrollTop: offset.top - 80 }, 400);        
     });
 
-    // 기업개요 더보기 열기
-    $('.s_stokes #wrap #container.sub_search .summary_box .summary').on("click", function () {                
-        $(this).toggleClass('active');                     
-    });   
+    // 기업개요 더보기 열기        
+    function summaryMore() {
+        var summaryHeight = $('.s_stokes #wrap #container.sub_search .summary_box .summary p').innerHeight()        
+        if (summaryHeight <= 30) {            
+            $('.s_stokes #wrap #container.sub_search .summary_box .summary').css('padding', '18px 16px 18px');
+            $('.s_stokes #wrap #container.sub_search .summary_box .summary .link_btn').hide();
+        } else {
+            $('.s_stokes #wrap #container.sub_search .summary_box .summary').css('padding', '18px 16px 8px');
+            $('.s_stokes #wrap #container.sub_search .summary_box .summary .link_btn').show();
+        }
+    }        
+    $(window).resize(function () {        
+        summaryMore();        
+    });
+    summaryMore(); //기업개요 더보기 실행
+    $('.s_stokes #wrap #container.sub_search .summary_box .summary').on("click", function () {
+        console.log("열닫");
+        $(this).toggleClass('active');
+    });
+    // 기업개요 더보기 열기 End //
 
     // 서브 오늘의 승부주 필터 active
     $('.s_stokes #wrap #container.sub_stock .winner .w_filter ul li').on("click", function () {
