@@ -147,7 +147,7 @@ $(document).ready(function () {
     // 기업개요 더보기 열기        
     function summaryMore() {
         var summaryHeight = $('.s_stokes #wrap #container.sub_search .summary_box .summary p').innerHeight()        
-        if (summaryHeight <= 30) {            
+        if (summaryHeight <= 40) {            
             $('.s_stokes #wrap #container.sub_search .summary_box .summary').css('padding', '18px 16px 18px');
             $('.s_stokes #wrap #container.sub_search .summary_box .summary .link_btn').hide();
         } else {
