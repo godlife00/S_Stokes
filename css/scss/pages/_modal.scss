@@ -1,30 +1,34 @@
 // 모달팝업
-.modal {    
+.modal {
     @at-root .blocker {
         z-index: 98;
-        background-color: rgba(0,0,0, 0.5);
+        background-color: rgba(0, 0, 0, 0.5);
     }
+
     z-index: 99;
-    width: 100%;    
+    width: 100%;
     padding: 0;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
     background-color: #fff;
+
     // display: block;
     .close-modal {
         display: none;
-        visibility: hidden;        
+        visibility: hidden;
     }
 
-    .pop_header {        
-        padding: 15px 15px;        
+    .pop_header {
+        padding: 15px 15px;
         border-bottom: 1px solid #e7eaf2;
+
         .pop_title {
             font-size: $font14;
-            font-weight: $f_sizeB;            
-            color: #333;            
+            font-weight: $f_sizeB;
+            color: #333;
         }
+
         .clse {
             cursor: pointer;
             position: absolute;
@@ -33,35 +37,39 @@
             width: 17px;
             height: 17px;
             right: 14px;
-            top: 14px;            
-                        
-            &::before, &::after {
+            top: 14px;
+
+            &::before,
+            &::after {
                 content: '';
                 position: absolute;
-                right: 7px;                
-                top: 0;                
+                right: 7px;
+                top: 0;
                 height: 17px;
                 width: 1px;
                 background-color: $colpmr500;
             }
+
             &::before {
                 transform: rotate(45deg);
             }
+
             &::after {
                 transform: rotate(-45deg);
             }
         }
-    }    
+    }
 
     // 월자동결제 서비스 변경, 기간결제 해지/환불 팝업
-    &.login_form, &.refund {
+    &.login_form,
+    &.refund {
         .pop_header {
             #now_time {
                 color: #939393;
                 font-size: $font15;
                 font-weight: normal;
-                padding-left: 25px;                
-            }            
+                padding-left: 25px;
+            }
         }
 
         .pop_con {
@@ -71,64 +79,81 @@
                 font-size: $font15;
                 text-align: center;
                 border-bottom: 1px solid #E0E4E9;
-                line-height: 1.4;                
+                line-height: 1.4;
+
                 strong {
                     color: #c22e06;
-                    font-weight: $f_sizeB;;
+                    font-weight: $f_sizeB;
+                    ;
                 }
             }
-            padding: 10px 15px 20px;        
+
+            padding: 10px 15px 20px;
+
             .mapage_form {
                 padding-top: 10px;
+
                 .form_table {
-                    table {                        
-                        th, td {
+                    table {
+
+                        th,
+                        td {
                             padding: 7px 0;
-                            text-align: left;                            
+                            text-align: left;
                             font-size: $font14;
-                            font-weight: $f_sizeB;                
-                            letter-spacing: -0.65px;                
+                            font-weight: $f_sizeB;
+                            letter-spacing: -0.65px;
                             color: #898989;
                         }
+
                         tr {
                             border-bottom: 1px solid #e5e5e5;
-                        }                        
-                        th {                            
+                        }
+
+                        th {
                             font-weight: normal;
                         }
+
                         .item {
-                            padding-left: 25px;        
+                            padding-left: 25px;
+
                             .txt_info {
                                 strong {
                                     color: #c22e06;
-                                }                                
-                            }                    
+                                }
+                            }
                         }
+
                         .certification_area {
                             overflow: auto;
                             max-height: 180px;
                             background: #f5f5f5;
                             border-radius: 5px;
                             margin-top: 10px;
-                            margin-left: -50px;                            
+                            margin-left: -50px;
                             padding: 15px 15px;
-                            box-sizing: border-box;                            
+                            box-sizing: border-box;
+
                             .service_title {
-                                display: block;;
+                                display: block;
+                                ;
                                 padding-bottom: 5px;
-                                font-size: $font14;                                
-                            }                            
+                                font-size: $font14;
+                            }
+
                             .txt {
                                 color: #575757;
                             }
+
                             .go_link {
                                 margin-top: 5px;
                                 display: block;
-                                text-decoration: underline;             
-                                color: $collonk;                   
+                                text-decoration: underline;
+                                color: $collonk;
                                 text-align: right;
                             }
                         }
+
                         .tr_num {
                             border: none;
                             font-size: $font16;
@@ -138,23 +163,27 @@
                             padding: 8px 13px;
                             width: 100%;
                             box-sizing: border-box;
-                            border-radius: 5px;  
+                            border-radius: 5px;
+
                             &:focus {
                                 border: none;
                                 outline: none;
-                            }                          
+                            }
+
                             &::placeholder {
                                 color: #333;
                             }
                         }
                     }
                 }
+
                 .label_chk {
                     margin-top: 15px;
                     font-size: 0.875rem;
-                    letter-spacing: -0.7px;                    
-                    color: #222;                    
+                    letter-spacing: -0.7px;
+                    color: #222;
                 }
+
                 .label_chk i {
                     display: inline-block;
                     vertical-align: top;
@@ -163,42 +192,48 @@
                     background: url('/img/icon_agreecheck.svg') no-repeat 100% 0;
                     margin-right: 7px;
                 }
-                .label_chk.active i {                                        
+
+                .label_chk.active i {
                     background-position: 0 0;
-                }                
-                .btnArea.edtBtn {                    
+                }
+
+                .btnArea.edtBtn {
                     @include one_btn;
                     border: none;
                     margin-top: 20px;
                     background-color: #c22e06;
+
                     a {
                         font-size: 0.9375rem;
                         letter-spacing: -0.38px;
                         color: #fff;
                         border: none;
-                    }                                        
+                    }
                 }
-            }            
-        }    
+            }
+        }
+
         .btnArea.edtBtn {
             @include one_btn;
             background-color: #c22e06;
             border: none;
-            margin-top: 15px;            
+            margin-top: 15px;
+
             a {
-                color: #fff;                
-            }            
-        }    
+                color: #fff;
+            }
+        }
     }
 
     // 카드정보확인
-    &.card_reg {        
+    &.card_reg {
         position: fixed;
         left: 50%;
         top: 40%;
         margin-left: -250px;
         opacity: 1;
-        display: inline-block;        
+        display: inline-block;
+
         .bg {
             position: fixed;
             top: 0;
@@ -207,23 +242,25 @@
             left: 0;
             width: 100%;
             height: 100%;
-            overflow: auto;            
+            overflow: auto;
             padding: 20px;
-            box-sizing: border-box;            
-            text-align: center;        
+            box-sizing: border-box;
+            text-align: center;
             z-index: 98;
             background-color: rgba(0, 0, 0, 0.5);
         }
+
         .setting_area {
             position: fixed;
             left: 50%;
             top: 40%;
-            width: 90%;            
+            width: 90%;
             margin-left: -45%;
             opacity: 1;
-            display: inline-block;        
-            z-index: 99;            
+            display: inline-block;
+            z-index: 99;
         }
+
         .pop_con {
             text-align: center;
             background: #F4F4F5;
@@ -238,30 +275,32 @@
                 font-size: 1.125rem;
                 font-weight: 700;
                 color: #222;
-                line-height: 1.7;                
+                line-height: 1.7;
             }
-            
+
             .btnArea.edtBtn {
                 @include two_btn;
-                margin-top: 30px;                
+                margin-top: 30px;
             }
-            .btnArea.edtBtn {
-                
-            }
+
+            .btnArea.edtBtn {}
         }
     }
 
     // 나이스페이 진행중인 결제 취소
     &.paymentCancel {
         .pop_con {
-            padding: 10px 15px 20px;   
+            padding: 10px 15px 20px;
+
             .txt {
-                padding: 30px 10px 30px;                   
+                padding: 30px 10px 30px;
                 font-size: $font18;
-                font-weight: $f_sizeB;;                                
-                color: #222;                
+                font-weight: $f_sizeB;
+                ;
+                color: #222;
             }
         }
+
         .btnArea.edtBtn {
             @include two_btn;
         }
@@ -272,32 +311,40 @@
     &.pay_terms02,
     &.pay_terms03 {
         .pop_con {
-            padding: 10px 15px 20px;   
+            padding: 10px 15px 20px;
             overflow: auto;
             height: 500px;
+
             .txt {
-                padding: 15px 0;                   
-                font-size: $font13;                
-                color: #222;                
+                padding: 15px 0;
+                font-size: $font13;
+                color: #222;
                 word-break: break-all;
             }
+
             .agree {
-                padding: 20px 0 30px;                                   
-                dt, dd, li {
-                    font-size: $font12;                
-                    color: #222;                
+                padding: 20px 0 30px;
+
+                dt,
+                dd,
+                li {
+                    font-size: $font12;
+                    color: #222;
                     line-height: 1.5;
                     word-break: break-all;
                 }
+
                 dt {
                     font-weight: $f_sizeB;
                     padding: 7px 0;
                 }
+
                 dd {
                     padding: 7px 0;
                 }
             }
         }
+
         .btnArea.edtBtn {
             @include two_btn;
         }
@@ -305,43 +352,52 @@
 
     // 슈퍼스톡스 프리미엄 2주 무료
     &.premium_pop {
-        background-color: #fff;                
-        .pop_header {            
+        background-color: #fff;
+
+        .pop_header {
             padding: 15px 15px 25px;
             background-image: url('/img/bg_loign_com.svg'), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
             background-position: right bottom;
             background-repeat: no-repeat;
 
-            .clse::before, .clse::after {
+            .clse::before,
+            .clse::after {
                 background-color: #fff;
             }
+
             .h2_title {
                 font-size: $font20;
-                font-weight: $f_sizeB;                
-                line-height: 1.4;                                
+                font-weight: $f_sizeB;
+                line-height: 1.4;
                 color: #fff;
-                strong {                    
-                    color: #fee46a;                    
-                }                
-            }   
+
+                strong {
+                    color: #fee46a;
+                }
+            }
+
             .period {
                 margin-top: 15px;
-                font-size: $font13;                    
-                letter-spacing: -0.38px;                    
-                color: #fff;                    
-            }         
-        }        
+                font-size: $font13;
+                letter-spacing: -0.38px;
+                color: #fff;
+            }
+        }
+
         .pop_con {
-            padding: 20px 15px 20px;   
-            .list {      
-                margin-top: 10px;          
+            padding: 20px 15px 20px;
+
+            .list {
+                margin-top: 10px;
+
                 .txt {
                     position: relative;
-                    padding: 5px 0 5px 12px;                    
-                    font-size: $font14;                    
+                    padding: 5px 0 5px 12px;
+                    font-size: $font14;
                     line-height: 1.47;
                     letter-spacing: -0.38px;
                     color: #898989;
+
                     &::after {
                         content: '';
                         display: inline-block;
@@ -355,31 +411,33 @@
                 }
             }
 
-            .btnArea.payBtn {                
+            .btnArea.payBtn {
                 @include one_btn;
                 margin-top: 25px;
-                padding: 11px 0;            
+                padding: 11px 0;
                 background-color: #fa8700;
                 border: none;
-                a {                
+
+                a {
                     position: relative;
-                    display: block;                    
+                    display: block;
                     font-size: $font15;
-                    font-weight: $f_sizeB;                
+                    font-weight: $f_sizeB;
                     letter-spacing: -0.9px;
                     color: #fff;
+
                     &::after {
                         content: '';
                         display: inline-block;
                         width: 10px;
                         height: 10px;
                         position: absolute;
-                        top: 6px;                                  
-                        left: calc(100% - 35px);                        
+                        top: 6px;
+                        left: calc(100% - 35px);
                         border-top: 1px solid #fff;
-                        border-right: 1px solid #fff;            
-                        transform: rotate(45deg);         
-                    }  
+                        border-right: 1px solid #fff;
+                        transform: rotate(45deg);
+                    }
                 }
             }
 
@@ -388,13 +446,22 @@
                 display: flex;
                 justify-content: center;
                 gap: 10px;
+
                 a {
                     color: #c22e06;
                     font-size: $font13;
                 }
             }
-        }        
+        }
+
         &.premium_join {
+            .pop_con .btnArea.payBtn {
+                background-color: #c22e06;
+            }
+        }
+
+        // 프리미엄 리턴즈 첫달 0원
+        &.premium_event {
             .pop_con .btnArea.payBtn {
                 background-color: #c22e06;
             }
@@ -403,78 +470,89 @@
 
     // 유료서비스 이전 신청 안내
     &.previous_pop {
-        background-color: #fff;                
-        .pop_header {            
+        background-color: #fff;
+
+        .pop_header {
             padding: 30px 15px 20px;
             background-image: linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
             background-position: right bottom;
             background-repeat: no-repeat;
 
-            .clse::before, .clse::after {
+            .clse::before,
+            .clse::after {
                 background-color: #fff;
             }
+
             .h2_title {
                 font-size: $font20;
-                font-weight: $f_sizeB;                
-                line-height: 1.4;                                
+                font-weight: $f_sizeB;
+                line-height: 1.4;
                 color: #fff;
-                strong {                    
-                    color: #fee46a;                    
-                }                
-            }   
+
+                strong {
+                    color: #fee46a;
+                }
+            }
+
             .period {
                 margin-top: 15px;
-                font-size: $font13;                    
-                letter-spacing: -0.38px;                    
-                color: #fff;                    
-            }         
-        }        
+                font-size: $font13;
+                letter-spacing: -0.38px;
+                color: #fff;
+            }
+        }
+
         .pop_con {
-            padding: 20px 0 20px;   
-            .scr_box {                
-                padding: 0 15px;   
-                overflow: auto;            
+            padding: 20px 0 20px;
+
+            .scr_box {
+                padding: 0 15px;
+                overflow: auto;
                 overflow-x: hidden;
                 max-height: 300px;
                 box-sizing: border-box;
-                font-size: $font14;                    
+                font-size: $font14;
                 line-height: 1.47;
                 letter-spacing: -0.38px;
                 color: #898989;
-            } 
-            .day {              
-                font-size: $font14;                    
+            }
+
+            .day {
+                font-size: $font14;
                 line-height: 1.47;
                 letter-spacing: -0.38px;
-                color: #898989;  
+                color: #898989;
                 text-decoration: underline;
-            }            
-            .btnArea.payBtn {                
-                @include one_btn;        
+            }
+
+            .btnArea.payBtn {
+                @include one_btn;
                 width: calc(100% - 30px);
                 margin: 25px auto 0;
-                padding: 11px 0;            
+                padding: 11px 0;
                 background-color: #fa8700;
                 border: none;
-                a {                
+
+                a {
                     position: relative;
-                    display: block;                    
+                    display: block;
                     font-size: $font15;
-                    font-weight: $f_sizeB;                
+                    font-weight: $f_sizeB;
                     letter-spacing: -0.9px;
                     color: #fff;
+
                     &::after {
                         content: '';
                         display: inline-block;
                         width: 10px;
                         height: 10px;
                         position: absolute;
-                        top: 6px;                                  
-                        left: calc(100% - 35px);                        
+                        top: 6px;
+                        left: calc(100% - 35px);
                         border-top: 1px solid #fff;
-                        border-right: 1px solid #fff;            
-                        transform: rotate(45deg);         
-                    }  
+                        border-right: 1px solid #fff;
+                        transform: rotate(45deg);
+                    }
                 }
             }
 
@@ -483,25 +561,33 @@
                 display: flex;
                 justify-content: center;
                 gap: 10px;
+
                 a {
                     color: #c22e06;
                     font-size: $font13;
                 }
             }
-        }        
+        }
+
         &.premium_join {
             .pop_con .btnArea.payBtn {
                 background-color: #c22e06;
             }
         }
+
         .today_check {
             padding-right: 15px;
             margin-top: 15px;
             text-align: right;
-            font-size: $font14;                    
+            font-size: $font14;
             line-height: 1.47;
             letter-spacing: -0.38px;
             color: #898989;
         }
+
+
     }
+
+
+
 }

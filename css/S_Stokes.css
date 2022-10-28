@@ -9244,7 +9244,9 @@ input[type='radio']:checked:before {
   padding-top: 10px;
 }
 
-.modal.login_form .pop_con .mapage_form .form_table table th, .modal.login_form .pop_con .mapage_form .form_table table td, .modal.refund .pop_con .mapage_form .form_table table th, .modal.refund .pop_con .mapage_form .form_table table td {
+.modal.login_form .pop_con .mapage_form .form_table table th,
+.modal.login_form .pop_con .mapage_form .form_table table td, .modal.refund .pop_con .mapage_form .form_table table th,
+.modal.refund .pop_con .mapage_form .form_table table td {
   padding: 7px 0;
   text-align: left;
   font-size: 0.875rem;
@@ -9565,7 +9567,13 @@ input[type='radio']:checked:before {
   padding: 20px 0 30px;
 }
 
-.modal.pay_terms01 .pop_con .agree dt, .modal.pay_terms01 .pop_con .agree dd, .modal.pay_terms01 .pop_con .agree li, .modal.pay_terms02 .pop_con .agree dt, .modal.pay_terms02 .pop_con .agree dd, .modal.pay_terms02 .pop_con .agree li, .modal.pay_terms03 .pop_con .agree dt, .modal.pay_terms03 .pop_con .agree dd, .modal.pay_terms03 .pop_con .agree li {
+.modal.pay_terms01 .pop_con .agree dt,
+.modal.pay_terms01 .pop_con .agree dd,
+.modal.pay_terms01 .pop_con .agree li, .modal.pay_terms02 .pop_con .agree dt,
+.modal.pay_terms02 .pop_con .agree dd,
+.modal.pay_terms02 .pop_con .agree li, .modal.pay_terms03 .pop_con .agree dt,
+.modal.pay_terms03 .pop_con .agree dd,
+.modal.pay_terms03 .pop_con .agree li {
   font-size: 0.75rem;
   color: #222;
   line-height: 1.5;
@@ -9625,7 +9633,8 @@ input[type='radio']:checked:before {
   background-repeat: no-repeat;
 }
 
-.modal.premium_pop .pop_header .clse::before, .modal.premium_pop .pop_header .clse::after {
+.modal.premium_pop .pop_header .clse::before,
+.modal.premium_pop .pop_header .clse::after {
   background-color: #fff;
 }
 
@@ -9745,6 +9754,10 @@ input[type='radio']:checked:before {
   background-color: #c22e06;
 }
 
+.modal.premium_pop.premium_event .pop_con .btnArea.payBtn {
+  background-color: #c22e06;
+}
+
 .modal.previous_pop {
   background-color: #fff;
 }
@@ -9757,7 +9770,8 @@ input[type='radio']:checked:before {
   background-repeat: no-repeat;
 }
 
-.modal.previous_pop .pop_header .clse::before, .modal.previous_pop .pop_header .clse::after {
+.modal.previous_pop .pop_header .clse::before,
+.modal.previous_pop .pop_header .clse::after {
   background-color: #fff;
 }
 

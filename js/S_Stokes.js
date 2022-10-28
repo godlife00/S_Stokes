@@ -8,26 +8,26 @@ $(document).ready(function () {
 
     // 페이지 해더 종목명 노출 스크립트    
     $('.page_hdrName').hide();
-    $(window).scroll(function () {        
-        if ($('.page_hdrName').length) {                        
-            var hdrNameTop = $('.mainBox.attr').offset().top;                                                                      
-            if ($(document).scrollTop() == 0 && $(document).scrollTop() <= hdrNameTop) {            
+    $(window).scroll(function () {
+        if ($('.page_hdrName').length) {
+            var hdrNameTop = $('.mainBox.attr').offset().top;
+            if ($(document).scrollTop() == 0 && $(document).scrollTop() <= hdrNameTop) {
                 $('#header .bgWrap .leftLink').fadeIn();
                 $('.page_hdrName').hide();
                 $('#header .bgWrap').css({
-                    'justify-content' : 'space-between',
+                    'justify-content': 'space-between',
                 });
-                $('.s_stokes #wrap #header.sub_hdr').removeClass('boxShadow');                
-            } else if ($(document).scrollTop() !== 0 && $(document).scrollTop() > hdrNameTop) {                                                                      
+                $('.s_stokes #wrap #header.sub_hdr').removeClass('boxShadow');
+            } else if ($(document).scrollTop() !== 0 && $(document).scrollTop() > hdrNameTop) {
                 $('#header .bgWrap .leftLink').hide();
                 $('.page_hdrName').fadeIn();
                 $('#header .bgWrap').css({
-                    'justify-content' : 'center',
+                    'justify-content': 'center',
                 });
-                $('.s_stokes #wrap #header.sub_hdr').addClass('boxShadow');                
-            } 
+                $('.s_stokes #wrap #header.sub_hdr').addClass('boxShadow');
+            }
         }
-    }); 
+    });
 
     //select
     $(function () {
@@ -67,73 +67,73 @@ $(document).ready(function () {
             fadeDuration: 100
         });
     });
-    
+
     // 상단 검색바
     $('.autocompleteWrap, .bg_layer').hide();
     // $('.bgWrap .r_menu a.searchForm').on("focusout", function () {            
     //     $('.AutoComplete, .bg_layer').hide();
     // });
-    $('.bg_layer').on("click", function () {            
+    $('.bg_layer').on("click", function () {
         $('.AutoComplete, .bg_layer').hide();
     });
-    $('.bgWrap .r_menu a.searchForm').on("click", function () {            
+    $('.bgWrap .r_menu a.searchForm').on("click", function () {
         $('.AutoComplete').slideDown(300);
         $('.bg_layer').show();
     });
 
     // 오늘의승부주 탭네비 상단 고정 시키기    
-    $(window).scroll(function () {        
+    $(window).scroll(function () {
         if ($('.mainBox.game_scr').length) {
-            var jbOffset = $('.mainBox.game_scr').offset();                                            
-            if ($(document).scrollTop() < jbOffset.top - 34) {      
+            var jbOffset = $('.mainBox.game_scr').offset();
+            if ($(document).scrollTop() < jbOffset.top - 34) {
                 $('.mainBox.game_scr').css({
-                    'padding' : '25px 0 25px',                    
-                });                                                      
+                    'padding': '25px 0 25px',
+                });
                 $('.mainBox.game_scr .page_nav').css({
-                    'position' : 'relative',
+                    'position': 'relative',
                     'top': '0',
-                }).removeClass('boxShadow');     
-                
-            } else {                            
+                }).removeClass('boxShadow');
+
+            } else {
                 $('.mainBox.game_scr').css({
-                    'padding' : '62px 0 25px',                    
-                });                
+                    'padding': '62px 0 25px',
+                });
                 $('.mainBox.game_scr .page_nav').css({
-                    'position' : 'fixed',
-                    'top': '58px',                    
-                }).addClass('boxShadow');              
+                    'position': 'fixed',
+                    'top': '58px',
+                }).addClass('boxShadow');
             }
-        }        
-    });    
-    
+        }
+    });
+
     // 메인 상단 탭네비 활성화  
-    $(window).scroll(function () {                        
-        if ($('.mainBox.game_scr .page_nav').length) {            
-            var navoffset01 = $('.mainBox.game_scr').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                                                  
-            var navoffset02 = $('.mainBox.portfolio').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                                                  
-            var navoffset03 = $('.mainBox.strategy').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                                                        
-            var navoffset04 = $('.mainBox.attr').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                  
-            $('.mainBox.game_scr .page_nav li').removeClass('active');            
-            if ($(document).scrollTop() >= 0 && $(document).scrollTop() < navoffset02) {                 
-                $('.mainBox.game_scr .page_nav li a.nav_game_scr').parents().addClass('active');            
-            } else if (navoffset01 <= navoffset02 && $(document).scrollTop() < navoffset03) {                                        
-                $('.mainBox.game_scr .page_nav li a.nav_portfolio').parents().addClass('active');    
-            } else if (navoffset02 <= navoffset03 && $(document).scrollTop() < navoffset04) {                  
-                $('.mainBox.game_scr .page_nav li a.nav_strategy').parents().addClass('active');   
-            } else {                
-                $('.mainBox.game_scr .page_nav li a.nav_attr').parents().addClass('active');            
+    $(window).scroll(function () {
+        if ($('.mainBox.game_scr .page_nav').length) {
+            var navoffset01 = $('.mainBox.game_scr').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();
+            var navoffset02 = $('.mainBox.portfolio').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();
+            var navoffset03 = $('.mainBox.strategy').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();
+            var navoffset04 = $('.mainBox.attr').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();
+            $('.mainBox.game_scr .page_nav li').removeClass('active');
+            if ($(document).scrollTop() >= 0 && $(document).scrollTop() < navoffset02) {
+                $('.mainBox.game_scr .page_nav li a.nav_game_scr').parents().addClass('active');
+            } else if (navoffset01 <= navoffset02 && $(document).scrollTop() < navoffset03) {
+                $('.mainBox.game_scr .page_nav li a.nav_portfolio').parents().addClass('active');
+            } else if (navoffset02 <= navoffset03 && $(document).scrollTop() < navoffset04) {
+                $('.mainBox.game_scr .page_nav li a.nav_strategy').parents().addClass('active');
+            } else {
+                $('.mainBox.game_scr .page_nav li a.nav_attr').parents().addClass('active');
             }
-        }        
-    });    
+        }
+    });
     // 메인 상단 탭네비 페이지내 이동    
     $('.mainBox.game_scr .page_nav li a.nav_game_scr').on("click", function () {
         var offset = $('html').offset();
-        $('html').animate({ scrollTop: offset.top}, 400);        
+        $('html').animate({ scrollTop: offset.top }, 400);
         // $('.mainBox.game_scr .page_nav li').removeClass('active');
     });
     $('.mainBox.game_scr .page_nav li a.nav_portfolio').on("click", function () {
         var offset = $('.mainBox.portfolio').offset();
-        $('html').animate({ scrollTop: offset.top - 80 }, 400);        
+        $('html').animate({ scrollTop: offset.top - 80 }, 400);
     });
     $('.mainBox.game_scr .page_nav li a.nav_strategy').on("click", function () {
         var offset = $('.mainBox.strategy').offset();
@@ -141,22 +141,22 @@ $(document).ready(function () {
     });
     $('.mainBox.game_scr .page_nav li a.nav_attr').on("click", function () {
         var offset = $('.mainBox.attr').offset();
-        $('html').animate({ scrollTop: offset.top - 80 }, 400);        
+        $('html').animate({ scrollTop: offset.top - 80 }, 400);
     });
 
     // 기업개요 더보기 열기        
     function summaryMore() {
-        var summaryHeight = $('.s_stokes #wrap #container.sub_search .summary_box .summary p').innerHeight()        
-        if (summaryHeight <= 40) {            
+        var summaryHeight = $('.s_stokes #wrap #container.sub_search .summary_box .summary p').innerHeight()
+        if (summaryHeight <= 40) {
             $('.s_stokes #wrap #container.sub_search .summary_box .summary').css('padding', '18px 16px 18px');
             $('.s_stokes #wrap #container.sub_search .summary_box .summary .link_btn').hide();
         } else {
             $('.s_stokes #wrap #container.sub_search .summary_box .summary').css('padding', '18px 16px 8px');
             $('.s_stokes #wrap #container.sub_search .summary_box .summary .link_btn').show();
         }
-    }        
-    $(window).resize(function () {        
-        summaryMore();        
+    }
+    $(window).resize(function () {
+        summaryMore();
     });
     summaryMore(); //기업개요 더보기 실행
     $('.s_stokes #wrap #container.sub_search .summary_box .summary').on("click", function () {
@@ -198,10 +198,10 @@ $(document).ready(function () {
 
     // 결제 박스 선택
     $('.s_stokes #wrap #container.sub_payment .payment_area .serviceStep .step_box').on("click", function () {
-        $('.s_stokes #wrap #container.sub_payment .payment_area .serviceStep .step_box').removeClass('active');            
+        $('.s_stokes #wrap #container.sub_payment .payment_area .serviceStep .step_box').removeClass('active');
         $(this).addClass('active');
     });
-    
+
 
     // 모달팝업
     // 슈퍼스톡스 프리미엄 2주 무료
@@ -212,10 +212,12 @@ $(document).ready(function () {
     // });    
     // 슈퍼스톡스 프리미엄 가입하기
     $('.btn_free, .btn_join').on('click', function () {
+        console.log("프리미엄 첫달무료 가입하기");
         $('.premium_pop.premium_join').modal({
             fadeDuration: 100
         });
     });
+    
     // 월자동결제 서비스 변경 팝업
     $('.btn_payCan').on('click', function () {
         $('.login_form').modal({
@@ -248,25 +250,25 @@ $(document).ready(function () {
             fadeDuration: 100
         });
     });
-    
-    
+
+
 
 
     // 진단점수 그래프바 에니메이션 효과
-    (function( $ ) {
-        $(function() {
+    (function ($) {
+        $(function () {
             function animated_contents() {
                 $(".zt-skill-bar > div ").each(function (i) {
-                    var $this  = $(this),
+                    var $this = $(this),
                         skills = $this.data('width');
-    
-                    $this.css({'width' : skills + '%'});
-    
+
+                    $this.css({ 'width': skills + '%' });
+
                 });
             }
-            
-            if(jQuery().appear) {
-                $('.zt-skill-bar').appear().on('appear', function() {
+
+            if (jQuery().appear) {
+                $('.zt-skill-bar').appear().on('appear', function () {
                     animated_contents();
                 });
             } else {
@@ -277,7 +279,7 @@ $(document).ready(function () {
 
 
 
-        
+
 });
 
 
