@@ -86,7 +86,7 @@
                 <div class="serviceStep step01">
                     <div class="step_top">
                         <h2 class="step_title">결제하기</h2>
-                        <a href="#" onclick="window.open('https://pg.nicepay.co.kr/shared/info.html', 'location', 'width=420, height=700, scrollbars=yes'); return false;">
+                        <a href="#" class="btn_cardEvent" onclick="window.open('https://pg.nicepay.co.kr/shared/info.html', 'location', 'width=420, height=700, scrollbars=yes'); return false;">
                             <img src="../img/btn_cardEvent.png" alt="카드 무이자 할부 안내">
                         </a>
                     </div>
@@ -94,13 +94,14 @@
 
                     <div class="step_box active event_1year">
                         <!-- 1주년 900원 이벤트 class = event_1year -->
-                        <h3 class="title">월 정기결제 <span class="way">&nbsp;</span></h3>
+                        <h3 class="title">월 정기결제 <span class="way">&nbsp;</span></h3>                        
                         <div class="payRight">
-                            <span class="pay01">88,000<b>원</b><span
-                                    class="pay_sale"><strong>3%할인!</strong></span></span>
-                            <span class="pay02">85,000<b>원</b></span>
-                            <div class="txt_line">
-                                <p class="txt">월 정기 결제는 신용카드와 체크카드 결제가 가능합니다.</p>
+                            <span class="pay01">88,000<b>원</b><span class="pay_sale"><strong>[이벤트]</strong></span></span>
+                            <span class="pay02">첫달 무료</span>
+                            <div class="txt_line">								
+                                <p class="txt">[이벤트] <strong>신규 월 정기결제시, 프리미엄 서비스를 첫달 무료</strong>로 이용할 수 있으며,
+                                    <span style="text-decoration: underline">둘째 달부터는 매월 정상가로 자동 결제됩니다.</span>(월 85,000원, 3% 할인적용)</p>
+                                <p class="txt"><strong>월 정기결제는 신용카드와 체크카드 결제가 가능합니다.</strong></p>
                                 <p class="txt"><strong>약정 기간 없이 언제든 해지 가능합니다.</strong></p>
                             </div>
                         </div>
@@ -160,6 +161,11 @@
                     <ul class="guide">
                         <li class="th">결제금액</li>
                         <li class="td_txt" id="payPrice_1"><strong>85,000</strong>원 <span>(부가세포함)</span></li>
+                        <li class="td_sum">(월 정기 결제는 신용카드와 체크카드 결제가 가능합니다.)</li>
+                    </ul>
+                    <ul class="guide">
+                        <li class="th">결제금액</li>
+                        <li class="td_txt" id="payPrice_1"><strong>0</strong>원 <span>(이벤트 첫 달 무료)</span></li>
                         <li class="td_sum">(월 정기 결제는 신용카드와 체크카드 결제가 가능합니다.)</li>
                     </ul>
                 </div>
