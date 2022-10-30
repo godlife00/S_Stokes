@@ -99,27 +99,8 @@
 </script>
 <!-- End Channel Plugin -->
 
-<script>
-    
-    $(document).ready(function () {
-        // 프리미엄 리턴즈 첫달 0원 이벤트 기간 중 노출되는 레이어 팝업 시작
-        // 기간 11/15 ~ 12/8 (3주)
-        $(window).on('load', function() {
-            premium_event();
-        });
-        $('.btn_free, .btn_join').on('click', function () {
-            premium_event();
-        });        
-        function premium_event() {
-            $('.premium_pop.premium_event').modal({
-                fadeDuration: 100
-            });
-        }
-        // 프리미엄 리턴즈 첫달 0원 이벤트 기간 중 노출되는 레이어 팝업 끝
-    });
-    
-</script>
 <!-- 슈퍼스톡스 프리미엄 리턴즈 첫달 0원 -->
+<!--  기간 11/15 ~ 12/8 (3주) -->
 <div class="modal premium_pop premium_event">
     <div class="pop_header">
         <h2 class="h2_title">슈퍼스톡스 리턴즈 첫달 0원</h2>
@@ -145,7 +126,6 @@
         </div>
         <!-- //service_info -->
     </div>
-
 </div>
 
 <body class="s_stokes">

@@ -210,14 +210,28 @@ $(document).ready(function () {
     //         fadeDuration: 100
     //     });
     // });    
+
     // 슈퍼스톡스 프리미엄 가입하기
-    $('.btn_free, .btn_join').on('click', function () {
-        console.log("프리미엄 첫달무료 가입하기");
-        $('.premium_pop.premium_join').modal({
-            fadeDuration: 100
+    // $('.btn_free, .btn_join').on('click', function () {        
+    //     $('.premium_pop.premium_join').modal({
+    //         fadeDuration: 100
+    //     });        
+    // });    
+     
+    // 프리미엄 리턴즈 첫달 0원 이벤트 시작 11/15 ~ 12/8 -->
+        $('.btn_free, .btn_join').on('click', function () {        
+            premium_event();
         });
-    });
-    
+        $(window).on('load', function() {
+            premium_event();
+        });    
+        function premium_event() {
+            $('.premium_pop.premium_event').modal({
+                fadeDuration: 100
+            });
+        }    
+    // 프리미엄 리턴즈 첫달 0원 이벤트 끝
+
     // 월자동결제 서비스 변경 팝업
     $('.btn_payCan').on('click', function () {
         $('.login_form').modal({
