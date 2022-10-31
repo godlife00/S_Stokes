@@ -9626,7 +9626,7 @@ input[type='radio']:checked:before {
 }
 
 .modal.premium_pop .pop_header {
-  padding: 15px 15px 25px;
+  padding: 28px 15px;
   background-image: url("/img/bg_loign_com.svg"), -webkit-gradient(linear, left top, right top, color-stop(9%, #c22e06), color-stop(95%, #e07b3c));
   background-image: url("/img/bg_loign_com.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
   background-position: right bottom;
