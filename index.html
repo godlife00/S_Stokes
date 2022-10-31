@@ -405,16 +405,10 @@
             <!-- //game_scr -->
 
             <!-- 상단 롱배너 -->
-            <div class="main_topbanner">
-                <a href="stock/service.html" class="bannerBox">
-                    <div class="title">저평가 우량주투자,<br><b>슈퍼스톡스</b>와 함께하세요.</div>
-                    <div class="link">
-                        <span>슈퍼스톡스 프리미엄 안내</span>
-                    </div>
-                </a>
-                <!-- //bannerBox -->
+            <div class="event_topBanner" style="display: block; width: 100%; height: 100%; padding: 0 15px; box-sizing: border-box; background-color: #fff;">
+                <img src="img/banner/event_topbanner_zero_221115.png" alt="슈퍼스톡스 리턴즈 첫달 0원" style="display: block; width: 100%; height: 100%;">                        
             </div>
-            <!-- //main_topbanner -->
+            <!-- //event_topBanner -->
 
             <!-- 포트폴리오 -->
             <div class="mainBox portfolio">
@@ -997,6 +991,50 @@
                 <!-- //adequateArea -->
             </div>
             <!-- //attr -->
+
+            <!-- 하단 서비스 노출 배너 -->
+            <script>
+                $(document).ready(function () {
+                    var swiper = new Swiper('.bannerSwiper', {
+                        loop: true,
+                        spaceBetween: 30,
+                        centeredSlides: true,
+                        autoplay: {
+                            delay: 2500,                        
+                        },
+                    });
+                });
+            </script>
+            <style>
+                .family_banner {                    
+                    padding: 35px 15px;                                        
+                }
+                .family_banner .bannerSwiper {
+                    
+                }                
+                .family_banner .bannerSwiper img {
+                    display: inline-block;                                        
+                    width: 100%;
+                    height: 100%;
+                }                
+            </style>
+            <div class="family_banner">
+                <div class="swiper-container bannerSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href=""><img src="img/banner/family_vl.png" alt="밸류라인"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href=""><img src="img/banner/family_chous.png" alt="초이스스탁US"></a>
+                        </div>                        
+                        <div class="swiper-slide">
+                            <a href=""><img src="img/banner/family_vp.png" alt="빅파이낸스"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //swiper-container -->
+            </div>
+            <!-- //family_banner -->
         </div>
         <!-- //container -->
 
