@@ -103,7 +103,9 @@
 <!--  기간 11/15 ~ 12/8 (3주) -->
 <div class="modal premium_pop premium_event">
     <div class="pop_header">
-        <!-- <h2 class="h2_title">슈퍼스톡스 리턴즈 <span style="color: #FEE46A; font-weight: bold;">첫달 0원</span></h2> -->
+        <h2 class="h2_title">
+            <img src="img/banner/event_topbanner_zero_221115.png" alt="" style="width: 100%">
+        </h2>
         <a href="#" class="clse" rel="modal:close">
             <!--닫기-->
         </a>
@@ -131,17 +133,12 @@
 <body class="s_stokes">
 
     <div id="wrap">
-        <!-- 메인 상단 휴대폰 등록 안내 팝업 -->
-        <div class="top_banner">
-            <p>추천알림을 위해 휴대폰번호를 등록해주세요. <a href="/member/mypage_mod.html"> [마이페이지]</a> <a href="#"
-                    class="btn_close">X</a></p>
+        <!-- 상단 롱배너 -->
+        <div class="event_topBanner" style="display: block; width: 100%; height: 100%;">
+            <a href="payment/step01.html"><img src="img/banner/event_topbanner_zero_221115.png" alt="슈퍼스톡스 리턴즈 첫달 0원" style="display: block; width: 100%; height: 100%;"> </a>
         </div>
-        <script language="Javascript" type="text/javascript">
-            $('.s_stokes .top_banner p .btn_close').on("click", function () {
-                $('.s_stokes .top_banner').slideUp();
-            })
-        </script>
-        <!-- //메인 상단 휴대폰 등록 안내 팝업 -->
+        <!-- //event_topBanner -->
+
 
         <!-- 헤더 -->
         <div id="header" class="main_hdr">
@@ -200,6 +197,18 @@
             <!-- //header_bgWrap -->
         </div>
         <!-- //header -->
+
+        <!-- 메인 상단 휴대폰 등록 안내 팝업 -->
+        <div class="top_banner">
+            <p>추천알림을 위해 휴대폰번호를 등록해주세요. <a href="/member/mypage_mod.html"> [마이페이지]</a> <a href="#"
+                    class="btn_close">X</a></p>
+        </div>
+        <script language="Javascript" type="text/javascript">
+            $('.s_stokes .top_banner p .btn_close').on("click", function () {
+                $('.s_stokes .top_banner').slideUp();
+            })
+        </script>
+        <!-- //메인 상단 휴대폰 등록 안내 팝업 -->
 
         <div id="container">
             <!-- 마켓 -->
@@ -403,14 +412,7 @@
                 <!-- //list_area -->
             </div>
             <!-- //game_scr -->
-
-            <!-- 상단 롱배너 -->
-            <div class="event_topBanner" style="display: block; width: 100%; height: 100%; padding: 0 15px; box-sizing: border-box; background-color: #fff;">
-                <a href="payment/step01.html"><img src="img/banner/event_topbanner_zero_221115.png" alt="슈퍼스톡스 리턴즈 첫달 0원"
-                        style="display: block; width: 100%; height: 100%;"> </a>
-            </div>
-            <!-- //event_topBanner -->
-
+            
             <!-- 포트폴리오 -->
             <div class="mainBox portfolio">
                 <h2 class="title"><a href="stock/portfolio_recom.html">포트폴리오</a></h2>
@@ -1026,19 +1028,19 @@
                 <div class="swiper-container bannerSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href=""><img src="img/banner/family_vl.png" alt="밸류라인"></a>
+                            <a href="https://value.choicestock.co.kr/" target="_blank"><img src="img/banner/family_vl.png" alt="밸류라인"></a>
                         </div>
                         <div class="swiper-slide">
-                            <a href=""><img src="img/banner/family_chous.png" alt="초이스스탁US"></a>
+                            <a href="https://www.choicestock.co.kr/" target="_blank"><img src="img/banner/family_chous.png" alt="초이스스탁US"></a>
                         </div>                        
                         <div class="swiper-slide">
-                            <a href=""><img src="img/banner/family_vp.png" alt="빅파이낸스"></a>
+                            <a href="https://bigfinance.co.kr/home" target="_blank"><img src="img/banner/family_vp.png" alt="빅파이낸스"></a>
                         </div>
                     </div>
                     <!-- //swiper-wrapper -->
                     <div class="swiper-pagination"></div>
                 </div>
-                <!-- //swiper-container -->
+                <!-- //swiper-container -->                
             </div>
             <!-- //family_banner -->
         </div>

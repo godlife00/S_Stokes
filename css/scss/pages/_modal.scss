@@ -355,14 +355,14 @@
         background-color: #fff;
 
         .pop_header {
-            padding: 28px 15px;
-            background-image: url('/img/bg_loign_com.svg'), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
-            background-position: right bottom;
-            background-repeat: no-repeat;
-
+            padding: 0;            
+            .clse {
+                right: 11px;
+                top: 8px;                
+            }
             .clse::before,
-            .clse::after {
-                background-color: #fff;
+            .clse::after {                
+                background-color: #000;
             }
 
             .h2_title {
@@ -386,6 +386,8 @@
 
         .pop_con {
             padding: 20px 15px 20px;
+            border: 2px solid #e3e5e6;
+            border-top: none;
 
             .list {
                 margin-top: 10px;

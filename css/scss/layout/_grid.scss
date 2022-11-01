@@ -9,10 +9,8 @@ body {
 }
 #header {
     @include pad(0);     
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
+    position: sticky; 
+    top: 0;    
     width: 100%;
     z-index: 82;        
     box-sizing: border-box;
@@ -23,10 +21,10 @@ body {
     }
 }
 #header.main_hdr + #container {
-    padding-top: 58px;   
+    // padding-top: 58px;   
 }
 #header.sub_hdr + #container {
-    padding-top: 44px;       
+    // padding-top: 44px;       
 }
 #container {            
     @include pad(0);      
@@ -364,8 +362,8 @@ input[type='radio']:checked:before {
         height: 6px;
     }
     .swiper-pagination-bullet-active {
-        background-color: #3655d6;
-        width: 22px;
+        background-color: #c22e06;
+        width: 18px;
         border-radius: 3px;
     }
 }
