@@ -685,6 +685,9 @@ input[type='radio']:checked:before {
     height: 100%;
 }
 
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 0;
+}
 .swiper-pagination .swiper-pagination-bullet {
     background-color: #bdc8d8;
     opacity: 1;
@@ -693,8 +696,8 @@ input[type='radio']:checked:before {
 }
 
 .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #3655d6;
-    width: 22px;
+    background-color: #c22e06;
+    width: 16px;
     border-radius: 3px;
 }
 

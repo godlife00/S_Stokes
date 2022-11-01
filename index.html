@@ -1001,7 +1001,10 @@
                         spaceBetween: 30,
                         centeredSlides: true,
                         autoplay: {
-                            delay: 2500,                        
+                            delay: 3500,                        
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
                         },
                     });
                 });
@@ -1011,7 +1014,7 @@
                     padding: 35px 15px;                                        
                 }
                 .family_banner .bannerSwiper {
-                    
+                    padding-bottom: 30px;                    
                 }                
                 .family_banner .bannerSwiper img {
                     display: inline-block;                                        
@@ -1032,6 +1035,8 @@
                             <a href=""><img src="img/banner/family_vp.png" alt="빅파이낸스"></a>
                         </div>
                     </div>
+                    <!-- //swiper-wrapper -->
+                    <div class="swiper-pagination"></div>
                 </div>
                 <!-- //swiper-container -->
             </div>
