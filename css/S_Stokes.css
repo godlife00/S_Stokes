@@ -9623,7 +9623,7 @@ input[type='radio']:checked:before {
 
 .modal.premium_pop .pop_header .clse::before,
 .modal.premium_pop .pop_header .clse::after {
-  background-color: #000;
+  background-color: #fff;
 }
 
 .modal.premium_pop .pop_header .h2_title {
