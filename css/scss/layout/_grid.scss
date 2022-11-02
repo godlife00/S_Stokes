@@ -587,15 +587,25 @@ input[type='radio']:checked:before {
         width: 100%;
         height: 100%;
     }
-    .today_check {       
-        background-color: #070C27; 
+    .today_check {               
+        position: absolute;
+        right: 5px;
+        top: 3px;
+        
         .content-button {
             display: block;
-            padding: 3px 16px;
+            padding: 2px 5px;
             text-align: right;
             font-size: 0.75rem;
             letter-spacing: -0.3px;
-            color: #fff;
+            color: #fff !important;
+            fill: #fff !important;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 0px;
+            stroke: none;
         }
 
     }

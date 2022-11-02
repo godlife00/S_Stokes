@@ -100,9 +100,6 @@
 </script>
 <!-- End Channel Plugin -->
 
-
-
-
 <body class="s_stokes">
 
     <div id="wrap">
@@ -129,7 +126,7 @@
                     </ul>
                 </div>
                 <div class="btnArea payBtn">
-                    <a href="payment/step01.html" class="btn">프리미엄 첫달 무료 가입하기</a>
+                    <a href="event_221115.html" class="btn">프리미엄 첫달 무료 가입하기</a>
                 </div>
                 <div class="service_info">
                     <a href="stock/service.html">[프리미엄 서비스 안내]</a>
@@ -142,14 +139,14 @@
         <div id="event_topBanner" class="" style="display: none;">
             <div class="pop_con">
                 <div class="event_topBanner">
-                    <a href="payment/step01.html"><img src="img/banner/event_topbanner_zero_221115.png" alt="슈퍼스톡스 리턴즈 첫달 0원" style="display: block; width: 100%; height: 100%;"> </a>
+                    <a href="event_221115.html"><img src="img/banner/event_topbanner_zero_221115.png" alt="슈퍼스톡스 리턴즈 첫달 0원" style="display: block; width: 100%; height: 100%;"> </a>
                 </div>
                 <!-- //event_topBanner -->
                 <div class="today_check">
                     <label for="pop_today" class="btn_day" style="display: none;">
                         <input type="checkbox" checked name="pop_today" id="pop_today" />3일 동안 보지 않기
                     </label>
-                    <a href="javascript:closeWin();" class="btn_close"><span class="content-button">3일 동안 보지 않기</span></a>
+                    <a href="javascript:closeWin();" class="btn_close"><span class="content-button">3일 동안 보지 않기&nbsp;&nbsp;✖</span></a>
                 </div>
             </div>
         </div>
@@ -166,14 +163,14 @@
             }
             function closeWin() {
                 if (document.getElementById("pop_today").checked) {
-                    setCookie("ncookie_SStokes", "done", 72);
+                    setCookie("ncookie_eventZero", "done", 72);
                 }
                 document.getElementById('event_topBanner').style.display = "none";
                 $('.blocker').hide();
                 $('body').removeAttr("style")
             }
 
-            if (cookiedata.indexOf("ncookie_SStokes=done") < 0) {
+            if (cookiedata.indexOf("ncookie_eventZero=done") < 0) {
                 // 오늘 하루 보기 체크 안한 경우
                 $('#event_topBanner').show();
             } else {
