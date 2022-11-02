@@ -14,7 +14,8 @@
     <!-- 오픈 그래프 -->
     <meta property="og:title" content="슈퍼스톡스" />
     <meta property="og:type" content="website">
-    <meta property="og:description" content="저평가 우랑주투자, 슈퍼스톡스와 함께하세요.  우량주투자, 포트폴리오, 승부주, 투자매력, 종목진단, 재무차트, 종목쇼핑, 데이터히어로">
+    <meta property="og:description"
+        content="저평가 우랑주투자, 슈퍼스톡스와 함께하세요.  우량주투자, 포트폴리오, 승부주, 투자매력, 종목진단, 재무차트, 종목쇼핑, 데이터히어로">
     <meta property="og:image" content="http://godlife.ivyro.net/SStokes/img/SStokes_thumb.png">
     <meta property="og:image:width" content="410" />
     <meta property="og:image:height" content="210" />
@@ -99,33 +100,62 @@
 </script>
 <!-- End Channel Plugin -->
 
+
+
+
 <body class="s_stokes">
 
     <div id="wrap">
-        <!-- 상단 롱배너 -->
-        <div id="layer_pop" class="">
-            <div class="pop_header">                
+
+        <!-- 슈퍼스톡스 프리미엄 리턴즈 첫달 0원 -->
+        <!--  기간 11/15 ~ 12/8 (3주) -->
+        <div class="modal premium_pop premium_event">
+            <div class="pop_header">
+                <h2 class="h2_title">
+                    <img src="img/banner/event_topbanner_zero_221115.png" alt="" style="width: 100%">
+                </h2>
                 <a href="#" class="clse" rel="modal:close">
-                    닫
                     <!--닫기-->
                 </a>
             </div>
-            
+
             <div class="pop_con">
-                <div class="event_topBanner" style="display: block; width: 100%; height: 100%;">
+                <div class="list">
+                    <ul>
+                        <li class="txt">매일 저평가 우량주 추천. <strong>오늘의 승부주</strong></li>
+                        <li class="txt">엄선된 <strong>종목추천/포트폴리오</strong></li>
+                        <li class="txt">우량주 리스트 <strong>투자매력TOP100</strong></li>
+                        <li class="txt">추천종목 <strong>투자전략 알림</strong></li>
+                    </ul>
+                </div>
+                <div class="btnArea payBtn">
+                    <a href="payment/step01.html" class="btn">프리미엄 첫달 무료 가입하기</a>
+                </div>
+                <div class="service_info">
+                    <a href="stock/service.html">[프리미엄 서비스 안내]</a>
+                </div>
+                <!-- //service_info -->
+            </div>
+        </div>
+
+        <!-- 상단 롱배너 -->
+        <div id="event_topBanner" class="" style="display: none;">
+            <div class="pop_con">
+                <div class="event_topBanner">
                     <a href="payment/step01.html"><img src="img/banner/event_topbanner_zero_221115.png" alt="슈퍼스톡스 리턴즈 첫달 0원" style="display: block; width: 100%; height: 100%;"> </a>
                 </div>
                 <!-- //event_topBanner -->
                 <div class="today_check">
                     <label for="pop_today" class="btn_day" style="display: none;">
-                        <input type="checkbox" checked name="pop_today" id="pop_today" />오늘 하루 열지 않기
+                        <input type="checkbox" checked name="pop_today" id="pop_today" />3일 동안 보지 않기
                     </label>
-                    <a href="javascript:closeWin();" class="btn_close"><span class="content-button">오늘 하루 열지 않기</span></a>
+                    <a href="javascript:closeWin();" class="btn_close"><span class="content-button">3일 동안 보지 않기</span></a>
                 </div>
             </div>
         </div>
-        
-        <!-- 오늘 하루 열지 않기 -->
+
+        <!-- 3일 동안 보지 않기 -->
+        <!--  기간 11/15 ~ 12/8 (3주) -->
         <script language="Javascript" type="text/javascript">
             cookiedata = document.cookie;
 
@@ -136,25 +166,20 @@
             }
             function closeWin() {
                 if (document.getElementById("pop_today").checked) {
-                    setCookie("ncookie_SStokes", "done", 24);
+                    setCookie("ncookie_SStokes", "done", 72);
                 }
-                document.getElementById('layer_pop').style.display = "none";
+                document.getElementById('event_topBanner').style.display = "none";
                 $('.blocker').hide();
                 $('body').removeAttr("style")
             }
 
             if (cookiedata.indexOf("ncookie_SStokes=done") < 0) {
-                $('.modal.previous_pop').modal({
-                    fadeDuration: 100
-                });
+                // 오늘 하루 보기 체크 안한 경우
+                $('#event_topBanner').show();
             } else {
-
+                // 오늘 하루 보기 체크 인 경우
             }
-
         </script>
-        <!-- 서비스 이전 공지 2022년 5월 31일까지 -->
-
-
 
         <!-- 헤더 -->
         <div id="header" class="main_hdr">
@@ -294,7 +319,7 @@
                                         <ul class="list">
                                             <li class="num">
                                                 <div>
-                                                    <span class="th">목표가</span>                                                    
+                                                    <span class="th">목표가</span>
                                                     <span class="td"><b>1,234,500</b>원</span>
                                                     <span class="trans nice">우량주</span>
                                                     <!-- 우량주 nice, 성장주 gro, 턴 turn -->
@@ -428,7 +453,7 @@
                 <!-- //list_area -->
             </div>
             <!-- //game_scr -->
-            
+
             <!-- 포트폴리오 -->
             <div class="mainBox portfolio">
                 <h2 class="title"><a href="stock/portfolio_recom.html">포트폴리오</a></h2>
@@ -1019,7 +1044,7 @@
                         spaceBetween: 30,
                         centeredSlides: true,
                         autoplay: {
-                            delay: 3500,                        
+                            delay: 3500,
                         },
                         pagination: {
                             el: ".swiper-pagination",
@@ -1028,35 +1053,40 @@
                 });
             </script>
             <style>
-                .family_banner {                    
-                    padding: 35px 15px;                                        
+                .family_banner {
+                    padding: 35px 15px;
                 }
+
                 .family_banner .bannerSwiper {
-                    padding-bottom: 30px;                    
-                }                
+                    padding-bottom: 30px;
+                }
+
                 .family_banner .bannerSwiper img {
-                    display: inline-block;                                        
+                    display: inline-block;
                     width: 100%;
                     height: 100%;
-                }                
+                }
             </style>
             <div class="family_banner">
                 <div class="swiper-container bannerSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="https://value.choicestock.co.kr/" target="_blank"><img src="img/banner/family_vl.png" alt="밸류라인"></a>
+                            <a href="https://value.choicestock.co.kr/" target="_blank"><img
+                                    src="img/banner/family_vl.png" alt="밸류라인"></a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://www.choicestock.co.kr/" target="_blank"><img src="img/banner/family_chous.png" alt="초이스스탁US"></a>
-                        </div>                        
+                            <a href="https://www.choicestock.co.kr/" target="_blank"><img
+                                    src="img/banner/family_chous.png" alt="초이스스탁US"></a>
+                        </div>
                         <div class="swiper-slide">
-                            <a href="https://bigfinance.co.kr/home" target="_blank"><img src="img/banner/family_vp.png" alt="빅파이낸스"></a>
+                            <a href="https://bigfinance.co.kr/home" target="_blank"><img src="img/banner/family_vp.png"
+                                    alt="빅파이낸스"></a>
                         </div>
                     </div>
                     <!-- //swiper-wrapper -->
                     <div class="swiper-pagination"></div>
                 </div>
-                <!-- //swiper-container -->   
+                <!-- //swiper-container -->
             </div>
             <!-- //family_banner -->
         </div>
@@ -1065,7 +1095,7 @@
         <div id="footer" class="f_main"></div>
         <!-- //footer -->
     </div>
-    <!-- //wrap -->    
+    <!-- //wrap -->
 </body>
 
 </html>
