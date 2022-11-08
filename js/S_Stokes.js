@@ -208,7 +208,7 @@ $(document).ready(function () {
     // $('.btn_free').on('click', function () {
     //     $('.premium_pop.free2weeks').modal({
     //         fadeDuration: 100
-    //     });
+    //     }); 
     // });    
 
     // 슈퍼스톡스 프리미엄 가입하기
@@ -221,10 +221,7 @@ $(document).ready(function () {
     // 프리미엄 리턴즈 첫달 0원 이벤트 시작 11/15 ~ 12/8 -->
         $('.btn_free, .btn_join').on('click', function () {        
             premium_event();
-        });
-        $(window).on('load', function() {
-            premium_event();
-        });    
+        });        
         function premium_event() {
             $('.premium_pop.premium_event').modal({
                 fadeDuration: 100
