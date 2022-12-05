@@ -1315,6 +1315,11 @@
                             &.decrease {
                                 color: $coldown;
                             }
+                            &.same {
+                                color: #222;                                
+                            } 
+
+
                         }
 
                         .num {

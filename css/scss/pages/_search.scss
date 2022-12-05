@@ -55,6 +55,9 @@
                 &.decrease {
                     color: $coldown;                                
                 }                
+                &.same {
+                    color: #222;                                
+                }                
             }
 
         }
