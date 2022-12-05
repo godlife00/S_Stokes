@@ -196,10 +196,6 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-<<<<<<< HEAD
-=======
-  left: 0;
->>>>>>> master
   width: 100%;
   z-index: 82;
   box-sizing: border-box;
@@ -737,13 +733,11 @@ input[type=radio]:checked:before {
   width: 100%;
   height: 100%;
 }
-
 #event_topBanner .today_check {
   position: absolute;
   right: 5px;
   top: 3px;
 }
-
 #event_topBanner .today_check .content-button {
   display: block;
   padding: 2px 5px;
@@ -7506,14 +7500,9 @@ input[type=radio]:checked:before {
 .modal.login_form .pop_con .mapage_form, .modal.refund .pop_con .mapage_form {
   padding-top: 10px;
 }
-<<<<<<< HEAD
-
 .modal.login_form .pop_con .mapage_form .form_table table th,
 .modal.login_form .pop_con .mapage_form .form_table table td, .modal.refund .pop_con .mapage_form .form_table table th,
 .modal.refund .pop_con .mapage_form .form_table table td {
-=======
-.modal.login_form .pop_con .mapage_form .form_table table th, .modal.login_form .pop_con .mapage_form .form_table table td, .modal.refund .pop_con .mapage_form .form_table table th, .modal.refund .pop_con .mapage_form .form_table table td {
->>>>>>> master
   padding: 7px 0;
   text-align: left;
   font-size: 0.875rem;
@@ -7771,8 +7760,6 @@ input[type=radio]:checked:before {
 .modal.pay_terms01 .pop_con .agree, .modal.pay_terms02 .pop_con .agree, .modal.pay_terms03 .pop_con .agree {
   padding: 20px 0 30px;
 }
-<<<<<<< HEAD
-
 .modal.pay_terms01 .pop_con .agree dt,
 .modal.pay_terms01 .pop_con .agree dd,
 .modal.pay_terms01 .pop_con .agree li, .modal.pay_terms02 .pop_con .agree dt,
@@ -7780,9 +7767,6 @@ input[type=radio]:checked:before {
 .modal.pay_terms02 .pop_con .agree li, .modal.pay_terms03 .pop_con .agree dt,
 .modal.pay_terms03 .pop_con .agree dd,
 .modal.pay_terms03 .pop_con .agree li {
-=======
-.modal.pay_terms01 .pop_con .agree dt, .modal.pay_terms01 .pop_con .agree dd, .modal.pay_terms01 .pop_con .agree li, .modal.pay_terms02 .pop_con .agree dt, .modal.pay_terms02 .pop_con .agree dd, .modal.pay_terms02 .pop_con .agree li, .modal.pay_terms03 .pop_con .agree dt, .modal.pay_terms03 .pop_con .agree dd, .modal.pay_terms03 .pop_con .agree li {
->>>>>>> master
   font-size: 0.75rem;
   color: #222;
   line-height: 1.5;
@@ -7821,25 +7805,14 @@ input[type=radio]:checked:before {
   background-color: #fff;
 }
 .modal.premium_pop .pop_header {
-<<<<<<< HEAD
   padding: 0;
 }
-
 .modal.premium_pop .pop_header .clse {
   right: 11px;
   top: 8px;
 }
-
 .modal.premium_pop .pop_header .clse::before,
 .modal.premium_pop .pop_header .clse::after {
-=======
-  padding: 15px 15px 25px;
-  background-image: url("/img/bg_loign_com.svg"), linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
-  background-position: right bottom;
-  background-repeat: no-repeat;
-}
-.modal.premium_pop .pop_header .clse::before, .modal.premium_pop .pop_header .clse::after {
->>>>>>> master
   background-color: #fff;
 }
 .modal.premium_pop .pop_header .h2_title {
@@ -7940,14 +7913,9 @@ input[type=radio]:checked:before {
 .modal.premium_pop.premium_join .pop_con .btnArea.payBtn {
   background-color: #c22e06;
 }
-<<<<<<< HEAD
-
 .modal.premium_pop.premium_event .pop_con .btnArea.payBtn {
   background-color: #c22e06;
 }
-
-=======
->>>>>>> master
 .modal.previous_pop {
   background-color: #fff;
 }
@@ -7957,13 +7925,8 @@ input[type=radio]:checked:before {
   background-position: right bottom;
   background-repeat: no-repeat;
 }
-<<<<<<< HEAD
-
 .modal.previous_pop .pop_header .clse::before,
 .modal.previous_pop .pop_header .clse::after {
-=======
-.modal.previous_pop .pop_header .clse::before, .modal.previous_pop .pop_header .clse::after {
->>>>>>> master
   background-color: #fff;
 }
 .modal.previous_pop .pop_header .h2_title {
