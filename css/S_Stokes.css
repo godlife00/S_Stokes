@@ -193,7 +193,8 @@ body {
 
 #header {
   padding: 0;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
