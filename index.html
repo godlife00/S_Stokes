@@ -741,7 +741,7 @@
                                 <!-- //charm_num -->
                                 <div class="num_bar">
                                     <div class="line">
-                                        <div class="th">기술적분석</div>
+                                        <div class="th">수급분석</div>
                                         <div class="barArea">
                                             <!-- <div class="barline">
                                                 <span class="position" style="width: 10%;"></span>
@@ -807,7 +807,7 @@
                                 <!-- //charm_num -->
                                 <div class="num_bar">
                                     <div class="line">
-                                        <div class="th">기술적분석</div>
+                                        <div class="th">수급분석</div>
                                         <div class="barArea">
                                             <!-- <div class="barline">
                                                 <span class="position" style="width: 10%;"></span>
@@ -872,7 +872,7 @@
                                 <!-- //charm_num -->
                                 <div class="num_bar">
                                     <div class="line">
-                                        <div class="th">기술적분석</div>
+                                        <div class="th">수급분석</div>
                                         <div class="barArea">
                                             <!-- <div class="barline">
                                                 <span class="position" style="width: 10%;"></span>
@@ -969,6 +969,59 @@
                 <!-- //adequateArea -->
             </div>
             <!-- //attr -->
+
+            <!-- 하단 서비스 노출 배너 -->
+            <script>
+                $(document).ready(function () {
+                    var swiper = new Swiper('.bannerSwiper', {
+                        loop: true,
+                        spaceBetween: 30,
+                        centeredSlides: true,
+                        autoplay: {
+                            delay: 3500,
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                        },
+                    });
+                });
+            </script>
+            <style>
+                .family_banner {
+                    padding: 35px 15px 0;
+                }
+
+                .family_banner .bannerSwiper {
+                    padding-bottom: 30px;
+                }
+
+                .family_banner .bannerSwiper img {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                }
+            </style>
+            
+            <div class="family_banner">
+                <div class="swiper-container bannerSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" target="_blank"><img src="img/banner/family_vl_01.png" class="radam_Img_vl" alt="밸류라인"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://capdev.choicestock.co.kr" target="_blank"><img src="/img/banner/family_chous.png" alt="초이스스탁US"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://bigfinance.co.kr/home" target="_blank"><img src="img/banner/family_vp.png" class="radam_Img_vp" alt="빅파이낸스"></a>
+                        </div>
+                    </div>
+                    <!-- //swiper-wrapper -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- //swiper-container -->
+            </div>
+            <!-- //family_banner -->
+
         </div>
         <!-- //container -->
 
