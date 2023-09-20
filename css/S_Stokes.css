@@ -193,7 +193,6 @@ body {
 
 #header {
   padding: 0;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
@@ -623,9 +622,6 @@ input[type=radio]:checked:before {
 .AutoComplete form .searchInput::-moz-placeholder {
   color: #d3d3d3;
 }
-.AutoComplete form .searchInput:-ms-input-placeholder {
-  color: #d3d3d3;
-}
 .AutoComplete form .searchInput::placeholder {
   color: #d3d3d3;
 }
@@ -748,7 +744,6 @@ input[type=radio]:checked:before {
   color: #898989;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 0px;
   stroke: none;
@@ -4198,7 +4193,7 @@ input[type=radio]:checked:before {
   padding: 15px 5px;
 }
 .s_stokes #wrap #container.sub_stock .serviceStyle .smart {
-  padding: 35px 15px;
+  padding: 35px 15px 15px;
   background: #fff url("/img/bg_serviceSmart.svg") no-repeat calc(100% + 10px) 25px;
 }
 .s_stokes #wrap #container.sub_stock .serviceStyle .smart .title strong {
@@ -4230,7 +4225,15 @@ input[type=radio]:checked:before {
   text-align: center;
   color: #898989;
 }
-.s_stokes #wrap #container.sub_stock .serviceStyle .smart .box .btnArea.payBtn {
+.s_stokes #wrap #container.sub_stock .serviceStyle .btnArea.payBtn {
+  position: sticky;
+  bottom: 0;
+  margin-bottom: 35px;
+  padding: 15px 0;
+  background-color: #fff;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
+}
+.s_stokes #wrap #container.sub_stock .serviceStyle .btnArea.payBtn a {
   position: relative;
   display: block;
   width: 100%;
@@ -4245,37 +4248,34 @@ input[type=radio]:checked:before {
   font-size: 0.9375rem;
   letter-spacing: -0.38px;
   color: #fff;
-  margin-top: 15px;
-  padding: 11px 0;
-  width: calc(100% - 60px);
   background-color: #fa8700;
+  padding: 11px 0;
   border: none;
-}
-.s_stokes #wrap #container.sub_stock .serviceStyle .smart .box .btnArea.payBtn b {
-  color: #fff;
-  font-weight: 700;
-}
-.s_stokes #wrap #container.sub_stock .serviceStyle .smart .box .btnArea.payBtn a {
   position: relative;
   display: block;
   font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: -0.9px;
   color: #fff;
+  width: calc(100% - 60px);
 }
-.s_stokes #wrap #container.sub_stock .serviceStyle .smart .box .btnArea.payBtn a::after {
+.s_stokes #wrap #container.sub_stock .serviceStyle .btnArea.payBtn a b {
+  color: #fff;
+  font-weight: 700;
+}
+.s_stokes #wrap #container.sub_stock .serviceStyle .btnArea.payBtn a::after {
   content: "";
   display: inline-block;
   width: 10px;
   height: 10px;
   position: absolute;
-  top: 8px;
+  top: 16px;
   left: calc(100% - 35px);
   border-top: 1px solid #fff;
   border-right: 1px solid #fff;
   transform: rotate(45deg);
 }
-.s_stokes #wrap #container.sub_stock .serviceStyle .smart .box:last-child .btnArea.payBtn {
+.s_stokes #wrap #container.sub_stock .serviceStyle:last-child .btnArea.payBtn a {
   background-color: #c22e06;
 }
 
@@ -4722,12 +4722,6 @@ input[type=radio]:checked:before {
   color: #82929f;
   letter-spacing: -0.8px;
 }
-.s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .pinInput:-ms-input-placeholder, .s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .pinInput_out:-ms-input-placeholder {
-  font-size: 16px;
-  font-weight: normal;
-  color: #82929f;
-  letter-spacing: -0.8px;
-}
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .pinInput::placeholder,
 .s_stokes #wrap #container.sub_login .agree_area .agree_from .phonePin_form .pinInput_out::placeholder {
   font-size: 16px;
@@ -4965,12 +4959,6 @@ input[type=radio]:checked:before {
   outline: none;
 }
 .s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput::-moz-placeholder, .s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput_out::-moz-placeholder {
-  font-size: 0.875rem;
-  font-weight: normal;
-  color: #82929f;
-  letter-spacing: -0.8px;
-}
-.s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput:-ms-input-placeholder, .s_stokes #wrap #container.sub_login .agree_area .mapage_form .form_table td.phonePin_form .pinInput_out:-ms-input-placeholder {
   font-size: 0.875rem;
   font-weight: normal;
   color: #82929f;
@@ -7561,9 +7549,6 @@ input[type=radio]:checked:before {
   outline: none;
 }
 .modal.login_form .pop_con .mapage_form .form_table table .tr_num::-moz-placeholder, .modal.refund .pop_con .mapage_form .form_table table .tr_num::-moz-placeholder {
-  color: #333;
-}
-.modal.login_form .pop_con .mapage_form .form_table table .tr_num:-ms-input-placeholder, .modal.refund .pop_con .mapage_form .form_table table .tr_num:-ms-input-placeholder {
   color: #333;
 }
 .modal.login_form .pop_con .mapage_form .form_table table .tr_num::placeholder, .modal.refund .pop_con .mapage_form .form_table table .tr_num::placeholder {

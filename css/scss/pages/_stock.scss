@@ -1646,8 +1646,8 @@
         }
 
         // 스마트하게 슈퍼스톡스 이용하기
-        .smart {
-            padding: 35px 15px;
+        .smart {            
+            padding: 35px 15px 15px;
             background: #fff url('/img/bg_serviceSmart.svg') no-repeat calc(100% + 10px) 25px;
 
             .title {
@@ -1682,48 +1682,51 @@
                         text-align: center;
                         color: #898989;
                     }
-                }
-
-                .btnArea.payBtn {
-                    @include one_btn;
-                    margin-top: 15px;
-                    padding: 11px 0;
-                    width: calc(100% - 60px);
-                    background-color: #fa8700;
-                    border: none;
-
-                    a {
-                        position: relative;
-                        display: block;
-                        font-size: $font18;
-                        font-weight: $f_sizeB;
-                        letter-spacing: -0.9px;
-                        color: #fff;
-
-                        &::after {
-                            content: '';
-                            display: inline-block;
-                            width: 10px;
-                            height: 10px;
-                            position: absolute;
-                            top: 8px;
-                            left: calc(100% - 35px);
-                            border-top: 1px solid #fff;
-                            border-right: 1px solid #fff;
-                            transform: rotate(45deg);
-                        }
-                    }
-                }
-
-                &:last-child {
-                    .btnArea.payBtn {
-                        background-color: #c22e06;
-                    }
-                }
-
-            }
-
+                }                
+            }            
         }
+        .btnArea.payBtn {            
+            position: sticky;
+            bottom: 0;
+            margin-bottom: 35px;            
+            padding: 15px 0;
+            background-color: #fff;
+            box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
+            
+            a {
+                @include one_btn;
+                background-color: #fa8700;
+                padding: 11px 0;            
+                border: none;
+                position: relative;
+                display: block;
+                font-size: $font18;
+                font-weight: $f_sizeB;
+                letter-spacing: -0.9px;
+                color: #fff;
+                width: calc(100% - 60px);                
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    position: absolute;
+                    top: 16px;
+                    left: calc(100% - 35px);
+                    border-top: 1px solid #fff;
+                    border-right: 1px solid #fff;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        &:last-child {
+            .btnArea.payBtn a {
+                background-color: #c22e06;
+            }
+        }
+
     }
 }
 
