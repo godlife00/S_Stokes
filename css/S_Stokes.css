@@ -4275,9 +4275,6 @@ input[type=radio]:checked:before {
   border-right: 1px solid #fff;
   transform: rotate(45deg);
 }
-.s_stokes #wrap #container.sub_stock .serviceStyle:last-child .btnArea.payBtn a {
-  background-color: #c22e06;
-}
 
 /*** 이용약관, 개인정보처리방침 ***/
 .s_stokes .sub_terms {
@@ -8000,6 +7997,12 @@ input[type=radio]:checked:before {
   line-height: 1.47;
   letter-spacing: -0.38px;
   color: #898989;
+}
+
+.s_stokes #wrap .service_wrap .box.lazy_img img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
 }
 
 body {
