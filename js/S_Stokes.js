@@ -110,15 +110,13 @@ $(document).ready(function () {
     $(window).scroll(function () {                        
         if ($('.mainBox.game_scr .page_nav').length) {            
             var navoffset01 = $('.mainBox.game_scr').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                                                  
-            var navoffset02 = $('.mainBox.portfolio').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                                                  
+            // var navoffset02 = $('.mainBox.portfolio').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                                                  
             var navoffset03 = $('.mainBox.strategy').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                                                        
             var navoffset04 = $('.mainBox.attr').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight();                  
             $('.mainBox.game_scr .page_nav li').removeClass('active');            
-            if ($(document).scrollTop() >= 0 && $(document).scrollTop() < navoffset02) {                 
+            if ($(document).scrollTop() >= 0 && $(document).scrollTop() < navoffset03) {                 
                 $('.mainBox.game_scr .page_nav li a.nav_game_scr').parents().addClass('active');            
-            } else if (navoffset01 <= navoffset02 && $(document).scrollTop() < navoffset03) {                                        
-                $('.mainBox.game_scr .page_nav li a.nav_portfolio').parents().addClass('active');    
-            } else if (navoffset02 <= navoffset03 && $(document).scrollTop() < navoffset04) {                  
+            } else if (navoffset03 <= navoffset03 && $(document).scrollTop() < navoffset04) {                  
                 $('.mainBox.game_scr .page_nav li a.nav_strategy').parents().addClass('active');   
             } else {                
                 $('.mainBox.game_scr .page_nav li a.nav_attr').parents().addClass('active');            
@@ -130,11 +128,7 @@ $(document).ready(function () {
         var offset = $('html').offset();
         $('html').animate({ scrollTop: offset.top}, 400);        
         // $('.mainBox.game_scr .page_nav li').removeClass('active');
-    });
-    $('.mainBox.game_scr .page_nav li a.nav_portfolio').on("click", function () {
-        var offset = $('.mainBox.portfolio').offset();
-        $('html').animate({ scrollTop: offset.top - 80 }, 400);        
-    });
+    });    
     $('.mainBox.game_scr .page_nav li a.nav_strategy').on("click", function () {
         var offset = $('.mainBox.strategy').offset();
         $('html').animate({ scrollTop: offset.top - 80 }, 400);

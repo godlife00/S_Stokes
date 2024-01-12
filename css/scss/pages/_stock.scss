@@ -13,6 +13,97 @@
             color: #222;
         }
 
+        // 포트수익률
+        .bg_box {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 4px 4px;
+            margin: 15px 0 17px;
+            box-sizing: border-box;
+
+            .data_opinion {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                gap: 15px;
+                padding: 15px 15px;                
+
+                .line {
+                    .th {
+                        font-size: $font12;
+                        line-height: 1.5;
+                        letter-spacing: -0.3px;
+                        color: #898989;
+
+                        span {
+                            font-size: 10px;
+                            color: #898989;
+                        }
+                    }
+
+                    .td {
+                        font-size: $font18;
+                        line-height: 1.47;
+                        letter-spacing: -0.38px;
+                        color: #222;
+
+                        b {
+                            font-weight: $f_sizeB;
+                        }
+
+                        .port {
+                            font-size: $font16;
+                            font-weight: $f_sizeB;
+                            letter-spacing: -0.4px;
+                            color: #222;
+                        }
+
+                        p {
+                            display: inline-block;
+
+                            &.yield {
+                                &.increase, &.increase b {
+                                    color: $colup;                                    
+                                }
+                                &.decrease, &.decrease b {
+                                    color: $coldown;                                    
+                                }
+                                font-size: $font20;
+                                font-weight: $f_sizeB;
+                                letter-spacing: -0.53px;
+                                b {
+                                    font-weight: normal;
+                                }                                
+                            }
+                        }
+
+                        &.yield {
+                            &.increase, &.increase b {
+                                color: $colup;                                    
+                            }
+                            &.decrease, &.decrease b {
+                                color: $coldown;                                    
+                            }
+                            font-weight: $f_sizeB;
+                            b {
+                                font-weight: normal;                                
+                            }                            
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        flex: 3;
+                        border-right: 1px solid #e6e6e6;
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+
         .w_filter {
             margin-top: 24px;
 
