@@ -29,7 +29,7 @@ $font20: 1.25rem;
 // Set a default value
 $default-padding: 0px;
 $default-margin: 0px;
-$default-fontfamily: 'Spoqa Han Sans Neo', "Malgun gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$default-fontfamily: "Pretendard Variable", Pretendard, 'Spoqa Han Sans Neo', -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
 @mixin font-family {
     font-family: $default-fontfamily;

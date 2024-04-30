@@ -1,4 +1,12 @@
 /* 그리드 grid */
+
+body, #wrap {
+	display: flex;
+	flex-direction: column;
+	min-height: -webkit-fill-available;
+	min-height: 100vh;	
+}
+
 body {
     background-color: #f7f7f7;
     max-width: 767px;
@@ -26,7 +34,8 @@ body {
 #header.sub_hdr + #container {
     // padding-top: 44px;       
 }
-#container {            
+#container {           
+    flex: 1; 
     @include pad(0);      
     position: relative;
     min-height: 500px;

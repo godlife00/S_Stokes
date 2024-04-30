@@ -48,7 +48,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="../css/scss/S_Stokes.css" />    
+    <link rel="stylesheet" type="text/css" href="../css/scss/S_Stokes.css" />
     <!-- js -->
     <script src="../js/S_Stokes.js"></script>
     <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
@@ -71,32 +71,46 @@
 
         <!-- 로그인 class = sub_login-->
         <div id="container" class="sub_login">
-
-            <!-- 초이스스탁 통합회원 가입 완료-->
-            <div class="mainBox loign_com">                
-                <div class="sum_box">
-                    <h2 class="login_sum"><strong>데이터히어로 서비스</strong> 통합회원 가입이<br>완료되었습니다.</h2>                 
-                </div>                
-
-                <div class="phone_regbox">
-                    <h3 class="title">슈퍼스톡스 프리미엄</h3>
-                    <p class="txt">요즘 뜨는 종목과 시장트렌드를 한번에!</p>
-                    <ul>
-                        <li class="txt">AI추천주 + 정보 문자서비스</li>
-                        <li class="txt">저평가 우량주를 매일 2종목씩 추천 <strong>‘종목 추천’</strong></li>                    
-                        <li class="txt">우량주 리스트 <strong>'투자매력TOP100'</strong></li>
-                        <li class="txt">추천종목 <strong>'투자전략 알림'</strong></li>
-                    </ul>
+            <!-- 주요 콘텐츠 -->
+            <div class="loign_chk dup">                
+                <p class="dup_sns">이미 가입한 계정이 있습니다</p>                
+                <div class="id_chk sns_n">
+                    <div class="sns_img">
+                        <img src="../img/icon_sns_n.svg" alt="네이버">
+                    </div>
+                    <div class="sns_info">
+                        <p class="sns_name">네이버 연동</p>
+                        <p class="sns_chk">cmux76cmux76cmux76cmux76cmux76cmux76cmux76cmux76cmux76@gmail.com</p>
+                        <p class="sns_phon">010-***-1234</p>
+                    </div>                    
                 </div>
-                <div class="link_home">
-                    <a href="../index.html" class="link_home">홈으로 이동</a>
-                </div>
+                <!-- <div class="id_chk sns_k">
+                    <div class="sns_img">
+                        <img src="../img/icon_sns_k.svg" alt="카카오톡">
+                    </div>
+                    <div class="sns_info">
+                        <p class="sns_name">카카오 연동</p>
+                        <p class="sns_chk">cmux76cmux76cmux76cmux76cmux76cmux76cmux76cmux76cmux76@gmail.com</p>
+                        <p class="sns_phon">010-***-5678</p>
+                    </div>                    
+                </div>                 -->
             </div>
-            <!-- //loign_com -->
+            <!-- //loign_chk -->
+
+            <div class="loign">
+                <p class="sns_loign">정보가 맞다면 이 계정으로 로그인하세요</p>
+                <ul class="sns">
+                    <li class="sns_k"><a href="login_idchk.html">카카오로 로그인</a></li>
+                    <li class="sns_n"><a href="login_idchk.html">네이버로 로그인</a></li>                    
+                </ul>
+                <a href="https://kq64o.channel.io/" class="btn_channel" target="_blank" >회원가입 관련 문의하기</a>
+            </div>
+            <!-- //loign -->  
+
         </div>
         <!-- //sub_login -->
-
         <!-- //container -->
+
         <div id="footer" class="f_main"></div>
         <!-- //footer -->
     </div>
