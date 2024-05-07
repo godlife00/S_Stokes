@@ -58,7 +58,7 @@
 
 <body class="s_stokes">
     <div id="wrap">
-        <!-- 헤더 -->        
+        <!-- 헤더 -->
         <div id="header" class="sub_hdr bg_blue">
             <div class="headerTop">
                 <div class="left">
@@ -76,59 +76,73 @@
 
         <!-- 결제 class = sub_payment-->
         <div id="container" class="sub_payment bg_blue">
-            <!-- 결제 -->
-            <div class="mainBox payment_area">                
-                <!-- 가입방법 선택 -->
-                <div class="serviceStep step01">
-                    <div class="page_sumtop">
-                        <p class="txt">슈퍼스톡스 결제하고<br>나에게 딱 맞는 주식 정보 받아보세요. </p>
-                    </div>
-                    <!-- //page_sumtop -->
-
-                    <div class="step_wrap">                        
-                        <div class="step_box routine_pay active">
-                            <h3 class="title">월 정기결제</h3>
-                            <div class="payRight">
-                                <span class="pay01">88,000원</span>
-                                <span class="pay02">85,000원
-                                    <span class="pay_sale">
-                                        <strong>(3% 할인)</strong>
-                                    </span>
-                                </span>
-                            </div>
-                            <!-- //payRight -->
-                            <div class="subscribe">
-                                <a href="step02_routine.html"><span>구독</span></a>
-                            </div>
-                        </div>
-                        <!-- //step_box -->                        
-                        <!-- <p class="pay_guideTxt">신규 월 정기결제 시, 첫째 달에 1,000원이 결제되며,<br>둘째 달 부터는 매월 33,000원으로 자동결제됩니다.</p> -->
-
-                        <!-- 기간결제(3개월)  -->
-                        <div class="step_box period_pay">
-                            <h3 class="title">기간결제(3개월)</h3>
-                            <div class="payRight">                                
-                                <span class="pay02">264,000원
-                                    <span class="pay_sale">
-                                        <strong>(88,000원 * 3개월)</strong>
-                                    </span>
-                                </span>
-                            </div>
-                            <!-- //payRight -->
-                            <div class="subscribe">
-                                <a href="step02_period.html"><span>구독</span></a>
-                            </div>
-                        </div>
-                        <!-- //step_box -->
-                    </div>
-                    <!-- //step_wrap -->
-
-
+            <!-- 서비스 결제가 완료되었습니다. -->
+            <div class="pay_complete">
+                <h1 class="com_title">슈퍼스톡스<br>서비스 결제가 완료되었습니다.</h1>
+                <div class="payment_guide">
+                    <ul class="guide">
+                        <li class="th">결제상품</li>
+                        <li class="td_txt">슈퍼스톡스 - 월정기결제</li>
+                    </ul>
+                    <ul class="guide">
+                        <li class="th">결제수단 </li>
+                        <li class="td_txt">신용카드 ( 현대 **2345) </li>
+                    </ul>
+                    <ul class="guide">
+                        <li class="th">결제금액</li>
+                        <li class="td_txt">85,000</li>
+                    </ul>
+                    <ul class="guide">
+                        <li class="th">결제일</li>
+                        <li class="td_txt">월정기결제 - 매월 28일</li>
+                    </ul>
                 </div>
-                <!-- //serviceStep -->
+                <!-- //payment_guide -->
+                <p class="go_myhome">결제내역은 <a href="../member/mypage_history.html">‘마이페이지’</a>에서 확인할 수 있습니다.</p>
 
+                <div class="btnArea payBtn">
+                    <a href="../index.html" class="btn btn_home">서비스 홈으로</a>
+                </div>
             </div>
-            <!-- //payment_area -->
+            <!-- //pay_complete -->
+
+            <div class="pay_complete">
+                <h1 class="com_title">슈퍼스톡스<br>서비스 결제가 완료되었습니다.</h1>
+                <div class="payment_guide">
+                    <ul class="guide">
+                        <li class="th">결제상품</li>
+                        <li class="td_txt">슈퍼스톡스 - 기간결제(3개월)</li>
+                    </ul>
+                    <ul class="guide">
+                        <li class="th">결제수단 </li>
+                        <li class="td_txt">가상계좌 (무통장) </li>
+                    </ul>
+                    <ul class="guide">
+                        <li class="th">결제금액</li>
+                        <li class="td_txt">148,500원</li>
+                    </ul>
+                    <ul class="guide">
+                        <li class="th">입금계좌</li>
+                        <li class="td_txt">국민은행 1234-2334-2334-2345<br>(주)데이터히어로</li>
+                    </ul>
+                    <ul class="guide">
+                        <li class="th">입금기한</li>
+                        <li class="td_txt">2023년 10월 10일 123:29까지</li>
+                    </ul>
+                    <div class="deposit_box">
+                        <p class="deposit_info">*무통장 결제 신청 시 해당 계좌로 결제금액을 입금해주세요.
+                            입금내역 확인 즉시, 서비스를 바로 이용할 수 있습니다.</p>
+                        <p class="deposit_info"> *입금기한 내 미입금 시, 서비스 신청은 자동 취소됩니다.</p>
+                    </div>
+                </div>
+                <!-- //payment_guide -->
+                <p class="go_myhome">결제내역은 <a href="../member/mypage_history.html">‘마이페이지’</a>에서 확인할 수 있습니다.</p>
+
+                <div class="btnArea payBtn">
+                    <a href="../index.html" class="btn btn_home">서비스 홈으로</a>
+                </div>
+            </div>
+            <!-- //pay_complete -->
         </div>
         <!-- //container -->
 

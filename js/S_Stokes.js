@@ -227,24 +227,42 @@ $(document).ready(function () {
             fadeDuration: 100
         });
     });
-    $('.age_pop01').on('click', function () {
-        $('.pay_terms01').modal({
-            fadeDuration: 100
-        });
+    $('.age_pop01').on('click', function () {        
+        $('.modal').hide().removeClass('slideUp');
+        $('.blocker').show();
+        $('.agreePopBox.box_01').show().addClass('slideUp');
     });
-    $('.age_pop02').on('click', function () {
-        $('.pay_terms02').modal({
-            fadeDuration: 100
-        });
+    $('.age_pop02').on('click', function () {        
+        $('.modal').hide().removeClass('slideUp');
+        $('.blocker').show();
+        $('.agreePopBox.box_02').show().addClass('slideUp');
     });
-    $('.age_pop03').on('click', function () {
-        $('.pay_terms03').modal({
-            fadeDuration: 100
-        });
+    $('.age_pop03').on('click', function () {        
+        $('.modal').hide().removeClass('slideUp');
+        $('.blocker').show();
+        $('.agreePopBox.box_03').show().addClass('slideUp');
     });
-    
+    // 모달팝업 - 닫기
+    $('.modal .pop_header .clse, .blocker').on('click', function () {
+        $('body').css('overflow', '');
+        $('.blocker').hide();
+        $('.modal').hide().removeClass('slideUp');
+    });
+
+    // 결제 이용약관 모달 팝업        
+    $('.sub_payment .refund_terms').on('click', function () {
+        if ($(this).hasClass('no_signal')) {            
+            return;
+        } else {
+            $('body').css('overflow', 'hidden');
+            $('.modal').hide().removeClass('slideUp');
+            $('.blocker').show();
+            $('.refundTerms_pop01').show().addClass('slideUp');
+        }        
+    });
     
 
+    
 
     // 진단점수 그래프바 에니메이션 효과
     (function( $ ) {
@@ -268,9 +286,6 @@ $(document).ready(function () {
             }
         });
     }(jQuery));
-
-
-
         
 });
 

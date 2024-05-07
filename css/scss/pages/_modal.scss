@@ -1,15 +1,18 @@
 // 모달팝업
+.modalBox .modal + .blocker {
+    display: none;    
+}
 .modal {    
     @at-root .blocker {
         z-index: 98;
-        background-color: rgba(0,0,0, 0.5);
+        background-color: rgba(0,0,0, 0.4);
     }
     z-index: 99;
     width: 100%;    
     padding: 0;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
     background-color: #fff;
     // display: block;
     .close-modal {
@@ -162,9 +165,10 @@
                     height: 18px;
                     background: url('/img/icon_agreecheck.svg') no-repeat 100% 0;
                     margin-right: 7px;
+                    filter: grayscale(100%) opacity(30%);
                 }
                 .label_chk.active i {                                        
-                    background-position: 0 0;
+                    filter: grayscale(0%) opacity(100%);
                 }                
                 .btnArea.edtBtn {                    
                     @include one_btn;
@@ -502,6 +506,110 @@
             line-height: 1.47;
             letter-spacing: -0.38px;
             color: #898989;
+        }
+    }
+    &.agreePopBox {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 94%;
+        transform: translate(-50%, 15%);
+        .pop_header {
+            background-color: #fff;
+            padding: 24px 15px;
+            border: none;
+            .pop_title {
+                display: flex;                
+                justify-content: center;
+                font-size: 1.25rem;
+                line-height: 1.14;
+                font-weight: bold;
+                color: #333;
+                box-sizing: border-box;                                
+            }            
+            .clse::before,
+            .clse::after {
+                height: 22px;
+                width: 2px;
+                background-color: #333;                
+            }
+        }
+        .pop_con {
+            padding: 0 16px 32px;
+        
+            .txt {
+                overflow: auto;
+                height: 400px;
+                padding: 0;
+                font-size: 0.9375rem;
+                color: #939393;
+                word-break: break-all;
+                line-height: 1.5;
+            }
+            .agree {
+                dt {
+                    padding: 20px 0 20px;
+                    font-weight: 700;
+                }                
+                dd, li {                    
+                    text-align: left;
+                    color: #333;
+                    font-size: 0.875rem;
+                    line-height: 1.6;                
+                }
+            }
+        }
+    }
+    &.refundTerms_pop01 {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 94%;
+        transform: translate(-50%, 15%);
+        padding-bottom: 15px;
+        .pop_header {
+            background-color: #fff;
+            padding: 24px 15px 0;
+            border: none;
+            .pop_title {
+                display: flex;                
+                justify-content: center;
+                font-size: 1.25rem;
+                line-height: 1.14;
+                font-weight: bold;
+                color: #333;
+                box-sizing: border-box;                                
+            }            
+            .clse::before,
+            .clse::after {
+                height: 22px;
+                width: 2px;
+                background-color: #333;                
+            }
+        }
+        .pop_con {            
+            margin: 0 16px;
+            padding: 0 16px;            
+            padding-bottom: 10px;
+            overflow: auto;
+            max-height: 380px;
+            .txt {
+                white-space: pre-line;
+                color: #333;
+                font-size: 0.84rem;
+                line-height: 22px;
+                word-wrap: break-word;
+                word-break: break-all;
+            }
+        }
+        .terms_link {
+            display: block;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            text-align: right;
+            color: #06c;
+            font-size: 0.8215rem;
+            text-decoration: none;
         }
     }
 }

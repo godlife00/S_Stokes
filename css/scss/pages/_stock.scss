@@ -1378,6 +1378,7 @@
                             text-align: right;
                             letter-spacing: -0.33px;
                             color: #222;
+                            padding: 18px 5px 12px;
 
                             b {
                                 font-weight: $f_sizeB;
@@ -1467,7 +1468,7 @@
                 .tableData .table tbody .price {
                     // text-align: center;       
                     display: flex;                    
-                    align-items: flex-end;
+                    align-items: baseline;
                     justify-content: center;
                     b {
                         display: block;
@@ -1816,7 +1817,7 @@
 
 /*** 이용약관, 개인정보처리방침 ***/
 .s_stokes .sub_terms {
-    padding: 75px 15px 30px !important;
+    padding: 45px 15px 30px !important;
 }
 
 .s_stokes .sub_terms .terms_title {
