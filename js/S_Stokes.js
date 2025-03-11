@@ -210,6 +210,11 @@ $(document).ready(function () {
             fadeDuration: 100
         });
     });
+    $('.serviceStyle .btnArea.payBtn span').on('click', function () {
+        $('.premium_pop.premium_join').modal({
+            fadeDuration: 100
+        });
+    });
     // 월자동결제 서비스 변경 팝업
     $('.btn_payCan').on('click', function () {
         $('.login_form').modal({

@@ -309,6 +309,7 @@
 
     // 슈퍼스톡스 프리미엄 2주 무료
     &.premium_pop {
+        top: -10%;
         background-color: #fff;                
         .pop_header {            
             padding: 15px 15px 25px;
@@ -357,11 +358,41 @@
                         background-color: #898989;
                     }
                 }
-            }
-
+            } 
+            .scr_box {                
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                align-content: center;                
+                padding: 0 5px;                                   
+                overflow: auto;            
+                overflow-x: hidden;
+                max-height: 300px;
+                box-sizing: border-box;
+                font-size: $font15;                    
+                line-height: 1.47;
+                letter-spacing: -0.38px;
+                color: #444;
+                strong {
+                    font-size: $font16;
+                    font-weight: bold;
+                    b {
+                        text-decoration: underline;
+                    }                    
+                }
+            } 
+            .day {              
+                font-size: $font14;                    
+                line-height: 1.47;
+                letter-spacing: -0.38px;
+                color: #898989;  
+                text-decoration: underline;
+            }            
             .btnArea.payBtn {                
-                @include one_btn;
-                margin-top: 25px;
+                @include one_btn;        
+                width: calc(100% - 30px);
+                margin: 25px auto 0;
                 padding: 11px 0;            
                 background-color: #fa8700;
                 border: none;
@@ -397,22 +428,16 @@
                     font-size: $font13;
                 }
             }
-        }        
-        &.premium_join {
-            .pop_con .btnArea.payBtn {
-                background-color: #c22e06;
-            }
-        }
+        } 
     }
 
     // 유료서비스 이전 신청 안내
-    &.previous_pop {
+    &.previous_pop {        
+        top: -10%;
         background-color: #fff;                
         .pop_header {            
             padding: 30px 15px 20px;
-            background-image: linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
-            background-position: right bottom;
-            background-repeat: no-repeat;
+            background: url('/img/bg_loign_com.svg') no-repeat calc(100% - 20px) bottom, linear-gradient(to right, #c22e06 9%, #e07b3c 95%);
 
             .clse::before, .clse::after {
                 background-color: #fff;
@@ -426,6 +451,13 @@
                     color: #fee46a;                    
                 }                
             }   
+            .txt {           
+                margin-top: 3px;     
+                font-size: $font13;                    
+                letter-spacing: -0.38px;                    
+                color: #fff; 
+                opacity: 0.85;
+            }
             .period {
                 margin-top: 15px;
                 font-size: $font13;                    
@@ -436,15 +468,30 @@
         .pop_con {
             padding: 20px 0 20px;   
             .scr_box {                
-                padding: 0 15px;   
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                align-content: center;                
+                padding: 0 5px;                   
+                margin: 0 15px;
+                border-bottom: 1px solid #E5E5E5;
                 overflow: auto;            
                 overflow-x: hidden;
                 max-height: 300px;
                 box-sizing: border-box;
-                font-size: $font14;                    
+                font-size: $font15;                    
                 line-height: 1.47;
                 letter-spacing: -0.38px;
-                color: #898989;
+                color: #444;
+                strong {
+                    font-size: $font16;
+                    font-weight: bold;
+                    b {
+                        text-decoration: underline;
+                    }
+                    
+                }
             } 
             .day {              
                 font-size: $font14;                    
@@ -507,6 +554,9 @@
             letter-spacing: -0.38px;
             color: #898989;
         }
+    }
+    &.todayQuantUP_pop {
+        
     }
     &.agreePopBox {
         position: fixed;
